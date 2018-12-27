@@ -5,16 +5,9 @@ import { List , Message, Dimmer,Loader } from 'semantic-ui-react';
 import MapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
 import '../style/Map.css';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
-import AWS from 'aws-sdk';
 import uuid from 'uuid';
 import Promise from 'promise';
-import ReactGA from 'react-ga';
 
-
-AWS.config.update({
-  'accessKeyId':'AKIAIYVQFSGQWDI6KDUA',
-  'secretAccessKey':'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',
-});
 
 class Map extends Component {
 
@@ -38,12 +31,7 @@ getChildContext = () => ({
   })
   
 
-fireTracking() { 
-    ReactGA.pageview('location');
-}
-
 componentDidMount() {
-  ReactGA.initialize('UA-120152287-1'); //Unique Google Analytics tracking number
   this.generateUuid();
   MapboxGl.accessToken = "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA"
   const map = new MapboxGl.Map({
@@ -101,25 +89,8 @@ isValidated(){
   return new Promise((resolve, reject) => {
   //capture the map and save the map pic
     html2canvas(document.querySelector(".mapboxgl-canvas")).then(canvas => {
-      const s3 = new AWS.S3({
-        region:'us-west-2',
-        Bucket:'legionsolar-web-app'
-      });
-    
-      var params = {
-        Bucket:'legionsolar-web-app',
-        Key: 'OriginalMap/' + this.state.uuid,
-        Body:canvas.toDataURL(),
-      };
-    
-      s3.upload(params, (err,data) =>{
-          if(err){
-            // console.log('error !!! '+ JSON.stringify(err,null,2));
-          }else{
-            // console.log('success!!!' + JSON.stringify(data,null,2));
-            resolve();
-          }
-      })
+      // need store the image
+      resolve();
     })
   });
 }
@@ -127,7 +98,6 @@ isValidated(){
 
 
   render() {
-    this.fireTracking();
     const { children } = this.props;
     const { map } = this.state;
 
