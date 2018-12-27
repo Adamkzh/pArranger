@@ -1,0 +1,16 @@
+.Dashboard-Header
+{
+    justify-content: center;
+    display: flex;
+    background-color: #222;
+    position: relative;
+    height: 52px;
+}
+.HomeIcon
+{
+    margin-top: 16px;
+    margin-left: 90%;
+    display: inline-block;
+    color: white;
+    line-height: 1;
+}

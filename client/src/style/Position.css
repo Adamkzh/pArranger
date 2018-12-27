@@ -1,0 +1,12 @@
+.mapImg{
+    width: 65%;
+    height: 410px;
+    margin-left: -5%;
+    margin-bottom: 30px;
+}
+.positionWarning{
+    width: 20%;
+    left: 70%;
+    margin-top: 0px !important;
+    font-size: 12px !important;
+}

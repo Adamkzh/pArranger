@@ -1,0 +1,35 @@
+.images
+{
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 40px;
+    text-align:center
+}
+
+.intro-head{
+    font-size: 25px;
+    font-weight: 700;
+    border-bottom-color: gray;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+}
+
+.orderNowBtn{
+    text-align:center;
+    margin-top: 30px;
+}
+.ordernowleft{
+    text-align:center;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.ordernowright{
+    text-align:center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: inline-block;
+}

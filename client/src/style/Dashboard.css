@@ -1,0 +1,16 @@
+.dashboard-logo{
+    height: 32px;
+    position: absolute;
+    left: 46px;
+    top: 10px;
+}
+
+.Dashboard-Header{
+    
+    justify-content: center;
+    display: flex;
+    background-color: #222;
+    position: relative;
+    height: 52px;
+}
+

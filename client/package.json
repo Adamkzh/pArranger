@@ -1,0 +1,38 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^2.2.0",
+    "amazon-cognito-identity-js": "^2.0.3",
+    "aws-sdk": "^2.230.1",
+    "babel-loader": "^7.1.4",
+    "html2canvas": "^1.0.0-alpha.10",
+    "mapbox-gl": "^0.44.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-draggable": "^3.0.5",
+    "react-ga": "^2.5.3",
+    "react-image-gallery": "^0.8.7",
+    "react-image-show": "^0.2.4",
+    "react-mapbox-gl": "^3.7.0",
+    "react-numeric-input": "^2.2.3",
+    "react-rnd": "^7.4.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0",
+    "react-stepzilla": "^4.7.0",
+    "semantic-ui": "^2.2.14",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.78.1",
+    "uuid": "^3.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-router": "^4.2.0"
+  }
+}
