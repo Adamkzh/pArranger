@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
-import HomepageHeading from './Header';
 import {
   Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
@@ -38,8 +36,15 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ 
+              minHeight: 700, 
+              padding: '1em 0em',
+              'background-image': 'url(https://fortunedotcom.files.wordpress.com/2018/05/f500-2018-xcel-energy.jpg?size=full)',
+              'background-repeat': 'no-repeat',
+              'background-size': 'cover',
+            }}
             vertical
+            Home
           >
             <Menu
               fixed={fixed ? 'top' : null}
@@ -65,7 +70,35 @@ class DesktopContainer extends Component {
                 </Menu.Item>
               </Container>
             </Menu>
-            <HomepageHeading />
+            <Container text>
+                <Header
+                as='h1'
+                content='Panel Arranger'
+                inverted
+                style={{
+                    fontSize:'4em',
+                    fontWeight: 'normal',
+                    marginBottom: 0,
+                    marginTop: '3em',
+                }}
+                />
+                <Header
+                as='h2'
+                content='Do whatever you want when you want to.'
+                inverted
+                style={{
+                    fontSize: '1.7em',
+                    fontWeight: 'normal',
+                    marginTop: '1.5em',
+                }}
+                />
+                <Link to="/dashboard">
+                    <Button primary onClick={this.initStepzilla} size='huge'>
+                    Get Started
+                    <Icon name='right arrow' />
+                    </Button>
+                </Link>
+            </Container>
           </Segment>
         </Visibility>
 
