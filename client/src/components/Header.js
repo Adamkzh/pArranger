@@ -1,10 +1,9 @@
 import React ,{ Component }from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import {
     Button,
     Container,
-    Header,
-    Icon,
+    Menu,
   } from 'semantic-ui-react'
 
 
@@ -16,37 +15,31 @@ class HomepageHeading extends Component {
         }
     
     }
-    render(){  
+    render(){ 
         return(
-            <Container text>
-                <Header
-                as='h1'
-                content='Panel Arranger'
-                inverted
-                style={{
-                    fontSize:'4em',
-                    fontWeight: 'normal',
-                    marginBottom: 0,
-                    marginTop: '3em',
-                }}
-                />
-                <Header
-                as='h2'
-                content='Do whatever you want when you want to.'
-                inverted
-                style={{
-                    fontSize: '1.7em',
-                    fontWeight: 'normal',
-                    marginTop: '1.5em',
-                }}
-                />
-                <Link to="/dashboard">
-                    <Button primary onClick={this.initStepzilla} size='huge'>
-                    Get Started
-                    <Icon name='right arrow' />
-                    </Button>
-                </Link>
+            <Menu
+            inverted={false}
+            pointing={false}
+            secondary={false}
+            size='large'
+            >
+            <Container>
+                <Menu.Item as='a' active>
+                Home
+                </Menu.Item>
+                <Menu.Item as='a'>Work</Menu.Item>
+                <Menu.Item as='a'>Company</Menu.Item>
+                <Menu.Item as='a'>Careers</Menu.Item>
+                <Menu.Item position='right'>
+                <Button as='a' inverted={!true}>
+                    Log in
+                </Button>
+                <Button as='a' inverted={true} primary={true} style={{ marginLeft: '0.5em' }}>
+                    Sign Up
+                </Button>
+                </Menu.Item>
             </Container>
+            </Menu>
         );
     }
 }
