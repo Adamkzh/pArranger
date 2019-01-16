@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Map from './Map';
-import System from './System';
-import Position from './Position';
+import Location from './Dashboard-Content-Location';
+import System from './Dashboard-Content-System';
+import Position from './Dashboard-Content-Position';
 
 
 import StepZilla from 'react-stepzilla';
@@ -13,7 +13,7 @@ class Content extends Component{
     render(){
     const steps =
     [
-      {name: 'Location', component: <Map />},
+      {name: 'Location', component: <Location />},
       {name: 'System Size', component: <System />},
       {name: 'Position', component: <Position />},
     ]

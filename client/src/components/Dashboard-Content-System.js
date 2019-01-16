@@ -1,15 +1,9 @@
 import React,{ PureComponent } from 'react';
 import { Dropdown, Message } from 'semantic-ui-react';
 import NumericInput from 'react-numeric-input';
-import PanelNumber from './PanelNumber';
+import PanelNumber from './Dashboard-Content-System-PanelNumber';
 import '../style/System.css';
-import AWS from 'aws-sdk';
-import ReactGA from 'react-ga';
 
-const s3 = new AWS.S3({
-    region:'us-west-2',
-    Bucket:'legionsolar-web-app'
-});
 
 const ACPower = [
     {
@@ -77,13 +71,8 @@ class System extends PureComponent{
  
     }
 
-    fireTracking() { 
-        ReactGA.pageview('System Size');
-    }
-
     componentDidMount(){
         this.draw();
-        ReactGA.initialize('UA-120152287-1'); //Unique Google Analytics tracking number
     }
 
     componentDidUpdate(prevProps, prevState){
@@ -98,21 +87,7 @@ class System extends PureComponent{
         img.onload = () =>{
             ctx.drawImage(img, 0, 0, 800, 390);
         }
-        var params = {
-            Bucket: "legionsolar-web-app", 
-            Key: 'OriginalMap/' + window.localStorage.getItem('uuid'),
-           };
-        s3.getObject(params, function(err, data) {
-            //  if (err) 
-            //     // console.log(err, err.stack); // an error occurred
-            //  else{
-            //     // console.log('save success!');           // successful response
-            //  } 
-            if(data === null){
-                return;
-            }   
-             img.src = data.Body;
-        }); 
+        img.src = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547660001931&di=c77706ef3301e6fa7f31b0575c1627ba&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2F1706%2F22%2F9431076_2_thumb.jpg'
     }
 
     ACPowerChange(event,data){
@@ -127,7 +102,6 @@ class System extends PureComponent{
         function myFormat(num){
             return num + ' watts'
         }
-        this.fireTracking();
         return(
             <div className="system">
                 <div className="_title">

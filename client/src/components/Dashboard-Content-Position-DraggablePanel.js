@@ -1,8 +1,8 @@
 import React,{ Component } from 'react';
 import SolarPanel from '../image/sp.png';
 import '../style/DraggablePanel.css';
-import PanelDetail from '../components/PanelDetail';
-import PanelImage from './PanelImage';
+import PanelDetail from './Dashboard-Content-Position-DraggablePanel-PanelDetail';
+import PanelImage from './Dashboard-Content-Position-DraggablePanel-PanelImage';
 
 
 class DraggablePanel extends Component{

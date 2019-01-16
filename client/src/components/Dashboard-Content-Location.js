@@ -9,7 +9,7 @@ import uuid from 'uuid';
 import Promise from 'promise';
 
 
-class Map extends Component {
+class Location extends Component {
 
   constructor(props) {
     super(props);
@@ -28,11 +28,15 @@ class Map extends Component {
 
 getChildContext = () => ({
     map: this.state.map
-  })
+})
   
 
 componentDidMount() {
   this.generateUuid();
+
+  /**
+   * This part is for mapbox configuration
+   */
   MapboxGl.accessToken = "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA"
   const map = new MapboxGl.Map({
     container: this.container,
@@ -131,4 +135,4 @@ isValidated(){
   }
 }
 
-export default Map;
+export default Location;

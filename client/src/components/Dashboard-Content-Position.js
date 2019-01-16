@@ -1,16 +1,11 @@
 import React,{ Component } from 'react';
 import { Message } from 'semantic-ui-react'
 import html2canvas from 'html2canvas';
-import DraggablePanel from '../components/DraggablePanel';
+import DraggablePanel from './Dashboard-Content-Position-DraggablePanel';
 import '../style/Position.css';
-import AWS from 'aws-sdk';
 import Promise from 'promise';
-import ReactGA from 'react-ga';
 
-const s3 = new AWS.S3({
-    region:'us-west-2',
-    Bucket:'legionsolar-web-app'
-});
+
 
 class Position extends Component{
     
@@ -52,32 +47,14 @@ class Position extends Component{
           });
       }
     
-
+      
+      /**
+       *  save canvas data
+       */
       captureMap(){
           return (html2canvas(document.querySelector(".capture")).then(canvas => {
             this.saveDataToS3(canvas.toDataURL());
           }));
-      }
-
-      saveDataToS3(file){
-        const s3 = new AWS.S3({
-          region:'us-west-2',
-          Bucket:'legionsolar-web-app'
-        });
-      
-        var params = {
-          Bucket:'legionsolar-web-app',
-          Key: 'PanelsMap/' + window.localStorage.getItem('uuid'),
-          Body:file,
-        };
-      
-        s3.upload(params, (err,data) =>{
-            if(err){
-            //   console.log('error !!! '+ JSON.stringify(err,null,2));
-            }else{
-            //   console.log('success!!!' + JSON.stringify(data,null,2))
-            }
-        })
       }
 
       draw(){
@@ -87,31 +64,13 @@ class Position extends Component{
         img.onload = () =>{
             ctx.drawImage(img, 0, 0, 800, 390);
         }
-        var params = {
-            Bucket: "legionsolar-web-app", 
-            Key: 'OriginalMap/' + window.localStorage.getItem('uuid'),
-           };
-        s3.getObject(params, function(err, data) {
-            //  if (err) 
-            //     // console.log(err, err.stack); // an error occurred
-            //  else{
-            //     // console.log("data"+data);           // successful response
-            //  }     
-             if(data === null){
-                return;
-            }  
-             img.src = data.Body;
-        }); 
+        img.src = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1475131974,834535367&fm=26&gp=0.jpg';
     }
     componentDidMount(){
-        ReactGA.initialize('UA-120152287-1'); //Unique Google Analytics tracking number
         this.draw();
     }
-    fireTracking() { 
-        ReactGA.pageview('Position');
-    }
+
     render(){
-        this.fireTracking();
         return(
             <div className="system">
                 <div className="_title">
