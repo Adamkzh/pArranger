@@ -13,8 +13,7 @@ import {
   Responsive,
   Segment,
   Visibility,
-} from 'semantic-ui-react'
-
+} from 'semantic-ui-react';
 
 class DesktopContainer extends Component {
   state = {}
