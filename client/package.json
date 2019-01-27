@@ -4,8 +4,6 @@
   "private": true,
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "^2.2.0",
-    "amazon-cognito-identity-js": "^2.0.3",
-    "aws-sdk": "^2.230.1",
     "babel-loader": "^7.1.4",
     "html2canvas": "^1.0.0-alpha.10",
     "mapbox-gl": "^0.44.0",
@@ -13,8 +11,6 @@
     "react-dom": "^16.2.0",
     "react-draggable": "^3.0.5",
     "react-ga": "^2.5.3",
-    "react-image-gallery": "^0.8.7",
-    "react-image-show": "^0.2.4",
     "react-mapbox-gl": "^3.7.0",
     "react-numeric-input": "^2.2.3",
     "react-rnd": "^7.4.0",

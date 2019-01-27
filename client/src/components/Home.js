@@ -15,6 +15,9 @@ import {
   Visibility,
 } from 'semantic-ui-react';
 
+import homepageMidImage from '../image/homepage-mid.jpg'
+
+
 class DesktopContainer extends Component {
   state = {}
 
@@ -149,7 +152,7 @@ const Home = () => (
             </p>
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+            <Image bordered rounded size='large' src={homepageMidImage} />
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -168,10 +171,6 @@ const Home = () => (
             <Header as='h3' style={{ fontSize: '2em' }}>
               "I shouldn't have gone with their competitor."
             </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src='/images/avatar/large/nan.jpg' />
-              <b>Nan</b> Chief Fun Officer Acme Toys
-            </p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
