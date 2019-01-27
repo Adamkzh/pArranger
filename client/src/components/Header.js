@@ -1,5 +1,5 @@
 import React ,{ Component }from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
     Button,
     Container,
@@ -24,15 +24,13 @@ class HomepageHeading extends Component {
             size='large'
             >
             <Container>
-                <Menu.Item as='a' active>
+                <Menu.Item as={Link} to='/' active>
                 Home
                 </Menu.Item>
                 <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
                 <Menu.Item position='right'>
-                <Button as='a' inverted={!true}>
-                    Log in
+                <Button as={Link} to='/login' inverted={false}>
+                    Login
                 </Button>
                 <Button as='a' inverted={true} primary={true} style={{ marginLeft: '0.5em' }}>
                     Sign Up

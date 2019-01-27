@@ -20,6 +20,13 @@ class DesktopContainer extends Component {
 
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
+  
+  // For stepZilla init, prevent error
+  initStepzilla(){
+    if(window.localStorage.getItem('step') === undefined){
+       window.localStorage.setItem('step',0);
+    }
+  }
 
   render() {
     const { children } = this.props
@@ -38,12 +45,11 @@ class DesktopContainer extends Component {
             style={{ 
               minHeight: 700, 
               padding: '1em 0em',
-              'background-image': 'url(https://fortunedotcom.files.wordpress.com/2018/05/f500-2018-xcel-energy.jpg?size=full)',
-              'background-repeat': 'no-repeat',
-              'background-size': 'cover',
+              'backgroundImage': 'url(https://fortunedotcom.files.wordpress.com/2018/05/f500-2018-xcel-energy.jpg?size=full)',
+              'backgroundRepeat': 'no-repeat',
+              'backgroundSize': 'cover',
             }}
             vertical
-            Home
           >
             <Menu
               fixed={fixed ? 'top' : null}
@@ -53,15 +59,15 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>
-                  Home
+                <Menu.Item as={Link} to='/' active>
+                Home
                 </Menu.Item>
                 <Menu.Item as='a'>Work</Menu.Item>
                 <Menu.Item as='a'>Company</Menu.Item>
                 <Menu.Item as='a'>Careers</Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
-                    Log in
+                <Menu.Item as={Link} to='/login' position='right' >
+                  <Button inverted={!fixed}>
+                      Login
                   </Button>
                   <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
                     Sign Up
@@ -91,12 +97,12 @@ class DesktopContainer extends Component {
                     marginTop: '1.5em',
                 }}
                 />
-                <Link to="/dashboard">
-                    <Button primary onClick={this.initStepzilla} size='huge'>
-                    Get Started
-                    <Icon name='right arrow' />
-                    </Button>
-                </Link>
+                <Button as={Link} to='/dashboard' animated primary size='huge' onClick={this.initStepzilla}>
+                  <Button.Content visible>Get Started</Button.Content>
+                  <Button.Content hidden>
+                    <Icon name='arrow right' />
+                  </Button.Content>
+                </Button>
             </Container>
           </Segment>
         </Visibility>
