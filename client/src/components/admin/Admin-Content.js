@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js'
 import {HexagonLayer} from 'deck.gl';
 import {MapboxLayer} from '@deck.gl/mapbox';
-import * as d3 from "d3";
+
 
 
 import html2canvas from 'html2canvas';
