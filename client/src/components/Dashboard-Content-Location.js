@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import html2canvas from 'html2canvas';
 import PropTypes from 'prop-types'
 import { List , Message, Dimmer,Loader } from 'semantic-ui-react';
 import MapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
@@ -53,9 +52,11 @@ componentDidMount() {
     zoom:0.5,
     speed:4 
   })
-  map.on('load', (...args) => {
-    this.setState({ map })
-  })
+
+  map.on('moveend', (...args) => {
+    window.localStorage.setItem('original_map',map.getCanvas().toDataURL());
+  });
+
   map.addControl(geocoder);
   map.scrollZoom.disable();
 }
@@ -88,14 +89,10 @@ generateUuid(){
 isValidated(){
   this.setState({
     uploading: true, 
-  });
-  
+  }); 
+
   return new Promise((resolve, reject) => {
-  //capture the map and save the map pic
-    html2canvas(document.querySelector(".mapboxgl-canvas")).then(canvas => {
-      // need store the image
-      resolve();
-    })
+    resolve();
   });
 }
 
@@ -104,7 +101,7 @@ isValidated(){
   render() {
     const { children } = this.props;
     const { map } = this.state;
-
+    
   return (
     
     <div className='Sarea'>

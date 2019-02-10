@@ -1,13 +1,8 @@
 import React, { Component } from 'react'
-import '../style/Accessories.css'
-import AWS from 'aws-sdk';
+import '../style/Detail.css'
 
-const s3 = new AWS.S3({
-    region:'us-west-2',
-    Bucket:'legionsolar-web-app'
-});
 
-class Accessories extends Component {
+class Detail extends Component {
 
     constructor(props,context){
         super(props);
@@ -20,7 +15,6 @@ class Accessories extends Component {
         
     }
     componentDidMount(){
-        window.sessionStorage.setItem('registered','SUCCESS');
         this.draw();
     }
 
@@ -34,21 +28,7 @@ draw(){
     img.onload = () =>{
         ctx.drawImage(img, this.state.sx, this.state.sy, this.state.width, this.state.height);
     }
-    var params = {
-        Bucket: "legionsolar-web-app", 
-        Key: 'PanelsMap/' + window.localStorage.getItem('uuid'),
-        };
-    s3.getObject(params, function(err, data) {
-            // if (err) 
-            // // console.log(err, err.stack); // an error occurred
-            // else{
-            // // console.log("data"+data);           // successful response
-            // }     
-            if(data === null){
-                return;
-            }
-            img.src = data.Body;
-    }); 
+    img.src = window.localStorage.getItem('new_image');
 }
     
 
@@ -60,7 +40,7 @@ draw(){
         return (
             <div>
                 <div className='_title'>
-                        ACCESSORIES
+                        Detail
                 </div>
                     <div className='ui two column grid'>
                         <canvas className="FinalMapImg" id="realMapImg" width="800" height = "410" > 
@@ -76,4 +56,4 @@ draw(){
     }
 }
 
-export default Accessories;
+export default Detail;

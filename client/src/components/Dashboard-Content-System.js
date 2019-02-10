@@ -87,7 +87,7 @@ class System extends PureComponent{
         img.onload = () =>{
             ctx.drawImage(img, 0, 0, 800, 390);
         }
-        img.src = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547660001931&di=c77706ef3301e6fa7f31b0575c1627ba&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2F1706%2F22%2F9431076_2_thumb.jpg'
+        img.src = window.localStorage.getItem('original_map');
     }
 
     ACPowerChange(event,data){

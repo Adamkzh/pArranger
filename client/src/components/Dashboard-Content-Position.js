@@ -43,7 +43,7 @@ class Position extends Component{
               // ... only then will it move to the next step. reject() will indicate a fail
               resolve();
               // reject(); // or reject
-            }, 1000);
+            }, 500);
           });
       }
     
@@ -52,9 +52,10 @@ class Position extends Component{
        *  save canvas data
        */
       captureMap(){
-          return (html2canvas(document.querySelector(".capture")).then(canvas => {
-            this.saveDataToS3(canvas.toDataURL());
-          }));
+        window.localStorage.setItem('original_map','');
+        return (html2canvas(document.querySelector(".capture")).then(canvas => {
+            window.localStorage.setItem('new_image',canvas.toDataURL());
+        }));
       }
 
       draw(){
@@ -64,7 +65,7 @@ class Position extends Component{
         img.onload = () =>{
             ctx.drawImage(img, 0, 0, 800, 390);
         }
-        img.src = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1475131974,834535367&fm=26&gp=0.jpg';
+        img.src = window.localStorage.getItem('original_map');
     }
     componentDidMount(){
         this.draw();

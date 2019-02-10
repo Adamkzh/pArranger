@@ -24,18 +24,8 @@ class HomepageHeading extends Component {
             size='large'
             >
             <Container>
-                <Menu.Item as={Link} to='/' active>
-                Home
-                </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item position='right'>
-                <Button as={Link} to='/login' inverted={false}>
-                    Login
-                </Button>
-                <Button as='a' inverted={true} primary={true} style={{ marginLeft: '0.5em' }}>
-                    Sign Up
-                </Button>
-                </Menu.Item>
+                <Menu.Item as={Link} to='/' > Home </Menu.Item>
+                <Menu.Item as={Link} to='/admin'>Admin</Menu.Item>
             </Container>
             </Menu>
         );

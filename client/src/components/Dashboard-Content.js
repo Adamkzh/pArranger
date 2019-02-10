@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Location from './Dashboard-Content-Location';
 import System from './Dashboard-Content-System';
 import Position from './Dashboard-Content-Position';
+import Detail from './Dashboard-Content-Detail';
 
 
 import StepZilla from 'react-stepzilla';
@@ -16,6 +17,7 @@ class Content extends Component{
       {name: 'Location', component: <Location />},
       {name: 'System Size', component: <System />},
       {name: 'Position', component: <Position />},
+      {name: 'Detail', component: <Detail />},
     ]
 
         return (
