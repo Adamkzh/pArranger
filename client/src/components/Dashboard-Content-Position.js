@@ -43,7 +43,7 @@ class Position extends Component{
               // ... only then will it move to the next step. reject() will indicate a fail
               resolve();
               // reject(); // or reject
-            }, 500);
+            }, 750);
           });
       }
     
@@ -52,7 +52,6 @@ class Position extends Component{
        *  save canvas data
        */
       captureMap(){
-        window.localStorage.setItem('original_map','');
         return (html2canvas(document.querySelector(".capture")).then(canvas => {
             window.localStorage.setItem('new_image',canvas.toDataURL());
         }));
