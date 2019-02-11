@@ -54,6 +54,9 @@ componentDidMount() {
   })
 
   map.on('moveend', (...args) => {
+    let inputTextValue = document.getElementsByClassName("mapboxgl-ctrl-geocoder mapboxgl-ctrl")[0].textContent;
+    let address = inputTextValue.substr(0, inputTextValue.indexOf('United States') + 13);
+    window.localStorage.setItem('address',address);   
     window.localStorage.setItem('original_map',map.getCanvas().toDataURL());
   });
 
