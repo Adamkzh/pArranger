@@ -47,7 +47,7 @@ draw(){
                         </canvas>
                         <div className='AList'>
                             <div>
-                                Comming Soon...
+                                {window.localStorage.getItem('address')}
                             </div>
                         </div>
                     </div>  
