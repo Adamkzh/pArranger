@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import '../style/Detail.css'
+import '../style/Detail.css';
+import { Button, Form } from "semantic-ui-react";
 
 
 class Detail extends Component {
@@ -42,15 +43,21 @@ draw(){
                 <div className='_title'>
                         Detail
                 </div>
-                    <div className='ui two column grid'>
+                    {/* <div className='ui two column grid'> */}
                         <canvas className="FinalMapImg" id="realMapImg" width="800" height = "410" > 
                         </canvas>
-                        <div className='AList'>
-                            <div>
-                                {window.localStorage.getItem('address')}
-                            </div>
-                        </div>
-                    </div>  
+                         <Form>
+                            <Form.Field>
+                            <label>Address</label>
+                            <input value={window.localStorage.getItem('address')} />
+                            </Form.Field>
+                            <Form.Field>
+                            <label>Last Name</label>
+                            <input placeholder="Last Name" />
+                            </Form.Field>
+                            <Button type="submit">Submit</Button>
+                        </Form>
+                    {/* </div>   */}
                 </div>
         )
     }
