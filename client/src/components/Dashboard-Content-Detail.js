@@ -49,11 +49,15 @@ draw(){
                          <Form>
                             <Form.Field>
                             <label>Address</label>
-                            <input value={window.localStorage.getItem('address')} />
+                            <input value={window.localStorage.getItem('address')} readOnly/>
                             </Form.Field>
                             <Form.Field>
                             <label>Last Name</label>
                             <input placeholder="Last Name" />
+                            </Form.Field>
+                            <Form.Field>
+                            <label>Email</label>
+                            <input placeholder="cmpe280@sjsu.edu" />
                             </Form.Field>
                             <Button type="submit">Submit</Button>
                         </Form>
