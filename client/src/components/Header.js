@@ -1,7 +1,6 @@
 import React ,{ Component }from 'react';
 import { Link } from 'react-router-dom';
 import {
-    Button,
     Container,
     Menu,
   } from 'semantic-ui-react'
@@ -24,8 +23,8 @@ class HomepageHeading extends Component {
             size='large'
             >
             <Container>
-                <Menu.Item as={Link} to='/' > Home </Menu.Item>
-                <Menu.Item as={Link} to='/admin'>Admin</Menu.Item>
+                <Menu.Item position='left' as={Link} to='/' active>HOME</Menu.Item>
+                <Menu.Item position='right' as={Link} to='/login' >SIGN IN</Menu.Item>
             </Container>
             </Menu>
         );

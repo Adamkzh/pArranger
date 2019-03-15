@@ -61,13 +61,10 @@ class DesktopContainer extends Component {
               secondary={!fixed}
               size='large'
             >
-              <Container>
-                <Menu.Item as={Link} to='/' active>
-                Home
-                </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-              </Container>
+            <Container>
+                <Menu.Item position='left' as={Link} to='/' active>HOME</Menu.Item>
+                <Menu.Item position='right' as={Link} to='/login' >SIGN IN</Menu.Item>
+            </Container>
             </Menu>
             <Container text>
                 <Header
