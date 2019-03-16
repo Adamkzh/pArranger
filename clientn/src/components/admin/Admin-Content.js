@@ -1,12 +1,13 @@
 import React from "react";
 import DeckGL, { ScatterplotLayer } from "deck.gl";
 import { StaticMap } from "react-map-gl";
+import '../../style/admin/adminContent.css'
 
 export default class App extends React.Component{
     render() {
         return(
             <DeckGL
-            initialViewState={{ longitude: -122.45, latitude: 37.78, zoom: 12 }}
+            initialViewState={{ longitude: -122.45, latitude: 37.78, zoom: 12, pitch:40.5 }}
             controller={true}
             layers={[
               new ScatterplotLayer({
