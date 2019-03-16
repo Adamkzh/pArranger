@@ -1,0 +1,21 @@
+.AList{
+    border: 1px solid rgba(34,36,38,.15);
+    width: 26%;
+    margin-left: 2%;
+    height: 390px;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 1.4285em;
+}
+
+.FinalMapImg{
+    width: 32.5%;
+    height: 205px;
+    margin-left: -5%;
+    margin-bottom: 30px;
+}
+
+.sub_title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}

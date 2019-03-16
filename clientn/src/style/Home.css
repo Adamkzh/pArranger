@@ -1,0 +1,52 @@
+.Home {
+  height: 100%;
+  text-align: center;
+  /* Location of the image */
+  background-image: url(../image/homepageBG.png);
+    
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+  
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+      the content height is greater than the image height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+  
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#464646;
+  
+  /* SHORTHAND CSS NOTATION
+    * background: url(background-photo.jpg) center center cover no-repeat fixed;
+    */
+  
+}
+  
+.Home-logo {
+  height: 120px;
+}
+
+
+.Home-header {
+  height: 220px;
+  padding: 50px;
+  color: white;
+}
+
+.Buttons
+{
+  height: 60%;
+}
+
+.ui.button.newButton{
+  font-weight: 350;
+  font-size: 18px;
+  font-family: "M Hei PRC W45","M Hei HK W42","M Hei HK W40","HelveticaNeue-Regular","Helvetica Neue Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  height:60px;
+  width:280px;
+  margin-right: 25px;
+}

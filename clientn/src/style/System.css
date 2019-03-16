@@ -1,0 +1,62 @@
+.ui.fixed.table{
+    width: 40%;
+    height: 400px;
+}
+
+.ui.checkbox .box, .ui.checkbox label{
+    font-size: 16px;
+}
+.ui.two.column.grid{
+    margin-top: 20px;
+    margin-left: 14%;
+    text-align: center;
+    z-index: -1;
+}
+
+.size_Input{
+    border: 1px solid rgba(34,36,38,.15);
+    width: 26%;
+    margin-left: 2%;
+    height: 430px;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 1.4285em;
+}
+
+.system_SizeInput{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.react-numeric-input{
+    margin-top: 3%;
+}
+.checkbox{
+    margin-top: 3%;
+    font-size: 16px;
+}
+
+.mapPic{
+    width: 65%;
+    height: 410px;
+    margin-left: -5%;
+    margin-bottom: 30px;
+}
+.tips{
+    font-size: 11px;
+}
+
+.systemWarning{
+    width: 19%;
+    left: 70%;
+    margin-top: 0px !important;
+    font-size: 12px !important;
+}
+
+.acPower{
+    font-size: 12px !important;
+    margin-top: 5px;
+}
+.systemprice{
+    margin-bottom: 5px;
+}

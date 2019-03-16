@@ -1,0 +1,57 @@
+.Map
+{
+    position: absolute;
+    top: 60px;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.Sarea{
+  width: 100%;
+}
+
+.mapboxgl-map
+{
+  overflow: visible;
+  height: 420px;
+  margin-top:120px;
+}
+
+.mapboxgl-ctrl-top-right
+{
+  right: auto;
+  width: 100%;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl
+{
+  top: 440px;
+  position:absolute;
+  left:58%;
+  margin-left:-25%;
+}
+
+._title
+{
+  line-height: 30px;
+  font-size: 28px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+.test{
+  width: 100%;
+}
+
+.reminder
+{
+  width: 22.5%;
+  margin-left: 16%;
+  margin-top: 460px;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 120%;
+  color: black;
+  height: 20px;
+  white-space: nowrap
+}

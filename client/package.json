@@ -7,23 +7,22 @@
     "@deck.gl/mapbox": "^6.4.0",
     "@mapbox/mapbox-gl-geocoder": "^2.2.0",
     "axios": "^0.18.0",
-    "babel-loader": "^7.1.4",
     "d3": "^5.8.0",
-    "deck.gl": "^6.4.0",
+    "deck.gl": "^6.4.7",
     "faker": "^4.1.0",
     "html2canvas": "^1.0.0-alpha.10",
     "lodash": "^4.17.11",
     "mapbox-gl": "^0.44.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-draggable": "^3.0.5",
     "react-ga": "^2.5.3",
-    "react-map-gl": "^4.0.10",
+    "react-map-gl": "^4.1.1",
     "react-mapbox-gl": "^3.7.0",
     "react-numeric-input": "^2.2.3",
     "react-rnd": "^7.4.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0",
+    "react-scripts": "2.1.8",
     "react-stepzilla": "^4.7.0",
     "semantic-ui": "^2.2.14",
     "semantic-ui-css": "^2.3.1",
@@ -38,5 +37,11 @@
   },
   "devDependencies": {
     "react-router": "^4.2.0"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

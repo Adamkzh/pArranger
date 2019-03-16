@@ -1,29 +1,56 @@
-// // import React, { Component } from 'react';
+import React from "react";
+import DeckGL, { ScatterplotLayer } from "deck.gl";
+import { StaticMap } from "react-map-gl";
+
+export default class App extends React.Component{
+    render() {
+        return(
+            <DeckGL
+            initialViewState={{ longitude: -122.45, latitude: 37.78, zoom: 12 }}
+            controller={true}
+            layers={[
+              new ScatterplotLayer({
+                data: [{ position: [-122.45, 37.78] }],
+                radiusScale: 100,
+                getColor: [255, 0, 0, 255]
+              })
+            ]}
+          >
+            <StaticMap
+              mapStyle="mapbox://styles/mapbox/dark-v9"
+              mapboxApiAccessToken="pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA" 
+            />
+          </DeckGL>
+        )
+    }
+}
+
+// import React, { Component } from 'react';
 // import DeckGL, { LineLayer, MapboxLayer, HexagonLayer } from "deck.gl";
 // import * as d3 from "d3";
-// // import { StaticMap } from "react-map-gl";
+// import { StaticMap } from "react-map-gl";
 
-// // export default class adminContent extends Component{
-// //     render() {
-// //         const data = [{sourcePosition: [-122.41669, 37.7853], targetPosition: [-122.41669, 37.781]}];
-// //         const layers = [
-// //             new LineLayer({id: 'line-layer', data})
-// //         ];
-// //         return(
-// //             <DeckGL
-// //             initialViewState={{ longitude: -122.45, latitude: 37.78, zoom: 12, pitch: 40.5}}
-// //             controller={true}
-// //             layers={layers}
-// //           >
-// //             <StaticMap
-// //               mapStyle="mapbox://styles/mapbox/dark-v9"
-// //               mapboxApiAccessToken="pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA"
-// //             />
-// //           </DeckGL>
-// //         )
-// //     }
-// // }
-
+// class adminContent extends Component{
+//     render() {
+//         const data = [{sourcePosition: [-122.41669, 37.7853], targetPosition: [-122.41669, 37.781]}];
+//         const layers = [
+//             new LineLayer({id: 'line-layer', data})
+//         ];
+//         return(
+//             <DeckGL
+//             initialViewState={{ longitude: -122.45, latitude: 37.78, zoom: 12, pitch: 40.5}}
+//             controller={true}
+//             layers={layers}
+//           >
+//             <StaticMap
+//               mapStyle="mapbox://styles/mapbox/dark-v9"
+//               mapboxApiAccessToken="pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA"
+//             />
+//           </DeckGL>
+//         )
+//     }
+// }
+// export default adminContent;
 
 // import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
@@ -130,29 +157,3 @@
 // }
 
 // export default adminContent;
-import React from "react";
-import DeckGL, { ScatterplotLayer } from "deck.gl";
-import { StaticMap } from "react-map-gl";
-
-export default class App extends React.Component{
-    render() {
-        return(
-            <DeckGL
-            initialViewState={{ longitude: -122.45, latitude: 37.78, zoom: 12 }}
-            controller={true}
-            layers={[
-              new ScatterplotLayer({
-                data: [{ position: [-122.45, 37.78] }],
-                radiusScale: 100,
-                getColor: [255, 0, 0, 255]
-              })
-            ]}
-          >
-            <StaticMap
-              mapStyle="mapbox://styles/mapbox/dark-v9"
-              mapboxApiAccessToken="pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA" 
-            />
-          </DeckGL>
-        )
-    }
-}

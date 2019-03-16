@@ -1,0 +1,74 @@
+.dragPanelImage{
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+}
+
+.ui.dropdown .menu>.item {
+    font-size: 10px !important;
+}
+
+.eachPanel{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1;
+    height: 67px;
+}
+
+.Dragger{
+    margin-bottom: 20px;
+}
+
+.pNumber{
+    display: block;
+}
+
+.ui.checkbox input.hidden+label{
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.ui.radio.checkbox{
+    margin-top: 0px;
+}
+
+.form{
+    display:inline;
+}
+
+.dropdown{
+     margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.lastdropdown{
+    margin-bottom: 10px;
+}
+
+.header{
+    margin-top: 10px;
+}
+.PositionPanelSpace{
+    margin-top: 290px;
+    margin-bottom: 20px;
+}
+
+.inputArea {
+    font-size: 14px;
+    position: absolute;
+    top: 210px;
+    left: 73%;
+    z-index: 99;
+    height: 100px;
+}
+mark{
+    background-color: #ff00 !important;
+    font-weight: 900;
+    font-size: 20px !important;
+}
+.underNumber{
+    line-height: 22px;
+    text-align: center
+}
