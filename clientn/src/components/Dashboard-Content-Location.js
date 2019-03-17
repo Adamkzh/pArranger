@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { List , Message, Dimmer,Loader } from 'semantic-ui-react';
+import { List , Message, Loader } from 'semantic-ui-react';
 import MapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
 import '../style/Map.css';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
