@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom';
 import { Container, Menu, Button } from 'semantic-ui-react'
 
 
+var activeTag = "home";
+
 class HomepageHeading extends Component {
+
+    constructor(props){
+      super(props);
+      activeTag = this.props.activeTag;
+    }
 
     initStepzilla= () => {
         if(window.localStorage.getItem('step') === undefined){
@@ -13,11 +20,12 @@ class HomepageHeading extends Component {
     }
     render(){ 
         var fixed = true;
+        
         return(
          <Menu>
             <Container>
-              <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
-              <Menu.Item as={Link} to='/admin' >ADMIN</Menu.Item>
+              <Menu.Item as={Link} to='/' active={activeTag === "home"}>HOME</Menu.Item>
+              <Menu.Item as={Link} to='/admin' active={activeTag === "admin"}>ADMIN</Menu.Item>
               <Menu.Item position='right'>
                 <Button as={Link} to='/login' inverted={!fixed}>
                   SIGN IN
