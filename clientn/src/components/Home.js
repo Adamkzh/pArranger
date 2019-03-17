@@ -63,6 +63,7 @@ class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
+                <Menu.Item as={Link} to='/dashboard'>DASHBOARD</Menu.Item>
                 <Menu.Item as={Link} to='/admin' >ADMIN</Menu.Item>
                 <Menu.Item position='right'>
                   <Button as={Link} to='/login' inverted={!fixed}>

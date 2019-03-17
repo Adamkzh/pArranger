@@ -7,7 +7,7 @@ class Dashboard extends Component{
     render(){
         return(
             <div>
-                <Header />
+                <Header activeTag={"dashboard"}/>
                 <DashboardContent />
             </div>
         );

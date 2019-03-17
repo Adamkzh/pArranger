@@ -25,6 +25,7 @@ class HomepageHeading extends Component {
          <Menu>
             <Container>
               <Menu.Item as={Link} to='/' active={activeTag === "home"}>HOME</Menu.Item>
+              <Menu.Item as={Link} to='/dashboard' active={activeTag === "dashboard"}>DASHBOARD</Menu.Item>
               <Menu.Item as={Link} to='/admin' active={activeTag === "admin"}>ADMIN</Menu.Item>
               <Menu.Item position='right'>
                 <Button as={Link} to='/login' inverted={!fixed}>
