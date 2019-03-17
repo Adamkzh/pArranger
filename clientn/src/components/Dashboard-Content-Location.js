@@ -17,7 +17,6 @@ class Location extends Component {
       y:"20.077361",
       map:null,
       uuid:null,
-      uploading:false,
     }; 
   }
 
@@ -69,8 +68,7 @@ componentDidMount() {
 shouldComponentUpdate(nextProps, nextState) {
   return (
     nextProps.children !== this.props.children ||
-    nextState.map !== this.state.map||
-    nextState.uploading !== this.state.uploading
+    nextState.map !== this.state.map
   )
 }
 
@@ -92,15 +90,10 @@ generateUuid(){
 
 //asynchronous problem
 isValidated(){
-  this.setState({
-    uploading: true, 
-  }); 
-
   return new Promise((resolve, reject) => {
     resolve();
   });
 }
-
 
 
   render() {
@@ -114,13 +107,11 @@ isValidated(){
         LOCATION       
       </div>
       <div className='Map' ref={(x) => { this.container = x }}>
-        <Dimmer active={this.state.uploading}>
         <Loader 
         indeterminate
         size='big'
         >Constructing</Loader>
           { map && children }
-        </Dimmer>
       </div>
         <div className="reminder" >
         <Message 

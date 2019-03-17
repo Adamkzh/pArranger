@@ -1,8 +1,8 @@
 import React from "react";
 import DeckGL, { HexagonLayer } from "deck.gl";
 import { StaticMap } from "react-map-gl";
-import '../../style/admin/adminContent.css';
 import * as d3 from 'd3';
+import '../../style/admin/adminContent.css';
 
 const DATA_URL = 'https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/3d-heatmap/heatmap-data.csv';
 const COLOR_RANGE = [
@@ -22,41 +22,58 @@ const LIGHT_SETTINGS = {
   numberOfLights: 2
 };
 
-export default class App extends React.Component{
+export default class adminContent extends React.Component{
     render() {
-        var data = d3.csv(DATA_URL);
-        console.log(data);
-        return(
-          <DeckGL
-            initialViewState={{ longitude: -1.4157, latitude: 52.2324, zoom: 6, pitch:40.5 }}
-            controller={true}
 
-            layers={[
-              new HexagonLayer({
-                type: HexagonLayer,
-                id: 'heatmap',
-                data: d3.csv(DATA_URL),
-                radius: 2000,
-                coverage: 1,
-                upperPercentile: 100,
-                colorRange: COLOR_RANGE,
-                elevationRange: [0, 1000],
-                elevationScale: 250,
-                extruded: true,
-                getPosition: d => [Number(d.lng), Number(d.lat)],
-                lightSettings: LIGHT_SETTINGS,
-                opacity: 1,
-                pickable: true,
-                autoHighlight: true,
-                onClick: console.log
-              })
-            ]}
-          >
-            <StaticMap
-              mapStyle="mapbox://styles/mapbox/dark-v9"
-              mapboxApiAccessToken="pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA" 
-            />
-          </DeckGL>
+        return(
+          <div className="showbox">
+            <div id="control-panel">
+              <div>
+                  <label>Radius</label>
+                  <input id="radius" type="range" min="500" max="10000" step="500" value="1000"></input>
+                  <span id="radius-value"></span>
+              </div>
+              <div>
+                  <label>Coverage</label>
+                  <input id="coverage" type="range" min="0" max="1" step="0.1" value="1"></input>
+                  <span id="coverage-value"></span>
+              </div>
+              <div>
+                  <label>Upper Percentile</label>
+                  <input id="upperPercentile" type="range" min="90" max="100" step="1" value="100"></input>
+                  <span id="upperPercentile-value"></span>
+              </div>
+            </div>
+            <DeckGL
+              initialViewState={{ longitude: -1.4157, latitude: 52.2324, zoom: 6, pitch:40.5 }}
+              controller={true}
+              layers={[
+                new HexagonLayer({
+                  type: HexagonLayer,
+                  id: 'heatmap',
+                  data: d3.csv(DATA_URL),
+                  radius: 2000,
+                  coverage: 1,
+                  upperPercentile: 100,
+                  colorRange: COLOR_RANGE,
+                  elevationRange: [0, 1000],
+                  elevationScale: 250,
+                  extruded: true,
+                  getPosition: d => [Number(d.lng), Number(d.lat)],
+                  lightSettings: LIGHT_SETTINGS,
+                  opacity: 1,
+                  pickable: true,
+                  autoHighlight: true,
+                  onClick: console.log
+                })
+              ]}
+            >
+              <StaticMap
+                mapStyle="mapbox://styles/mapbox/dark-v9"
+                mapboxApiAccessToken="pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA" 
+              />
+            </DeckGL>
+          </div>
         )
     }
 }
