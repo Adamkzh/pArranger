@@ -46,7 +46,7 @@ export default class adminContent extends React.Component{
             <div id="control-panel">
               <div>
                   <label>Radius</label>
-                  <input id="radius" type="range" min="500" max="10000" step="500" value={this.state.radius} onChange={this.handleChange}></input>
+                  <input id="radius" type="range" min="500" max="10000" step="100" value={this.state.radius} onChange={this.handleChange}></input>
                   <span id="radius-value"></span>
               </div>
               <div>
@@ -56,7 +56,7 @@ export default class adminContent extends React.Component{
               </div>
               <div>
                   <label>Upper Percentile</label>
-                  <input id="upperPercentile" type="range" min="90" max="100" step="1" value={this.state.upperPercentile} onChange={this.handleChange}></input>
+                  <input id="upperPercentile" type="range" min="90" max="100" step="0.2" value={this.state.upperPercentile} onChange={this.handleChange}></input>
                   <span id="upperPercentile-value"></span>
               </div>
             </div>
