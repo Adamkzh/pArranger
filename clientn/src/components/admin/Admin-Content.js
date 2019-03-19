@@ -23,24 +23,40 @@ const LIGHT_SETTINGS = {
 };
 
 export default class adminContent extends React.Component{
-    render() {
 
+    constructor(props){
+      super(props);
+      this.state={
+         radius: 2000,
+         coverage: 1,
+         upperPercentile:100,
+      }
+    }
+
+    handleChange = (e) =>{
+      var value = e.target.value;
+      this.setState({
+        [e.target.id] : value
+      })
+    }
+
+    render() {
         return(
           <div className="showbox">
             <div id="control-panel">
               <div>
                   <label>Radius</label>
-                  <input id="radius" type="range" min="500" max="10000" step="500" value="1000"></input>
+                  <input id="radius" type="range" min="500" max="10000" step="500" value={this.state.radius} onChange={this.handleChange}></input>
                   <span id="radius-value"></span>
               </div>
               <div>
                   <label>Coverage</label>
-                  <input id="coverage" type="range" min="0" max="1" step="0.1" value="1"></input>
+                  <input id="coverage" type="range" min="0" max="1" step="0.1" value={this.state.coverage} onChange={this.handleChange}></input>
                   <span id="coverage-value"></span>
               </div>
               <div>
                   <label>Upper Percentile</label>
-                  <input id="upperPercentile" type="range" min="90" max="100" step="1" value="100"></input>
+                  <input id="upperPercentile" type="range" min="90" max="100" step="1" value={this.state.upperPercentile} onChange={this.handleChange}></input>
                   <span id="upperPercentile-value"></span>
               </div>
             </div>
@@ -52,9 +68,9 @@ export default class adminContent extends React.Component{
                   type: HexagonLayer,
                   id: 'heatmap',
                   data: d3.csv(DATA_URL),
-                  radius: 2000,
-                  coverage: 1,
-                  upperPercentile: 100,
+                  radius: this.state.radius,
+                  coverage: this.state.coverage,
+                  upperPercentile: this.state.upperPercentile,
                   colorRange: COLOR_RANGE,
                   elevationRange: [0, 1000],
                   elevationScale: 250,
