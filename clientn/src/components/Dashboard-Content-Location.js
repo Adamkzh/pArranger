@@ -54,13 +54,8 @@ componentDidMount() {
 
   map.on('moveend', (...args) => {
     let ctn = document.getElementsByClassName("mapboxgl-ctrl-geocoder mapboxgl-ctrl")
-    let inputTextValue = "";
-    if(ctn === null){
-      inputTextValue = ctn[0].textContent;
-    }
-    console.log(inputTextValue);
+    let inputTextValue = ctn[0].textContent === undefined? "":  ctn[0].textContent;
     let address = inputTextValue.substr(0, inputTextValue.indexOf('United States') + 13);
-    console.log(address);
     window.localStorage.setItem('address',address);   
     window.localStorage.setItem('original_map',map.getCanvas().toDataURL());
   });
