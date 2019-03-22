@@ -85,7 +85,7 @@ class Position extends Component{
                             <DraggablePanel number={window.localStorage.getItem('watts')} />
                         </div>
                     </div>
-                    {this.state.warning === true &&
+                    {this.state.warning &&
                         <Message
                         className='positionWarning'
                         warning

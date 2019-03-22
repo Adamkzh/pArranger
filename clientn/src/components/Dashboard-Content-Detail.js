@@ -1,6 +1,40 @@
 import React, { Component } from 'react'
 import '../style/Detail.css';
-import { Button, Form, Grid, Input } from "semantic-ui-react";
+import { Button, Form, Grid, Input, Dropdown } from "semantic-ui-react";
+
+import CSImage from '../image/cs-roof.jpg'
+import tileImage from '../image/tile-roof.png'
+import metalImage from '../image/metal-roof.png'
+import DIYImage from '../image/diy-roof.png'
+
+
+const mountOptions = [
+    {
+        key: 'Composite Shingle',
+        text: 'Composite Shingle',
+        value: 'Composite Shingle',
+        image: { avatar: true, src: CSImage },
+    },
+    {
+        key: 'Tile',
+        text: 'Tile',
+        value: 'Tile',
+        image: { avatar: true, src: tileImage },
+    },
+    {
+        key: 'Metal',
+        text: 'Metal',
+        value: 'Metal',
+        image: { avatar: true, src: metalImage },
+    },
+    {
+        key: 'DIY',
+        text: 'DIY',
+        value: 'DIY',
+        image: { avatar: true, src: DIYImage },
+    },
+      
+];
 
 
 class Detail extends Component {
@@ -17,7 +51,7 @@ class Detail extends Component {
             username:'',
             email:'',
             watts:'',
-            type:'',
+            mountType:'',
         }
         
     }
@@ -29,7 +63,7 @@ class Detail extends Component {
             username: " ",
             email: " ",
             watts: window.localStorage.getItem('watts'),
-            type: window.localStorage.getItem('0mountType'),
+            mountType: window.localStorage.getItem('0mountType'),
         })
     }
 
@@ -58,6 +92,12 @@ class Detail extends Component {
         })
     }
 
+    MountChange(event,data){
+        this.setState({
+            mountType: data.value
+        })
+    };
+    
     render(){
         return (
             <div>
@@ -101,7 +141,12 @@ class Detail extends Component {
                                         </Form.Field>
                                         <Form.Field>
                                         <label>Panel Type</label>
-                                        <input id="type" value={this.state.type}  placeholder="Tile" onChange={this.handleChange}/>
+                                        <Dropdown 
+                                            placeholder='Chose your mount type'  
+                                            selection options={mountOptions}
+                                            value={this.state.mountType}
+                                            onChange ={(e,data) => this.MountChange(e,data)}
+                                        />
                                         </Form.Field>
                                         <Button type="submit">Submit</Button>
                                     </Form>
