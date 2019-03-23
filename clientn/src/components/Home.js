@@ -34,6 +34,12 @@ class DesktopContainer extends Component {
   render() {
     const { children } = this.props
     const { fixed } = this.state
+    var dashboardUrl = "/dashboard/";
+    if(window.localStorage.getItem('uuid')){
+      dashboardUrl += window.localStorage.getItem('uuid');
+    }else{
+      dashboardUrl += "admin"
+    }
 
     return (
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
@@ -63,7 +69,8 @@ class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
-                <Menu.Item as={Link} to='/dashboard'>DASHBOARD</Menu.Item>
+                <Menu.Item as={Link} to='/design'>DESIGN</Menu.Item>
+                <Menu.Item as={Link} to= {dashboardUrl}>DASHBOARD</Menu.Item>
                 <Menu.Item as={Link} to='/admin' >ADMIN</Menu.Item>
                 <Menu.Item position='right'>
                   <Button as={Link} to='/login' inverted={!fixed}>

@@ -65,7 +65,6 @@ class Detail extends Component {
             email: " ",
             watts: window.localStorage.getItem('watts'),
             mountType: window.localStorage.getItem('0mountType'),
-            // image: window.localStorage.getItem('new_image')
         })
     }
 
@@ -100,6 +99,12 @@ class Detail extends Component {
         })
     };
 
+    changeStatus = (key, value) =>{
+        this.setState({
+            [key]: value
+        })
+    }
+
     handleSubmit = () => {
         var imageurl = window.localStorage.getItem('new_image')
         const formData = new FormData();
@@ -111,17 +116,19 @@ class Detail extends Component {
                 'content-type': 'multipart/form-data'
             }
         };
-        console.log(formData);
+
         axios.post('/api/save', formData, config)
           .then(function (response) {
-            console.log(response);
+            if(response.request.status === 200){
+                window.location = '/dashboard/' + window.localStorage.getItem('uuid');
+            }
           })
           .catch(function (error) {
             console.log(error);
           });
       };
     
-    render(){
+    render = () =>{
         return (
             <div>
                 <div className='_title'>
