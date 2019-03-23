@@ -20,7 +20,7 @@ router.post('/api/save', function(req, res, next) {
         // console.log("Request body ---",  JSON.parse(req.body.data));
         var data = JSON.parse(req.body.data);
         var document = {
-            id: data.uuid,
+            _id: data.uuid,
             email: data.email,
             address: data.address,
             watts: data.watts,
@@ -34,11 +34,13 @@ router.post('/api/save', function(req, res, next) {
             console.log("Connected correctly to server...");
             var db = client.db('panelDB');
             // Insert a single document
-            db.collection('userinfo').insertOne(document, function(err, r) {
+            db.collection('userinfo').updateOne(
+                {_id: data.uuid},
+                {$set: document},
+                function(err, r) {
                 assert.equal(null, err);
-                assert.equal(1, r.insertedCount);
-                console.log(r);
-              });
+              },
+                { upsert: true });
           });
 
 
