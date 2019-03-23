@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../style/Detail.css';
 import { Button, Form, Grid, Input, Dropdown } from "semantic-ui-react";
+import axios from 'axios';
 
 import CSImage from '../image/cs-roof.jpg'
 import tileImage from '../image/tile-roof.png'
@@ -36,16 +37,16 @@ const mountOptions = [
       
 ];
 
+const sx = -154;
+const sy = 0;
+const width = 1461;
+const height = 370;
 
 class Detail extends Component {
 
     constructor(props,context){
         super(props);
         this.state={
-            sx:-154,
-            sy:0,
-            width:1461,
-            height:440,
             address:"",
             uuid:'',
             username:'',
@@ -64,6 +65,7 @@ class Detail extends Component {
             email: " ",
             watts: window.localStorage.getItem('watts'),
             mountType: window.localStorage.getItem('0mountType'),
+            // image: window.localStorage.getItem('new_image')
         })
     }
 
@@ -75,7 +77,7 @@ class Detail extends Component {
         const ctx = canvas.getContext('2d');
         var img = new Image();
         img.onload = () =>{
-            ctx.drawImage(img, this.state.sx, this.state.sy, this.state.width, this.state.height);
+            ctx.drawImage(img, sx, sy, width, height);
         }
         img.src = window.localStorage.getItem('new_image');
     }
@@ -97,6 +99,27 @@ class Detail extends Component {
             mountType: data.value
         })
     };
+
+    handleSubmit = () => {
+        var imageurl = window.localStorage.getItem('new_image')
+        const formData = new FormData();
+        formData.append('mapImage',imageurl);
+        formData.append('data',JSON.stringify(this.state))
+        
+        const config = {
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        };
+        console.log(formData);
+        axios.post('/api/save', formData, config)
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      };
     
     render(){
         return (
@@ -118,7 +141,7 @@ class Detail extends Component {
                                         </Form.Field>
                                         <Form.Field>
                                         <label>UUID</label>
-                                        <input id="uuid" value={this.state.uuid} onChange={this.handleChange}/>
+                                        <input id="uuid" value={this.state.uuid} readOnly/>
                                         </Form.Field>
                                         <Form.Field>
                                         <label>User Name</label>
@@ -148,7 +171,7 @@ class Detail extends Component {
                                             onChange ={(e,data) => this.MountChange(e,data)}
                                         />
                                         </Form.Field>
-                                        <Button type="submit">Submit</Button>
+                                        <Button type="submit" onClick={this.handleSubmit}>Submit</Button>
                                     </Form>
                                 </div>
                             </Grid.Column>

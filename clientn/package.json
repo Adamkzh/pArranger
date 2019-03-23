@@ -2,6 +2,7 @@
   "name": "ubertest",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "github:mapbox/mapbox-gl-geocoder",
     "axios": "^0.18.0",
