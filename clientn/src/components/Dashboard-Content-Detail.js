@@ -54,8 +54,8 @@ class Detail extends Component {
             watts:'',
             mountType:'',
         }
-        
     }
+    
     componentDidMount(){
         this.draw();
         this.setState({
@@ -99,11 +99,6 @@ class Detail extends Component {
         })
     };
 
-    changeStatus = (key, value) =>{
-        this.setState({
-            [key]: value
-        })
-    }
 
     handleSubmit = () => {
         var imageurl = window.localStorage.getItem('new_image')

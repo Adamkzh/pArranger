@@ -101,7 +101,7 @@ class DesktopContainer extends Component {
                     marginTop: '1.5em',
                 }}
                 />
-                <Button as={Link} to='/dashboard' animated primary size='huge' onClick={this.initStepzilla}>
+                <Button as={Link} to='/design' animated primary size='huge' onClick={this.initStepzilla}>
                   <Button.Content visible>Get Started</Button.Content>
                   <Button.Content hidden>
                     <Icon name='arrow right' />

@@ -28,7 +28,7 @@ router.post('/api/save', function(req, res, next) {
             mountType: data.mountType,
             mapImage:req.body.mapImage
         }
-        // console.log(document);
+        console.log("saving user info...")
         MongoClient.connect(url, function(err, client) {
             assert.equal(null, err);
             console.log("Connected correctly to server...");
@@ -37,17 +37,15 @@ router.post('/api/save', function(req, res, next) {
             db.collection('userinfo').updateOne(
                 {_id: data.uuid},
                 {$set: document},
+                { upsert: true },
                 function(err, r) {
                 assert.equal(null, err);
-              },
-                { upsert: true });
+                });
           });
 
-
-
-
         if(!err)
-           return res.sendStatus(200).end();
+            console.log("save successful..")
+            return res.sendStatus(200).end();
      });
 });
 
