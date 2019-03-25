@@ -87,8 +87,7 @@ exports.addUser = function (user) {
     }
     const promises = [
         exports.getUserForUsername(user.username),
-        exports.getUserForEmail(user.email),
-        panelDB.findOne({}, { sort: {id:-1} ,fields: { id: 1 } })
+        exports.getUserForEmail(user.email)
     ];
     return Promise.all(promises)
         .then(function (values) {
