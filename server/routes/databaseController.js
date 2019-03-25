@@ -3,6 +3,7 @@ const panelDB = db.get('panelDB');
 const mongodb = require('mongodb');
 
 // Public functions
+// All methods returns a promise
 var exports = module.exports = {};
 exports.getUsersUpdatedBeforeDate = function(date, limit) {
     if (!limit) {
