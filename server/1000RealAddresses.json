@@ -1,0 +1,7004 @@
+{
+  "results": [
+    {
+      "address": "560 Robert Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.36438918183242",
+        "lon": "-121.94475950059133"
+      }
+    },
+    {
+      "address": "3046 Magliocco Dr, San Jose, CA 95128",
+      "location": {
+        "lat": "37.312451660287365",
+        "lon": "-121.9488001730878"
+      }
+    },
+    {
+      "address": "5088 Rice Ct, San Jose, CA 95111",
+      "location": {
+        "lat": "37.26535665130898",
+        "lon": "-121.81767655226156"
+      }
+    },
+    {
+      "address": "2445 Rinconada Dr, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28906151924586",
+        "lon": "-121.8796515238949"
+      }
+    },
+    {
+      "address": "200 Edenvale Ave, San Jose, CA 95136",
+      "location": {
+        "lat": "37.26280422942287",
+        "lon": "-121.82107686369295"
+      }
+    },
+    {
+      "address": "1660 Hope Dr, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.39836581933618",
+        "lon": "-121.95631874172983"
+      }
+    },
+    {
+      "address": "11561 Berryessa Rd, San Jose, CA 95133",
+      "location": {
+        "lat": "37.365713384526984",
+        "lon": "-121.88420653946345"
+      }
+    },
+    {
+      "address": "907 Bainbridge Ct, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34955030922989",
+        "lon": "-122.05218856288819"
+      }
+    },
+    {
+      "address": "1066 Mitchell Ct, Campbell, CA 95128",
+      "location": {
+        "lat": "37.3025889101868",
+        "lon": "-121.94202028178925"
+      }
+    },
+    {
+      "address": "167 Covington Ct, San Jose, CA 95136",
+      "location": {
+        "lat": "37.272456798524985",
+        "lon": "-121.8380045637141"
+      }
+    },
+    {
+      "address": "2141 Nobili Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.361680830677955",
+        "lon": "-121.99146433639663"
+      }
+    },
+    {
+      "address": "4500 The Woods Dr, San Jose, CA 95136",
+      "location": {
+        "lat": "37.27517583108679",
+        "lon": "-121.83383792336843"
+      }
+    },
+    {
+      "address": "555 Carver St, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38011868645536",
+        "lon": "-121.83826384653464"
+      }
+    },
+    {
+      "address": "20437 Sea Gull Way, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.28943167437851",
+        "lon": "-122.03106920475868"
+      }
+    },
+    {
+      "address": "10284 Ann Arbor Ct, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.327045380000826",
+        "lon": "-122.04551949064916"
+      }
+    },
+    {
+      "address": "2791 Ophelia Ave, San Jose, CA 95122",
+      "location": {
+        "lat": "37.31580734702728",
+        "lon": "-121.81633461618648"
+      }
+    },
+    {
+      "address": "1822 Old Piedmont Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.41805234517905",
+        "lon": "-121.847459208814"
+      }
+    },
+    {
+      "address": "21726 Noonan Ct, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31603839836289",
+        "lon": "-122.05431158144617"
+      }
+    },
+    {
+      "address": "765 Mahogany Ln, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.3651082123561",
+        "lon": "-122.01356542635047"
+      }
+    },
+    {
+      "address": "1385 San Tomas Aquino Rd, San Jose, CA 95130",
+      "location": {
+        "lat": "37.29889402808332",
+        "lon": "-121.97703693118149"
+      }
+    },
+    {
+      "address": "2943 Kentridge Dr, San Jose, CA 95133",
+      "location": {
+        "lat": "37.37496896721449",
+        "lon": "-121.83972032197963"
+      }
+    },
+    {
+      "address": "7463 Bollinger Rd, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31256464019829",
+        "lon": "-122.03518809647585"
+      }
+    },
+    {
+      "address": "5169 Alum Rock Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.37500779353734",
+        "lon": "-121.82187852389717"
+      }
+    },
+    {
+      "address": "1350 Oakland Rd, San Jose, CA 95112",
+      "location": {
+        "lat": "37.370324660174234",
+        "lon": "-121.892723074853"
+      }
+    },
+    {
+      "address": "1661 Senter Rd, San Jose, CA 95112",
+      "location": {
+        "lat": "37.31741492012399",
+        "lon": "-121.86098861238233"
+      }
+    },
+    {
+      "address": "4800 Patrick Henry Dr, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.400323805607485",
+        "lon": "-121.98599471438907"
+      }
+    },
+    {
+      "address": "4390 Silverberry Dr, San Jose, CA 95136",
+      "location": {
+        "lat": "37.27119569996794",
+        "lon": "-121.83486551234878"
+      }
+    },
+    {
+      "address": "2045 Gateway Pl, San Jose, CA 95110",
+      "location": {
+        "lat": "37.37098092915873",
+        "lon": "-121.92605833479256"
+      }
+    },
+    {
+      "address": "19461 Riesling Ct, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.25505965382763",
+        "lon": "-122.01247549424777"
+      }
+    },
+    {
+      "address": "1432 Old Bayshore Hwy, San Jose, CA 95112",
+      "location": {
+        "lat": "37.367661670852414",
+        "lon": "-121.89910693409956"
+      }
+    },
+    {
+      "address": "2652 E Trimble Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.40848428578253",
+        "lon": "-121.88495451261842"
+      }
+    },
+    {
+      "address": "1995 N First St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.37253465052688",
+        "lon": "-121.91796073931874"
+      }
+    },
+    {
+      "address": "2250 Monroe St, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.36064510129699",
+        "lon": "-121.9641070243107"
+      }
+    },
+    {
+      "address": "351 Meridian Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.322718839610964",
+        "lon": "-121.91376480788993"
+      }
+    },
+    {
+      "address": "2418 Villanova Rd, San Jose, CA 95130",
+      "location": {
+        "lat": "37.27806231474074",
+        "lon": "-121.98934059051525"
+      }
+    },
+    {
+      "address": "675 Almanor Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.39832205562725",
+        "lon": "-122.03273013977784"
+      }
+    },
+    {
+      "address": "2933 Millar Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.35882661981892",
+        "lon": "-121.98011802776783"
+      }
+    },
+    {
+      "address": "6211 Balsamo Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.30643576669343",
+        "lon": "-122.01327266628793"
+      }
+    },
+    {
+      "address": "11731 Southwood Dr, San Jose, CA 95130",
+      "location": {
+        "lat": "37.29742577309454",
+        "lon": "-121.98443734690804"
+      }
+    },
+    {
+      "address": "850 Clarkston Dr, San Jose, CA 95136",
+      "location": {
+        "lat": "37.27144594579979",
+        "lon": "-121.86671409932632"
+      }
+    },
+    {
+      "address": "20660 Lomita Ave, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.25412686918431",
+        "lon": "-122.03475016224047"
+      }
+    },
+    {
+      "address": "650 Lenfest Rd, San Jose, CA 95133",
+      "location": {
+        "lat": "37.36338225285588",
+        "lon": "-121.86863228276854"
+      }
+    },
+    {
+      "address": "1805 S Winchester Blvd, Campbell, CA 95008",
+      "location": {
+        "lat": "37.29148568222685",
+        "lon": "-121.94999721291646"
+      }
+    },
+    {
+      "address": "3480 Rancho View Ct, San Jose, CA 95132",
+      "location": {
+        "lat": "37.41209858911948",
+        "lon": "-121.8461545923846"
+      }
+    },
+    {
+      "address": "250 Innovation Dr, San Jose, CA 95134",
+      "location": {
+        "lat": "37.40096646582061",
+        "lon": "-121.93031596966925"
+      }
+    },
+    {
+      "address": "12788 Homes Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.2828222799248",
+        "lon": "-122.00815904820529"
+      }
+    },
+    {
+      "address": "4195 Sierra Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.41528832099145",
+        "lon": "-121.82445082875051"
+      }
+    },
+    {
+      "address": "1601 Heron Ave, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34109498518512",
+        "lon": "-122.0187984894942"
+      }
+    },
+    {
+      "address": "1030 Pennington Ln, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.30955036465517",
+        "lon": "-122.04935322826152"
+      }
+    },
+    {
+      "address": "99 Glen Eyrie Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.31111380909465",
+        "lon": "-121.90637643633295"
+      }
+    },
+    {
+      "address": "1139 Fawn Dr, Campbell, CA 95008",
+      "location": {
+        "lat": "37.27035215067231",
+        "lon": "-121.97859558579404"
+      }
+    },
+    {
+      "address": "350 Cureton Pl, San Jose, CA 95127",
+      "location": {
+        "lat": "37.36699720633315",
+        "lon": "-121.81581767851489"
+      }
+    },
+    {
+      "address": "636 Santa Barbara Terr, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.39093882343318",
+        "lon": "-122.01853381613566"
+      }
+    },
+    {
+      "address": "2867 Glen Donegal Dr, San Jose, CA 95148",
+      "location": {
+        "lat": "37.330009939317144",
+        "lon": "-121.8032115302803"
+      }
+    },
+    {
+      "address": "524 Hyde Park Dr, San Jose, CA 95136",
+      "location": {
+        "lat": "37.26057143418474",
+        "lon": "-121.85069236136113"
+      }
+    },
+    {
+      "address": "1182 Pomeroy Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.34724305374281",
+        "lon": "-121.98704680145774"
+      }
+    },
+    {
+      "address": "2854 Forbes Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.332076740819204",
+        "lon": "-121.97733145227373"
+      }
+    },
+    {
+      "address": "5150 Cherry Ave, San Jose, CA 95118",
+      "location": {
+        "lat": "37.2585236887341",
+        "lon": "-121.87299859730624"
+      }
+    },
+    {
+      "address": "1242 Kifer Rd, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.37245642922705",
+        "lon": "-121.99391802120151"
+      }
+    },
+    {
+      "address": "1477 Cameo Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.296423051048755",
+        "lon": "-121.9921780685703"
+      }
+    },
+    {
+      "address": "20521 Debbie Ln, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27295358824448",
+        "lon": "-122.03282115511593"
+      }
+    },
+    {
+      "address": "766 Duncardine Way, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34512292007051",
+        "lon": "-122.01998816803939"
+      }
+    },
+    {
+      "address": "608 Mill Pond Dr, San Jose, CA 95125",
+      "location": {
+        "lat": "37.29576674703824",
+        "lon": "-121.87027391902508"
+      }
+    },
+    {
+      "address": "2910 Aborn Square Rd, San Jose, CA 95121",
+      "location": {
+        "lat": "37.31354944926699",
+        "lon": "-121.80821628418965"
+      }
+    },
+    {
+      "address": "14670 Sobey Rd, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.25643415379929",
+        "lon": "-121.99905521986794"
+      }
+    },
+    {
+      "address": "1189 Sandstone Ln, San Jose, CA 95132",
+      "location": {
+        "lat": "37.388752027730895",
+        "lon": "-121.86081256535996"
+      }
+    },
+    {
+      "address": "2665 Villa Cortona Way, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28658913515211",
+        "lon": "-121.87126953797762"
+      }
+    },
+    {
+      "address": "400 S Abel St, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.424449135137834",
+        "lon": "-121.907132891425"
+      }
+    },
+    {
+      "address": "1608 Las Plumas Ave, San Jose, CA 95133",
+      "location": {
+        "lat": "37.35984729587649",
+        "lon": "-121.86849279242081"
+      }
+    },
+    {
+      "address": "15900 Simoni Dr, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38580600356676",
+        "lon": "-121.80411617540982"
+      }
+    },
+    {
+      "address": "1695 Monterey Hwy, San Jose, CA 95112",
+      "location": {
+        "lat": "37.309956248292565",
+        "lon": "-121.87020283730577"
+      }
+    },
+    {
+      "address": "986 Live Oak Dr, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.343917268421116",
+        "lon": "-121.9845947892743"
+      }
+    },
+    {
+      "address": "1477 Crespi Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.2961886253388",
+        "lon": "-121.99155427269623"
+      }
+    },
+    {
+      "address": "4753 Allegro Ln, San Jose, CA 95111",
+      "location": {
+        "lat": "37.27552032169915",
+        "lon": "-121.81308969631411"
+      }
+    },
+    {
+      "address": "10991 Edgemont Dr, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38751144315023",
+        "lon": "-121.81395901214296"
+      }
+    },
+    {
+      "address": "2416 Boxwood Dr, San Jose, CA 95128",
+      "location": {
+        "lat": "37.3367105881939",
+        "lon": "-121.94787607916625"
+      }
+    },
+    {
+      "address": "4398 Zanker Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.4351390059849",
+        "lon": "-121.93562535923643"
+      }
+    },
+    {
+      "address": "1328 Karl St, San Jose, CA 95122",
+      "location": {
+        "lat": "37.34251150665583",
+        "lon": "-121.83190758924798"
+      }
+    },
+    {
+      "address": "230 El Caminito Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28159082321196",
+        "lon": "-121.95370752808238"
+      }
+    },
+    {
+      "address": "2430 Quantico Ct, San Jose, CA 95128",
+      "location": {
+        "lat": "37.30593216630552",
+        "lon": "-121.935938020203"
+      }
+    },
+    {
+      "address": "1330 Glen Haven Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.29965946024757",
+        "lon": "-122.00018588044219"
+      }
+    },
+    {
+      "address": "2582 Orchard Pkwy, San Jose, CA 95131",
+      "location": {
+        "lat": "37.381740772071836",
+        "lon": "-121.93115280440085"
+      }
+    },
+    {
+      "address": "3121 Flinthaven Dr, San Jose, CA 95148",
+      "location": {
+        "lat": "37.34279521677771",
+        "lon": "-121.80582376539309"
+      }
+    },
+    {
+      "address": "5161 Barron Park Dr, San Jose, CA 95136",
+      "location": {
+        "lat": "37.25871786877724",
+        "lon": "-121.84769326357632"
+      }
+    },
+    {
+      "address": "574 Continental Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.276646029053246",
+        "lon": "-121.81563466494431"
+      }
+    },
+    {
+      "address": "3488 Calaveras Rd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.44075270788885",
+        "lon": "-121.84252005391403"
+      }
+    },
+    {
+      "address": "4350 Felter Rd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.43385515231853",
+        "lon": "-121.82456759667072"
+      }
+    },
+    {
+      "address": "110 Falkirk Ct, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34361334562003",
+        "lon": "-122.03176641073071"
+      }
+    },
+    {
+      "address": "1924 Montemar Way, Campbell, CA 95125",
+      "location": {
+        "lat": "37.290284161426456",
+        "lon": "-121.9210814917721"
+      }
+    },
+    {
+      "address": "532 Lawrence Expy, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.38312434257227",
+        "lon": "-121.99504329010345"
+      }
+    },
+    {
+      "address": "1052 Luther Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.327806414312604",
+        "lon": "-121.91000902619672"
+      }
+    },
+    {
+      "address": "855 Minnesota Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.30679657381241",
+        "lon": "-121.89276243166162"
+      }
+    },
+    {
+      "address": "1276 Manet Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.352782653068374",
+        "lon": "-122.02789696913044"
+      }
+    },
+    {
+      "address": "1565 Clampett Way, San Jose, CA 95131",
+      "location": {
+        "lat": "37.39157642010215",
+        "lon": "-121.8762470228604"
+      }
+    },
+    {
+      "address": "590 N Capitol Ave, San Jose, CA 95133",
+      "location": {
+        "lat": "37.376099745149446",
+        "lon": "-121.84811404096146"
+      }
+    },
+    {
+      "address": "2278 Trade Zone Blvd, San Jose, CA 95131",
+      "location": {
+        "lat": "37.402589906203204",
+        "lon": "-121.88877084619612"
+      }
+    },
+    {
+      "address": "1290 N Central Ave, San Jose, CA 95128",
+      "location": {
+        "lat": "37.30604301881637",
+        "lon": "-121.94322976590864"
+      }
+    },
+    {
+      "address": "1400 Parkmoor Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.316017360468884",
+        "lon": "-121.91333842296008"
+      }
+    },
+    {
+      "address": "1283 Terra Alta Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.42008132691597",
+        "lon": "-121.86753941496059"
+      }
+    },
+    {
+      "address": "972 Rincon Cir, San Jose, CA 95131",
+      "location": {
+        "lat": "37.39832101481444",
+        "lon": "-121.90898712130124"
+      }
+    },
+    {
+      "address": "4570 Madoc Way, San Jose, CA 95130",
+      "location": {
+        "lat": "37.2818704417357",
+        "lon": "-121.98247493267665"
+      }
+    },
+    {
+      "address": "175 Baypointe Pkwy, San Jose, CA 95134",
+      "location": {
+        "lat": "37.413382378950246",
+        "lon": "-121.94157076510332"
+      }
+    },
+    {
+      "address": "2175 Anthony Dr, San Jose, CA 95008",
+      "location": {
+        "lat": "37.282399335572926",
+        "lon": "-121.97292533879202"
+      }
+    },
+    {
+      "address": "2668 Kimball Dr, San Jose, CA 95121",
+      "location": {
+        "lat": "37.30903928542736",
+        "lon": "-121.83227299760894"
+      }
+    },
+    {
+      "address": "1020 McCarthy Blvd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.412318319062884",
+        "lon": "-121.92095884647294"
+      }
+    },
+    {
+      "address": "7 Technology Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.41927103701132",
+        "lon": "-121.92772681731867"
+      }
+    },
+    {
+      "address": "1204 Edith St, San Jose, CA 95122",
+      "location": {
+        "lat": "37.34361768063392",
+        "lon": "-121.83399956674836"
+      }
+    },
+    {
+      "address": "4001 N First St, San Jose, CA 95134",
+      "location": {
+        "lat": "37.41247192674197",
+        "lon": "-121.9528784287886"
+      }
+    },
+    {
+      "address": "1520 E Capitol Expy, San Jose, CA 95121",
+      "location": {
+        "lat": "37.301090839846786",
+        "lon": "-121.81282190045088"
+      }
+    },
+    {
+      "address": "484 Auzerais Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.32478065468851",
+        "lon": "-121.89667735182758"
+      }
+    },
+    {
+      "address": "912 Riverside Dr, San Jose, CA 95125",
+      "location": {
+        "lat": "37.31516619025517",
+        "lon": "-121.90212715895036"
+      }
+    },
+    {
+      "address": "330 Gordon Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38284320879187",
+        "lon": "-121.8230423252357"
+      }
+    },
+    {
+      "address": "2107 Seacliff Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.42800502922362",
+        "lon": "-121.86588033777541"
+      }
+    },
+    {
+      "address": "13070 La Vista Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.278858764138086",
+        "lon": "-122.01710523778307"
+      }
+    },
+    {
+      "address": "2880 Lakeside Dr, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.38375575958528",
+        "lon": "-121.98013684273492"
+      }
+    },
+    {
+      "address": "3681 Eastwood Cir, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.39084991436749",
+        "lon": "-121.93958774012384"
+      }
+    },
+    {
+      "address": "532 E Weddell Dr, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.39709761174086",
+        "lon": "-122.01422488409102"
+      }
+    },
+    {
+      "address": "2960 Heidi Dr, San Jose, CA 95132",
+      "location": {
+        "lat": "37.39394148447003",
+        "lon": "-121.85632999622918"
+      }
+    },
+    {
+      "address": "1594 Tolbert Dr, San Jose, CA 95122",
+      "location": {
+        "lat": "37.3220761800914",
+        "lon": "-121.8309394292015"
+      }
+    },
+    {
+      "address": "1645 The Alameda, San Jose, CA 95126",
+      "location": {
+        "lat": "37.336003083990974",
+        "lon": "-121.91781770431224"
+      }
+    },
+    {
+      "address": "2240 Agnew Rd, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.391931109770276",
+        "lon": "-121.96416478569101"
+      }
+    },
+    {
+      "address": "1530 Santa Maria Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.298957100503465",
+        "lon": "-121.90995549842683"
+      }
+    },
+    {
+      "address": "2797 Scott Blvd, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.371155519209886",
+        "lon": "-121.95846093399318"
+      }
+    },
+    {
+      "address": "585 Fenton St, San Jose, CA 95127",
+      "location": {
+        "lat": "37.384186853144826",
+        "lon": "-121.83248590701152"
+      }
+    },
+    {
+      "address": "1470 E San Antonio St, San Jose, CA 95116",
+      "location": {
+        "lat": "37.346442480588664",
+        "lon": "-121.85940573792061"
+      }
+    },
+    {
+      "address": "4115 Golf Dr, San Jose, CA 95127",
+      "location": {
+        "lat": "37.3885732158439",
+        "lon": "-121.82495105627412"
+      }
+    },
+    {
+      "address": "817 Duncardine Way, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34545399008284",
+        "lon": "-122.01814570740858"
+      }
+    },
+    {
+      "address": "1883 Agnew Rd, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.39620799951901",
+        "lon": "-121.95935243631499"
+      }
+    },
+    {
+      "address": "140 S Bayview Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.37590649289688",
+        "lon": "-122.02592905353227"
+      }
+    },
+    {
+      "address": "2026 Nunes Dr, San Jose, CA 95131",
+      "location": {
+        "lat": "37.390210306817934",
+        "lon": "-121.87714092990596"
+      }
+    },
+    {
+      "address": "470 S 16th St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.33629923212585",
+        "lon": "-121.8697441810783"
+      }
+    },
+    {
+      "address": "213 N Westridge Dr, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.32501259321138",
+        "lon": "-121.95653921008443"
+      }
+    },
+    {
+      "address": "887 Hermiston Dr, San Jose, CA 95136",
+      "location": {
+        "lat": "37.27078558783889",
+        "lon": "-121.86767777217293"
+      }
+    },
+    {
+      "address": "900 Monica Ln, Campbell, CA 95008",
+      "location": {
+        "lat": "37.30065881933594",
+        "lon": "-121.94447846348135"
+      }
+    },
+    {
+      "address": "5504 Monterey Hwy, San Jose, CA 95138",
+      "location": {
+        "lat": "37.25556051032838",
+        "lon": "-121.8015289957306"
+      }
+    },
+    {
+      "address": "1573 Cross Way, San Jose, CA 95125",
+      "location": {
+        "lat": "37.30631435587623",
+        "lon": "-121.8820863089561"
+      }
+    },
+    {
+      "address": "2718 Taft Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.33231120168767",
+        "lon": "-121.97186949183711"
+      }
+    },
+    {
+      "address": "2909 Leigh Ave, San Jose, CA 95124",
+      "location": {
+        "lat": "37.26855347248281",
+        "lon": "-121.92188848758063"
+      }
+    },
+    {
+      "address": "4679 Applewood Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.31032345743168",
+        "lon": "-121.9856370428426"
+      }
+    },
+    {
+      "address": "1903 Somersworth Dr, San Jose, CA 95124",
+      "location": {
+        "lat": "37.27735691814618",
+        "lon": "-121.92551868824899"
+      }
+    },
+    {
+      "address": "4398 Zanker Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.43692653470177",
+        "lon": "-121.93573157389392"
+      }
+    },
+    {
+      "address": "1452 Kimberly Dr, San Jose, CA 95118",
+      "location": {
+        "lat": "37.267843212981425",
+        "lon": "-121.89013515594326"
+      }
+    },
+    {
+      "address": "862 Brevins Loop, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28145042188817",
+        "lon": "-121.87476978125088"
+      }
+    },
+    {
+      "address": "46 Eastwood Ct, San Jose, CA 95116",
+      "location": {
+        "lat": "37.35263649101678",
+        "lon": "-121.85897780991682"
+      }
+    },
+    {
+      "address": "5064 Shady Ave, San Jose, CA 95129",
+      "location": {
+        "lat": "37.30120744904183",
+        "lon": "-121.99041863329485"
+      }
+    },
+    {
+      "address": "101 W Younger Ave, San Jose, CA 95110",
+      "location": {
+        "lat": "37.35378324192526",
+        "lon": "-121.90839216892122"
+      }
+    },
+    {
+      "address": "21116 Comer Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27833933498725",
+        "lon": "-122.04433874229586"
+      }
+    },
+    {
+      "address": "12000 Crothers Rd, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38769061581271",
+        "lon": "-121.79961716280033"
+      }
+    },
+    {
+      "address": "338 N 12th St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.34698596233154",
+        "lon": "-121.88255028081346"
+      }
+    },
+    {
+      "address": "3885 Grandbrook Way, San Jose, CA 95111",
+      "location": {
+        "lat": "37.29096524704279",
+        "lon": "-121.82058597955013"
+      }
+    },
+    {
+      "address": "1569 Lochinvar Ave, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.3428163957894",
+        "lon": "-122.00368070516619"
+      }
+    },
+    {
+      "address": "2831 Mission College Blvd, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.388359339619825",
+        "lon": "-121.97797515454647"
+      }
+    },
+    {
+      "address": "1385 Martin Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.32861679623817",
+        "lon": "-121.91709231304431"
+      }
+    },
+    {
+      "address": "1045 E Brokaw Rd, San Jose, CA 95131",
+      "location": {
+        "lat": "37.384473347181",
+        "lon": "-121.89871088133559"
+      }
+    },
+    {
+      "address": "2827 Sycamore Way, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.33090146002433",
+        "lon": "-121.9771021084596"
+      }
+    },
+    {
+      "address": "2281 Glenkirk Dr, San Jose, CA 95124",
+      "location": {
+        "lat": "37.281509553951246",
+        "lon": "-121.91434891899468"
+      }
+    },
+    {
+      "address": "2485 Glen Duff Way, San Jose, CA 95148",
+      "location": {
+        "lat": "37.329935491079134",
+        "lon": "-121.80814934377483"
+      }
+    },
+    {
+      "address": "1404 Sonoma Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.4205770404694",
+        "lon": "-121.87615785665601"
+      }
+    },
+    {
+      "address": "1557 Orangewood Dr, San Jose, CA 95121",
+      "location": {
+        "lat": "37.308633326603115",
+        "lon": "-121.82080904749257"
+      }
+    },
+    {
+      "address": "1271 Anvilwood Ave, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.40782473046263",
+        "lon": "-121.99392789474904"
+      }
+    },
+    {
+      "address": "216 Cristich Ln, Campbell, CA 95008",
+      "location": {
+        "lat": "37.27801636795711",
+        "lon": "-121.9436589389911"
+      }
+    },
+    {
+      "address": "5449 Felter Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.43306604291986",
+        "lon": "-121.80763687499682"
+      }
+    },
+    {
+      "address": "760 Glen Mead Ct, San Jose, CA 95133",
+      "location": {
+        "lat": "37.381547254886",
+        "lon": "-121.84833036285995"
+      }
+    },
+    {
+      "address": "3975 McLaughlin Ave, San Jose, CA 95121",
+      "location": {
+        "lat": "37.29233885972506",
+        "lon": "-121.814704648089"
+      }
+    },
+    {
+      "address": "6795 Mason Way, San Jose, CA 95129",
+      "location": {
+        "lat": "37.30869313032202",
+        "lon": "-122.02339146002393"
+      }
+    },
+    {
+      "address": "1363 Teakwood Dr, San Jose, CA 95128",
+      "location": {
+        "lat": "37.2994683087837",
+        "lon": "-121.94725753810548"
+      }
+    },
+    {
+      "address": "4551 Great America Pkwy, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.39500600293842",
+        "lon": "-121.97741181219726"
+      }
+    },
+    {
+      "address": "1171 Lennon Way, San Jose, CA 95125",
+      "location": {
+        "lat": "37.293388771649326",
+        "lon": "-121.89286238552204"
+      }
+    },
+    {
+      "address": "1800 Rocky Mountain Ave, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.420888277370246",
+        "lon": "-121.86766093087945"
+      }
+    },
+    {
+      "address": "545 S Ninth St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.33181336796554",
+        "lon": "-121.87638691232218"
+      }
+    },
+    {
+      "address": "696 N 12th St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.354251021265554",
+        "lon": "-121.88841503873662"
+      }
+    },
+    {
+      "address": "3090 Homestead Rd, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.337168044180814",
+        "lon": "-121.98435462935934"
+      }
+    },
+    {
+      "address": "11351 Bubb Rd, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.303053460701626",
+        "lon": "-122.0507753880756"
+      }
+    },
+    {
+      "address": "1562 Jacob Ave, San Jose, CA 95118",
+      "location": {
+        "lat": "37.263335854739914",
+        "lon": "-121.89798468789917"
+      }
+    },
+    {
+      "address": "3419 Borge Ct, San Jose, CA 95132",
+      "location": {
+        "lat": "37.40486693501011",
+        "lon": "-121.84353252771581"
+      }
+    },
+    {
+      "address": "4090 Golf Dr, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38828266766769",
+        "lon": "-121.82564608627399"
+      }
+    },
+    {
+      "address": "292 Gibraltar Dr, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.40917553658547",
+        "lon": "-122.0150422022122"
+      }
+    },
+    {
+      "address": "14132 Taos Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.26280604262836",
+        "lon": "-122.01753974520022"
+      }
+    },
+    {
+      "address": "3770 Honolulu Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.287594428124464",
+        "lon": "-121.82321113697024"
+      }
+    },
+    {
+      "address": "123 Duane St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.32476372335549",
+        "lon": "-121.88476937705346"
+      }
+    },
+    {
+      "address": "7375 Rollingdell Dr, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.30705417657199",
+        "lon": "-122.03376400626995"
+      }
+    },
+    {
+      "address": "1154 Brandybuck Way, San Jose, CA 95121",
+      "location": {
+        "lat": "37.29844154453979",
+        "lon": "-121.82028749506132"
+      }
+    },
+    {
+      "address": "520 E Julian St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.345606159284706",
+        "lon": "-121.88260968162685"
+      }
+    },
+    {
+      "address": "20021 Stevens Creek Blvd, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.32328558476134",
+        "lon": "-122.02409911968783"
+      }
+    },
+    {
+      "address": "920 Stewart Dr, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.38333661287115",
+        "lon": "-122.00564870730469"
+      }
+    },
+    {
+      "address": "145 Aguacate Ct, San Jose, CA 95116",
+      "location": {
+        "lat": "37.35990840370935",
+        "lon": "-121.85006268144835"
+      }
+    },
+    {
+      "address": "4116 Carola Ct, San Jose, CA 95130",
+      "location": {
+        "lat": "37.29625292912444",
+        "lon": "-121.97400778015904"
+      }
+    },
+    {
+      "address": "1483 Carrington Cir, San Jose, CA 95125",
+      "location": {
+        "lat": "37.274453502234294",
+        "lon": "-121.89441045336429"
+      }
+    },
+    {
+      "address": "80 W Rincon Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28458979930953",
+        "lon": "-121.95116207931173"
+      }
+    },
+    {
+      "address": "1208 Arlington Ln, San Jose, CA 95129",
+      "location": {
+        "lat": "37.30206337687002",
+        "lon": "-122.02686691859539"
+      }
+    },
+    {
+      "address": "1764 Wayne Cir, San Jose, CA 95131",
+      "location": {
+        "lat": "37.38810011636046",
+        "lon": "-121.8967094370427"
+      }
+    },
+    {
+      "address": "3147 Cropley Ave, San Jose, CA 95132",
+      "location": {
+        "lat": "37.40869856364589",
+        "lon": "-121.87121435530925"
+      }
+    },
+    {
+      "address": "7472 Dumas Dr, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.310487301796",
+        "lon": "-122.03558113053492"
+      }
+    },
+    {
+      "address": "10129 Mello Pl, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.32155629941513",
+        "lon": "-122.02165342248271"
+      }
+    },
+    {
+      "address": "705 Los Esteros Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.438824868619875",
+        "lon": "-121.9483561849073"
+      }
+    },
+    {
+      "address": "1400 Parkmoor Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.31648014249057",
+        "lon": "-121.91186677986566"
+      }
+    },
+    {
+      "address": "967 Bellomo Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.35674576814265",
+        "lon": "-122.01589885702124"
+      }
+    },
+    {
+      "address": "14599 Clearview Dr, Los Gatos, CA 95032",
+      "location": {
+        "lat": "37.25579636891323",
+        "lon": "-121.97522133616627"
+      }
+    },
+    {
+      "address": "4950 Patrick Henry Dr, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.40214084255406",
+        "lon": "-121.9862635733461"
+      }
+    },
+    {
+      "address": "120 E Gish Rd, San Jose, CA 95112",
+      "location": {
+        "lat": "37.36262615228274",
+        "lon": "-121.90704323983456"
+      }
+    },
+    {
+      "address": "1546 Hallcrest Dr, San Jose, CA 95118",
+      "location": {
+        "lat": "37.261627792564745",
+        "lon": "-121.89755185169855"
+      }
+    },
+    {
+      "address": "20565 Verde Vista Ln, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.26926218409427",
+        "lon": "-122.03342079524668"
+      }
+    },
+    {
+      "address": "1139 Delynn Way, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28452278655465",
+        "lon": "-121.88511188006464"
+      }
+    },
+    {
+      "address": "215 Chateau La Salle Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.29364637931837",
+        "lon": "-121.85646336825212"
+      }
+    },
+    {
+      "address": "439 S First St, San Jose, CA 95113",
+      "location": {
+        "lat": "37.329282563310244",
+        "lon": "-121.88583353919012"
+      }
+    },
+    {
+      "address": "1039 Montague Expy, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.41686115671421",
+        "lon": "-121.88370926535082"
+      }
+    },
+    {
+      "address": "13160 Haga Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.28529359317857",
+        "lon": "-121.83581090210414"
+      }
+    },
+    {
+      "address": "11740 Berryessa Rd, San Jose, CA 95133",
+      "location": {
+        "lat": "37.366169441552174",
+        "lon": "-121.87954007417827"
+      }
+    },
+    {
+      "address": "1626 Orlando Dr, San Jose, CA 95122",
+      "location": {
+        "lat": "37.333692585017566",
+        "lon": "-121.83566756337957"
+      }
+    },
+    {
+      "address": "771 Nevin Way, San Jose, CA 95128",
+      "location": {
+        "lat": "37.31272317048478",
+        "lon": "-121.91762384829154"
+      }
+    },
+    {
+      "address": "1522 Redding Park Ln, Campbell, CA 95008",
+      "location": {
+        "lat": "37.26490499695859",
+        "lon": "-121.94468415044454"
+      }
+    },
+    {
+      "address": "12147 Parker Ranch Rd, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.29201371922977",
+        "lon": "-122.04363820085517"
+      }
+    },
+    {
+      "address": "1203 Willo Mar Dr, San Jose, CA 95118",
+      "location": {
+        "lat": "37.276788648016236",
+        "lon": "-121.88230593345955"
+      }
+    },
+    {
+      "address": "630 Martin Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.36480631937701",
+        "lon": "-121.94615446622366"
+      }
+    },
+    {
+      "address": "809 Acacia Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.37906473268124",
+        "lon": "-122.01885237995126"
+      }
+    },
+    {
+      "address": "346 Manzanita Ct, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.40561061650899",
+        "lon": "-121.90863914553272"
+      }
+    },
+    {
+      "address": "992 Princess Anne Dr, San Jose, CA 95128",
+      "location": {
+        "lat": "37.30778917778818",
+        "lon": "-121.9277171676428"
+      }
+    },
+    {
+      "address": "850 Lori Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.38393026706243",
+        "lon": "-122.03842852138737"
+      }
+    },
+    {
+      "address": "1330 Sunnycrest Cir, San Jose, CA 95122",
+      "location": {
+        "lat": "37.32032261614264",
+        "lon": "-121.83582001562408"
+      }
+    },
+    {
+      "address": "18436 Chelmsford Dr, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31236222248772",
+        "lon": "-121.9984071097802"
+      }
+    },
+    {
+      "address": "3235 Kifer Rd, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.37422970684385",
+        "lon": "-121.98497971072203"
+      }
+    },
+    {
+      "address": "1584 Grackle Way, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.341940019496874",
+        "lon": "-122.01931221196648"
+      }
+    },
+    {
+      "address": "71 Vista Montaña, San Jose, CA 95134",
+      "location": {
+        "lat": "37.41406666872673",
+        "lon": "-121.95699551162518"
+      }
+    },
+    {
+      "address": "1980 Tarob Ct, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.40640277439617",
+        "lon": "-121.89061623526626"
+      }
+    },
+    {
+      "address": "1220 Vienna Dr, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.40213947186536",
+        "lon": "-121.9989998773383"
+      }
+    },
+    {
+      "address": "425 Firloch Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.37089841880294",
+        "lon": "-122.02118772887705"
+      }
+    },
+    {
+      "address": "4120 Holly Dr, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38979064916355",
+        "lon": "-121.82572265562757"
+      }
+    },
+    {
+      "address": "1528 Hallcrest Dr, San Jose, CA 95118",
+      "location": {
+        "lat": "37.2623071024169",
+        "lon": "-121.89585843718751"
+      }
+    },
+    {
+      "address": "1380 Kifer Rd, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.373180172478065",
+        "lon": "-121.9868891323002"
+      }
+    },
+    {
+      "address": "852 Knollfield Way, San Jose, CA 95136",
+      "location": {
+        "lat": "37.26710055529156",
+        "lon": "-121.86688693863553"
+      }
+    },
+    {
+      "address": "205 Burnham Ct, Campbell, CA 95008",
+      "location": {
+        "lat": "37.289201385883025",
+        "lon": "-121.97541409304998"
+      }
+    },
+    {
+      "address": "4430 Hamilton Ave, San Jose, CA 95130",
+      "location": {
+        "lat": "37.29355657901275",
+        "lon": "-121.98010761679107"
+      }
+    },
+    {
+      "address": "640 W California Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.382144307805014",
+        "lon": "-122.03664298179994"
+      }
+    },
+    {
+      "address": "880 E Estates Dr, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31267683963274",
+        "lon": "-122.01962487951643"
+      }
+    },
+    {
+      "address": "1541 Hallcrest Dr, San Jose, CA 95118",
+      "location": {
+        "lat": "37.26213532849053",
+        "lon": "-121.89706114303198"
+      }
+    },
+    {
+      "address": "18681 Harleigh Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.26944424753603",
+        "lon": "-121.99704055095945"
+      }
+    },
+    {
+      "address": "3186 Fernside Square, San Jose, CA 95132",
+      "location": {
+        "lat": "37.411467361989764",
+        "lon": "-121.86302630064878"
+      }
+    },
+    {
+      "address": "839 Upton Way, San Jose, CA 95136",
+      "location": {
+        "lat": "37.26954128209627",
+        "lon": "-121.86694414926902"
+      }
+    },
+    {
+      "address": "417 Coyote Creek Cir, San Jose, CA 95116",
+      "location": {
+        "lat": "37.35209445917966",
+        "lon": "-121.87251495417881"
+      }
+    },
+    {
+      "address": "2183 Casa Mia Dr, San Jose, CA 95124",
+      "location": {
+        "lat": "37.26593997035499",
+        "lon": "-121.937669624029"
+      }
+    },
+    {
+      "address": "1425 Dubert Ln, San Jose, CA 95122",
+      "location": {
+        "lat": "37.32933827775278",
+        "lon": "-121.84434003503426"
+      }
+    },
+    {
+      "address": "1265 N Capitol Ave, San Jose, CA 95132",
+      "location": {
+        "lat": "37.388536525378456",
+        "lon": "-121.86455715290717"
+      }
+    },
+    {
+      "address": "1000 W Maude Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.39236837243866",
+        "lon": "-122.04206928104303"
+      }
+    },
+    {
+      "address": "595 Vermont St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.34761769521498",
+        "lon": "-121.91820812683837"
+      }
+    },
+    {
+      "address": "1035 Lanark Ct, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34026184943704",
+        "lon": "-122.00581764600183"
+      }
+    },
+    {
+      "address": "7640 Berland Ct, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.301886402983605",
+        "lon": "-122.03993284133387"
+      }
+    },
+    {
+      "address": "1587 Kennewick Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34167008847911",
+        "lon": "-122.0491139189052"
+      }
+    },
+    {
+      "address": "387 S Genevieve Ln, San Jose, CA 95128",
+      "location": {
+        "lat": "37.32174633641458",
+        "lon": "-121.94221020793559"
+      }
+    },
+    {
+      "address": "80 Senter Rd, San Jose, CA 95111",
+      "location": {
+        "lat": "37.2779463148263",
+        "lon": "-121.83345923000336"
+      }
+    },
+    {
+      "address": "2991 Monroe St, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.36438309993389",
+        "lon": "-121.98112789338808"
+      }
+    },
+    {
+      "address": "813 Pierino Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.359953175881",
+        "lon": "-122.02065953657895"
+      }
+    },
+    {
+      "address": "2350 Lundy Pl, San Jose, CA 95131",
+      "location": {
+        "lat": "37.40441813368672",
+        "lon": "-121.88838444911599"
+      }
+    },
+    {
+      "address": "3310 Woodward Ave, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.381966318238995",
+        "lon": "-121.94424858279451"
+      }
+    },
+    {
+      "address": "1135 Lick Ave, San Jose, CA 95110",
+      "location": {
+        "lat": "37.31420934019166",
+        "lon": "-121.8844326385519"
+      }
+    },
+    {
+      "address": "2275 Cherry Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28518944187371",
+        "lon": "-121.89734147428743"
+      }
+    },
+    {
+      "address": "435 Park Ave, San Jose, CA 95110",
+      "location": {
+        "lat": "37.3283400799047",
+        "lon": "-121.89788765499065"
+      }
+    },
+    {
+      "address": "1713 Junction Ave, San Jose, CA 95112",
+      "location": {
+        "lat": "37.37365486652457",
+        "lon": "-121.90767072437193"
+      }
+    },
+    {
+      "address": "5211 Elmwood Dr, San Jose, CA 95130",
+      "location": {
+        "lat": "37.287465363279765",
+        "lon": "-121.99230039986895"
+      }
+    },
+    {
+      "address": "1748 Sweetbriar Dr, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28142986760264",
+        "lon": "-121.91064057303751"
+      }
+    },
+    {
+      "address": "801 N First St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.351304524828784",
+        "lon": "-121.90452105325241"
+      }
+    },
+    {
+      "address": "502 S Fourth St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.3298616595132",
+        "lon": "-121.88109110006232"
+      }
+    },
+    {
+      "address": "11281 Clayton Rd, San Jose, CA 95127",
+      "location": {
+        "lat": "37.35772151714755",
+        "lon": "-121.79853996061094"
+      }
+    },
+    {
+      "address": "803 Dederick Ct, San Jose, CA 95125",
+      "location": {
+        "lat": "37.282936436450406",
+        "lon": "-121.87390629697028"
+      }
+    },
+    {
+      "address": "1606 Peacock Ave, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34120153386908",
+        "lon": "-122.00693248521483"
+      }
+    },
+    {
+      "address": "200 Marianna Way, Campbell, CA 95008",
+      "location": {
+        "lat": "37.289957218818515",
+        "lon": "-121.96458320048286"
+      }
+    },
+    {
+      "address": "4654 Blanco Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.307470993750215",
+        "lon": "-121.98531195267338"
+      }
+    },
+    {
+      "address": "1369 Mauna Kea Ln, San Jose, CA 95132",
+      "location": {
+        "lat": "37.400206652042414",
+        "lon": "-121.85412662228617"
+      }
+    },
+    {
+      "address": "2501 Alvin Ave, San Jose, CA 95121",
+      "location": {
+        "lat": "37.31843113641358",
+        "lon": "-121.82637321098522"
+      }
+    },
+    {
+      "address": "360 S 11th St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.335533242525365",
+        "lon": "-121.87532796005608"
+      }
+    },
+    {
+      "address": "6588 Dartmoor Way, San Jose, CA 95129",
+      "location": {
+        "lat": "37.296798371654674",
+        "lon": "-122.02009095381379"
+      }
+    },
+    {
+      "address": "2240 S Seventh St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.30637397974235",
+        "lon": "-121.85568248890525"
+      }
+    },
+    {
+      "address": "10381 S De Anza Blvd, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31759759352034",
+        "lon": "-122.03329135375562"
+      }
+    },
+    {
+      "address": "850 W Parr Ave, Los Gatos, CA 95032",
+      "location": {
+        "lat": "37.26357315570128",
+        "lon": "-121.97113478209391"
+      }
+    },
+    {
+      "address": "1126 Colonial Ln, San Jose, CA 95132",
+      "location": {
+        "lat": "37.397835058548026",
+        "lon": "-121.83797475628742"
+      }
+    },
+    {
+      "address": "19411 San Marcos Rd, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.259013530370105",
+        "lon": "-122.0114113642432"
+      }
+    },
+    {
+      "address": "1079 Warren Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.31234802548576",
+        "lon": "-121.89570324815666"
+      }
+    },
+    {
+      "address": "1302 N Fourth St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.36197384777628",
+        "lon": "-121.90478050851891"
+      }
+    },
+    {
+      "address": "807 Beaver Creek Way, San Jose, CA 95133",
+      "location": {
+        "lat": "37.37684136006771",
+        "lon": "-121.85811740470498"
+      }
+    },
+    {
+      "address": "3510 Ranch Pl, San Jose, CA 95132",
+      "location": {
+        "lat": "37.4092177141721",
+        "lon": "-121.84362104512756"
+      }
+    },
+    {
+      "address": "5050 Russo Dr, San Jose, CA 95118",
+      "location": {
+        "lat": "37.254634250175855",
+        "lon": "-121.8810507464187"
+      }
+    },
+    {
+      "address": "225 Union Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28361279010577",
+        "lon": "-121.93690125978468"
+      }
+    },
+    {
+      "address": "1138 Raposa Dr, San Jose, CA 95121",
+      "location": {
+        "lat": "37.29881584735263",
+        "lon": "-121.82177124955456"
+      }
+    },
+    {
+      "address": "3874 Pruneridge Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.33214072773484",
+        "lon": "-122.00353706788889"
+      }
+    },
+    {
+      "address": "175 Nortech Pkwy, San Jose, CA 95134",
+      "location": {
+        "lat": "37.424366288002794",
+        "lon": "-121.95545888840655"
+      }
+    },
+    {
+      "address": "560 McCarthy Blvd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.418906440998406",
+        "lon": "-121.92027101081678"
+      }
+    },
+    {
+      "address": "1414 Vallejo Dr, San Jose, CA 95130",
+      "location": {
+        "lat": "37.29869812771141",
+        "lon": "-121.97852645997247"
+      }
+    },
+    {
+      "address": "2130 Cheryl Way, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28722362157306",
+        "lon": "-121.90155816875112"
+      }
+    },
+    {
+      "address": "830 Royal Palm Ct, San Jose, CA 95133",
+      "location": {
+        "lat": "37.3778817636148",
+        "lon": "-121.85447215092174"
+      }
+    },
+    {
+      "address": "2830 Moorpark Ave, San Jose, CA 95128",
+      "location": {
+        "lat": "37.315648630598595",
+        "lon": "-121.94406323993682"
+      }
+    },
+    {
+      "address": "4974 Gazania Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.26745301593522",
+        "lon": "-121.81637081614406"
+      }
+    },
+    {
+      "address": "1253 Mace Dr, San Jose, CA 95127",
+      "location": {
+        "lat": "37.36330747625277",
+        "lon": "-121.80041417822883"
+      }
+    },
+    {
+      "address": "1512 Nuthatch Ln, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34408135132298",
+        "lon": "-122.01056727490946"
+      }
+    },
+    {
+      "address": "485 Asbury St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.344422346193866",
+        "lon": "-121.91216836963656"
+      }
+    },
+    {
+      "address": "1194 N Mathilda Ave, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.40995869157901",
+        "lon": "-122.02597202059914"
+      }
+    },
+    {
+      "address": "12414 Brookglen Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.28798770936907",
+        "lon": "-122.00488501387488"
+      }
+    },
+    {
+      "address": "4752 Elmhurst Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.315038198763304",
+        "lon": "-121.98591050994062"
+      }
+    },
+    {
+      "address": "640 Rettus Ct, San Jose, CA 95111",
+      "location": {
+        "lat": "37.30909522921416",
+        "lon": "-121.84540652402623"
+      }
+    },
+    {
+      "address": "1188 Bordeaux Dr, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.408433193082",
+        "lon": "-122.02256632607312"
+      }
+    },
+    {
+      "address": "894 S Eighth St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.326530140328785",
+        "lon": "-121.87277807188393"
+      }
+    },
+    {
+      "address": "10307 Bret Ave, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31845683613758",
+        "lon": "-122.00446269726771"
+      }
+    },
+    {
+      "address": "6740 John Dr, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31252043008427",
+        "lon": "-122.02233493585017"
+      }
+    },
+    {
+      "address": "4953 Avenida de Lago, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.40717413282363",
+        "lon": "-121.95882475700876"
+      }
+    },
+    {
+      "address": "2250 Almaden Expy, San Jose, CA 95125",
+      "location": {
+        "lat": "37.29346186435707",
+        "lon": "-121.87642821206184"
+      }
+    },
+    {
+      "address": "1085 Tasman Dr, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.405101253690106",
+        "lon": "-122.00403812471208"
+      }
+    },
+    {
+      "address": "2266 Creek Bed Ct, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.393551539666724",
+        "lon": "-121.96420481721258"
+      }
+    },
+    {
+      "address": "840 Emory Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.274904734182236",
+        "lon": "-121.95681764373352"
+      }
+    },
+    {
+      "address": "1145 Pine Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.29767388388856",
+        "lon": "-121.89525117513182"
+      }
+    },
+    {
+      "address": "3236 Blue Mountain Dr, San Jose, CA 95127",
+      "location": {
+        "lat": "37.34996711660305",
+        "lon": "-121.80695690272995"
+      }
+    },
+    {
+      "address": "1501 W Campbell Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28689251395499",
+        "lon": "-121.9757609466146"
+      }
+    },
+    {
+      "address": "1033 Wood Duck Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.344544915270845",
+        "lon": "-121.99657940827575"
+      }
+    },
+    {
+      "address": "2620 Sturla Dr, San Jose, CA 95148",
+      "location": {
+        "lat": "37.321868601899034",
+        "lon": "-121.79966268740748"
+      }
+    },
+    {
+      "address": "821 McCarthy Blvd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.4165344552038",
+        "lon": "-121.9188605861357"
+      }
+    },
+    {
+      "address": "545 Shadow Glen, San Jose, CA 95129",
+      "location": {
+        "lat": "37.316809407056695",
+        "lon": "-121.97885362525702"
+      }
+    },
+    {
+      "address": "5139 Snow Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.26785771892145",
+        "lon": "-121.80354770138938"
+      }
+    },
+    {
+      "address": "605 Laurelwood Rd, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.38044520679302",
+        "lon": "-121.94553586327673"
+      }
+    },
+    {
+      "address": "4443 Pinon Pl, San Jose, CA 95136",
+      "location": {
+        "lat": "37.270603292407834",
+        "lon": "-121.83146899595434"
+      }
+    },
+    {
+      "address": "1447 Hanchett Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.32829121910438",
+        "lon": "-121.91845841200222"
+      }
+    },
+    {
+      "address": "4004 Williams Rd, San Jose, CA 95117",
+      "location": {
+        "lat": "37.30813860975911",
+        "lon": "-121.9720218607025"
+      }
+    },
+    {
+      "address": "1094 W Maude Ave, Mountain View, CA 94085",
+      "location": {
+        "lat": "37.39378357651717",
+        "lon": "-122.04534958315196"
+      }
+    },
+    {
+      "address": "490 Hyde Park Dr, San Jose, CA 95136",
+      "location": {
+        "lat": "37.2617369626447",
+        "lon": "-121.84958764355741"
+      }
+    },
+    {
+      "address": "625 N McCarthy Blvd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.43582103125741",
+        "lon": "-121.92443817685725"
+      }
+    },
+    {
+      "address": "1610 Monterey Hwy, San Jose, CA 95112",
+      "location": {
+        "lat": "37.3132787985589",
+        "lon": "-121.87017728784586"
+      }
+    },
+    {
+      "address": "274 E Mission St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.35399516398326",
+        "lon": "-121.89594412119484"
+      }
+    },
+    {
+      "address": "13337 Pierce Rd, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27443946803904",
+        "lon": "-122.04172977242098"
+      }
+    },
+    {
+      "address": "525 E Hamilton Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.29693618470283",
+        "lon": "-121.94034209547057"
+      }
+    },
+    {
+      "address": "20116 Chateau Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.279332885931204",
+        "lon": "-122.02332514678825"
+      }
+    },
+    {
+      "address": "10900 N Blaney Ave, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.335448319089124",
+        "lon": "-122.02018644308988"
+      }
+    },
+    {
+      "address": "1200 W Latimer Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.29039818927829",
+        "lon": "-121.9712127598771"
+      }
+    },
+    {
+      "address": "5522 Sean Cir, San Jose, CA 95123",
+      "location": {
+        "lat": "37.25365579570037",
+        "lon": "-121.82984082705354"
+      }
+    },
+    {
+      "address": "14675 Winchester Blvd, Los Gatos, CA 95032",
+      "location": {
+        "lat": "37.255588020065794",
+        "lon": "-121.96717285722492"
+      }
+    },
+    {
+      "address": "18802 McFarland Ave, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.277843032520515",
+        "lon": "-121.99972585980343"
+      }
+    },
+    {
+      "address": "619 San Miguel Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.337330702869394",
+        "lon": "-121.96363106746266"
+      }
+    },
+    {
+      "address": "111 Hillsdale Ave, San Jose, CA 95136",
+      "location": {
+        "lat": "37.28270515235508",
+        "lon": "-121.84616826497466"
+      }
+    },
+    {
+      "address": "2749 Glorietta Cir, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.32854795009161",
+        "lon": "-121.97378839197646"
+      }
+    },
+    {
+      "address": "21990 Prospect Rd, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.284561505922845",
+        "lon": "-122.05383635724662"
+      }
+    },
+    {
+      "address": "3298 Woody Ln, San Jose, CA 95132",
+      "location": {
+        "lat": "37.41418316102133",
+        "lon": "-121.86395843283039"
+      }
+    },
+    {
+      "address": "538 Carver St, San Jose, CA 95127",
+      "location": {
+        "lat": "37.37994822243023",
+        "lon": "-121.83781202702951"
+      }
+    },
+    {
+      "address": "840 Quince Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.3399942712262",
+        "lon": "-121.9864427144068"
+      }
+    },
+    {
+      "address": "300 Grant St, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28892862748601",
+        "lon": "-121.94321608420827"
+      }
+    },
+    {
+      "address": "2315 Canoas Garden Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.29086986170465",
+        "lon": "-121.8752216390004"
+      }
+    },
+    {
+      "address": "1503 Little Orchard St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.311560649373575",
+        "lon": "-121.8767287134836"
+      }
+    },
+    {
+      "address": "3755 Pruneridge Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.331782010068046",
+        "lon": "-121.99957803883194"
+      }
+    },
+    {
+      "address": "2311 Elkhorn Ct, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28414384645961",
+        "lon": "-121.90185009019274"
+      }
+    },
+    {
+      "address": "1482 Shore Dr, San Jose, CA 95131",
+      "location": {
+        "lat": "37.372038851360784",
+        "lon": "-121.88128472743277"
+      }
+    },
+    {
+      "address": "20888 Dunbar Dr, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.32964580135077",
+        "lon": "-122.03932809918638"
+      }
+    },
+    {
+      "address": "1028 Cynthia Ln, San Jose, CA 95129",
+      "location": {
+        "lat": "37.30895967955992",
+        "lon": "-122.02438454701907"
+      }
+    },
+    {
+      "address": "862 S Wolfe Rd, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.36058313336792",
+        "lon": "-122.01372364113573"
+      }
+    },
+    {
+      "address": "2285 Cherry Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.284876003025104",
+        "lon": "-121.89713664990605"
+      }
+    },
+    {
+      "address": "3638 Tuers Rd, San Jose, CA 95121",
+      "location": {
+        "lat": "37.29525955332724",
+        "lon": "-121.81930611477098"
+      }
+    },
+    {
+      "address": "1543 Rue Avati, San Jose, CA 95131",
+      "location": {
+        "lat": "37.38750413301452",
+        "lon": "-121.87985433244928"
+      }
+    },
+    {
+      "address": "361 Paseo Refugio, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.437804465502396",
+        "lon": "-121.90054468440525"
+      }
+    },
+    {
+      "address": "1500 Duane Ave, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.37855755750827",
+        "lon": "-121.95550910679859"
+      }
+    },
+    {
+      "address": "10730 N Blaney Ave, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.33358605029271",
+        "lon": "-122.02195272511149"
+      }
+    },
+    {
+      "address": "360 Emerick Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.362437510742986",
+        "lon": "-121.82142493218194"
+      }
+    },
+    {
+      "address": "1130 S 11th St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.32432521398831",
+        "lon": "-121.86743728873792"
+      }
+    },
+    {
+      "address": "4195 Sierra Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.41578132503822",
+        "lon": "-121.8246283914145"
+      }
+    },
+    {
+      "address": "2610 Boren Dr, San Jose, CA 95121",
+      "location": {
+        "lat": "37.31041443899081",
+        "lon": "-121.83584973196925"
+      }
+    },
+    {
+      "address": "4934 McCoy Ave, San Jose, CA 95130",
+      "location": {
+        "lat": "37.276178931140706",
+        "lon": "-121.98699914543658"
+      }
+    },
+    {
+      "address": "845 Lewis Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.37900156625783",
+        "lon": "-122.03955380349252"
+      }
+    },
+    {
+      "address": "4951 Cherry Ave, San Jose, CA 95118",
+      "location": {
+        "lat": "37.25668434402744",
+        "lon": "-121.88173904477603"
+      }
+    },
+    {
+      "address": "10071 Santa Clara Ave, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.32355184957676",
+        "lon": "-122.0518880177942"
+      }
+    },
+    {
+      "address": "1140 Yvette Ct, San Jose, CA 95118",
+      "location": {
+        "lat": "37.259783430374135",
+        "lon": "-121.87809385371646"
+      }
+    },
+    {
+      "address": "2431 Futamase Ct, San Jose, CA 95111",
+      "location": {
+        "lat": "37.308208856682796",
+        "lon": "-121.84392276952259"
+      }
+    },
+    {
+      "address": "582 Dunholme Way, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.3446358361901",
+        "lon": "-122.02763429155833"
+      }
+    },
+    {
+      "address": "1301 S Milpitas Blvd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.415787424437646",
+        "lon": "-121.88880050351808"
+      }
+    },
+    {
+      "address": "1394 Socorro Ave, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.389833195223794",
+        "lon": "-121.98873030586311"
+      }
+    },
+    {
+      "address": "13879 Trinity Ave, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.26643135685388",
+        "lon": "-122.03887751799111"
+      }
+    },
+    {
+      "address": "1171 N Capitol Ave, San Jose, CA 95132",
+      "location": {
+        "lat": "37.38715694898164",
+        "lon": "-121.8618792782066"
+      }
+    },
+    {
+      "address": "2140 Marlboro Ct, San Jose, CA 95128",
+      "location": {
+        "lat": "37.30951576224227",
+        "lon": "-121.93021259996571"
+      }
+    },
+    {
+      "address": "1333 Norman Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.3509033383869",
+        "lon": "-122.01017147294665"
+      }
+    },
+    {
+      "address": "2450 Zanker Rd, San Jose, CA 95131",
+      "location": {
+        "lat": "37.38744061120465",
+        "lon": "-121.92170423714282"
+      }
+    },
+    {
+      "address": "3613 Deep Harbor Ct, San Jose, CA 95111",
+      "location": {
+        "lat": "37.290620313417186",
+        "lon": "-121.82356611741011"
+      }
+    },
+    {
+      "address": "706 E Gish Rd, San Jose, CA 95112",
+      "location": {
+        "lat": "37.370033606333585",
+        "lon": "-121.89561850535031"
+      }
+    },
+    {
+      "address": "3226 Scott Blvd, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.378761209274245",
+        "lon": "-121.96721235561724"
+      }
+    },
+    {
+      "address": "19868 Bonnie Ridge Way, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27371480870109",
+        "lon": "-122.02043701602871"
+      }
+    },
+    {
+      "address": "19550 Douglass Ln, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.259258795482225",
+        "lon": "-122.01498879750712"
+      }
+    },
+    {
+      "address": "1580 Park Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.33160954872843",
+        "lon": "-121.92097322602363"
+      }
+    },
+    {
+      "address": "840 Mulberry Ln, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.36639338120134",
+        "lon": "-122.05081157418115"
+      }
+    },
+    {
+      "address": "3610 El Camino Real, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.35196089357797",
+        "lon": "-121.99759571202114"
+      }
+    },
+    {
+      "address": "1598 Laurelwood Crossing Pl, San Jose, CA 95138",
+      "location": {
+        "lat": "37.29094845764439",
+        "lon": "-121.79950097906512"
+      }
+    },
+    {
+      "address": "13615 Vaquero Ct, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.270911936008666",
+        "lon": "-122.04902446115317"
+      }
+    },
+    {
+      "address": "878 Russet Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.362778028685184",
+        "lon": "-122.03946863221269"
+      }
+    },
+    {
+      "address": "1960 The Alameda, San Jose, CA 95126",
+      "location": {
+        "lat": "37.34282313313276",
+        "lon": "-121.92365717566665"
+      }
+    },
+    {
+      "address": "1856 MacDuee Way, San Jose, CA 95121",
+      "location": {
+        "lat": "37.30777248843504",
+        "lon": "-121.80722826373136"
+      }
+    },
+    {
+      "address": "436 Page St, San Jose, CA 95126",
+      "location": {
+        "lat": "37.320805089716586",
+        "lon": "-121.91489182675679"
+      }
+    },
+    {
+      "address": "645 Almanor Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.398283204347976",
+        "lon": "-122.03061371857021"
+      }
+    },
+    {
+      "address": "2975 Glen Crow Ct, San Jose, CA 95148",
+      "location": {
+        "lat": "37.33291834548099",
+        "lon": "-121.80014779430242"
+      }
+    },
+    {
+      "address": "15680 Woodard Rd, San Jose, CA 95124",
+      "location": {
+        "lat": "37.260131191490835",
+        "lon": "-121.94402052168881"
+      }
+    },
+    {
+      "address": "1531 Queenstown Ct, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34391648564818",
+        "lon": "-122.03866807878055"
+      }
+    },
+    {
+      "address": "5359 Pecan Blossom Dr, San Jose, CA 95123",
+      "location": {
+        "lat": "37.25741165619772",
+        "lon": "-121.81120056045644"
+      }
+    },
+    {
+      "address": "18597 Devon Ave, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27886273016859",
+        "lon": "-121.99601508677765"
+      }
+    },
+    {
+      "address": "1980 Senter Rd, San Jose, CA 95112",
+      "location": {
+        "lat": "37.31407425973848",
+        "lon": "-121.85254404126677"
+      }
+    },
+    {
+      "address": "2520 Alvin Ave, San Jose, CA 95121",
+      "location": {
+        "lat": "37.3192219128418",
+        "lon": "-121.82542235195547"
+      }
+    },
+    {
+      "address": "1235 Magnolia Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.3328185108959",
+        "lon": "-121.91752599697413"
+      }
+    },
+    {
+      "address": "2846 Sycamore Way, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.330579487327746",
+        "lon": "-121.97783631457305"
+      }
+    },
+    {
+      "address": "550 Dawn Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.360261020600966",
+        "lon": "-122.03457954430144"
+      }
+    },
+    {
+      "address": "1916 E San Antonio St, San Jose, CA 95116",
+      "location": {
+        "lat": "37.352110544223656",
+        "lon": "-121.8477729150964"
+      }
+    },
+    {
+      "address": "3819 Steinbaugh Ct, San Jose, CA 95132",
+      "location": {
+        "lat": "37.40104106132577",
+        "lon": "-121.82696407821733"
+      }
+    },
+    {
+      "address": "7200 Bollinger Rd, San Jose, CA 95129",
+      "location": {
+        "lat": "37.31096778454387",
+        "lon": "-122.02996838250718"
+      }
+    },
+    {
+      "address": "2860 Junction Ave, San Jose, CA 95134",
+      "location": {
+        "lat": "37.399044031273824",
+        "lon": "-121.9268858375503"
+      }
+    },
+    {
+      "address": "3211 Scott Blvd, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.37978007944398",
+        "lon": "-121.96754239688659"
+      }
+    },
+    {
+      "address": "515 Crawford Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.36336334567564",
+        "lon": "-122.03280513548287"
+      }
+    },
+    {
+      "address": "11051 Canyon Dr, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38941933717509",
+        "lon": "-121.81884747625898"
+      }
+    },
+    {
+      "address": "555 W Hacienda Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.27006217234681",
+        "lon": "-121.95949404972282"
+      }
+    },
+    {
+      "address": "880 Fox Ln, San Jose, CA 95131",
+      "location": {
+        "lat": "37.386837092756075",
+        "lon": "-121.90325980777928"
+      }
+    },
+    {
+      "address": "719 Hibiscus Pl, San Jose, CA 95117",
+      "location": {
+        "lat": "37.313687220845836",
+        "lon": "-121.9737362140613"
+      }
+    },
+    {
+      "address": "5551 Sweigert Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.425207659231575",
+        "lon": "-121.81058898222244"
+      }
+    },
+    {
+      "address": "3955 Yellowstone Dr, San Jose, CA 95130",
+      "location": {
+        "lat": "37.29886886189641",
+        "lon": "-121.97108288924996"
+      }
+    },
+    {
+      "address": "2196 Toryglen Way, San Jose, CA 95121",
+      "location": {
+        "lat": "37.30623543658272",
+        "lon": "-121.79794265583908"
+      }
+    },
+    {
+      "address": "3100 Lakeside Dr, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.386526586850984",
+        "lon": "-121.98317579182556"
+      }
+    },
+    {
+      "address": "104 Greentree Way, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.4095938327899",
+        "lon": "-121.90455149493907"
+      }
+    },
+    {
+      "address": "1790 Coastland Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.2999837598075",
+        "lon": "-121.88631209376825"
+      }
+    },
+    {
+      "address": "1918 N Star Pl, San Jose, CA 95131",
+      "location": {
+        "lat": "37.40023707397244",
+        "lon": "-121.8856625083041"
+      }
+    },
+    {
+      "address": "21215 Chadwick Ct, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.277469841840386",
+        "lon": "-122.0454172425993"
+      }
+    },
+    {
+      "address": "2940 Mead Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.37153473210126",
+        "lon": "-121.98041912600551"
+      }
+    },
+    {
+      "address": "1123 Spiro Dr, San Jose, CA 95116",
+      "location": {
+        "lat": "37.34035268260135",
+        "lon": "-121.86042597164406"
+      }
+    },
+    {
+      "address": "4855 Atherton Ave, San Jose, CA 95130",
+      "location": {
+        "lat": "37.29478523083427",
+        "lon": "-121.987207889163"
+      }
+    },
+    {
+      "address": "4548 Hamilton Ave, San Jose, CA 95130",
+      "location": {
+        "lat": "37.29346390561857",
+        "lon": "-121.9822925055744"
+      }
+    },
+    {
+      "address": "3061 Zanker Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.39809272673108",
+        "lon": "-121.93269050040217"
+      }
+    },
+    {
+      "address": "14717 Nelson Way, San Jose, CA 95124",
+      "location": {
+        "lat": "37.256305472657445",
+        "lon": "-121.92608632080587"
+      }
+    },
+    {
+      "address": "3575 Monroe St, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.36781677803273",
+        "lon": "-121.99490620070826"
+      }
+    },
+    {
+      "address": "2211 Junction Ave, San Jose, CA 95131",
+      "location": {
+        "lat": "37.38527017639225",
+        "lon": "-121.9154689514402"
+      }
+    },
+    {
+      "address": "1720 Halford Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.35518769403934",
+        "lon": "-121.99886778718638"
+      }
+    },
+    {
+      "address": "1330 Orleans Dr, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.412227336520424",
+        "lon": "-122.00555779354946"
+      }
+    },
+    {
+      "address": "922 Weddell Ct, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.398550023794414",
+        "lon": "-122.02046050330414"
+      }
+    },
+    {
+      "address": "120 Granite Rock Way, San Jose, CA 95136",
+      "location": {
+        "lat": "37.280923604284496",
+        "lon": "-121.8426716086405"
+      }
+    },
+    {
+      "address": "275B E Campbell Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28722578310334",
+        "lon": "-121.94459258248884"
+      }
+    },
+    {
+      "address": "805 Aldo Ave, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.38422028698941",
+        "lon": "-121.94847576094763"
+      }
+    },
+    {
+      "address": "14288 Chester Ave, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.260984548438934",
+        "lon": "-122.00524515248603"
+      }
+    },
+    {
+      "address": "2654 Greenrock Rd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.42556769449145",
+        "lon": "-121.85919544179654"
+      }
+    },
+    {
+      "address": "1501 McCarthy Blvd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.40863776416715",
+        "lon": "-121.92135506871429"
+      }
+    },
+    {
+      "address": "4962 Ruttner Ct, San Jose, CA 95111",
+      "location": {
+        "lat": "37.274399743939185",
+        "lon": "-121.80062457909496"
+      }
+    },
+    {
+      "address": "240 Michelle Dr, Campbell, CA 95008",
+      "location": {
+        "lat": "37.29013238781455",
+        "lon": "-121.9721527600447"
+      }
+    },
+    {
+      "address": "120 Charcot Ave, San Jose, CA 95131",
+      "location": {
+        "lat": "37.37907716704777",
+        "lon": "-121.92045017043935"
+      }
+    },
+    {
+      "address": "438 W Maude Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.38978560943123",
+        "lon": "-122.03186301214159"
+      }
+    },
+    {
+      "address": "800 Spreckles Ave, San Jose, CA 95134",
+      "location": {
+        "lat": "37.43478914139583",
+        "lon": "-121.97070371766901"
+      }
+    },
+    {
+      "address": "2720 Uridias Ranch Rd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.43914603764837",
+        "lon": "-121.85676661199528"
+      }
+    },
+    {
+      "address": "421 S Monroe St, San Jose, CA 95128",
+      "location": {
+        "lat": "37.320664273430275",
+        "lon": "-121.9435255253396"
+      }
+    },
+    {
+      "address": "1717 Lafayette St, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.35682600154582",
+        "lon": "-121.94588337109836"
+      }
+    },
+    {
+      "address": "2054 Old Piedmont Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.419809144233014",
+        "lon": "-121.8506435573844"
+      }
+    },
+    {
+      "address": "14916 Freeman Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.391689892798965",
+        "lon": "-121.83262589158875"
+      }
+    },
+    {
+      "address": "975 Rock Canyon Cir, San Jose, CA 95127",
+      "location": {
+        "lat": "37.39300113100894",
+        "lon": "-121.82856788024336"
+      }
+    },
+    {
+      "address": "2880 Scott Blvd, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.37281267722057",
+        "lon": "-121.96247485602446"
+      }
+    },
+    {
+      "address": "19917 Merribrook Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.26967952929394",
+        "lon": "-122.02141422612765"
+      }
+    },
+    {
+      "address": "1181 Valelake Ct, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.39851027981549",
+        "lon": "-121.9972653241092"
+      }
+    },
+    {
+      "address": "680 W Maude Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.389946858324365",
+        "lon": "-122.03366986225427"
+      }
+    },
+    {
+      "address": "24 Cleaves Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.33104368367767",
+        "lon": "-121.90704486397527"
+      }
+    },
+    {
+      "address": "507 N Fifth St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.34729651411313",
+        "lon": "-121.89314354213946"
+      }
+    },
+    {
+      "address": "45 E Reed St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.32746985395818",
+        "lon": "-121.8832147132206"
+      }
+    },
+    {
+      "address": "501 Sycamore Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.410760127247386",
+        "lon": "-121.9138791724445"
+      }
+    },
+    {
+      "address": "871 Rosemary Terrace, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.356550710235894",
+        "lon": "-122.01468792835698"
+      }
+    },
+    {
+      "address": "1190 N 13th St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.36471260203209",
+        "lon": "-121.8939162977148"
+      }
+    },
+    {
+      "address": "20846 Dunbar Dr, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.32955231790843",
+        "lon": "-122.03856746131594"
+      }
+    },
+    {
+      "address": "525 S 16th St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.33515637171316",
+        "lon": "-121.86973873914043"
+      }
+    },
+    {
+      "address": "1922 The Alameda, San Jose, CA 95126",
+      "location": {
+        "lat": "37.34187784539815",
+        "lon": "-121.92248560640162"
+      }
+    },
+    {
+      "address": "358 San Jose Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.307599302193545",
+        "lon": "-121.87729051793113"
+      }
+    },
+    {
+      "address": "1319 Los Palos Way, San Jose, CA 95118",
+      "location": {
+        "lat": "37.26459572196029",
+        "lon": "-121.88488250884504"
+      }
+    },
+    {
+      "address": "3078 Warrington Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.352313235659",
+        "lon": "-121.8164024787906"
+      }
+    },
+    {
+      "address": "12048 Parker Ranch Rd, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.293683131084066",
+        "lon": "-122.04134242422333"
+      }
+    },
+    {
+      "address": "12832 Star Ridge Ct, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.28082595169994",
+        "lon": "-122.04881141327142"
+      }
+    },
+    {
+      "address": "2666 Hill Park Dr, San Jose, CA 95124",
+      "location": {
+        "lat": "37.27399041615061",
+        "lon": "-121.91432709809189"
+      }
+    },
+    {
+      "address": "191 N Central Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28999283174106",
+        "lon": "-121.94359877257683"
+      }
+    },
+    {
+      "address": "2144 Royal Dr, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.3570603455774",
+        "lon": "-121.96212087955001"
+      }
+    },
+    {
+      "address": "19545 Northampton Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.28779368763042",
+        "lon": "-122.01389660618823"
+      }
+    },
+    {
+      "address": "1090 Lovell Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.27220112666516",
+        "lon": "-121.96816084980671"
+      }
+    },
+    {
+      "address": "10425 Anderson Rd, San Jose, CA 95127",
+      "location": {
+        "lat": "37.37629852531814",
+        "lon": "-121.8083697927513"
+      }
+    },
+    {
+      "address": "19945 Braemar Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27212750602011",
+        "lon": "-122.02211196870557"
+      }
+    },
+    {
+      "address": "1239 Kaylene Ct, San Jose, CA 95127",
+      "location": {
+        "lat": "37.36083404144507",
+        "lon": "-121.80654940796575"
+      }
+    },
+    {
+      "address": "1134 Oakbluff Ct, San Jose, CA 95131",
+      "location": {
+        "lat": "37.38104039481982",
+        "lon": "-121.86732447004145"
+      }
+    },
+    {
+      "address": "522 N Monroe St, San Jose, CA 95128",
+      "location": {
+        "lat": "37.32725734265387",
+        "lon": "-121.94296778258838"
+      }
+    },
+    {
+      "address": "3039 Rubino Cir, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28104329832007",
+        "lon": "-121.87598578221206"
+      }
+    },
+    {
+      "address": "785 Kiely Blvd, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.337770030338426",
+        "lon": "-121.97586453329738"
+      }
+    },
+    {
+      "address": "2777 Scottsdale Dr, San Jose, CA 95148",
+      "location": {
+        "lat": "37.31995224078074",
+        "lon": "-121.80415999868266"
+      }
+    },
+    {
+      "address": "3167 Sierra Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.39819009182087",
+        "lon": "-121.85062943434907"
+      }
+    },
+    {
+      "address": "1252 State St, San Jose, CA 95002",
+      "location": {
+        "lat": "37.42796974414808",
+        "lon": "-121.97404599726309"
+      }
+    },
+    {
+      "address": "830 W Maude Ave, Mountain View, CA 94043",
+      "location": {
+        "lat": "37.397274350339984",
+        "lon": "-122.0491514444044"
+      }
+    },
+    {
+      "address": "1964 Abinante Ln, San Jose, CA 95124",
+      "location": {
+        "lat": "37.27013939820256",
+        "lon": "-121.92905029357375"
+      }
+    },
+    {
+      "address": "2298 Warfield Way, San Jose, CA 95122",
+      "location": {
+        "lat": "37.31373353235028",
+        "lon": "-121.84171716680918"
+      }
+    },
+    {
+      "address": "286 N Abbott Ave, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.43325188779033",
+        "lon": "-121.91502995207439"
+      }
+    },
+    {
+      "address": "1350 Oakland Rd, San Jose, CA 95112",
+      "location": {
+        "lat": "37.370484585747974",
+        "lon": "-121.89186306125842"
+      }
+    },
+    {
+      "address": "1115 Walsh Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.371510636868486",
+        "lon": "-121.95230089912606"
+      }
+    },
+    {
+      "address": "1035 Wilsham Dr, San Jose, CA 95132",
+      "location": {
+        "lat": "37.38527939413896",
+        "lon": "-121.85545474803641"
+      }
+    },
+    {
+      "address": "1390 Glacier Dr, San Jose, CA 95118",
+      "location": {
+        "lat": "37.262969584325525",
+        "lon": "-121.88779624972791"
+      }
+    },
+    {
+      "address": "3278 Hebron Ct, San Jose, CA 95121",
+      "location": {
+        "lat": "37.31101140521278",
+        "lon": "-121.79725432202355"
+      }
+    },
+    {
+      "address": "4569 Ross Ave, San Jose, CA 95124",
+      "location": {
+        "lat": "37.25395030930283",
+        "lon": "-121.91056615274566"
+      }
+    },
+    {
+      "address": "3529 Agate Dr, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.36994625981166",
+        "lon": "-121.99403252406724"
+      }
+    },
+    {
+      "address": "21153 Patriot Way, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.32423853093189",
+        "lon": "-122.04386111989011"
+      }
+    },
+    {
+      "address": "295 E Hamilton Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.294585156966356",
+        "lon": "-121.94516287743976"
+      }
+    },
+    {
+      "address": "62 George St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.347266153744386",
+        "lon": "-121.90029046468048"
+      }
+    },
+    {
+      "address": "527 Hubbard Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.331089374752466",
+        "lon": "-122.00356342522988"
+      }
+    },
+    {
+      "address": "1988 Shenandoah Ave, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.42940529108412",
+        "lon": "-121.86850020592465"
+      }
+    },
+    {
+      "address": "425 Paria Terrace, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.40474096093994",
+        "lon": "-122.01383286258516"
+      }
+    },
+    {
+      "address": "2645 Zanker Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.3895480962392",
+        "lon": "-121.92600297993374"
+      }
+    },
+    {
+      "address": "101 Paseo De San Antonio, San Jose, CA 95113",
+      "location": {
+        "lat": "37.333561518382105",
+        "lon": "-121.88595131725279"
+      }
+    },
+    {
+      "address": "404 El Cajon Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.28235158677995",
+        "lon": "-121.82689580019361"
+      }
+    },
+    {
+      "address": "29 Cecil Ave, San Jose, CA 95128",
+      "location": {
+        "lat": "37.32403413810617",
+        "lon": "-121.93433984096774"
+      }
+    },
+    {
+      "address": "1202 S Sixth St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.32001764189766",
+        "lon": "-121.87216014456139"
+      }
+    },
+    {
+      "address": "2797 Kern Ave, San Jose, CA 95121",
+      "location": {
+        "lat": "37.30694155662421",
+        "lon": "-121.82777273678693"
+      }
+    },
+    {
+      "address": "391 E McGlincy Ln, Campbell, CA 95008",
+      "location": {
+        "lat": "37.27697914139877",
+        "lon": "-121.9429919327534"
+      }
+    },
+    {
+      "address": "3046 Ryan Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.335155651139225",
+        "lon": "-121.98537808927756"
+      }
+    },
+    {
+      "address": "1005 Nevada Pl, San Jose, CA 95125",
+      "location": {
+        "lat": "37.302594320851426",
+        "lon": "-121.8932840522606"
+      }
+    },
+    {
+      "address": "1225 Montague Expy, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.414300089451274",
+        "lon": "-121.8824232303232"
+      }
+    },
+    {
+      "address": "2030 Lockwood Dr, San Jose, CA 95132",
+      "location": {
+        "lat": "37.415553293040325",
+        "lon": "-121.86026818089024"
+      }
+    },
+    {
+      "address": "175 Falcato Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.435711210214",
+        "lon": "-121.87145109333687"
+      }
+    },
+    {
+      "address": "402 Union Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28066274790218",
+        "lon": "-121.93513160624245"
+      }
+    },
+    {
+      "address": "31 Muller Pl, San Jose, CA 95126",
+      "location": {
+        "lat": "37.324435114549345",
+        "lon": "-121.91676007412627"
+      }
+    },
+    {
+      "address": "922 Franquette Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.29226728757325",
+        "lon": "-121.88354127840465"
+      }
+    },
+    {
+      "address": "2054 Terilyn Ave, San Jose, CA 95122",
+      "location": {
+        "lat": "37.325120505384355",
+        "lon": "-121.83515435171127"
+      }
+    },
+    {
+      "address": "2755 Great America Way, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.41463307506135",
+        "lon": "-121.97647175607327"
+      }
+    },
+    {
+      "address": "7739 Robindell Way, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.30354072372304",
+        "lon": "-122.04208172858958"
+      }
+    },
+    {
+      "address": "422 Avenida Arboles, San Jose, CA 95123",
+      "location": {
+        "lat": "37.254780415502495",
+        "lon": "-121.84008716621048"
+      }
+    },
+    {
+      "address": "762 W Knickerbocker Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.361389571283496",
+        "lon": "-122.04421470738491"
+      }
+    },
+    {
+      "address": "702 Minnesota Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.30868617675049",
+        "lon": "-121.88889459183473"
+      }
+    },
+    {
+      "address": "2187 Dahlia Ct, San Jose, CA 95133",
+      "location": {
+        "lat": "37.38154925158315",
+        "lon": "-121.86170384018656"
+      }
+    },
+    {
+      "address": "1790 Las Plumas Ave, San Jose, CA 95133",
+      "location": {
+        "lat": "37.36319863210937",
+        "lon": "-121.86348808255437"
+      }
+    },
+    {
+      "address": "686 S Daniel Way, San Jose, CA 95128",
+      "location": {
+        "lat": "37.314609642899136",
+        "lon": "-121.94099015422523"
+      }
+    },
+    {
+      "address": "1640 Coleman Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.359835642676344",
+        "lon": "-121.93694496390066"
+      }
+    },
+    {
+      "address": "1733 De Marietta Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.30316223892949",
+        "lon": "-121.92440984962712"
+      }
+    },
+    {
+      "address": "365 E San Fernando St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.33818618826177",
+        "lon": "-121.8816357097993"
+      }
+    },
+    {
+      "address": "1432 Portola Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.42220031325472",
+        "lon": "-121.87619720045066"
+      }
+    },
+    {
+      "address": "2803 Rainview Dr, San Jose, CA 95133",
+      "location": {
+        "lat": "37.37663243536583",
+        "lon": "-121.84537977330072"
+      }
+    },
+    {
+      "address": "3144 Acorn Ct, San Jose, CA 95117",
+      "location": {
+        "lat": "37.30725237006001",
+        "lon": "-121.95204485964798"
+      }
+    },
+    {
+      "address": "647 S Sixth St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.328789477288815",
+        "lon": "-121.87806138736177"
+      }
+    },
+    {
+      "address": "2201 Laurelwood Rd, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.38384641684102",
+        "lon": "-121.96450170456056"
+      }
+    },
+    {
+      "address": "60 Kirk Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.37711900502373",
+        "lon": "-121.82295940200052"
+      }
+    },
+    {
+      "address": "1746 Yosemite Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.42945238815423",
+        "lon": "-121.87288373384922"
+      }
+    },
+    {
+      "address": "1235 Flora Ave, San Jose, CA 95117",
+      "location": {
+        "lat": "37.302570827984916",
+        "lon": "-121.97621088481405"
+      }
+    },
+    {
+      "address": "181 Parc Place Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.42069807645539",
+        "lon": "-121.9008477572266"
+      }
+    },
+    {
+      "address": "369 Gridley Ct, San Jose, CA 95127",
+      "location": {
+        "lat": "37.37926082410045",
+        "lon": "-121.8319226821478"
+      }
+    },
+    {
+      "address": "1500 Duane Ave, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.37925877051195",
+        "lon": "-121.95634324048348"
+      }
+    },
+    {
+      "address": "3150 Loma Verde Dr, San Jose, CA 95117",
+      "location": {
+        "lat": "37.29841152428757",
+        "lon": "-121.95143438283891"
+      }
+    },
+    {
+      "address": "301 Ranch Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.43078944727015",
+        "lon": "-121.92015009504658"
+      }
+    },
+    {
+      "address": "3952 Malvini Dr, San Jose, CA 95118",
+      "location": {
+        "lat": "37.26543610520698",
+        "lon": "-121.88844587521635"
+      }
+    },
+    {
+      "address": "2506 Sue Ave, San Jose, CA 95111",
+      "location": {
+        "lat": "37.30498352865638",
+        "lon": "-121.84556121940591"
+      }
+    },
+    {
+      "address": "890 E Arques Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.37914843228352",
+        "lon": "-122.0106980302256"
+      }
+    },
+    {
+      "address": "14452 Evans Ln, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.25920088830155",
+        "lon": "-121.99418941945572"
+      }
+    },
+    {
+      "address": "4960 Birmingham Dr, San Jose, CA 95136",
+      "location": {
+        "lat": "37.262016061431815",
+        "lon": "-121.84644805937921"
+      }
+    },
+    {
+      "address": "577 Penitencia St, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.43403790755364",
+        "lon": "-121.91221978355853"
+      }
+    },
+    {
+      "address": "616 Cheshire Way, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.347985711379344",
+        "lon": "-122.02579651910162"
+      }
+    },
+    {
+      "address": "1460 Fremont St, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.34949411957353",
+        "lon": "-121.95101552873925"
+      }
+    },
+    {
+      "address": "1494 Lupton Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.299002149823366",
+        "lon": "-121.90147846235843"
+      }
+    },
+    {
+      "address": "14643 Eastview Dr, Los Gatos, CA 95032",
+      "location": {
+        "lat": "37.255657528507584",
+        "lon": "-121.97353639492978"
+      }
+    },
+    {
+      "address": "350 Martin Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.36325470836282",
+        "lon": "-121.93873255145229"
+      }
+    },
+    {
+      "address": "1385 Lucretia Ave, San Jose, CA 95122",
+      "location": {
+        "lat": "37.32644074191979",
+        "lon": "-121.853856642037"
+      }
+    },
+    {
+      "address": "2270 Monterey Hwy, San Jose, CA 95112",
+      "location": {
+        "lat": "37.303180279881744",
+        "lon": "-121.86013831280088"
+      }
+    },
+    {
+      "address": "3147 Cayman Pl, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38899408046334",
+        "lon": "-121.84418667046714"
+      }
+    },
+    {
+      "address": "21682 Olive Ave, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31895209530796",
+        "lon": "-122.05410072675328"
+      }
+    },
+    {
+      "address": "14175 Douglass Ln, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.262362332923686",
+        "lon": "-122.02320046562993"
+      }
+    },
+    {
+      "address": "797 E William St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.33675017328394",
+        "lon": "-121.86909549855794"
+      }
+    },
+    {
+      "address": "3410 Waterman Ct, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38390202174698",
+        "lon": "-121.83174515287251"
+      }
+    },
+    {
+      "address": "482 S Abbott Ave, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.42279249347698",
+        "lon": "-121.9130966922768"
+      }
+    },
+    {
+      "address": "4244 Tanbark St, San Jose, CA 95129",
+      "location": {
+        "lat": "37.31358491121696",
+        "lon": "-121.97783549546295"
+      }
+    },
+    {
+      "address": "467 Norwood Cir, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.330644252072446",
+        "lon": "-121.99607832301146"
+      }
+    },
+    {
+      "address": "360 Chateau La Salle Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.292393461795456",
+        "lon": "-121.85758940662784"
+      }
+    },
+    {
+      "address": "1948 Foxworthy Ave, San Jose, CA 95124",
+      "location": {
+        "lat": "37.26701066044925",
+        "lon": "-121.92781197020633"
+      }
+    },
+    {
+      "address": "1720 Old Bayshore Hwy, San Jose, CA 95112",
+      "location": {
+        "lat": "37.369813252457355",
+        "lon": "-121.90757298904724"
+      }
+    },
+    {
+      "address": "1204 Morrill Ct, San Jose, CA 95132",
+      "location": {
+        "lat": "37.39259374048941",
+        "lon": "-121.85713365803068"
+      }
+    },
+    {
+      "address": "585 Santa Rosalia Terrace, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.387678364723016",
+        "lon": "-122.00218451158472"
+      }
+    },
+    {
+      "address": "375 Chateau La Salle Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.29166834152049",
+        "lon": "-121.85797963354457"
+      }
+    },
+    {
+      "address": "1646 Fawn Ct, Campbell, CA 95008",
+      "location": {
+        "lat": "37.270125807536736",
+        "lon": "-121.97886824673374"
+      }
+    },
+    {
+      "address": "590 Old San Francisco Rd, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.36677632473466",
+        "lon": "-122.02360263400654"
+      }
+    },
+    {
+      "address": "1366 Glenmoor Way, San Jose, CA 95129",
+      "location": {
+        "lat": "37.298824425615486",
+        "lon": "-122.02018011747518"
+      }
+    },
+    {
+      "address": "2371 Bering Dr, San Jose, CA 95131",
+      "location": {
+        "lat": "37.38282640473026",
+        "lon": "-121.92121389134277"
+      }
+    },
+    {
+      "address": "2805 Lafayette St, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.372389157220894",
+        "lon": "-121.94955271318494"
+      }
+    },
+    {
+      "address": "5971 W Walbrook Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.299802798147056",
+        "lon": "-122.00913407498513"
+      }
+    },
+    {
+      "address": "4398 Zanker Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.43477890091285",
+        "lon": "-121.93499710023401"
+      }
+    },
+    {
+      "address": "260 Doris Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.36074747106807",
+        "lon": "-121.82850866825846"
+      }
+    },
+    {
+      "address": "12833 Star Ridge Ct, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.28018620999979",
+        "lon": "-122.0486971203094"
+      }
+    },
+    {
+      "address": "21272 Chiquita Way, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27402808317129",
+        "lon": "-122.04624783988912"
+      }
+    },
+    {
+      "address": "13360 Old Oak Way, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27420357230335",
+        "lon": "-122.04659444792358"
+      }
+    },
+    {
+      "address": "3845 Suncrest Ave, San Jose, CA 95132",
+      "location": {
+        "lat": "37.40156925623212",
+        "lon": "-121.8261931664074"
+      }
+    },
+    {
+      "address": "1341 Hapland Ct, San Jose, CA 95131",
+      "location": {
+        "lat": "37.38233282024112",
+        "lon": "-121.87599905360179"
+      }
+    },
+    {
+      "address": "846 College Dr, San Jose, CA 95128",
+      "location": {
+        "lat": "37.31170742764213",
+        "lon": "-121.91916191231758"
+      }
+    },
+    {
+      "address": "777 Sunnyvale-Saratoga Rd, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.36619191775597",
+        "lon": "-122.03364726204077"
+      }
+    },
+    {
+      "address": "1384 Darryl Dr, San Jose, CA 95130",
+      "location": {
+        "lat": "37.29891743757872",
+        "lon": "-121.96391626253482"
+      }
+    },
+    {
+      "address": "232 Elm Wood Ct, Los Gatos, CA 95032",
+      "location": {
+        "lat": "37.2641537950953",
+        "lon": "-121.97723119169048"
+      }
+    },
+    {
+      "address": "49 N 32nd St, San Jose, CA 95116",
+      "location": {
+        "lat": "37.35111888932793",
+        "lon": "-121.86069242130601"
+      }
+    },
+    {
+      "address": "1578 Willowdale Dr, San Jose, CA 95118",
+      "location": {
+        "lat": "37.26531553289953",
+        "lon": "-121.90014114538664"
+      }
+    },
+    {
+      "address": "665 Clyde Ave, Mountain View, CA 94043",
+      "location": {
+        "lat": "37.40241633648409",
+        "lon": "-122.04806331068993"
+      }
+    },
+    {
+      "address": "897 Kingfisher Dr, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28609214993563",
+        "lon": "-121.87837640607232"
+      }
+    },
+    {
+      "address": "21040 Cory Ct, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.313182627983345",
+        "lon": "-122.0421451325824"
+      }
+    },
+    {
+      "address": "4350 Hilton Ave, San Jose, CA 95130",
+      "location": {
+        "lat": "37.294449155242965",
+        "lon": "-121.97844872189985"
+      }
+    },
+    {
+      "address": "1449 Shasta Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.328738201534556",
+        "lon": "-121.91926698077104"
+      }
+    },
+    {
+      "address": "533 River View Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.275977777480556",
+        "lon": "-121.81488791225811"
+      }
+    },
+    {
+      "address": "840 Pollard Rd, Los Gatos, CA 95032",
+      "location": {
+        "lat": "37.26295403084508",
+        "lon": "-121.9715029156198"
+      }
+    },
+    {
+      "address": "3929 Vista Roma Dr, San Jose, CA 95136",
+      "location": {
+        "lat": "37.27513056802383",
+        "lon": "-121.84620718966605"
+      }
+    },
+    {
+      "address": "1829 Comstock Ln, San Jose, CA 95124",
+      "location": {
+        "lat": "37.27568774169144",
+        "lon": "-121.91865308500776"
+      }
+    },
+    {
+      "address": "1015 Washington St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.35239269923507",
+        "lon": "-121.87534605934233"
+      }
+    },
+    {
+      "address": "652 Azara Pl, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.36976593281581",
+        "lon": "-122.02034656834189"
+      }
+    },
+    {
+      "address": "1436 Glena Ct, San Jose, CA 95122",
+      "location": {
+        "lat": "37.323745935411644",
+        "lon": "-121.83742959207983"
+      }
+    },
+    {
+      "address": "495 E Java Dr, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.409751682872134",
+        "lon": "-122.01133549793977"
+      }
+    },
+    {
+      "address": "411 Lafayette Way, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.34423134393503",
+        "lon": "-121.93971096728534"
+      }
+    },
+    {
+      "address": "635 Des Moines Pl, San Jose, CA 95133",
+      "location": {
+        "lat": "37.37793341680145",
+        "lon": "-121.8469819507853"
+      }
+    },
+    {
+      "address": "1518 Marcia Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28151794127382",
+        "lon": "-121.89703330274273"
+      }
+    },
+    {
+      "address": "5056 Brook Valley Loop, San Jose, CA 95136",
+      "location": {
+        "lat": "37.262186146899126",
+        "lon": "-121.81901341843508"
+      }
+    },
+    {
+      "address": "4866 Tampico Way, San Jose, CA 95118",
+      "location": {
+        "lat": "37.25544418150715",
+        "lon": "-121.89393590575108"
+      }
+    },
+    {
+      "address": "372 Kylemore Ct, San Jose, CA 95136",
+      "location": {
+        "lat": "37.27976833608577",
+        "lon": "-121.85535859529871"
+      }
+    },
+    {
+      "address": "3471 Lafayette St, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.383856084756",
+        "lon": "-121.94959170731839"
+      }
+    },
+    {
+      "address": "2700 N First St, San Jose, CA 95134",
+      "location": {
+        "lat": "37.390129833312244",
+        "lon": "-121.92890144183286"
+      }
+    },
+    {
+      "address": "1742 Little Orchard St, San Jose, CA 95125",
+      "location": {
+        "lat": "37.3076807829412",
+        "lon": "-121.87261341759505"
+      }
+    },
+    {
+      "address": "400 E Caribbean Dr, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.415548542357875",
+        "lon": "-122.01100594318913"
+      }
+    },
+    {
+      "address": "212 Fleming Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.37344271300866",
+        "lon": "-121.81547522433627"
+      }
+    },
+    {
+      "address": "3350 Scott Blvd, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.37897985329329",
+        "lon": "-121.98434916225355"
+      }
+    },
+    {
+      "address": "6934 Windsor Way, San Jose, CA 95129",
+      "location": {
+        "lat": "37.297194752669704",
+        "lon": "-122.02658235504909"
+      }
+    },
+    {
+      "address": "4388 Felter Rd, Milpitas, CA 95132",
+      "location": {
+        "lat": "37.4342279932039",
+        "lon": "-121.81932380928687"
+      }
+    },
+    {
+      "address": "1459 Canton Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.43408536000095",
+        "lon": "-121.87982289137747"
+      }
+    },
+    {
+      "address": "13553 Old Oak Way, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27065503100978",
+        "lon": "-122.04826241307373"
+      }
+    },
+    {
+      "address": "1065 Eagle Ridge Way, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.423035223580285",
+        "lon": "-121.86879495208291"
+      }
+    },
+    {
+      "address": "15281 Skyview Dr, San Jose, CA 95132",
+      "location": {
+        "lat": "37.40415728855068",
+        "lon": "-121.83586958355332"
+      }
+    },
+    {
+      "address": "444 N 26th St, San Jose, CA 95116",
+      "location": {
+        "lat": "37.353809524123605",
+        "lon": "-121.87160814841789"
+      }
+    },
+    {
+      "address": "1408 Legend Ln, San Jose, CA 95131",
+      "location": {
+        "lat": "37.374539346368564",
+        "lon": "-121.88246631357704"
+      }
+    },
+    {
+      "address": "767 Bonita Ave, San Jose, CA 95116",
+      "location": {
+        "lat": "37.34004521701179",
+        "lon": "-121.8550583923693"
+      }
+    },
+    {
+      "address": "3607 Larry Ct, San Jose, CA 95121",
+      "location": {
+        "lat": "37.296454997124535",
+        "lon": "-121.8187692499"
+      }
+    },
+    {
+      "address": "2259 Crocker Way, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.36410813361681",
+        "lon": "-121.99487096435496"
+      }
+    },
+    {
+      "address": "3249 Dorcich St, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.32515400206858",
+        "lon": "-121.95424358272385"
+      }
+    },
+    {
+      "address": "2507 Flory Dr, San Jose, CA 95121",
+      "location": {
+        "lat": "37.314746991467665",
+        "lon": "-121.83039716641161"
+      }
+    },
+    {
+      "address": "1760 Junction Ave, San Jose, CA 95112",
+      "location": {
+        "lat": "37.3777238232271",
+        "lon": "-121.90546738330622"
+      }
+    },
+    {
+      "address": "128 Clayton Ave, San Jose, CA 95110",
+      "location": {
+        "lat": "37.343099412775345",
+        "lon": "-121.89830154298924"
+      }
+    },
+    {
+      "address": "12663 Lido Way, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.28536185172438",
+        "lon": "-122.02470473301045"
+      }
+    },
+    {
+      "address": "994 Steinway Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.266674632040484",
+        "lon": "-121.9672926799664"
+      }
+    },
+    {
+      "address": "4170 Network Cir, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.394120874292206",
+        "lon": "-121.95222844010706"
+      }
+    },
+    {
+      "address": "21541 Columbus Ave, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.3081203302165",
+        "lon": "-122.05106239925438"
+      }
+    },
+    {
+      "address": "224 S Morrison Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.32514795286543",
+        "lon": "-121.90789287773221"
+      }
+    },
+    {
+      "address": "2943 Cataldi Dr, San Jose, CA 95132",
+      "location": {
+        "lat": "37.40299804387688",
+        "lon": "-121.8679863078132"
+      }
+    },
+    {
+      "address": "111 Uranium Dr, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.370675418334926",
+        "lon": "-121.98421894012472"
+      }
+    },
+    {
+      "address": "12051 Beauchamps Ln, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.29227006016197",
+        "lon": "-122.04071100821055"
+      }
+    },
+    {
+      "address": "1395 Patio Dr, Campbell, CA 95008",
+      "location": {
+        "lat": "37.288837665689584",
+        "lon": "-121.92481934034133"
+      }
+    },
+    {
+      "address": "1330 Sierra Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.32808792585626",
+        "lon": "-121.91513979942097"
+      }
+    },
+    {
+      "address": "2304 Senter Rd, San Jose, CA 95112",
+      "location": {
+        "lat": "37.309508116921556",
+        "lon": "-121.8483826291095"
+      }
+    },
+    {
+      "address": "17131 Crothers Rd, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38863072755307",
+        "lon": "-121.80534727261134"
+      }
+    },
+    {
+      "address": "700 Los Esteros Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.435041140907764",
+        "lon": "-121.94245350499439"
+      }
+    },
+    {
+      "address": "1864 Thunderbird Way, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28524215930423",
+        "lon": "-121.91947210948331"
+      }
+    },
+    {
+      "address": "1788 Campbell Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.286603603692626",
+        "lon": "-121.91767510382145"
+      }
+    },
+    {
+      "address": "71 N Cragmont Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.37269319348375",
+        "lon": "-121.82534688533545"
+      }
+    },
+    {
+      "address": "2378 Peachtree Ln, San Jose, CA 95128",
+      "location": {
+        "lat": "37.33401352708981",
+        "lon": "-121.94639270638096"
+      }
+    },
+    {
+      "address": "334 West Ct, San Jose, CA 95116",
+      "location": {
+        "lat": "37.35438234646462",
+        "lon": "-121.86791407165317"
+      }
+    },
+    {
+      "address": "1015 Timothy Dr, San Jose, CA 95133",
+      "location": {
+        "lat": "37.364322610601114",
+        "lon": "-121.87905068165814"
+      }
+    },
+    {
+      "address": "481 El Camino Real, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.352217506468975",
+        "lon": "-121.935521022268"
+      }
+    },
+    {
+      "address": "1027 Cynthia Ln, San Jose, CA 95129",
+      "location": {
+        "lat": "37.309059993985564",
+        "lon": "-122.02453846734942"
+      }
+    },
+    {
+      "address": "16431 Mozart Way, Los Gatos, CA 95032",
+      "location": {
+        "lat": "37.25870368927993",
+        "lon": "-121.95735840342839"
+      }
+    },
+    {
+      "address": "500 Roxbury Ln, Los Gatos, CA 95032",
+      "location": {
+        "lat": "37.25879736082811",
+        "lon": "-121.98364796739301"
+      }
+    },
+    {
+      "address": "2377 Pollard Ct, Campbell, CA 95032",
+      "location": {
+        "lat": "37.26358861295181",
+        "lon": "-121.99052564403692"
+      }
+    },
+    {
+      "address": "250 Manzanita Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.327616105971295",
+        "lon": "-121.97737438026004"
+      }
+    },
+    {
+      "address": "677 El Patio Dr, Campbell, CA 95008",
+      "location": {
+        "lat": "37.29032649740217",
+        "lon": "-121.93800813541597"
+      }
+    },
+    {
+      "address": "10014 Lyndale Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.35436325562467",
+        "lon": "-121.82193385348836"
+      }
+    },
+    {
+      "address": "3988 Perie Ln, San Jose, CA 95132",
+      "location": {
+        "lat": "37.40401665196863",
+        "lon": "-121.82033651234525"
+      }
+    },
+    {
+      "address": "2467 Autumnvale Dr, San Jose, CA 95131",
+      "location": {
+        "lat": "37.40439454108118",
+        "lon": "-121.88636745138653"
+      }
+    },
+    {
+      "address": "2201 Laurelwood Rd, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.38341994686429",
+        "lon": "-121.96455363174876"
+      }
+    },
+    {
+      "address": "1004 Stewart Dr, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.3836891959633",
+        "lon": "-122.00180549404995"
+      }
+    },
+    {
+      "address": "2534 Brahms Ave, San Jose, CA 95122",
+      "location": {
+        "lat": "37.321813928806996",
+        "lon": "-121.81982046393134"
+      }
+    },
+    {
+      "address": "418 Brahms Way, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.3629634908195",
+        "lon": "-122.02905065249284"
+      }
+    },
+    {
+      "address": "2512 Whitestone Ct, San Jose, CA 95122",
+      "location": {
+        "lat": "37.34315394933386",
+        "lon": "-121.8231069051092"
+      }
+    },
+    {
+      "address": "2924 Roma Ct, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.32570698135174",
+        "lon": "-121.97845295357291"
+      }
+    },
+    {
+      "address": "1158 Sunnyvale-Saratoga Rd, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.35491112686462",
+        "lon": "-122.03197972196558"
+      }
+    },
+    {
+      "address": "5054 Golden Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.30203556345441",
+        "lon": "-121.99109783097892"
+      }
+    },
+    {
+      "address": "333 N Montgomery St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.335508958175716",
+        "lon": "-121.90443340467755"
+      }
+    },
+    {
+      "address": "2200 Mission College Blvd, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.38825110383823",
+        "lon": "-121.96413407014697"
+      }
+    },
+    {
+      "address": "10770 Echo Knolls Rd, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38394150686057",
+        "lon": "-121.7953683121263"
+      }
+    },
+    {
+      "address": "205 E Alma Ave, San Jose, CA 95112",
+      "location": {
+        "lat": "37.31815852160998",
+        "lon": "-121.87057485939982"
+      }
+    },
+    {
+      "address": "700 Los Esteros Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.4323970517425",
+        "lon": "-121.947336408983"
+      }
+    },
+    {
+      "address": "585 Charcot Ave, San Jose, CA 95131",
+      "location": {
+        "lat": "37.385968895504995",
+        "lon": "-121.9121806882258"
+      }
+    },
+    {
+      "address": "408 Richmond Ave, San Jose, CA 95128",
+      "location": {
+        "lat": "37.32134462557659",
+        "lon": "-121.92268024882873"
+      }
+    },
+    {
+      "address": "12511 Saratoga Ave, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.28565734670804",
+        "lon": "-121.9988156406201"
+      }
+    },
+    {
+      "address": "561 Park Johnson Pl, San Jose, CA 95111",
+      "location": {
+        "lat": "37.28603595962671",
+        "lon": "-121.82427134227022"
+      }
+    },
+    {
+      "address": "702 W Remington Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.35935614414204",
+        "lon": "-122.04180386628606"
+      }
+    },
+    {
+      "address": "1797 Nelson Way, San Jose, CA 95124",
+      "location": {
+        "lat": "37.25842183625322",
+        "lon": "-121.91637914893704"
+      }
+    },
+    {
+      "address": "2125 Zanker Rd, San Jose, CA 95131",
+      "location": {
+        "lat": "37.37938155033263",
+        "lon": "-121.91593491183217"
+      }
+    },
+    {
+      "address": "324 N Mary Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.388434307519105",
+        "lon": "-122.04211837255603"
+      }
+    },
+    {
+      "address": "1930 W San Carlos St, San Jose, CA 95128",
+      "location": {
+        "lat": "37.323253913903706",
+        "lon": "-121.92974378101806"
+      }
+    },
+    {
+      "address": "12777 Picea Ct, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.28187630771758",
+        "lon": "-122.04989816908963"
+      }
+    },
+    {
+      "address": "855 Lewis Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.37903959389823",
+        "lon": "-122.0399635065775"
+      }
+    },
+    {
+      "address": "1240 Henderson Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.35426490071254",
+        "lon": "-122.0039555823556"
+      }
+    },
+    {
+      "address": "3560 Mount Pleasant Ct, San Jose, CA 95148",
+      "location": {
+        "lat": "37.35213619155619",
+        "lon": "-121.79783867187571"
+      }
+    },
+    {
+      "address": "725 Alder Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.41558960351222",
+        "lon": "-121.91775245554554"
+      }
+    },
+    {
+      "address": "3102 Bilbo Dr, San Jose, CA 95121",
+      "location": {
+        "lat": "37.30305830404267",
+        "lon": "-121.82038240522104"
+      }
+    },
+    {
+      "address": "715 Comstock St, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.374985996365155",
+        "lon": "-121.94722308496992"
+      }
+    },
+    {
+      "address": "801 N First St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.35106730017451",
+        "lon": "-121.90458150930513"
+      }
+    },
+    {
+      "address": "929 Boynton Ave, San Jose, CA 95117",
+      "location": {
+        "lat": "37.31019478813412",
+        "lon": "-121.96625315091082"
+      }
+    },
+    {
+      "address": "394 N Fourth St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.34422532379791",
+        "lon": "-121.89174314011736"
+      }
+    },
+    {
+      "address": "1333 Trailside Ct, San Jose, CA 95138",
+      "location": {
+        "lat": "37.28688727149552",
+        "lon": "-121.80491154039595"
+      }
+    },
+    {
+      "address": "1904 Treewood Ln, San Jose, CA 95132",
+      "location": {
+        "lat": "37.4113348870955",
+        "lon": "-121.866207484609"
+      }
+    },
+    {
+      "address": "1712 Tully Rd, San Jose, CA 95122",
+      "location": {
+        "lat": "37.32213935543555",
+        "lon": "-121.82485617150019"
+      }
+    },
+    {
+      "address": "1027 Craig Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.30861151528467",
+        "lon": "-122.01545008133358"
+      }
+    },
+    {
+      "address": "1485 Patio Dr, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28892345309925",
+        "lon": "-121.92324563799491"
+      }
+    },
+    {
+      "address": "1562 Hamilton Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.293422888606706",
+        "lon": "-121.91228694169251"
+      }
+    },
+    {
+      "address": "1020 Garrity Way, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.39821043290101",
+        "lon": "-121.95147509765212"
+      }
+    },
+    {
+      "address": "1710 Old Piedmont Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.41217194074719",
+        "lon": "-121.84929057858581"
+      }
+    },
+    {
+      "address": "2898 Holmes Pl, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.35533644982691",
+        "lon": "-121.97831127239472"
+      }
+    },
+    {
+      "address": "1260 N Mathilda Ave, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.412532472017084",
+        "lon": "-122.0243576017277"
+      }
+    },
+    {
+      "address": "19521 Farwell Ave, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.25555733241613",
+        "lon": "-122.01429785671088"
+      }
+    },
+    {
+      "address": "1761 Smith Ave, San Jose, CA 95112",
+      "location": {
+        "lat": "37.31357094424795",
+        "lon": "-121.8628039266359"
+      }
+    },
+    {
+      "address": "1916 Piedmont Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.41426360680069",
+        "lon": "-121.85496551603211"
+      }
+    },
+    {
+      "address": "80 Descanso Dr, San Jose, CA 95134",
+      "location": {
+        "lat": "37.40592147635653",
+        "lon": "-121.9379717405302"
+      }
+    },
+    {
+      "address": "720 Raines Terr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.36792602289569",
+        "lon": "-122.03931761263856"
+      }
+    },
+    {
+      "address": "2220 O'Toole Ave, San Jose, CA 95131",
+      "location": {
+        "lat": "37.39707601737188",
+        "lon": "-121.9111682030069"
+      }
+    },
+    {
+      "address": "105 Hunt Way, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28525005599444",
+        "lon": "-121.96546930141304"
+      }
+    },
+    {
+      "address": "10256 Dale Dr, San Jose, CA 95127",
+      "location": {
+        "lat": "37.36167750283191",
+        "lon": "-121.81848725634424"
+      }
+    },
+    {
+      "address": "144 Sunnyslope Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.37042830177614",
+        "lon": "-121.82045297746875"
+      }
+    },
+    {
+      "address": "1616 Lewiston Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.33978825342399",
+        "lon": "-122.04701120783042"
+      }
+    },
+    {
+      "address": "32 Talmadge Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.36845881048601",
+        "lon": "-121.82685664765349"
+      }
+    },
+    {
+      "address": "2675 Park Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.34348029653995",
+        "lon": "-121.93585561635483"
+      }
+    },
+    {
+      "address": "1553 Clayton Rd, San Jose, CA 95127",
+      "location": {
+        "lat": "37.355502376097995",
+        "lon": "-121.80204612367436"
+      }
+    },
+    {
+      "address": "5551 Sweigert Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.42671929624803",
+        "lon": "-121.82155159235174"
+      }
+    },
+    {
+      "address": "2090 Concourse Dr, San Jose, CA 95131",
+      "location": {
+        "lat": "37.39638718128325",
+        "lon": "-121.8892290045478"
+      }
+    },
+    {
+      "address": "1479 Suffolk Dr, San Jose, CA 95127",
+      "location": {
+        "lat": "37.34638309570874",
+        "lon": "-121.82118394067933"
+      }
+    },
+    {
+      "address": "100 Skyway Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.276805473161104",
+        "lon": "-121.82793633210453"
+      }
+    },
+    {
+      "address": "12124 Candy Ln, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.291886557030075",
+        "lon": "-122.01334175033881"
+      }
+    },
+    {
+      "address": "1150 Cotswald Ct, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34662904356779",
+        "lon": "-122.00121059271086"
+      }
+    },
+    {
+      "address": "2767 Aiello Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.294362096131856",
+        "lon": "-121.84734400154015"
+      }
+    },
+    {
+      "address": "1670 Hillsdale Ave, San Jose, CA 95124",
+      "location": {
+        "lat": "37.266780300203045",
+        "lon": "-121.90797428464646"
+      }
+    },
+    {
+      "address": "2836 Beecher Ct, San Jose, CA 95121",
+      "location": {
+        "lat": "37.312880991844736",
+        "lon": "-121.81877039972302"
+      }
+    },
+    {
+      "address": "1723 Dorrance Dr, San Jose, CA 95125",
+      "location": {
+        "lat": "37.2856697279582",
+        "lon": "-121.91067039268232"
+      }
+    },
+    {
+      "address": "1116 Maxey Ct, San Jose, CA 95132",
+      "location": {
+        "lat": "37.393727018130555",
+        "lon": "-121.84705468484236"
+      }
+    },
+    {
+      "address": "20672 Woodward Ct, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.267999685255575",
+        "lon": "-122.03533990941199"
+      }
+    },
+    {
+      "address": "1315 Bobolink Cir, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.35148504870122",
+        "lon": "-122.02897952436139"
+      }
+    },
+    {
+      "address": "10416 Cherry Tree Ln, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.32877126733817",
+        "lon": "-122.02579822960983"
+      }
+    },
+    {
+      "address": "4410 Bassett St, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.39606091837287",
+        "lon": "-121.96020092847205"
+      }
+    },
+    {
+      "address": "4930 Corbin Ave, San Jose, CA 95118",
+      "location": {
+        "lat": "37.25719000736533",
+        "lon": "-121.88454299220983"
+      }
+    },
+    {
+      "address": "1021 Malott Dr, San Jose, CA 95121",
+      "location": {
+        "lat": "37.30852180028209",
+        "lon": "-121.83241650955283"
+      }
+    },
+    {
+      "address": "327 San Jose Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.30843669679279",
+        "lon": "-121.8771353479147"
+      }
+    },
+    {
+      "address": "2503 Lambert Ln, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28220896013042",
+        "lon": "-121.89394547309195"
+      }
+    },
+    {
+      "address": "18983 Harleigh Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27005988666883",
+        "lon": "-122.00400215798447"
+      }
+    },
+    {
+      "address": "3670 Gleason Ave, San Jose, CA 95130",
+      "location": {
+        "lat": "37.29715079486455",
+        "lon": "-121.96600668871203"
+      }
+    },
+    {
+      "address": "2326 Bray Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.35297032284495",
+        "lon": "-121.96577731399653"
+      }
+    },
+    {
+      "address": "501 Murphy Ranch Rd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.4176154835181",
+        "lon": "-121.92867462718712"
+      }
+    },
+    {
+      "address": "2056 Woodglen Dr, San Jose, CA 95130",
+      "location": {
+        "lat": "37.284207684962944",
+        "lon": "-121.98429297848838"
+      }
+    },
+    {
+      "address": "1193 Water Lily Way, San Jose, CA 95129",
+      "location": {
+        "lat": "37.3037266783506",
+        "lon": "-122.03401763734212"
+      }
+    },
+    {
+      "address": "2580 Senter Rd, San Jose, CA 95111",
+      "location": {
+        "lat": "37.307739052697606",
+        "lon": "-121.84088525906616"
+      }
+    },
+    {
+      "address": "12620 Easton Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.2842394517296",
+        "lon": "-122.0026975634144"
+      }
+    },
+    {
+      "address": "4534 Lobos Ave, San Jose, CA 95111",
+      "location": {
+        "lat": "37.27399273116544",
+        "lon": "-121.81999663893959"
+      }
+    },
+    {
+      "address": "10555 Crothers Rd, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38203431029963",
+        "lon": "-121.79949093109403"
+      }
+    },
+    {
+      "address": "3107 Kermath Dr, San Jose, CA 95132",
+      "location": {
+        "lat": "37.41202505067075",
+        "lon": "-121.87148816610146"
+      }
+    },
+    {
+      "address": "307 N Fair Oaks Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.382078316707855",
+        "lon": "-122.018780390964"
+      }
+    },
+    {
+      "address": "4350 Felter Rd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.432380127478794",
+        "lon": "-121.8204659153604"
+      }
+    },
+    {
+      "address": "21450 Arrowhead Ln, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.28787268356217",
+        "lon": "-122.049199322172"
+      }
+    },
+    {
+      "address": "1039 Wood Duck Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.34421003389079",
+        "lon": "-121.99665456834627"
+      }
+    },
+    {
+      "address": "14527 S Bascom Ave, Campbell, CA 95032",
+      "location": {
+        "lat": "37.25731824237009",
+        "lon": "-121.94950616603225"
+      }
+    },
+    {
+      "address": "950 Hazel Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.27520516018478",
+        "lon": "-121.96559131685055"
+      }
+    },
+    {
+      "address": "230 Rosarno Ct, San Jose, CA 95111",
+      "location": {
+        "lat": "37.28908682865154",
+        "lon": "-121.85352855077728"
+      }
+    },
+    {
+      "address": "2559 Poplarwood Way, San Jose, CA 95132",
+      "location": {
+        "lat": "37.40771130496518",
+        "lon": "-121.88611716098796"
+      }
+    },
+    {
+      "address": "14725 Live Oak Ln, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.25362458198554",
+        "lon": "-122.01835914382062"
+      }
+    },
+    {
+      "address": "1080 Firth Ct, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.343039650438165",
+        "lon": "-122.00414114440541"
+      }
+    },
+    {
+      "address": "460 Costa Mesa Terrace, Mountain View, CA 94085",
+      "location": {
+        "lat": "37.393206000040244",
+        "lon": "-122.04541207406336"
+      }
+    },
+    {
+      "address": "1315 McCandless Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.411960452266996",
+        "lon": "-121.90066199787064"
+      }
+    },
+    {
+      "address": "1080 S Milpitas Blvd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.41785389237107",
+        "lon": "-121.88890868541823"
+      }
+    },
+    {
+      "address": "215 Dana Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.32523935231104",
+        "lon": "-121.92030147844815"
+      }
+    },
+    {
+      "address": "1800 Bradford Way, San Jose, CA 95124",
+      "location": {
+        "lat": "37.260719574823995",
+        "lon": "-121.91694567948979"
+      }
+    },
+    {
+      "address": "2456 Pioneer Ave, San Jose, CA 95128",
+      "location": {
+        "lat": "37.318540880442484",
+        "lon": "-121.93704677474872"
+      }
+    },
+    {
+      "address": "20865 Michaels Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.26268653656355",
+        "lon": "-122.03946620138534"
+      }
+    },
+    {
+      "address": "862 Vasona St, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.44038982277865",
+        "lon": "-121.91003652661566"
+      }
+    },
+    {
+      "address": "1170 Pedro St, San Jose, CA 95126",
+      "location": {
+        "lat": "37.312116788970094",
+        "lon": "-121.90751636696133"
+      }
+    },
+    {
+      "address": "21270 Blue Hills Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.291923083946024",
+        "lon": "-122.04677004024991"
+      }
+    },
+    {
+      "address": "955 11th Ave, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.4095599840655",
+        "lon": "-122.0332320231774"
+      }
+    },
+    {
+      "address": "2901 S White Rd, San Jose, CA 95148",
+      "location": {
+        "lat": "37.321317263968915",
+        "lon": "-121.79590021518042"
+      }
+    },
+    {
+      "address": "675 Los Esteros Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.43400047194429",
+        "lon": "-121.95439185695159"
+      }
+    },
+    {
+      "address": "855 Circle Dr, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.343209232337685",
+        "lon": "-121.9389211415008"
+      }
+    },
+    {
+      "address": "12631 Tallent Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.3928556043167",
+        "lon": "-121.83017650770877"
+      }
+    },
+    {
+      "address": "2509 Home Crest Dr, San Jose, CA 95148",
+      "location": {
+        "lat": "37.340322143994214",
+        "lon": "-121.81850437722481"
+      }
+    },
+    {
+      "address": "2500 Fontaine Rd, San Jose, CA 95121",
+      "location": {
+        "lat": "37.317155023083544",
+        "lon": "-121.82921351818742"
+      }
+    },
+    {
+      "address": "10740 Minette Dr, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31217474891059",
+        "lon": "-122.0022113903549"
+      }
+    },
+    {
+      "address": "477 Potrero Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.38930543779824",
+        "lon": "-122.03846998824946"
+      }
+    },
+    {
+      "address": "775 Peekskill Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.36123573915906",
+        "lon": "-122.04535958163517"
+      }
+    },
+    {
+      "address": "656 San Diego Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.39249832724487",
+        "lon": "-122.02231901408183"
+      }
+    },
+    {
+      "address": "2449 Woodland Ave, San Jose, CA 95128",
+      "location": {
+        "lat": "37.33134400298979",
+        "lon": "-121.94856539721962"
+      }
+    },
+    {
+      "address": "15826 Rica Vista Way, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38203952117312",
+        "lon": "-121.80438275400567"
+      }
+    },
+    {
+      "address": "1601 Coleman Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.35701783910544",
+        "lon": "-121.93949937952456"
+      }
+    },
+    {
+      "address": "841 Shenandoah Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.35801180101253",
+        "lon": "-122.04796946670352"
+      }
+    },
+    {
+      "address": "584 MacArthur Ave, San Jose, CA 95128",
+      "location": {
+        "lat": "37.31700063815256",
+        "lon": "-121.93599102949992"
+      }
+    },
+    {
+      "address": "2020 Assunta Way, San Jose, CA 95124",
+      "location": {
+        "lat": "37.27035963966588",
+        "lon": "-121.93114399400366"
+      }
+    },
+    {
+      "address": "19630 La Mar Ct, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31700496003034",
+        "lon": "-122.01663292708817"
+      }
+    },
+    {
+      "address": "3549 Cecil Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.324540028910484",
+        "lon": "-121.96063967354878"
+      }
+    },
+    {
+      "address": "795 Jasper St, San Jose, CA 95116",
+      "location": {
+        "lat": "37.33842694887443",
+        "lon": "-121.85674635724239"
+      }
+    },
+    {
+      "address": "12521 Paseo Cerro, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.286054825127565",
+        "lon": "-121.9967206645922"
+      }
+    },
+    {
+      "address": "701 Creekside Way, Campbell, CA 95008",
+      "location": {
+        "lat": "37.29138918838654",
+        "lon": "-121.93530062508495"
+      }
+    },
+    {
+      "address": "18591 Montpere Way, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.267499250692744",
+        "lon": "-121.99623400160023"
+      }
+    },
+    {
+      "address": "19700 Montauk Ct, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.26351880378141",
+        "lon": "-122.0176131145109"
+      }
+    },
+    {
+      "address": "19560 Chardonnay Ct, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27924815232744",
+        "lon": "-122.0154440476179"
+      }
+    },
+    {
+      "address": "1001 Ridder Park Dr, San Jose, CA 95131",
+      "location": {
+        "lat": "37.3832950913709",
+        "lon": "-121.90289511775025"
+      }
+    },
+    {
+      "address": "939 S Tantau Ave, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.311987635635774",
+        "lon": "-122.00782073044421"
+      }
+    },
+    {
+      "address": "1601 Las Plumas Ave, San Jose, CA 95133",
+      "location": {
+        "lat": "37.36176063390579",
+        "lon": "-121.86980558407546"
+      }
+    },
+    {
+      "address": "1186 Reed St, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.35711780050721",
+        "lon": "-121.95108989849223"
+      }
+    },
+    {
+      "address": "130 Rio Robles Dr W, San Jose, CA 95134",
+      "location": {
+        "lat": "37.40409255353123",
+        "lon": "-121.94767567780177"
+      }
+    },
+    {
+      "address": "11010 Sunnyvale-Saratoga Rd, Cupertino, CA 94087",
+      "location": {
+        "lat": "37.33818521585674",
+        "lon": "-122.03205827620424"
+      }
+    },
+    {
+      "address": "3093 Balgray Ct, San Jose, CA 95148",
+      "location": {
+        "lat": "37.31271017431061",
+        "lon": "-121.80407811375441"
+      }
+    },
+    {
+      "address": "3866 Blossomview Dr, San Jose, CA 95118",
+      "location": {
+        "lat": "37.26531409705499",
+        "lon": "-121.89340342402102"
+      }
+    },
+    {
+      "address": "1065 S Fifth St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.32272059475037",
+        "lon": "-121.87607624359003"
+      }
+    },
+    {
+      "address": "2314 New Jersey Ave, San Jose, CA 95124",
+      "location": {
+        "lat": "37.279413804946714",
+        "lon": "-121.92907141545327"
+      }
+    },
+    {
+      "address": "4978 Tifton Way, San Jose, CA 95118",
+      "location": {
+        "lat": "37.25601316553403",
+        "lon": "-121.88588017765154"
+      }
+    },
+    {
+      "address": "1538 Gladding Ct, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.409330745111006",
+        "lon": "-121.88639243503344"
+      }
+    },
+    {
+      "address": "1631 University Way, San Jose, CA 95126",
+      "location": {
+        "lat": "37.33366387483226",
+        "lon": "-121.93039879162744"
+      }
+    },
+    {
+      "address": "1135 Luchessi Dr, San Jose, CA 95118",
+      "location": {
+        "lat": "37.25963812722423",
+        "lon": "-121.87784400129321"
+      }
+    },
+    {
+      "address": "878 Brookline Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.36841935466348",
+        "lon": "-122.04484667212296"
+      }
+    },
+    {
+      "address": "14151 Vernice Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.35584918313686",
+        "lon": "-121.81555982044958"
+      }
+    },
+    {
+      "address": "370 Chateau La Salle Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.29167828993099",
+        "lon": "-121.85854764395373"
+      }
+    },
+    {
+      "address": "14545 Eastview Dr, Los Gatos, CA 95032",
+      "location": {
+        "lat": "37.25708056530677",
+        "lon": "-121.97256421818311"
+      }
+    },
+    {
+      "address": "1590 Buckeye Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.40645953322539",
+        "lon": "-121.91324360573122"
+      }
+    },
+    {
+      "address": "122 Destry Ct, San Jose, CA 95136",
+      "location": {
+        "lat": "37.25917493598261",
+        "lon": "-121.8205741467426"
+      }
+    },
+    {
+      "address": "2155 Dry Creek Rd, San Jose, CA 95124",
+      "location": {
+        "lat": "37.28636247190072",
+        "lon": "-121.91548155374802"
+      }
+    },
+    {
+      "address": "1047 Scott Blvd, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.34579142005581",
+        "lon": "-121.95917264571342"
+      }
+    },
+    {
+      "address": "1704 Automation Pkwy, San Jose, CA 95131",
+      "location": {
+        "lat": "37.38839172386127",
+        "lon": "-121.88211592176691"
+      }
+    },
+    {
+      "address": "5890 W Walbrook Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.29897767685591",
+        "lon": "-122.00834122941288"
+      }
+    },
+    {
+      "address": "2378 Peachtree Ln, San Jose, CA 95128",
+      "location": {
+        "lat": "37.33396243420829",
+        "lon": "-121.94646384896795"
+      }
+    },
+    {
+      "address": "4737 Williams Rd, San Jose, CA 95129",
+      "location": {
+        "lat": "37.308682520567714",
+        "lon": "-121.98672374494132"
+      }
+    },
+    {
+      "address": "2176 Spanishgate Ct, San Jose, CA 95132",
+      "location": {
+        "lat": "37.41250346238641",
+        "lon": "-121.87748759632719"
+      }
+    },
+    {
+      "address": "20291 Craigen Cir, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.280787222756786",
+        "lon": "-122.02897589805877"
+      }
+    },
+    {
+      "address": "2054 Old Piedmont Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.41936956544623",
+        "lon": "-121.84993368124704"
+      }
+    },
+    {
+      "address": "1582 Fall Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.354117526268595",
+        "lon": "-121.80035985721699"
+      }
+    },
+    {
+      "address": "628 Millich Dr, Campbell, CA 95117",
+      "location": {
+        "lat": "37.2962143249663",
+        "lon": "-121.95941783649035"
+      }
+    },
+    {
+      "address": "105 Silcreek Dr, San Jose, CA 95116",
+      "location": {
+        "lat": "37.35609867454933",
+        "lon": "-121.85357404385245"
+      }
+    },
+    {
+      "address": "1685 Stardust Ct, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.36009313842514",
+        "lon": "-121.95740264879646"
+      }
+    },
+    {
+      "address": "21065 Lauretta Dr, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.32769160622963",
+        "lon": "-122.04197273648082"
+      }
+    },
+    {
+      "address": "598 N 11th St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.351961062250474",
+        "lon": "-121.88778331333683"
+      }
+    },
+    {
+      "address": "1402 E Santa Clara St, San Jose, CA 95116",
+      "location": {
+        "lat": "37.34907784859818",
+        "lon": "-121.86317193180405"
+      }
+    },
+    {
+      "address": "1153 Highland Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.34049013227832",
+        "lon": "-121.94115355364191"
+      }
+    },
+    {
+      "address": "4398 Zanker Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.43960724831029",
+        "lon": "-121.93305973298746"
+      }
+    },
+    {
+      "address": "1901 Halford Ave, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.35779250619128",
+        "lon": "-121.99705344417703"
+      }
+    },
+    {
+      "address": "584 N Abbott Ave, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.43839641966581",
+        "lon": "-121.91494349073866"
+      }
+    },
+    {
+      "address": "19 Belle Terre Ct, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28867007832587",
+        "lon": "-121.94159092318328"
+      }
+    },
+    {
+      "address": "19834 Merritt Dr, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.32983557929081",
+        "lon": "-122.02029156039085"
+      }
+    },
+    {
+      "address": "10218 Pasadena Ave, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.319866156744865",
+        "lon": "-122.05424851208588"
+      }
+    },
+    {
+      "address": "94 Hollywood Ave, San Jose, CA 95112",
+      "location": {
+        "lat": "37.318552805185554",
+        "lon": "-121.87471887774572"
+      }
+    },
+    {
+      "address": "1306 Buckthorne Way, San Jose, CA 95129",
+      "location": {
+        "lat": "37.30031859393907",
+        "lon": "-122.02552235081991"
+      }
+    },
+    {
+      "address": "142 Bland Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28902627269182",
+        "lon": "-121.95399689022844"
+      }
+    },
+    {
+      "address": "1290 Coleman Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.35692711258232",
+        "lon": "-121.93434067188568"
+      }
+    },
+    {
+      "address": "1848 Indian Creek Ct, San Jose, CA 95148",
+      "location": {
+        "lat": "37.35074290728996",
+        "lon": "-121.79565194529853"
+      }
+    },
+    {
+      "address": "2684 E Trimble Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.408881183043164",
+        "lon": "-121.88409697900194"
+      }
+    },
+    {
+      "address": "903 Sunrose Terr, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.354641200017355",
+        "lon": "-122.01375033149853"
+      }
+    },
+    {
+      "address": "1127 S Daniel Way, San Jose, CA 95128",
+      "location": {
+        "lat": "37.30619841698912",
+        "lon": "-121.9417688365395"
+      }
+    },
+    {
+      "address": "1929 Trenton Dr, San Jose, CA 95124",
+      "location": {
+        "lat": "37.26952938447135",
+        "lon": "-121.92628498905069"
+      }
+    },
+    {
+      "address": "563 S Sunnyvale Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.36900611269248",
+        "lon": "-122.03156857161804"
+      }
+    },
+    {
+      "address": "1299 S Bascom Ave, San Jose, CA 95128",
+      "location": {
+        "lat": "37.301934561602934",
+        "lon": "-121.93187276897703"
+      }
+    },
+    {
+      "address": "258 Turquesa Ct, San Jose, CA 95116",
+      "location": {
+        "lat": "37.35944022684157",
+        "lon": "-121.85579424794234"
+      }
+    },
+    {
+      "address": "2811 Kalliam Dr, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.32863606515188",
+        "lon": "-121.97523755485173"
+      }
+    },
+    {
+      "address": "2582 Pioneer Ave, San Jose, CA 95128",
+      "location": {
+        "lat": "37.32011559940367",
+        "lon": "-121.93911301445075"
+      }
+    },
+    {
+      "address": "1010 E Arques Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.37808386908989",
+        "lon": "-122.00281388890355"
+      }
+    },
+    {
+      "address": "1632 Albatross Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.34038602176415",
+        "lon": "-122.03135725300362"
+      }
+    },
+    {
+      "address": "10229 Lyndale Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.35675470414002",
+        "lon": "-121.82451286023095"
+      }
+    },
+    {
+      "address": "5132 Forest View Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.312968298355955",
+        "lon": "-121.99329203130885"
+      }
+    },
+    {
+      "address": "1023 Huntingdon Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.30849647920536",
+        "lon": "-122.00194726057187"
+      }
+    },
+    {
+      "address": "5140 Cherry Ave, San Jose, CA 95118",
+      "location": {
+        "lat": "37.25688754686294",
+        "lon": "-121.87486579872835"
+      }
+    },
+    {
+      "address": "1885 Lundy Ave, San Jose, CA 95131",
+      "location": {
+        "lat": "37.393268972436864",
+        "lon": "-121.89317971496546"
+      }
+    },
+    {
+      "address": "3605 Julio Ave, San Jose, CA 95124",
+      "location": {
+        "lat": "37.263848417668065",
+        "lon": "-121.90988158253755"
+      }
+    },
+    {
+      "address": "2179 Glenkirk Dr, San Jose, CA 95124",
+      "location": {
+        "lat": "37.28339135411723",
+        "lon": "-121.91552144452973"
+      }
+    },
+    {
+      "address": "11406 Chula Vista Ct, San Jose, CA 95127",
+      "location": {
+        "lat": "37.39212093267211",
+        "lon": "-121.82499792666171"
+      }
+    },
+    {
+      "address": "4380 Albany Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.3204687281369",
+        "lon": "-121.98064375823085"
+      }
+    },
+    {
+      "address": "2164 Riordan Dr, San Jose, CA 95130",
+      "location": {
+        "lat": "37.28245443363541",
+        "lon": "-121.98403396730781"
+      }
+    },
+    {
+      "address": "666 S 11th St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.33111774378824",
+        "lon": "-121.87245915555361"
+      }
+    },
+    {
+      "address": "687 N Pastoria Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.39496268848965",
+        "lon": "-122.03338320333006"
+      }
+    },
+    {
+      "address": "1404 Dry Creek Rd, San Jose, CA 95125",
+      "location": {
+        "lat": "37.290211987659816",
+        "lon": "-121.90290262421082"
+      }
+    },
+    {
+      "address": "473 S Monroe St, San Jose, CA 95128",
+      "location": {
+        "lat": "37.3194153838024",
+        "lon": "-121.94333667094656"
+      }
+    },
+    {
+      "address": "700 Los Esteros Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.43163211083158",
+        "lon": "-121.94427402727285"
+      }
+    },
+    {
+      "address": "21925 Arrowhead Ln, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.2895390733745",
+        "lon": "-122.05046120272176"
+      }
+    },
+    {
+      "address": "1769 Cape Jasmine Pl, San Jose, CA 95133",
+      "location": {
+        "lat": "37.37227329880461",
+        "lon": "-121.86846103924273"
+      }
+    },
+    {
+      "address": "790 Comstock St, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.37433738575891",
+        "lon": "-121.94828283962697"
+      }
+    },
+    {
+      "address": "1987 Assunta Way, San Jose, CA 95124",
+      "location": {
+        "lat": "37.27101446498638",
+        "lon": "-121.93025587602118"
+      }
+    },
+    {
+      "address": "250 Innovation Dr, San Jose, CA 95134",
+      "location": {
+        "lat": "37.40060237582301",
+        "lon": "-121.93048065240542"
+      }
+    },
+    {
+      "address": "3423 Wheeling Dr, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.33331436909543",
+        "lon": "-121.99091113651588"
+      }
+    },
+    {
+      "address": "3058 Peppermint Dr, San Jose, CA 95148",
+      "location": {
+        "lat": "37.33071527887458",
+        "lon": "-121.79620489514537"
+      }
+    },
+    {
+      "address": "5279 Felter Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.435294957627086",
+        "lon": "-121.8129898269413"
+      }
+    },
+    {
+      "address": "2910 Tannery Way, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.38341566355328",
+        "lon": "-121.98123996427701"
+      }
+    },
+    {
+      "address": "4821 Ashmont Dr, San Jose, CA 95111",
+      "location": {
+        "lat": "37.274658385981034",
+        "lon": "-121.80868363793616"
+      }
+    },
+    {
+      "address": "1227 Scott Blvd, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.34762681465971",
+        "lon": "-121.95934037906889"
+      }
+    },
+    {
+      "address": "1650 Lafayette St, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.356223060009874",
+        "lon": "-121.94692351953978"
+      }
+    },
+    {
+      "address": "1654 The Alameda, San Jose, CA 95126",
+      "location": {
+        "lat": "37.336373446456406",
+        "lon": "-121.91758794224128"
+      }
+    },
+    {
+      "address": "13901 Lynde Ave, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.265924604696714",
+        "lon": "-122.03333007122643"
+      }
+    },
+    {
+      "address": "3131 Homestead Rd, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.33924856086933",
+        "lon": "-121.98349878729151"
+      }
+    },
+    {
+      "address": "1272 Fleming Ave, San Jose, CA 95127",
+      "location": {
+        "lat": "37.36530581596959",
+        "lon": "-121.79912697718466"
+      }
+    },
+    {
+      "address": "2005 Lavonne Ave, San Jose, CA 95116",
+      "location": {
+        "lat": "37.3481109272216",
+        "lon": "-121.84209676684952"
+      }
+    },
+    {
+      "address": "1777 Hamilton Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.294649768291144",
+        "lon": "-121.91676929541185"
+      }
+    },
+    {
+      "address": "3038 Vesuvius Ln, San Jose, CA 95132",
+      "location": {
+        "lat": "37.39668973430092",
+        "lon": "-121.85470584309016"
+      }
+    },
+    {
+      "address": "880 Hillsdale Ave, San Jose, CA 95136",
+      "location": {
+        "lat": "37.278173489812886",
+        "lon": "-121.87080895329943"
+      }
+    },
+    {
+      "address": "6167 Plymouth Ave, San Jose, CA 95129",
+      "location": {
+        "lat": "37.29611109631401",
+        "lon": "-122.01266859238777"
+      }
+    },
+    {
+      "address": "2831 Rainview Dr, San Jose, CA 95133",
+      "location": {
+        "lat": "37.376177705792166",
+        "lon": "-121.84628986099926"
+      }
+    },
+    {
+      "address": "2490 Fairglen Dr, San Jose, CA 95125",
+      "location": {
+        "lat": "37.2791519091696",
+        "lon": "-121.90124097739908"
+      }
+    },
+    {
+      "address": "1518 Elka Ave, San Jose, CA 95129",
+      "location": {
+        "lat": "37.29664542874072",
+        "lon": "-122.01843064340005"
+      }
+    },
+    {
+      "address": "489 N 14th St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.35068537925909",
+        "lon": "-121.88368711856525"
+      }
+    },
+    {
+      "address": "2061 E San Antonio St, San Jose, CA 95116",
+      "location": {
+        "lat": "37.35368772618247",
+        "lon": "-121.84538874222206"
+      }
+    },
+    {
+      "address": "20330 Kirkmont Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.29082569696991",
+        "lon": "-122.02934566390265"
+      }
+    },
+    {
+      "address": "1515 Farmer Pl, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.35046174205257",
+        "lon": "-121.99452152839423"
+      }
+    },
+    {
+      "address": "721 Camden Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.276450474052766",
+        "lon": "-121.9500927139969"
+      }
+    },
+    {
+      "address": "1089 W McKinley Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.377870681381644",
+        "lon": "-122.0498719158762"
+      }
+    },
+    {
+      "address": "1200 Ames Ave, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.420114495451024",
+        "lon": "-121.88475759031466"
+      }
+    },
+    {
+      "address": "445 Nelo St, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.38866973437679",
+        "lon": "-121.94179638068431"
+      }
+    },
+    {
+      "address": "698 Carolina Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.39248201423251",
+        "lon": "-122.01660407313095"
+      }
+    },
+    {
+      "address": "675 Los Esteros Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.434823157467946",
+        "lon": "-121.95788905501901"
+      }
+    },
+    {
+      "address": "595 W Remington Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.35929209375196",
+        "lon": "-122.03642960832624"
+      }
+    },
+    {
+      "address": "3411 Monroe St, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.36706558662476",
+        "lon": "-121.99057798980274"
+      }
+    },
+    {
+      "address": "842 N Tenth St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.356675062572506",
+        "lon": "-121.89266184095268"
+      }
+    },
+    {
+      "address": "4140 Felter Rd, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.441245001074556",
+        "lon": "-121.83790608245353"
+      }
+    },
+    {
+      "address": "125 Topeka Ave, San Jose, CA 95128",
+      "location": {
+        "lat": "37.32575855782088",
+        "lon": "-121.93140280808518"
+      }
+    },
+    {
+      "address": "1744 Lark Ln, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.33544927088841",
+        "lon": "-122.01735806099984"
+      }
+    },
+    {
+      "address": "3809 Ashton Ct, San Jose, CA 95111",
+      "location": {
+        "lat": "37.28654098020314",
+        "lon": "-121.8260676533045"
+      }
+    },
+    {
+      "address": "1439 Kahler Ct, San Jose, CA 95132",
+      "location": {
+        "lat": "37.42924151562212",
+        "lon": "-121.80542547504272"
+      }
+    },
+    {
+      "address": "1550 Grace Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.29662053982116",
+        "lon": "-121.91880541473186"
+      }
+    },
+    {
+      "address": "1539 Queens Crossing Dr, San Jose, CA 95132",
+      "location": {
+        "lat": "37.40181144360164",
+        "lon": "-121.86010754981542"
+      }
+    },
+    {
+      "address": "811 Commercial St, San Jose, CA 95112",
+      "location": {
+        "lat": "37.366784285499676",
+        "lon": "-121.89064426522432"
+      }
+    },
+    {
+      "address": "1162 W McKinley Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.37809477642551",
+        "lon": "-122.05308237602009"
+      }
+    },
+    {
+      "address": "858 Leith Ave, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.3902737705897",
+        "lon": "-121.94954424244453"
+      }
+    },
+    {
+      "address": "1390 S First St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.31698859004943",
+        "lon": "-121.87366125720754"
+      }
+    },
+    {
+      "address": "4037 Lemoyne Way, San Jose, CA 95008",
+      "location": {
+        "lat": "37.28041849971621",
+        "lon": "-121.97335913325198"
+      }
+    },
+    {
+      "address": "14455 Black Walnut Ct, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.258774317482874",
+        "lon": "-122.01634979299178"
+      }
+    },
+    {
+      "address": "1106 Lick Ave, San Jose, CA 95110",
+      "location": {
+        "lat": "37.315103675845215",
+        "lon": "-121.88425434918173"
+      }
+    },
+    {
+      "address": "1080 N Redwood Ave, San Jose, CA 95128",
+      "location": {
+        "lat": "37.33393343873679",
+        "lon": "-121.94650361719242"
+      }
+    },
+    {
+      "address": "694 San Luisito Way, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.39003768439923",
+        "lon": "-122.00871311254083"
+      }
+    },
+    {
+      "address": "1417 Hillsdale Ave, San Jose, CA 95118",
+      "location": {
+        "lat": "37.2726035521355",
+        "lon": "-121.89014626122726"
+      }
+    },
+    {
+      "address": "3394 Mira Vista Cir, San Jose, CA 95132",
+      "location": {
+        "lat": "37.39216137183467",
+        "lon": "-121.8395950218573"
+      }
+    },
+    {
+      "address": "1875 De La Cruz Blvd, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.360226081884974",
+        "lon": "-121.94050960052829"
+      }
+    },
+    {
+      "address": "1554 Amesbury Way, San Jose, CA 95127",
+      "location": {
+        "lat": "37.34821134574594",
+        "lon": "-121.81539860469866"
+      }
+    },
+    {
+      "address": "3895 Ashridge Ln, San Jose, CA 95121",
+      "location": {
+        "lat": "37.29960518137874",
+        "lon": "-121.79989729447269"
+      }
+    },
+    {
+      "address": "620 E Maude Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.38441359011405",
+        "lon": "-122.01668556214989"
+      }
+    },
+    {
+      "address": "1825 Silk Wood Ln, San Jose, CA 95131",
+      "location": {
+        "lat": "37.390354582250616",
+        "lon": "-121.90333429556617"
+      }
+    },
+    {
+      "address": "5101 Bengal Ct, San Jose, CA 95111",
+      "location": {
+        "lat": "37.26324318109277",
+        "lon": "-121.81458034766702"
+      }
+    },
+    {
+      "address": "2899 Agate Dr, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.37074824747413",
+        "lon": "-121.97957544110793"
+      }
+    },
+    {
+      "address": "104 Roxbury St, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.339588312138716",
+        "lon": "-121.94254970224262"
+      }
+    },
+    {
+      "address": "520 Brennan St, San Jose, CA 95131",
+      "location": {
+        "lat": "37.38843386908949",
+        "lon": "-121.91670056071337"
+      }
+    },
+    {
+      "address": "998 Granada Way, San Jose, CA 95122",
+      "location": {
+        "lat": "37.3209950209951",
+        "lon": "-121.84566102651017"
+      }
+    },
+    {
+      "address": "725 San Aleso Ave, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.39398731719522",
+        "lon": "-122.0278215331688"
+      }
+    },
+    {
+      "address": "10974 Edgemont Dr, San Jose, CA 95127",
+      "location": {
+        "lat": "37.38632047572127",
+        "lon": "-121.81237106648754"
+      }
+    },
+    {
+      "address": "1108 Willowhaven Dr, San Jose, CA 95126",
+      "location": {
+        "lat": "37.3068472459154",
+        "lon": "-121.91728825988046"
+      }
+    },
+    {
+      "address": "232 N Harold Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.328684413860785",
+        "lon": "-121.96163533264352"
+      }
+    },
+    {
+      "address": "1539 Husted Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.2809604966276",
+        "lon": "-121.89723246591592"
+      }
+    },
+    {
+      "address": "6792 Rainbow Dr, San Jose, CA 95129",
+      "location": {
+        "lat": "37.30112976802534",
+        "lon": "-122.02336957646123"
+      }
+    },
+    {
+      "address": "414 Gridley St, San Jose, CA 95127",
+      "location": {
+        "lat": "37.379908027247126",
+        "lon": "-121.83269945896754"
+      }
+    },
+    {
+      "address": "19130 Portos Dr, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27146547863212",
+        "lon": "-122.00692462098219"
+      }
+    },
+    {
+      "address": "481 Fenley Ave, San Jose, CA 95117",
+      "location": {
+        "lat": "37.31915233349116",
+        "lon": "-121.9568351561873"
+      }
+    },
+    {
+      "address": "444 Toyama Dr, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.39988247376982",
+        "lon": "-122.0140090995478"
+      }
+    },
+    {
+      "address": "1069 Bird Ave, San Jose, CA 95125",
+      "location": {
+        "lat": "37.31198738021525",
+        "lon": "-121.8972167816153"
+      }
+    },
+    {
+      "address": "3021 Garden Ave, San Jose, CA 95111",
+      "location": {
+        "lat": "37.29148925875916",
+        "lon": "-121.84114892954207"
+      }
+    },
+    {
+      "address": "950 Crestwood Ct, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.39321050367557",
+        "lon": "-121.99375020682889"
+      }
+    },
+    {
+      "address": "68 Hawthorne Way, San Jose, CA 95110",
+      "location": {
+        "lat": "37.34405451859664",
+        "lon": "-121.89784854024602"
+      }
+    },
+    {
+      "address": "2120 Walsh Ave, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.36904794806866",
+        "lon": "-121.962051608306"
+      }
+    },
+    {
+      "address": "2415 S Winchester Blvd, Campbell, CA 95008",
+      "location": {
+        "lat": "37.279508382929066",
+        "lon": "-121.95012785160519"
+      }
+    },
+    {
+      "address": "3061 Zanker Rd, San Jose, CA 95134",
+      "location": {
+        "lat": "37.3974393114874",
+        "lon": "-121.93118694487333"
+      }
+    },
+    {
+      "address": "11761 Southwood Dr, San Jose, CA 95130",
+      "location": {
+        "lat": "37.29673905596112",
+        "lon": "-121.98475149828143"
+      }
+    },
+    {
+      "address": "2226 Dobern Ave, San Jose, CA 95116",
+      "location": {
+        "lat": "37.352188031099274",
+        "lon": "-121.84027002863688"
+      }
+    },
+    {
+      "address": "728 State St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.32439048314796",
+        "lon": "-121.88430317623663"
+      }
+    },
+    {
+      "address": "3131 Homestead Rd, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.33959099323526",
+        "lon": "-121.98395588382618"
+      }
+    },
+    {
+      "address": "1386 Lillian Ave, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.3491386537972",
+        "lon": "-122.01782054173354"
+      }
+    },
+    {
+      "address": "390 N Winchester Blvd, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.33249734159053",
+        "lon": "-121.95274838811221"
+      }
+    },
+    {
+      "address": "3488 Sweigert Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.410945779392506",
+        "lon": "-121.84583018480964"
+      }
+    },
+    {
+      "address": "247 S Mathilda Ave, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.37593424578285",
+        "lon": "-122.0350194684002"
+      }
+    },
+    {
+      "address": "1417 Portola Dr, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.422376633189415",
+        "lon": "-121.87653662494198"
+      }
+    },
+    {
+      "address": "3257 Lynn Oaks Dr, San Jose, CA 95117",
+      "location": {
+        "lat": "37.31114603653657",
+        "lon": "-121.95482730652824"
+      }
+    },
+    {
+      "address": "3400 Central Expy, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.37737887017842",
+        "lon": "-121.98996698363322"
+      }
+    },
+    {
+      "address": "1424 Navarro Dr, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.347759177290285",
+        "lon": "-122.0107287781258"
+      }
+    },
+    {
+      "address": "2213 Ringwood Ave, San Jose, CA 95131",
+      "location": {
+        "lat": "37.39832257303409",
+        "lon": "-121.89937039446865"
+      }
+    },
+    {
+      "address": "10335 Wunderlich Dr, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31806338970531",
+        "lon": "-122.0009094178931"
+      }
+    },
+    {
+      "address": "3131 Bowers Ave, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.37893244248301",
+        "lon": "-121.9771771316498"
+      }
+    },
+    {
+      "address": "2540 Nightingale Dr, San Jose, CA 95125",
+      "location": {
+        "lat": "37.28687900920716",
+        "lon": "-121.87596561357405"
+      }
+    },
+    {
+      "address": "1708 Grizilo Dr, San Jose, CA 95124",
+      "location": {
+        "lat": "37.270836817667224",
+        "lon": "-121.9103088234274"
+      }
+    },
+    {
+      "address": "22651 Mount Eden Rd, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27807209165569",
+        "lon": "-122.05357387555175"
+      }
+    },
+    {
+      "address": "14093 Pike Rd, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.262479959958746",
+        "lon": "-122.04924113645592"
+      }
+    },
+    {
+      "address": "1717 The Alameda, San Jose, CA 95126",
+      "location": {
+        "lat": "37.33814777788642",
+        "lon": "-121.92091105376618"
+      }
+    },
+    {
+      "address": "1053 Reed Terrace, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.36739038655821",
+        "lon": "-122.00070125952065"
+      }
+    },
+    {
+      "address": "1434 Jupiter Ct, Milpitas, CA 95035",
+      "location": {
+        "lat": "37.43569009847137",
+        "lon": "-121.88026212523282"
+      }
+    },
+    {
+      "address": "10335 Judy Ave, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.318092539041444",
+        "lon": "-122.00547811409645"
+      }
+    },
+    {
+      "address": "1711 Chaucer Dr, San Jose, CA 95116",
+      "location": {
+        "lat": "37.34289588695889",
+        "lon": "-121.84554283502108"
+      }
+    },
+    {
+      "address": "889 S Almaden Ave, San Jose, CA 95110",
+      "location": {
+        "lat": "37.32086546570935",
+        "lon": "-121.88392665640812"
+      }
+    },
+    {
+      "address": "1121 Clark St, San Jose, CA 95125",
+      "location": {
+        "lat": "37.31226507660165",
+        "lon": "-121.89221438954806"
+      }
+    },
+    {
+      "address": "19448 Via Madronas Ct, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.27755803568873",
+        "lon": "-122.01371521340657"
+      }
+    },
+    {
+      "address": "737 Harvard Ave, Sunnyvale, CA 94087",
+      "location": {
+        "lat": "37.36372332344651",
+        "lon": "-122.04356140309254"
+      }
+    },
+    {
+      "address": "930 Remillard Ct, San Jose, CA 95122",
+      "location": {
+        "lat": "37.3298800214788",
+        "lon": "-121.86380734266348"
+      }
+    },
+    {
+      "address": "999 Riverside Dr, San Jose, CA 95125",
+      "location": {
+        "lat": "37.313714243084014",
+        "lon": "-121.90178758945063"
+      }
+    },
+    {
+      "address": "898 Malone Rd, San Jose, CA 95125",
+      "location": {
+        "lat": "37.295569852644384",
+        "lon": "-121.88429912179245"
+      }
+    },
+    {
+      "address": "780 E Brokaw Rd, San Jose, CA 95112",
+      "location": {
+        "lat": "37.381813088776674",
+        "lon": "-121.90520123296312"
+      }
+    },
+    {
+      "address": "33 S Second St, Campbell, CA 95008",
+      "location": {
+        "lat": "37.286660741288294",
+        "lon": "-121.94610144300842"
+      }
+    },
+    {
+      "address": "2792 El Camino Real, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.35227652798781",
+        "lon": "-121.97641514957459"
+      }
+    },
+    {
+      "address": "1054 Chestnut St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.348299915205665",
+        "lon": "-121.91957964879785"
+      }
+    },
+    {
+      "address": "1559 S King Rd, San Jose, CA 95122",
+      "location": {
+        "lat": "37.333927535422305",
+        "lon": "-121.83753813446145"
+      }
+    },
+    {
+      "address": "1217 Adams Dr, San Jose, CA 95132",
+      "location": {
+        "lat": "37.39466162373814",
+        "lon": "-121.85319343161385"
+      }
+    },
+    {
+      "address": "2905 Stender Way, Santa Clara, CA 95054",
+      "location": {
+        "lat": "37.37511468682983",
+        "lon": "-121.96975221950562"
+      }
+    },
+    {
+      "address": "1666 Coraltree Pl, San Jose, CA 95131",
+      "location": {
+        "lat": "37.39445681250245",
+        "lon": "-121.87846371810993"
+      }
+    },
+    {
+      "address": "689 Foxtail Dr, Sunnyvale, CA 94086",
+      "location": {
+        "lat": "37.362025680150424",
+        "lon": "-122.02245248238737"
+      }
+    },
+    {
+      "address": "3291 New Jersey Ave, San Jose, CA 95124",
+      "location": {
+        "lat": "37.26448968831267",
+        "lon": "-121.92560484918143"
+      }
+    },
+    {
+      "address": "4833 Felter Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.44168861345879",
+        "lon": "-121.8173916853146"
+      }
+    },
+    {
+      "address": "959 Stewart Dr, Sunnyvale, CA 94085",
+      "location": {
+        "lat": "37.385007242262475",
+        "lon": "-122.00405353091034"
+      }
+    },
+    {
+      "address": "507 Serenade Way, San Jose, CA 95111",
+      "location": {
+        "lat": "37.27881917327658",
+        "lon": "-121.81947632918565"
+      }
+    },
+    {
+      "address": "200 Winchester Cir, Los Gatos, CA 95032",
+      "location": {
+        "lat": "37.259004666903515",
+        "lon": "-121.96205156954561"
+      }
+    },
+    {
+      "address": "12799 Miller Ave, Saratoga, CA 95070",
+      "location": {
+        "lat": "37.282910435026345",
+        "lon": "-122.0121795986517"
+      }
+    },
+    {
+      "address": "1664 Isabel Dr, San Jose, CA 95125",
+      "location": {
+        "lat": "37.30065417519311",
+        "lon": "-121.91482554736004"
+      }
+    },
+    {
+      "address": "128 N San Tomas Aquino Rd, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28742567354128",
+        "lon": "-121.97524621984495"
+      }
+    },
+    {
+      "address": "2704 Ingalls Ct, San Jose, CA 95111",
+      "location": {
+        "lat": "37.30063287136903",
+        "lon": "-121.84329837554387"
+      }
+    },
+    {
+      "address": "2047 Zanker Rd, San Jose, CA 95131",
+      "location": {
+        "lat": "37.37757040128338",
+        "lon": "-121.91512304356529"
+      }
+    },
+    {
+      "address": "10062 Miller Ave, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.321902126259744",
+        "lon": "-122.0139166153068"
+      }
+    },
+    {
+      "address": "1736 Olivetree Dr, San Jose, CA 95131",
+      "location": {
+        "lat": "37.39773736980455",
+        "lon": "-121.87847247398177"
+      }
+    },
+    {
+      "address": "941 Pershing Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.335821664420514",
+        "lon": "-121.91332491403587"
+      }
+    },
+    {
+      "address": "2080 Juliana Ct, Santa Clara, CA 95050",
+      "location": {
+        "lat": "37.33633426755817",
+        "lon": "-121.95299480884624"
+      }
+    },
+    {
+      "address": "5551 Sweigert Rd, San Jose, CA 95132",
+      "location": {
+        "lat": "37.42498259529961",
+        "lon": "-121.82558391146684"
+      }
+    },
+    {
+      "address": "1190 Bordeaux Dr, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.40881445975835",
+        "lon": "-122.02342365751369"
+      }
+    },
+    {
+      "address": "65 W Rincon Ave, Campbell, CA 95008",
+      "location": {
+        "lat": "37.28540709465357",
+        "lon": "-121.9510830694672"
+      }
+    },
+    {
+      "address": "5068 Brook Valley Loop, San Jose, CA 95136",
+      "location": {
+        "lat": "37.26184692813616",
+        "lon": "-121.81861762649939"
+      }
+    },
+    {
+      "address": "1795 White Oaks Rd, Campbell, CA 95008",
+      "location": {
+        "lat": "37.26203306521002",
+        "lon": "-121.94927645322997"
+      }
+    },
+    {
+      "address": "2135 Little Orchard St, San Jose, CA 95125",
+      "location": {
+        "lat": "37.3014598339897",
+        "lon": "-121.86995322374301"
+      }
+    },
+    {
+      "address": "10792 Alderbrook Ln, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.31150079344021",
+        "lon": "-122.01757051718793"
+      }
+    },
+    {
+      "address": "1225 Vienna Dr, Sunnyvale, CA 94089",
+      "location": {
+        "lat": "37.40020210932594",
+        "lon": "-121.99950970158658"
+      }
+    },
+    {
+      "address": "610 Newhall St, San Jose, CA 95110",
+      "location": {
+        "lat": "37.34899703306063",
+        "lon": "-121.92084305110909"
+      }
+    },
+    {
+      "address": "21700 Stevens Creek Blvd, Cupertino, CA 95014",
+      "location": {
+        "lat": "37.32274326584344",
+        "lon": "-122.05428737122912"
+      }
+    },
+    {
+      "address": "3875 Kifer Rd, Santa Clara, CA 95051",
+      "location": {
+        "lat": "37.37501370375591",
+        "lon": "-122.00353599007985"
+      }
+    },
+    {
+      "address": "815 Riverside Dr, San Jose, CA 95125",
+      "location": {
+        "lat": "37.31667328501522",
+        "lon": "-121.90200306732642"
+      }
+    },
+    {
+      "address": "68 Cleaves Ave, San Jose, CA 95126",
+      "location": {
+        "lat": "37.32988452200835",
+        "lon": "-121.90699095999273"
+      }
+    }
+  ]
+}
