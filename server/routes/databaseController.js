@@ -5,27 +5,27 @@ const mongodb = require('mongodb');
 // Public functions
 // All methods returns a promise
 var exports = module.exports = {};
-exports.getUsersUpdatedBeforeDate = function(date, limit) {
+exports.getNewestUsers = function(beforeDate, limit) {
     if (!limit) {
         limit = 20;
     }
-    if (!date) {
-        date = new Date();
+    if (!beforeDate) {
+        beforeDate = new Date();
     }
-    return panelDB.find({ updatedDate: { $lt: date } },
+    return panelDB.find({ updatedDate: { $lt: beforeDate } },
         { limit: limit, sort: {updatedDate: -1} });
 };
 
-exports.getUsersUpdatedAfterDate = function(date, limit) {
+exports.getOldestUsers = function(afterDate, limit) {
     if (!limit) {
         limit = 20;
     }
 
-    if (!date) {
+    if (!afterDate) {
         return panelDB.find({},
             { limit: limit, sort: {updatedDate: 1} });
     } else {
-        return panelDB.find({ updatedDate: { $gt: date } },
+        return panelDB.find({ updatedDate: { $gt: afterDate } },
             { limit: limit, sort: {updatedDate: 1} });
     }
 };
@@ -92,16 +92,16 @@ exports.addUser = function (user) {
     return Promise.all(promises)
         .then(function (values) {
             if (!values[0] && !values[1]) {
-                return values[2];
+                return Promise.resolve();
             } else if (values[0]) {
                 return Promise.reject("Username already registered");
             } else {
                 return Promise.reject("Email already registered");
             }
         })
-        .then(function (doc) {
+        .then(function () {
             delete user._id;
-            data.updatedDate = new Date();
+            user.updatedDate = new Date();
             return panelDB.insert(user);
         })
 };
