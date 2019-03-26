@@ -32,3 +32,8 @@
 *.app
 
 node_modules/
+
+#JetBrains' IDEA
+server/.idea/*
+clientn/.idea/*
+client/.idea/*
