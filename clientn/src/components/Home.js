@@ -67,6 +67,9 @@ class DesktopContainer extends Component {
               pointing={!fixed}
               secondary={!fixed}
               size='large'
+              style={{ 
+                'border-width': '0px'
+              }}
             >
               <Container>
                 <Menu.Item as={Link} to='/' active>HOME</Menu.Item>

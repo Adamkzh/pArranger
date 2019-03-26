@@ -27,12 +27,8 @@ class HomepageHeading extends Component {
               <Menu.Item as={Link} to='/' active={activeTag === "home"}>HOME</Menu.Item>
               <Menu.Item as={Link} to='/design' active={activeTag === "design"}>DESIGN</Menu.Item>
               <Menu.Item as={Link} to='/dashboard/admin' active={activeTag === "dashboard"}>DASHBOARD</Menu.Item>
-              <Dropdown item simple text='ADMIN' style={{height : '100%'}}>
-                <Dropdown.Menu>
-                  <Dropdown.Item as={Link} to='/search'>SEARCH</Dropdown.Item>
-                  <Dropdown.Item as={Link} to='/console'>CONSOLE </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+              <Menu.Item as={Link} to='/search' >SEARCH</Menu.Item>
+              <Menu.Item as={Link} to= '/console' active={activeTag === "console"}>CONSOLE</Menu.Item>
               <Menu.Item position='right'>
                 <Button as={Link} to='/login' inverted={!fixed}>
                   SIGN IN

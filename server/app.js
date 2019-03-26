@@ -29,6 +29,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.use('/', indexRouter);
 app.post('/api/save', saveData);
 app.get('/api/get',getData);
+app.get('/api/getall',getData);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

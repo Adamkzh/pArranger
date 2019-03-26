@@ -5,6 +5,7 @@ import Design from './components/Dashboard';
 import Console from './components/admin/Admin';
 import Login from './components/auth/Login';
 import Detail from './components/Panel-Detail-Dashboard';
+import Search from './components/Search';
 
 const Routes =() =>(
     <Router>
@@ -12,9 +13,9 @@ const Routes =() =>(
       <Route exact path="/" component={Home}/>
       <Route exact path="/design" component={Design}/>
       <Route exact path="/console" component={Console}/>
-      {/* <Route exact path="/search" component={Search}/> */}
       <Route exact path="/login" component={Login}/>
       <Route exact path="/dashboard/:id" component={Detail}/>
+      <Route exact path="/search" component={Search}/>
     </div>
   </Router>
 )

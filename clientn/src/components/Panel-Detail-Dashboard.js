@@ -30,6 +30,7 @@ componentDidMount= ()=> {
             }
           })
           .then((response) =>{
+            console.log(response)
             var data = response.data;
             this.setState({
                 address: data.address,

@@ -10,7 +10,7 @@ var url = 'mongodb://localhost:27017/pArranger';
 
 var MongoClient = require('mongodb').MongoClient, assert = require('assert');
 
-
+// get a single user information 
 router.get('/api/get', function(req, res, next) {
     
      MongoClient.connect(url, function(err, client) {
@@ -26,6 +26,26 @@ router.get('/api/get', function(req, res, next) {
 
       });
 });
+
+// get all active user information
+router.get('/api/getall', function(req, res, next) {
+  MongoClient.connect(url, function(err, client) {
+     assert.equal(null, err);
+     console.log("Connected correctly to server...");
+     var db = client.db('panelDB');
+
+     db.collection('userinfo').find({}).toArray(function (err, result) {
+      if (err) {
+          res.send(err);
+      } else {
+          res.send(JSON.stringify(result));
+      }
+    })
+
+   });
+});
+
+
 
 module.exports = router;
  

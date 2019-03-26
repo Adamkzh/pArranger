@@ -1,0 +1,124 @@
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import {
+    Button,
+    Container,
+    Header,
+    Menu,
+    Segment,
+    Input
+} from 'semantic-ui-react';
+
+import '../style/Search.css';
+
+
+
+
+class Search extends Component{
+
+constructor(props){
+    super(props);
+    this.state = {
+     
+    }
+}
+
+
+
+componentDidMount= ()=> {
+    var id = this.props.match.params.id;
+    if(id !== "admin"){
+        axios.get('/api/getall', {
+            params: {
+              ID: id
+            }
+          })
+          .then((response) =>{
+              var data = response.data;
+              console.log(data)
+          })
+          .catch(function (error) {
+            console.log(error);
+          })
+          .then(function () {
+            // always executed
+          });  
+    }
+}
+
+
+
+render(){
+    var dashboardUrl = "/dashboard/";
+    if(window.localStorage.getItem('uuid')){
+      dashboardUrl += window.localStorage.getItem('uuid');
+    }else{
+      dashboardUrl += "admin"
+    }
+
+    return(
+        <div>
+          <Segment
+            inverted
+            textAlign='center'
+            className= "searchSeg"
+            style={{ 
+              minHeight: 500, 
+              padding: '1em 0em',
+              'backgroundImage': 'url(https://earthview.withgoogle.com/download/6101.jpg)',
+              'backgroundRepeat': 'no-repeat',
+              'backgroundSize': 'cover',
+            }}
+            vertical
+          >
+            <Menu
+              fixed={'top'}
+              inverted
+              pointing
+              secondary
+              size='large'
+              style={{ 
+                'border-width': '0px'
+              }}
+            >
+              <Container>
+                <Menu.Item as={Link} to='/' >HOME</Menu.Item>
+                <Menu.Item as={Link} to='/design'>DESIGN</Menu.Item>
+                <Menu.Item as={Link} to= {dashboardUrl}>DASHBOARD</Menu.Item>
+                <Menu.Item as={Link} to='/search' active>SEARCH</Menu.Item>
+                <Menu.Item as={Link} to= '/console'>CONSOLE</Menu.Item>
+                <Menu.Item position='right'>
+                  <Button as={Link} to='/login' inverted>
+                    SIGN IN
+                  </Button>
+                </Menu.Item>
+              </Container>
+            </Menu>
+
+            <Container text>
+                <Header
+                as='h2'
+                content='Search'
+                inverted
+                style={{
+                    fontSize:'4em',
+                    fontWeight: 'normal',
+                    marginBottom: 0,
+                    marginTop: '4em',
+                }}
+                />
+            <Input icon='search' placeholder='Search...' 
+                style={{
+                    marginTop: '1em',
+                    width: '26em'
+                }}
+            />
+            </Container>
+          </Segment>
+        </div>
+    );
+}
+}
+
+export default Search;   

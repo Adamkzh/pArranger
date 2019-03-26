@@ -13,11 +13,9 @@ const upload = multer({
 
 var MongoClient = require('mongodb').MongoClient, assert = require('assert');
 
-
+// save specific user information 
 router.post('/api/save', function(req, res, next) {
     upload(req, res, (err) => {
-        // console.log(req.body.mapImage);
-        // console.log("Request body ---",  JSON.parse(req.body.data));
         var data = JSON.parse(req.body.data);
         var document = {
             _id: data.uuid,
