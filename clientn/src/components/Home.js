@@ -13,6 +13,7 @@ import {
   Responsive,
   Segment,
   Visibility,
+  Dropdown
 } from 'semantic-ui-react';
 
 import homepageMidImage from '../image/homepage-mid.jpg'
@@ -71,7 +72,12 @@ class DesktopContainer extends Component {
                 <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
                 <Menu.Item as={Link} to='/design'>DESIGN</Menu.Item>
                 <Menu.Item as={Link} to= {dashboardUrl}>DASHBOARD</Menu.Item>
-                <Menu.Item as={Link} to='/admin' >ADMIN</Menu.Item>
+                <Dropdown item simple text='ADMIN' style={{height : '100%'}}>
+                <Dropdown.Menu>
+                  <Dropdown.Item as={Link} to='/search'>SEARCH</Dropdown.Item>
+                  <Dropdown.Item as={Link} to='/console'>CONSOLE </Dropdown.Item>
+                </Dropdown.Menu>
+                </Dropdown>
                 <Menu.Item position='right'>
                   <Button as={Link} to='/login' inverted={!fixed}>
                     SIGN IN

@@ -23,7 +23,6 @@ constructor(props){
 
 componentDidMount= ()=> {
     var id = this.props.match.params.id;
-
     if(id !== "admin"){
         axios.get('/api/get', {
             params: {
@@ -59,7 +58,7 @@ render(){
     return(
         <div>
             <Header activeTag={"dashboard"}/>
-            
+             
         </div>
     );
 }
