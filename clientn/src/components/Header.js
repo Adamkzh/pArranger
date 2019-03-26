@@ -1,6 +1,6 @@
 import React ,{ Component }from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Menu, Button, Dropdown } from 'semantic-ui-react'
+import { Container, Menu, Button } from 'semantic-ui-react'
 
 
 var activeTag = "home";

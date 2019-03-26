@@ -7,10 +7,14 @@ import {
     Header,
     Menu,
     Segment,
-    Input
+    Input,
+    Card,
+    Image,
+    Icon,
 } from 'semantic-ui-react';
 
 import '../style/Search.css';
+
 
 
 
@@ -20,10 +24,9 @@ class Search extends Component{
 constructor(props){
     super(props);
     this.state = {
-     
+        item: []
     }
 }
-
 
 
 componentDidMount= ()=> {
@@ -36,7 +39,17 @@ componentDidMount= ()=> {
           })
           .then((response) =>{
               var data = response.data;
-              console.log(data)
+              data.forEach(element => {
+                  var obj = {};
+                  obj.header = element.username;
+                  obj.meta = element.email;  
+                  obj.image = element.mapImage;
+                  console.log(obj)
+                  this.setState({
+                    item:[...this.state.item, obj]
+                  });
+                });
+
           })
           .catch(function (error) {
             console.log(error);
@@ -50,6 +63,7 @@ componentDidMount= ()=> {
 
 
 render(){
+    var src = 'https://image.ibb.co/kzeSqw/lunch1.jpg'
     var dashboardUrl = "/dashboard/";
     if(window.localStorage.getItem('uuid')){
       dashboardUrl += window.localStorage.getItem('uuid');
@@ -57,14 +71,14 @@ render(){
       dashboardUrl += "admin"
     }
 
+    console.log(this.state.item)
     return(
         <div>
           <Segment
             inverted
             textAlign='center'
-            className= "searchSeg"
             style={{ 
-              minHeight: 500, 
+              minHeight: 350, 
               padding: '1em 0em',
               'backgroundImage': 'url(https://earthview.withgoogle.com/download/6101.jpg)',
               'backgroundRepeat': 'no-repeat',
@@ -73,13 +87,12 @@ render(){
             vertical
           >
             <Menu
-              fixed={'top'}
               inverted
               pointing
               secondary
               size='large'
               style={{ 
-                'border-width': '0px'
+                'borderWidth': '0px'
               }}
             >
               <Container>
@@ -105,7 +118,7 @@ render(){
                     fontSize:'4em',
                     fontWeight: 'normal',
                     marginBottom: 0,
-                    marginTop: '4em',
+                    marginTop: '1em',
                 }}
                 />
             <Input icon='search' placeholder='Search...' 
@@ -116,6 +129,14 @@ render(){
             />
             </Container>
           </Segment>
+
+            <Card.Group 
+            itemsPerRow={5}
+            centered
+            className= "searchSeg" 
+            items={this.state.item}
+            >
+            </Card.Group>
         </div>
     );
 }
