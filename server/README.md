@@ -159,19 +159,19 @@ will be **ignored**.
 #### Request
 ```
 {
-	"user": {
-                "address": "815 Riverside Dr, San Jose, CA 95125",
-                "location": {
-                    "lat": "37.31667328501522",
-                    "lon": "-121.90200306732642"
-                },
-                "email": "Nice@people.com.cn",
-                "username": "Nice",
-                "mountType": "DIY",
-                "mapImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAK4SURBVDjLlZJdTJJxFMZp6C2bd+bWhTXXReuirbtuWuZFMyt1iX04bWlfNmlqoqCCfDZSS1ABwUQ0NSQVVD5ETcCVqLS6yK8EslpttdlFoS6Vp//7urVaLuvdzs357/c8zznvYQBg7FR3vbKwfEzE2u5tR1jhkYR1/kZIR4WodJax/kvgjlscbvLXw/62H5opFcrtXBRbb7H+SYBEDmunKdgK02IbbG/6oHxajSJLAfK7r7D+KiB7UhXWTKtgX7Lg0es2GOd04A4UYSDUi2qvHNdNebjUnsXaVkA6Kgirp5SwEVjhlULqFsIwq0XLrAYP51tgDZlR5arARUPmyh8C4pHKlcbJOhLXgsDXeaxtrKLzRTskY5VbcNAMoYuP8y0Z67+NoPLVJoiGK743+O7Tsyo8UhpWexoQWg5A7hHBEuyGYIhPOSOr9RzY+vQoWkDlq6kQkUj1E/douGvBSGILaGcKFjuEW7CTRzlj4uM4yh2lSNOektACVCTVRC0GyYI6F1rpWR/MqCEmseVuEfoC3ahwlkElS4Q7ex+GE6MxxI6FuPAATiiTYhiSEYGBFPTP1egPPUZxPwfNrxrRNtdMYBPt1lSdjJclR7A6WIPIjAPhrkJM5h/cbE2PUTAko4LdVArqSNRTdXRc46x+Cya9PHMOHJlxWCEwlCkANwaQxeOz4iicx5lBeok8222dwa9HkZUD5bMa9C6awLeV4KwuFXwiMnwsChF/D379vghiqX6EFii2cvZXuco3XEE7bpqvgggiVXMqQjbtSNee5jmTmO++NV8GCLRWwsAyqaVrTJD+e1qgoOdGNLmu3ryOnE1OTz7OqE+uZ+jTDpNN76Xevew4oS83Yf0DNx6fyqIRyN2FkZSoDUcSk/fziHI7cg5lGy9Mk1+VvN15j7P3lBLHEBWbSkTBVP8HrJC/O3IOxUMAAAAASUVORK5CYII=",
-                "watts": 3000,
-                "acPower": 120
-            }
+    "user": {
+        "address": "815 Riverside Dr, San Jose, CA 95125",
+        "location": {
+            "lat": "37.31667328501522",
+            "lon": "-121.90200306732642"
+        },
+        "email": "Nice@people.com.cn",
+        "username": "Nice",
+        "mountType": "DIY",
+        "mapImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAK4SURBVDjLlZJdTJJxFMZp6C2bd+bWhTXXReuirbtuWuZFMyt1iX04bWlfNmlqoqCCfDZSS1ABwUQ0NSQVVD5ETcCVqLS6yK8EslpttdlFoS6Vp//7urVaLuvdzs357/c8zznvYQBg7FR3vbKwfEzE2u5tR1jhkYR1/kZIR4WodJax/kvgjlscbvLXw/62H5opFcrtXBRbb7H+SYBEDmunKdgK02IbbG/6oHxajSJLAfK7r7D+KiB7UhXWTKtgX7Lg0es2GOd04A4UYSDUi2qvHNdNebjUnsXaVkA6Kgirp5SwEVjhlULqFsIwq0XLrAYP51tgDZlR5arARUPmyh8C4pHKlcbJOhLXgsDXeaxtrKLzRTskY5VbcNAMoYuP8y0Z67+NoPLVJoiGK743+O7Tsyo8UhpWexoQWg5A7hHBEuyGYIhPOSOr9RzY+vQoWkDlq6kQkUj1E/douGvBSGILaGcKFjuEW7CTRzlj4uM4yh2lSNOektACVCTVRC0GyYI6F1rpWR/MqCEmseVuEfoC3ahwlkElS4Q7ex+GE6MxxI6FuPAATiiTYhiSEYGBFPTP1egPPUZxPwfNrxrRNtdMYBPt1lSdjJclR7A6WIPIjAPhrkJM5h/cbE2PUTAko4LdVArqSNRTdXRc46x+Cya9PHMOHJlxWCEwlCkANwaQxeOz4iicx5lBeok8222dwa9HkZUD5bMa9C6awLeV4KwuFXwiMnwsChF/D379vghiqX6EFii2cvZXuco3XEE7bpqvgggiVXMqQjbtSNee5jmTmO++NV8GCLRWwsAyqaVrTJD+e1qgoOdGNLmu3ryOnE1OTz7OqE+uZ+jTDpNN76Xevew4oS83Yf0DNx6fyqIRyN2FkZSoDUcSk/fziHI7cg5lGy9Mk1+VvN15j7P3lBLHEBWbSkTBVP8HrJC/O3IOxUMAAAAASUVORK5CYII=",
+        "watts": 3000,
+        "acPower": 120
+    }
 }
 ```
 #### Returns
