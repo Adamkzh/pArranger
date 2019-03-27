@@ -6,13 +6,13 @@ mongoimport --db pArranger --collection panelDB --file dbImport.json --jsonArray
 ```
 
 # Table of Contents
-1. [APIs](#apis)
-    1. [Get Users](#api-get-users)
-    2. [Search Users](#api-search-users)
-    3. [Get one user](#api-get-one-user)
-    4. [Add user](#api-add-user)
-    5. [Update user](#api-update-user)
-    6. [Remove user](#api-remove-user)
+* [APIs](#apis)
+    * [Get Users](#api-get-users)
+    * [Search Users](#api-search-users)
+    * [Get one user](#api-get-one-user)
+    * [Add user](#api-add-user)
+    * [Update user](#api-update-user)
+    * [Remove user](#api-remove-user)
 
 ## APIs
 All APIs will follow the rules below
