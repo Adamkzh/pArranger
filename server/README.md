@@ -179,7 +179,7 @@ Get one user specified in the query
 #### Query parameters
 | Parameters  | Type | Description | Default  | Optional |
 | --- |:---:|:---:|:---:| ---:|
-| _id | `MongoDB ID` | MongoDB's ID string | N/A | Required |
+| _id | `MongoDB ID` | MongoDB's ID string | N/A | Yes* |
 | address | `String` | The address of that record | N/A | Yes* |
 | email | `String` | Email address | N/A | Yes* |
 | username | `String` | Username | N/A | Yes* |
@@ -272,7 +272,7 @@ Update a user in database
 ```
 {
     "updateUser": {
-        "_id": "5c9af853e89c7b2e70549d21", // Must include _id
+        "_id": "5c9af853e89c7b2e70549d21", // Must include "_id" (required)
         "watts": 600
         // Any other fields can be updated
     }
