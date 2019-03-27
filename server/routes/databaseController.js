@@ -5,56 +5,40 @@ const mongodb = require('mongodb');
 // Public functions
 // All methods returns a promise
 var exports = module.exports = {};
-exports.getNewestUsers = function(beforeDate, limit) {
+exports.getUsers = function(limit, oldToNew, createdBefore, createdAfter) {
     if (!limit) {
         limit = 20;
     }
-    if (!beforeDate) {
-        beforeDate = new Date();
-    }
-    return panelDB.find({ updatedDate: { $lt: beforeDate } },
-        { limit: limit, sort: {updatedDate: -1} });
-};
+    var sortOrder = oldToNew ? 1 : -1;
 
-exports.getOldestUsers = function(afterDate, limit) {
-    if (!limit) {
-        limit = 20;
+    if (!createdBefore) {
+        createdBefore = new Date();
     }
 
-    if (!afterDate) {
-        return panelDB.find({},
-            { limit: limit, sort: {updatedDate: 1} });
+    var updatedDateOption = null;
+    if (createdAfter) {
+        updatedDateOption = { $lt: createdBefore, $gt: createdAfter };
     } else {
-        return panelDB.find({ updatedDate: { $gt: afterDate } },
-            { limit: limit, sort: {updatedDate: 1} });
+        updatedDateOption = { $lt: createdBefore };
     }
-};
 
-exports.getUserForMongoId = function (mongoId) {
-    if (!mongoId || !mongodb.ObjectID.isValid(mongoId)) {
-        return new Promise(function(resolve, reject){
-            reject("Please specify a mongoId (_id)");
-        });
-    }
-    return exports.getUserForKeyValuePair({ _id: mongoId });
-};
+    var getCount = panelDB.count({ updatedDate: updatedDateOption });
+    var getDocs = panelDB.find({ updatedDate: updatedDateOption },
+        { limit: limit, sort: {updatedDate: sortOrder} });
+    const promises = [
+        getCount,
+        getDocs
+    ];
 
-exports.getUserForUsername = function (username) {
-    if (!username) {
-        return new Promise(function(resolve, reject){
-            reject("Please specify a username");
-        });
-    }
-    return exports.getUserForKeyValuePair({ username: username });
-};
-
-exports.getUserForEmail = function (email) {
-    if (!email) {
-        return new Promise(function(resolve, reject){
-            reject("Please specify a username");
-        });
-    }
-    return exports.getUserForKeyValuePair({ email: email });
+    return Promise.all(promises)
+        .then(function([count, docs]) {
+            return {
+                oldToNew: oldToNew ? "true" : "false",
+                limit: limit,
+                count: count,
+                data: docs
+            };
+    });
 };
 
 exports.getUserForKeyValuePair = function (keyValuePair) {
@@ -63,6 +47,40 @@ exports.getUserForKeyValuePair = function (keyValuePair) {
             reject("Please specify a key value pair (e.g. { email: \"abc@def.com\"})");
         });
     }
+
+    if (keyValuePair.mongoId || keyValuePair._id || keyValuePair.id) {
+        var id = keyValuePair.mongoId ? keyValuePair.mongoId : keyValuePair._id;
+        id = id ? id : keyValuePair.id;
+        if (!mongodb.ObjectID.isValid(id)) {
+            return new Promise(function(resolve, reject){
+                reject("The mongoId/_id/id you specified is invalid in format, please refer to mongodb for more");
+            });
+        }
+        delete keyValuePair.mongoId;
+        delete keyValuePair.id;
+        keyValuePair._id = id;
+    }
+
+    if (keyValuePair.acPower) {
+        let number = parseInt(keyValuePair.acPower);
+        if (!number) {
+            return new Promise(function(resolve, reject){
+                reject("\"acPower\" should be an integer");
+            });
+        }
+        keyValuePair.acPower = number;
+    }
+
+    if (keyValuePair.watts) {
+        let number = parseInt(keyValuePair.watts);
+        if (!number) {
+            return new Promise(function(resolve, reject){
+                reject("\"watts\" should be an integer");
+            });
+        }
+        keyValuePair.watts = number;
+    }
+
     return panelDB.findOne(keyValuePair, {});
 };
 
@@ -79,6 +97,11 @@ exports.addUser = function (user) {
                 "(address, location, email, username, mountType, mapImage, watts and acPower) fields");
         });
     }
+    if (!parseInt(user.watts) || !parseInt(user.acPower)) {
+        return new Promise(function(resolve, reject){
+            reject("Please make sure User.watts and User.acPower is a number");
+        });
+    }
     if (!user.location.lat || !user.location.lon) {
         return new Promise(function(resolve, reject){
             reject("Please make sure \"location\" object includes " +
@@ -86,14 +109,14 @@ exports.addUser = function (user) {
         });
     }
     const promises = [
-        exports.getUserForUsername(user.username),
-        exports.getUserForEmail(user.email)
+        exports.getUserForKeyValuePair({ username: user.username }),
+        exports.getUserForKeyValuePair({ email: user.email })
     ];
     return Promise.all(promises)
-        .then(function (values) {
-            if (!values[0] && !values[1]) {
+        .then(function ([existingUsername, existingEmail]) {
+            if (!existingUsername && !existingEmail) {
                 return Promise.resolve();
-            } else if (values[0]) {
+            } else if (existingUsername) {
                 return Promise.reject("Username already registered");
             } else {
                 return Promise.reject("Email already registered");
@@ -106,20 +129,37 @@ exports.addUser = function (user) {
         })
 };
 
-exports.updateUser = function (mongoId, data) {
+exports.updateUser = function (mongoId, user) {
     if (!mongoId || !mongodb.ObjectID.isValid(mongoId)) {
         return new Promise(function(resolve, reject) {
-            reject("Please specify a valid mongoDB id (_id)");
+            reject("Please specify a valid mongoDB id (_id) for user");
         });
     }
-    if (!data || Object.keys(data).length == 0) {
+    if (!user || Object.keys(user).length == 0) {
         return new Promise(function(resolve, reject) {
-            reject("Please specify a data to update");
+            reject("Please specify a field to update");
         });
     }
-    delete data._id;
-    data.updatedDate = new Date();
-    return panelDB.findOneAndUpdate({_id: mongoId}, { "$set": data});
+    if ((user.watts && !parseInt(user.watts)) || (user.acPower && !parseInt(user.acPower))) {
+        return new Promise(function(resolve, reject){
+            reject("Please make sure User.watts and User.acPower is a number");
+        });
+    }
+    if (user.location && (!user.location.lat || !user.location.lon)) {
+        return new Promise(function(resolve, reject){
+            reject("Please make sure \"location\" object includes " +
+                "(lat and lon) fields");
+        });
+    }
+    delete user._id;
+    user.updatedDate = new Date();
+    return panelDB.findOneAndUpdate({_id: mongoId}, { "$set": user})
+        .then(function (updatedDoc) {
+            if (!updatedDoc) {
+                return Promise.reject("No user found under specified mongoId (_id)")
+            }
+            return Promise.resolve(updatedDoc);
+        });
 };
 
 exports.removeUser = function (mongoId) {
@@ -128,5 +168,14 @@ exports.removeUser = function (mongoId) {
             reject("Please specify a valid mongoDB id (_id)");
         });
     }
-    return panelDB.remove({ _id: mongoId});
+    return panelDB.remove({ _id: mongoId})
+        .then(function (result) {
+            if (result.result.ok !== 1) {
+                return Promise.reject(result.result);
+            }
+            if (result.result.n === 0) {
+                return Promise.reject("No user found under specified mongoId (_id)");
+            }
+            return Promise.resolve("success");
+        });
 };

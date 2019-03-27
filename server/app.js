@@ -8,6 +8,7 @@ var bodyParser = require('body-parser')
 var indexRouter = require('./routes/index');
 var saveData = require('./routes/saveData');
 var getData = require('./routes/getData');
+var jsonRoutes = require('./routes/jsonRoutes');
 
 var app = express();
 
@@ -30,6 +31,13 @@ app.use('/', indexRouter);
 app.post('/api/save', saveData);
 app.get('/api/get',getData);
 app.get('/api/getall',getData);
+
+app.get('/api/v1/getUsers', jsonRoutes);
+app.get('/api/v1/searchUsers', jsonRoutes);
+app.get('/api/v1/getUser', jsonRoutes);
+app.post('/api/v1/addUser', jsonRoutes);
+app.post('/api/v1/updateUser', jsonRoutes);
+app.post('/api/v1/removeUser', jsonRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
