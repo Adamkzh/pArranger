@@ -33,7 +33,7 @@ exports.getUsers = function(limit, oldToNew, updatedBefore, updatedAfter) {
     return Promise.all(promises)
         .then(function([count, docs]) {
             return {
-                oldToNew: oldToNew ? "true" : "false",
+                oldToNew: oldToNew ? true : false,
                 limit: limit,
                 count: count,
                 updatedBefore: updatedBefore,
