@@ -5,28 +5,28 @@ var dbController = require('../routes/databaseController.js');
 router.get('/api/v1/getUsers', function(req, res, next) {
     let limit = parseInt(req.query.limit);
     let sortOldToNew = req.query.oldToNew === 'true';
-    var createdBefore = null;
-    var createdAfter = null;
+    var updatedBefore = null;
+    var updatedAfter = null;
 
-    if (req.query.createdBefore)  {
-        var date = convertEpochMilliStringToDate(req.query.createdBefore);
+    if (req.query.updatedBefore)  {
+        var date = convertEpochMilliStringToDate(req.query.updatedBefore);
         if (!date) {
-            res.json({ "error": "\"createdBefore\" must be a unix epoch date number in millisecond"});
+            res.json({ "error": "\"updatedBefore\" must be a unix epoch date number in millisecond"});
             return;
         }
-        createdBefore = date;
+        updatedBefore = date;
     }
 
-    if (req.query.createdAfter)  {
-        var date = convertEpochMilliStringToDate(req.query.createdAfter);
+    if (req.query.updatedAfter)  {
+        var date = convertEpochMilliStringToDate(req.query.updatedAfter);
         if (!date) {
-            res.json({ "error": "\"createdAfter\" must be a unix epoch date number in millisecond"});
+            res.json({ "error": "\"updatedAfter\" must be a unix epoch date number in millisecond"});
             return;
         }
-        createdAfter = date;
+        updatedAfter = date;
     }
 
-    dbController.getUsers(limit, sortOldToNew, createdBefore, createdAfter)
+    dbController.getUsers(limit, sortOldToNew, updatedBefore, updatedAfter)
         .then(function (result) {
             res.json({"result": result});
         })

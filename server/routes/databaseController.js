@@ -5,26 +5,26 @@ const mongodb = require('mongodb');
 // Public functions
 // All methods returns a promise
 var exports = module.exports = {};
-exports.getUsers = function(limit, oldToNew, createdBefore, createdAfter) {
+exports.getUsers = function(limit, oldToNew, updatedBefore, updatedAfter) {
     if (!limit) {
         limit = 20;
     }
     var sortOrder = oldToNew ? 1 : -1;
 
-    if (!createdBefore) {
-        createdBefore = new Date();
+    if (!updatedBefore) {
+        updatedBefore = new Date();
     }
 
     var updatedDateOption = null;
-    if (createdAfter) {
-        updatedDateOption = { $lt: createdBefore, $gt: createdAfter };
+    if (updatedAfter) {
+        updatedDateOption = { $lt: updatedBefore, $gt: updatedAfter };
     } else {
-        updatedDateOption = { $lt: createdBefore };
+        updatedDateOption = { $lt: updatedBefore };
     }
 
     var getCount = panelDB.count({ updatedDate: updatedDateOption });
     var getDocs = panelDB.find({ updatedDate: updatedDateOption },
-        { limit: limit, sort: {updatedDate: sortOrder} });
+        { limit: limit, sort: { updatedDate: sortOrder} });
     const promises = [
         getCount,
         getDocs
@@ -36,6 +36,8 @@ exports.getUsers = function(limit, oldToNew, createdBefore, createdAfter) {
                 oldToNew: oldToNew ? "true" : "false",
                 limit: limit,
                 count: count,
+                updatedBefore: updatedBefore,
+                updatedAfter: updatedAfter,
                 data: docs
             };
     });
