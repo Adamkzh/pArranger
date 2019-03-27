@@ -120,7 +120,7 @@ Search users in database
 
 | Parameters  | Type | Description | Default  | Optional |
 | --- |:---:|:---:|:---:| ---:|
-| q | `String` | The search term | N/A | No |
+| q | `String` | The search term | N/A | Required |
 | limit | `Int` | Maximum number of records to return | `20` | Yes |
 | oldToNew | `String` ('true' or 'false') | Whether to sort from old to new, default is new to old | `false` | Yes |
 * When parsing query strings, make sure `encodeURIComponent()` is used (e.g. `[space]` will convert to `%20`)
@@ -179,7 +179,7 @@ Get one user specified in the query
 #### Query parameters
 | Parameters  | Type | Description | Default  | Optional |
 | --- |:---:|:---:|:---:| ---:|
-| _id | `MongoDB ID` | MongoDB's ID string | N/A | Yes* |
+| _id | `MongoDB ID` | MongoDB's ID string | N/A | Required |
 | address | `String` | The address of that record | N/A | Yes* |
 | email | `String` | Email address | N/A | Yes* |
 | username | `String` | Username | N/A | Yes* |
