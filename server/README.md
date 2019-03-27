@@ -5,6 +5,15 @@ To import data into mongoDB, run
 mongoimport --db pArranger --collection panelDB --file dbImport.json --jsonArray
 ```
 
+# Table of Contents
+1. [APIs](#apis)
+    1. [Get Users](#api-get-users)
+    2. [Search Users](#api-search-users)
+    3. [Get one user](#api-get-one-user)
+    4. [Add user](#api-add-user)
+    5. [Update user](#api-update-user)
+    6. [Remove user](#api-remove-user)
+
 ## APIs
 All APIs will follow the rules below
 ##### Content-Type: `application/json`
@@ -27,7 +36,7 @@ The response will always look like this:
 }
 ```
 
-### API: Get Users
+## [API] Get Users
 Get an array of users from database
 ```
 [GET] localhost:8080/api/v1/getUsers
@@ -86,7 +95,7 @@ Let's say you want to get **all** users, sorted **new to old** and **5** records
 3. When requesting the next page, call endpoint with an additional parameter `updatedBefore=(last record's date)`
 4. Next page is shown
 
-### API: Search Users
+## [API] Search Users
 **[Not yet implemented]**
 Search users in database
 ```
@@ -100,7 +109,7 @@ Search users in database
 ##### On Success
 (wip)
 
-### API: Get one user
+## [API] Get one user
 Get one user specified in the query
 ```
 [GET] localhost:8080/api/v1/getUser
@@ -138,7 +147,7 @@ Get one user specified in the query
 }
 ```
 
-### API: Add user
+## [API] Add user
 Add a user into database
 
 **Note**: DO NOT assign the value for `_id` and `updatedDate`, they're handled internally, any value in those fields 
@@ -190,7 +199,7 @@ will be **ignored**.
 }
 ```
 
-### API: Update user
+## [API] Update user
 Update a user in database
 **Note**: `updatedDate` can NOT be manually updated, they're handled internally. 
 
@@ -233,7 +242,7 @@ Update a user in database
 }
 ```
 
-### API: Remove user
+## [API] Remove user
 Remove a user in database
 
 ```
