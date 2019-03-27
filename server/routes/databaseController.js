@@ -44,7 +44,7 @@ exports.getUsers = function(limit, oldToNew, updatedBefore, updatedAfter) {
 };
 
 exports.getUserForKeyValuePair = function (keyValuePair) {
-    if (!keyValuePair) {
+    if (!keyValuePair || Object.keys(keyValuePair).length == 0) {
         return new Promise(function(resolve, reject){
             reject("Please specify a key value pair (e.g. { email: \"abc@def.com\"})");
         });
@@ -137,11 +137,6 @@ exports.updateUser = function (mongoId, user) {
             reject("Please specify a valid mongoDB id (_id) for user");
         });
     }
-    if (!user || Object.keys(user).length == 0) {
-        return new Promise(function(resolve, reject) {
-            reject("Please specify a field to update");
-        });
-    }
     if ((user.watts && !parseInt(user.watts)) || (user.acPower && !parseInt(user.acPower))) {
         return new Promise(function(resolve, reject){
             reject("Please make sure User.watts and User.acPower is a number");
@@ -154,9 +149,48 @@ exports.updateUser = function (mongoId, user) {
         });
     }
     delete user._id;
+
+    var promises = [];
+    if (user.username) {
+        promises.push(exports.getUserForKeyValuePair({ username: user.username }));
+    } else {
+        delete user.username;
+    }
+    if (user.email) {
+        promises.push(exports.getUserForKeyValuePair({ email: user.email }));
+    } else {
+        delete user.email;
+    }
+
+    if (!user || Object.keys(user).length == 0) {
+        return new Promise(function(resolve, reject) {
+            reject("Please specify a field to update");
+        });
+    }
+
     user.updatedDate = new Date();
-    return panelDB.findOneAndUpdate({_id: mongoId}, { "$set": user})
-        .then(function (updatedDoc) {
+
+    var allPromises = null;
+    if (promises.length > 0) {
+        allPromises = Promise.all(promises)
+            .then(function (results) {
+                if (!user.username && !user.email) {
+                    return Promise.reject("Unknown promise was executed");
+                }
+                let arrayLength = results.length;
+                for (var i = 0; i < arrayLength; i++) {
+                    if (results[i] && results[i]._id.toString() !== mongoId) {
+                        return Promise.reject("Username/email already registered");
+                    }
+                }
+                return panelDB.findOneAndUpdate({_id: mongoId}, { "$set": user});
+            });
+    }
+    if (!allPromises) {
+        allPromises = panelDB.findOneAndUpdate({_id: mongoId}, { "$set": user});
+    }
+    
+    return allPromises.then(function (updatedDoc) {
             if (!updatedDoc) {
                 return Promise.reject("No user found under specified mongoId (_id)")
             }

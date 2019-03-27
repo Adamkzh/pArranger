@@ -45,7 +45,5 @@ router.get('/api/getall', function(req, res, next) {
    });
 });
 
-
-
 module.exports = router;
  
