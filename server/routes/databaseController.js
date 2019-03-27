@@ -44,7 +44,7 @@ exports.getUsers = function(limit, oldToNew, updatedBefore, updatedAfter) {
 };
 
 exports.getUserForKeyValuePair = function (keyValuePair) {
-    if (!keyValuePair) {
+    if (!keyValuePair || Object.keys(keyValuePair).length == 0) {
         return new Promise(function(resolve, reject){
             reject("Please specify a key value pair (e.g. { email: \"abc@def.com\"})");
         });
