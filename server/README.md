@@ -6,12 +6,17 @@ mongoimport --db pArranger --collection panelDB --file dbImport.json --jsonArray
 ```
 
 ## APIs
+All APIs will follow the rules below
+##### Content-Type: `application/json`
+##### On Success
+Successful response will always contain `success = true`, result can always be found in `result`.
+##### On Error
+Error response will always contain `success = false`, error reason can always be found in `error`.
 ### Get Users
 Get an array of users from database
 ```
 [GET] localhost:8080/api/v1/getUsers
 ```
-(Wip)
 
 #### Query parameters
 
@@ -26,9 +31,6 @@ Note: Regular unix Epoch is in second, multiply by 1000 to get it in millisecond
 
 #### Returns
 ##### On Success
-Successful response will always contain `success = true`, result can always be found in `result`.
-
-Content-Type: `application/json`
 ```
 {
     "result": {
@@ -60,9 +62,6 @@ Content-Type: `application/json`
 }
 ```
 ##### On Error
-Error response will always contain `success = false`, error reason can always be found in `error`.
-
-Content-Type: `application/json`
 ```
 {
     "error": "\"updatedBefore\" must be a unix epoch date number in millisecond",
