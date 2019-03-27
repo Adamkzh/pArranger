@@ -65,21 +65,36 @@ Note: Regular unix Epoch is in second, multiply by 1000 to get it in millisecond
         "updatedAfter": "2019-03-25T07:46:40.000Z",
         "data": [
             {
-                "_id": "5c98b00960e6876fb31c91e0",
-                "address": "560 Robert Ave, Santa Clara, CA 95050",
+                "_id": "5c9af3d1e89c7b2e70549d20",
+                "address": "815 Riverside Dr, San Jose, CA 95125",
                 "location": {
-                    "lat": "37.36438918183242",
-                    "lon": "-121.94475950059133"
+                    "lat": "37.31667328501522",
+                    "lon": "-121.90200306732642"
                 },
-                "email": "11111schritchley0@slate.com",
-                "username": "scroot0111",
-                "mountType": "Tile",
-                "mapImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHxSURBVDjLpVPJiipBEJyP6n/q+7TL6Km/QERBEfTiRdGDB0+CSB1EEUTcyuWg4r622i4oKuZUFKMyvGEej9cQdFeTEZmRmfVGRG//gz9+tNttpdVq6c1mkzUaDYNzbtRqNVatVvVyuaz8KiDIqiDz5XJJx+ORbrebxOFwoNlsRqVSiReLRfVHgS+yeT6fCQ/eu92OTNOk0+kk/0G0UCiY+Xxe/SbwVTZ/kEejEa3XazIMQ2IwGBCqeogwxngmk1GeAsKv/gjYbDZkt9sFaSjJq9WKrFYb9Xo9ms/nMqbT6VAymdSfAqJZDMooFSSbzS5go36/T4vFQghYJbrdruwHqovH4+wpUK/XDTRru91KAWQEnE4nDYdDslisAhb6+HDI8+VyoUgkYjwFxJikAMqHFZAdDofMClFNs0hbmqbJM6oIh8MvgUqlwtBx2IBPkJEVwZPJ5ElGAsTBWigUelkQ89XR+fv9LueNckEej8cS7++a9I1pXK9XyuVyFAgEXk0Uc1Wy2SwH6TEJECEKzyAjKxJARJC5gPJtkdLptJpKpUyMDYH7/V5WM51O5TIhM0QE0fR6veqPq5xIJNRYLMaFJekdPYFnzF0sDwkid7vd6q+XKRqNKsFgUPf7/czn8xkej8cQJOZyuXTxrfz1Nv4rPgFlRDELuo2JKwAAAABJRU5ErkJggg==",
-                "watts": 400,
-                "acPower": 230,
-                "updatedDate": "2019-03-25T10:40:09.198Z"
-            }
-            ...
+                "email": "Nice@people.com.cn",
+                "username": "Nice",
+                "mountType": "DIY",
+                "mapImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAK4SURBVDjLlZJdTJJxFMZp6C2bd+bWhTXXReuirbtuWuZFMyt1iX04bWlfNmlqoqCCfDZSS1ABwUQ0NSQVVD5ETcCVqLS6yK8EslpttdlFoS6Vp//7urVaLuvdzs357/c8zznvYQBg7FR3vbKwfEzE2u5tR1jhkYR1/kZIR4WodJax/kvgjlscbvLXw/62H5opFcrtXBRbb7H+SYBEDmunKdgK02IbbG/6oHxajSJLAfK7r7D+KiB7UhXWTKtgX7Lg0es2GOd04A4UYSDUi2qvHNdNebjUnsXaVkA6Kgirp5SwEVjhlULqFsIwq0XLrAYP51tgDZlR5arARUPmyh8C4pHKlcbJOhLXgsDXeaxtrKLzRTskY5VbcNAMoYuP8y0Z67+NoPLVJoiGK743+O7Tsyo8UhpWexoQWg5A7hHBEuyGYIhPOSOr9RzY+vQoWkDlq6kQkUj1E/douGvBSGILaGcKFjuEW7CTRzlj4uM4yh2lSNOektACVCTVRC0GyYI6F1rpWR/MqCEmseVuEfoC3ahwlkElS4Q7ex+GE6MxxI6FuPAATiiTYhiSEYGBFPTP1egPPUZxPwfNrxrRNtdMYBPt1lSdjJclR7A6WIPIjAPhrkJM5h/cbE2PUTAko4LdVArqSNRTdXRc46x+Cya9PHMOHJlxWCEwlCkANwaQxeOz4iicx5lBeok8222dwa9HkZUD5bMa9C6awLeV4KwuFXwiMnwsChF/D379vghiqX6EFii2cvZXuco3XEE7bpqvgggiVXMqQjbtSNee5jmTmO++NV8GCLRWwsAyqaVrTJD+e1qgoOdGNLmu3ryOnE1OTz7OqE+uZ+jTDpNN76Xevew4oS83Yf0DNx6fyqIRyN2FkZSoDUcSk/fziHI7cg5lGy9Mk1+VvN15j7P3lBLHEBWbSkTBVP8HrJC/O3IOxUMAAAAASUVORK5CYII=",
+                "watts": 3000,
+                "acPower": 120,
+                "updatedDate": "2019-03-27T03:53:53.607Z"
+            },
+            {
+                "_id": "5c9af39ce89c7b2e70549d1f",
+                "address": "815 Riverside Dr, San Jose, CA 95125",
+                "location": {
+                    "lat": "37.31667328501522",
+                    "lon": "-121.90200306732642"
+                },
+                "email": "wow@people.com.cn",
+                "username": "wow",
+                "mountType": "DIY",
+                "mapImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAK4SURBVDjLlZJdTJJxFMZp6C2bd+bWhTXXReuirbtuWuZFMyt1iX04bWlfNmlqoqCCfDZSS1ABwUQ0NSQVVD5ETcCVqLS6yK8EslpttdlFoS6Vp//7urVaLuvdzs357/c8zznvYQBg7FR3vbKwfEzE2u5tR1jhkYR1/kZIR4WodJax/kvgjlscbvLXw/62H5opFcrtXBRbb7H+SYBEDmunKdgK02IbbG/6oHxajSJLAfK7r7D+KiB7UhXWTKtgX7Lg0es2GOd04A4UYSDUi2qvHNdNebjUnsXaVkA6Kgirp5SwEVjhlULqFsIwq0XLrAYP51tgDZlR5arARUPmyh8C4pHKlcbJOhLXgsDXeaxtrKLzRTskY5VbcNAMoYuP8y0Z67+NoPLVJoiGK743+O7Tsyo8UhpWexoQWg5A7hHBEuyGYIhPOSOr9RzY+vQoWkDlq6kQkUj1E/douGvBSGILaGcKFjuEW7CTRzlj4uM4yh2lSNOektACVCTVRC0GyYI6F1rpWR/MqCEmseVuEfoC3ahwlkElS4Q7ex+GE6MxxI6FuPAATiiTYhiSEYGBFPTP1egPPUZxPwfNrxrRNtdMYBPt1lSdjJclR7A6WIPIjAPhrkJM5h/cbE2PUTAko4LdVArqSNRTdXRc46x+Cya9PHMOHJlxWCEwlCkANwaQxeOz4iicx5lBeok8222dwa9HkZUD5bMa9C6awLeV4KwuFXwiMnwsChF/D379vghiqX6EFii2cvZXuco3XEE7bpqvgggiVXMqQjbtSNee5jmTmO++NV8GCLRWwsAyqaVrTJD+e1qgoOdGNLmu3ryOnE1OTz7OqE+uZ+jTDpNN76Xevew4oS83Yf0DNx6fyqIRyN2FkZSoDUcSk/fziHI7cg5lGy9Mk1+VvN15j7P3lBLHEBWbSkTBVP8HrJC/O3IOxUMAAAAASUVORK5CYII=",
+                "watts": 3000,
+                "acPower": 120,
+                "updatedDate": "2019-03-27T03:53:00.314Z"
+            }, 
+            //....(more data in array)
         ]
     },
     "success": true
