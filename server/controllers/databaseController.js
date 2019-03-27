@@ -43,20 +43,38 @@ exports.getUsers = function(limit, oldToNew, updatedBefore, updatedAfter) {
     });
 };
 
-exports.getUserForKeyValuePair = function (keyValuePair) {
-    if (!keyValuePair || Object.keys(keyValuePair).length == 0) {
-        return new Promise(function(resolve, reject){
-            reject("Please specify a key value pair (e.g. { email: \"abc@def.com\"})");
+exports.searchUsers = function(keyword, limit, oldToNew) {
+    if (!keyword) {
+        return Promise.reject("Error: keyword is empty");
+    }
+    if (!limit) {
+        limit = 20;
+    }
+    let sortOrder = oldToNew ? 1 : -1;
+    let regx = new RegExp(keyword, 'i');
+
+    return panelDB.find({ $or: [{_id: regx}, {username: regx}, {email: regx}, {address: regx}, {mountType: regx}]},
+        { limit: limit, sort: { updatedDate: sortOrder} })
+        .then(function(docs) {
+            return {
+                oldToNew: oldToNew ? true : false,
+                limit: limit,
+                searchTerm: keyword,
+                data: docs
+            }
         });
+};
+
+exports.getUserForKeyValuePair = function(keyValuePair) {
+    if (!keyValuePair || Object.keys(keyValuePair).length == 0) {
+        return Promise.reject("Please specify a key value pair (e.g. { email: \"abc@def.com\"})");
     }
 
     if (keyValuePair.mongoId || keyValuePair._id || keyValuePair.id) {
         var id = keyValuePair.mongoId ? keyValuePair.mongoId : keyValuePair._id;
         id = id ? id : keyValuePair.id;
         if (!mongodb.ObjectID.isValid(id)) {
-            return new Promise(function(resolve, reject){
-                reject("The mongoId/_id/id you specified is invalid in format, please refer to mongodb for more");
-            });
+            return Promise.reject("The mongoId/_id/id you specified is invalid in format, please refer to mongodb for more");
         }
         delete keyValuePair.mongoId;
         delete keyValuePair.id;
@@ -66,9 +84,7 @@ exports.getUserForKeyValuePair = function (keyValuePair) {
     if (keyValuePair.acPower) {
         let number = parseInt(keyValuePair.acPower);
         if (!number) {
-            return new Promise(function(resolve, reject){
-                reject("\"acPower\" should be an integer");
-            });
+            return Promise.reject("\"acPower\" should be an integer");
         }
         keyValuePair.acPower = number;
     }
@@ -76,9 +92,7 @@ exports.getUserForKeyValuePair = function (keyValuePair) {
     if (keyValuePair.watts) {
         let number = parseInt(keyValuePair.watts);
         if (!number) {
-            return new Promise(function(resolve, reject){
-                reject("\"watts\" should be an integer");
-            });
+            return Promise.reject("\"watts\" should be an integer");
         }
         keyValuePair.watts = number;
     }
@@ -86,36 +100,28 @@ exports.getUserForKeyValuePair = function (keyValuePair) {
     return panelDB.findOne(keyValuePair, {});
 };
 
-exports.addUser = function (user) {
+exports.addUser = function(user) {
     if (!user) {
-        return new Promise(function(resolve, reject){
-            reject("Please specify a user");
-        });
+        return Promise.reject("Please specify a user");
     }
     if (!user.address || !user.location || !user.email || !user.username
         || !user.mountType || !user.mapImage || !user.watts || !user.acPower) {
-        return new Promise(function(resolve, reject){
-            reject("Please make sure User object includes " +
+        return Promise.reject("Please make sure User object includes " +
                 "(address, location, email, username, mountType, mapImage, watts and acPower) fields");
-        });
     }
     if (!parseInt(user.watts) || !parseInt(user.acPower)) {
-        return new Promise(function(resolve, reject){
-            reject("Please make sure User.watts and User.acPower is a number");
-        });
+        return Promise.reject("Please make sure User.watts and User.acPower is a number");
     }
     if (!user.location.lat || !user.location.lon) {
-        return new Promise(function(resolve, reject){
-            reject("Please make sure \"location\" object includes " +
+        return Promise.reject("Please make sure \"location\" object includes " +
                 "(lat and lon) fields");
-        });
     }
     const promises = [
         exports.getUserForKeyValuePair({ username: user.username }),
         exports.getUserForKeyValuePair({ email: user.email })
     ];
     return Promise.all(promises)
-        .then(function ([existingUsername, existingEmail]) {
+        .then(function([existingUsername, existingEmail]) {
             if (!existingUsername && !existingEmail) {
                 return Promise.resolve();
             } else if (existingUsername) {
@@ -124,29 +130,23 @@ exports.addUser = function (user) {
                 return Promise.reject("Email already registered");
             }
         })
-        .then(function () {
+        .then(function() {
             delete user._id;
             user.updatedDate = new Date();
             return panelDB.insert(user);
         })
 };
 
-exports.updateUser = function (mongoId, user) {
+exports.updateUser = function(mongoId, user) {
     if (!mongoId || !mongodb.ObjectID.isValid(mongoId)) {
-        return new Promise(function(resolve, reject) {
-            reject("Please specify a valid mongoDB id (_id) for user");
-        });
+        return Promise.reject("Please specify a valid mongoDB id (_id) for user");
     }
     if ((user.watts && !parseInt(user.watts)) || (user.acPower && !parseInt(user.acPower))) {
-        return new Promise(function(resolve, reject){
-            reject("Please make sure User.watts and User.acPower is a number");
-        });
+        return Promise.reject("Please make sure User.watts and User.acPower is a number");
     }
     if (user.location && (!user.location.lat || !user.location.lon)) {
-        return new Promise(function(resolve, reject){
-            reject("Please make sure \"location\" object includes " +
+        return Promise.reject("Please make sure \"location\" object includes " +
                 "(lat and lon) fields");
-        });
     }
     delete user._id;
 
@@ -163,9 +163,7 @@ exports.updateUser = function (mongoId, user) {
     }
 
     if (!user || Object.keys(user).length == 0) {
-        return new Promise(function(resolve, reject) {
-            reject("Please specify a field to update");
-        });
+        return Promise.reject("Please specify a field to update");
     }
 
     user.updatedDate = new Date();
@@ -173,7 +171,7 @@ exports.updateUser = function (mongoId, user) {
     var allPromises = null;
     if (promises.length > 0) {
         allPromises = Promise.all(promises)
-            .then(function (results) {
+            .then(function(results) {
                 if (!user.username && !user.email) {
                     return Promise.reject("Unknown promise was executed");
                 }
@@ -190,7 +188,7 @@ exports.updateUser = function (mongoId, user) {
         allPromises = panelDB.findOneAndUpdate({_id: mongoId}, { "$set": user});
     }
     
-    return allPromises.then(function (updatedDoc) {
+    return allPromises.then(function(updatedDoc) {
             if (!updatedDoc) {
                 return Promise.reject("No user found under specified mongoId (_id)")
             }
@@ -198,14 +196,12 @@ exports.updateUser = function (mongoId, user) {
         });
 };
 
-exports.removeUser = function (mongoId) {
+exports.removeUser = function(mongoId) {
     if (!mongoId || !mongodb.ObjectID.isValid(mongoId)) {
-        return new Promise(function(resolve, reject) {
-            reject("Please specify a valid mongoDB id (_id)");
-        });
+        return Promise.reject("Please specify a valid mongoDB id (_id)");
     }
     return panelDB.remove({ _id: mongoId})
-        .then(function (result) {
+        .then(function(result) {
             if (result.result.ok !== 1) {
                 return Promise.reject(result.result);
             }

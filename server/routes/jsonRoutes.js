@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var dbController = require('../routes/databaseController.js');
+var dbController = require('../controllers/databaseController.js');
+
+// See https://github.com/Adamkzh/pArranger/tree/master/server for documentation.
 
 router.get('/api/v1/getUsers', function(req, res, next) {
     let limit = parseInt(req.query.limit);
@@ -36,7 +38,19 @@ router.get('/api/v1/getUsers', function(req, res, next) {
 });
 
 router.get('/api/v1/searchUsers', function(req, res, next) {
-    res.json(failed({"error": "API not yet implemented"}));
+    let limit = parseInt(req.query.limit);
+    let sortOldToNew = req.query.oldToNew === 'true';
+    if (!req.query.q) {
+        res.json(failed({"error": "Please specify a search term via q={keyword}"}));
+    }
+
+    dbController.searchUsers(req.query.q, limit, sortOldToNew)
+        .then(function (result) {
+            res.json(success({"result": result}));
+        })
+        .catch(function (error) {
+            res.json(failed({"error": error}));
+        });
 });
 
 router.get('/api/v1/getUser', function(req, res, next) {
