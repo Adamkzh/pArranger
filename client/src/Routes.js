@@ -5,7 +5,7 @@ import Design from './components/Dashboard';
 import Console from './components/admin/Admin';
 import Login from './components/auth/Login';
 import Detail from './components/Panel-Detail-Dashboard';
-import Search from './components/Search';
+import Search from './components/admin/Search';
 
 const Routes =() =>(
     <Router>

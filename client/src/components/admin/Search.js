@@ -9,11 +9,10 @@ import {
     Segment,
     Input,
     Card,
-    Image,
-    Icon,
 } from 'semantic-ui-react';
 
-import '../style/Search.css';
+import Detail from './Detail'
+import '../../style/Search.css'
 
 
 
@@ -24,7 +23,9 @@ class Search extends Component{
 constructor(props){
     super(props);
     this.state = {
-        item: []
+        item: [],
+        viewDetail: false,
+        curId:""
     }
 }
 
@@ -40,11 +41,16 @@ componentDidMount= ()=> {
           .then((response) =>{
               var data = response.data;
               data.forEach(element => {
+                console.log(element);
                   var obj = {};
                   obj.header = element.username;
-                  obj.meta = element.email;  
+                  obj.meta = element.watts + " W";  
                   obj.image = element.mapImage;
-                  console.log(obj)
+                  obj.description = element.address;
+                  obj.link = true;
+                  obj.raised = true;
+                  obj.onClick = this.nailClick;
+                  obj.id = element._id;
                   this.setState({
                     item:[...this.state.item, obj]
                   });
@@ -60,10 +66,15 @@ componentDidMount= ()=> {
     }
 }
 
-
+nailClick = (element, data)=>{
+  var id = data.id;
+  this.setState({
+    curId : id,
+    viewDetail: true
+  })
+}
 
 render(){
-    var src = 'https://image.ibb.co/kzeSqw/lunch1.jpg'
     var dashboardUrl = "/dashboard/";
     if(window.localStorage.getItem('uuid')){
       dashboardUrl += window.localStorage.getItem('uuid');
@@ -71,7 +82,6 @@ render(){
       dashboardUrl += "admin"
     }
 
-    console.log(this.state.item)
     return(
         <div>
           <Segment
@@ -124,19 +134,21 @@ render(){
             <Input icon='search' placeholder='Search...' 
                 style={{
                     marginTop: '1em',
-                    width: '26em'
+                    width: '39em'
                 }}
             />
             </Container>
           </Segment>
 
-            <Card.Group 
-            itemsPerRow={5}
-            centered
-            className= "searchSeg" 
-            items={this.state.item}
-            >
-            </Card.Group>
+          {this.state.viewDetail ?  
+          <Detail id={this.state.curId}/> :       
+          <Card.Group 
+          itemsPerRow={5}
+          centered
+          className= "searchSeg" 
+          items={this.state.item}
+          >
+          </Card.Group>}
         </div>
     );
 }

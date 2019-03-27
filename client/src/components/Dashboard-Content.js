@@ -17,7 +17,7 @@ class Content extends Component{
       {name: 'Location', component: <Location />},
       {name: 'System Size', component: <System />},
       {name: 'Position', component: <Position />},
-      {name: 'Detail', component: <Detail />},
+      {name: 'Save/Edit', component: <Detail />},
     ]
 
         return (
@@ -31,7 +31,6 @@ class Content extends Component{
                    nextButtonText= {"Next"}
                    backButtonCls={"backButton"}
                    backButtonText= {"Previous"}
-                   
                    startAtStep={window.localStorage.getItem('step') ? parseFloat(window.localStorage.getItem('step')) : 0}
                    onStepChange={(step) => window.localStorage.setItem('step', step)}
                 />

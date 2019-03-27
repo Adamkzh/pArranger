@@ -41,6 +41,8 @@ const sy = 0;
 const width = 1461;
 const height = 370;
 
+var crop_image;
+
 class Detail extends Component {
 
     constructor(props,context){
@@ -73,10 +75,9 @@ class Detail extends Component {
         var img = new Image();
         img.onload = () =>{
             ctx.drawImage(img, sx, sy, width, height);
+            crop_image =  canvas.toDataURL();
         }
         img.src = window.localStorage.getItem('new_image');
-        console.log(canvas.toDataURL());
-        // window.localStorage.setItem('new_image', canvas.toDataURL());
     }  
 
     isValidated(){
@@ -98,7 +99,7 @@ class Detail extends Component {
 
 
     handleSubmit = () => {
-        var imageurl = window.localStorage.getItem('new_image')
+        var imageurl = crop_image;
         const formData = new FormData();
         formData.append('mapImage',imageurl);
         formData.append('data',JSON.stringify(this.state))
@@ -123,7 +124,7 @@ class Detail extends Component {
         return (
             <div>
                 <div className='_title'>
-                        Detail
+                        Save/Edit
                 </div>
                         <Grid divided='vertically'>
                             <Grid.Row columns={2}>

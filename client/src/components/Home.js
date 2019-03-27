@@ -13,7 +13,6 @@ import {
   Responsive,
   Segment,
   Visibility,
-  Dropdown
 } from 'semantic-ui-react';
 
 import homepageMidImage from '../image/homepage-mid.jpg'
