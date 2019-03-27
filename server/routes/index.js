@@ -1,12 +1,15 @@
 var express = require('express');
 var router = express.Router();
-var searchController = require('./searchController.js');
+var searchController = require('../controllers/searchController.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.send("hello world");
 });
 
-router.post('/api/search', searchController.search);
+/** POST request for fussy search
+ *  Required request body: {keyword: "text"}
+ */
+router.post('/api/v1/search', searchController.search);
 
 module.exports = router;

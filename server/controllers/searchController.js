@@ -7,14 +7,14 @@ var exports = module.exports = {};
 
 /**
  * Regex Search using Monk , can only match string fields.
- * @param req
- * @param res
+ * Expected param: req.body.keyword [string]
+ * Returns: List of user objects as JSON LIST
  */
 exports.search = function(req, res) {
     console.info(req.body);
     const keyword = req.body.keyword;
     if (!keyword) {
-        res.send("Error: keywords is empty");
+        res.send("Error: keyword is empty");
     }
 
     var regx = new RegExp(keyword, 'i');
