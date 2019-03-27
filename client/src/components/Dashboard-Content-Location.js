@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { List , Message, Dimmer,Loader } from 'semantic-ui-react';
+import { List , Message, Loader } from 'semantic-ui-react';
 import MapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
 import '../style/Map.css';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
@@ -17,7 +17,6 @@ class Location extends Component {
       y:"20.077361",
       map:null,
       uuid:null,
-      uploading:false,
     }; 
   }
 
@@ -54,8 +53,13 @@ componentDidMount() {
   })
 
   map.on('moveend', (...args) => {
-    let inputTextValue = document.getElementsByClassName("mapboxgl-ctrl-geocoder mapboxgl-ctrl")[0].textContent;
-    console.log(inputTextValue);
+    let ctn = document.getElementsByClassName("mapboxgl-ctrl-geocoder mapboxgl-ctrl");
+    let inputTextValue;
+    if(ctn[0].textContent === undefined){
+      inputTextValue = "admin";
+    }else{
+      inputTextValue = ctn[0].textContent;
+    }
     let address = inputTextValue.substr(0, inputTextValue.indexOf('United States') + 13);
     console.log(address);
     window.localStorage.setItem('address',address);   
@@ -69,8 +73,7 @@ componentDidMount() {
 shouldComponentUpdate(nextProps, nextState) {
   return (
     nextProps.children !== this.props.children ||
-    nextState.map !== this.state.map||
-    nextState.uploading !== this.state.uploading
+    nextState.map !== this.state.map
   )
 }
 
@@ -92,15 +95,10 @@ generateUuid(){
 
 //asynchronous problem
 isValidated(){
-  this.setState({
-    uploading: true, 
-  }); 
-
   return new Promise((resolve, reject) => {
     resolve();
   });
 }
-
 
 
   render() {
@@ -114,13 +112,11 @@ isValidated(){
         LOCATION       
       </div>
       <div className='Map' ref={(x) => { this.container = x }}>
-        <Dimmer active={this.state.uploading}>
         <Loader 
         indeterminate
         size='big'
         >Constructing</Loader>
           { map && children }
-        </Dimmer>
       </div>
         <div className="reminder" >
         <Message 

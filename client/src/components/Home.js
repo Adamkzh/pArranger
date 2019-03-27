@@ -13,6 +13,7 @@ import {
   Responsive,
   Segment,
   Visibility,
+  Dropdown
 } from 'semantic-ui-react';
 
 import homepageMidImage from '../image/homepage-mid.jpg'
@@ -34,6 +35,12 @@ class DesktopContainer extends Component {
   render() {
     const { children } = this.props
     const { fixed } = this.state
+    var dashboardUrl = "/dashboard/";
+    if(window.localStorage.getItem('uuid')){
+      dashboardUrl += window.localStorage.getItem('uuid');
+    }else{
+      dashboardUrl += "admin"
+    }
 
     return (
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
@@ -60,11 +67,22 @@ class DesktopContainer extends Component {
               pointing={!fixed}
               secondary={!fixed}
               size='large'
+              style={{ 
+                'border-width': '0px'
+              }}
             >
-            <Container>
-                <Menu.Item position='left' as={Link} to='/' active>HOME</Menu.Item>
-                <Menu.Item position='right' as={Link} to='/login' >SIGN IN</Menu.Item>
-            </Container>
+              <Container>
+                <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
+                <Menu.Item as={Link} to='/design'>DESIGN</Menu.Item>
+                <Menu.Item as={Link} to= {dashboardUrl}>DASHBOARD</Menu.Item>
+                <Menu.Item as={Link} to='/search' >SEARCH</Menu.Item>
+                <Menu.Item as={Link} to= '/console'>CONSOLE</Menu.Item>
+                <Menu.Item position='right'>
+                  <Button as={Link} to='/login' inverted={!fixed}>
+                    SIGN IN
+                  </Button>
+                </Menu.Item>
+              </Container>
             </Menu>
             <Container text>
                 <Header
@@ -88,7 +106,7 @@ class DesktopContainer extends Component {
                     marginTop: '1.5em',
                 }}
                 />
-                <Button as={Link} to='/dashboard' animated primary size='huge' onClick={this.initStepzilla}>
+                <Button as={Link} to='/design' animated primary size='huge' onClick={this.initStepzilla}>
                   <Button.Content visible>Get Started</Button.Content>
                   <Button.Content hidden>
                     <Icon name='arrow right' />

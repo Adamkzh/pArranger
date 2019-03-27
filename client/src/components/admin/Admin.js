@@ -12,7 +12,7 @@ class AdminDashboard extends Component{
     render(){
         return(
             <div>
-                <Header />
+                <Header activeTag={"console"}/>
                 <AdminContent />
             </div>
         );

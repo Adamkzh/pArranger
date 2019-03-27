@@ -9,13 +9,15 @@
 }
 
 .FinalMapImg{
-    width: 32.5%;
-    height: 205px;
-    margin-left: -5%;
-    margin-bottom: 30px;
+    height: 80%;
+    margin-left: 16%; 
 }
 
 .sub_title{
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+.rightP{
+    width: 80%;
 }
