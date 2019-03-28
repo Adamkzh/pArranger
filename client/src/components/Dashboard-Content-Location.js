@@ -4,7 +4,6 @@ import { List , Message, Loader } from 'semantic-ui-react';
 import MapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
 import '../style/Map.css';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
-import uuid from 'uuid';
 import Promise from 'promise';
 
 
@@ -16,7 +15,6 @@ class Location extends Component {
       x:"-20.012006",
       y:"20.077361",
       map:null,
-      uuid:null,
     }; 
   }
 
@@ -30,8 +28,6 @@ getChildContext = () => ({
   
 
 componentDidMount() {
-  this.generateUuid();
-
   /**
    * This part is for mapbox configuration
    */
@@ -84,21 +80,6 @@ shouldComponentUpdate(nextProps, nextState) {
     nextProps.children !== this.props.children ||
     nextState.map !== this.state.map
   )
-}
-
-//generate UUID
-generateUuid(){
-  if(window.localStorage.getItem('uuid') !== null){
-    this.setState({
-      uuid : window.localStorage.getItem('uuid')
-    })
-  }else{
-    this.setState({
-      uuid : uuid()
-    },() =>{
-      window.localStorage.setItem('uuid',this.state.uuid);
-    });
-  }
 }
 
 
