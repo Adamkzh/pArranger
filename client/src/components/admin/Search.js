@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {
     Button,
     Container,
@@ -15,54 +15,46 @@ import Detail from './Detail'
 import '../../style/Search.css'
 
 
+class Search extends Component {
 
-
-
-class Search extends Component{
-
-constructor(props){
-    super(props);
-    this.state = {
-        item: [],
-        viewDetail: false,
-        curId:""
+    constructor(props) {
+        super(props);
+        this.state = {
+            item: [],
+            viewDetail: false,
+            curId: ""
+        }
     }
-}
 
 
-componentDidMount= ()=> {
-    var id = this.props.match.params.id;
-    if(id !== "admin"){
-        axios.get('/api/getall', {
-            params: {
-              ID: id
-            }
-          })
-          .then((response) =>{
-              var data = response.data;
-              data.forEach(element => {
-                console.log(element);
-                  var obj = {};
-                  obj.header = element.username;
-                  obj.meta = element.watts + " W";  
-                  obj.image = element.mapImage;
-                  obj.description = element.address;
-                  obj.link = true;
-                  obj.raised = true;
-                  obj.onClick = this.nailClick;
-                  obj.id = element._id;
-                  this.setState({
-                    item:[...this.state.item, obj]
-                  });
+    componentDidMount = () => {
+        var id = this.props.match.params.id;
+        if (id !== "admin") {
+            axios.get('/api/getall', { params: { ID: id } })
+                .then((response) => {
+                    var data = response.data;
+                    data.forEach(element => {
+                        var obj = {};
+                        obj.header = element.username;
+                        obj.meta = element.watts + " W";
+                        obj.image = element.mapImage;
+                        obj.description = element.address;
+                        obj.link = true;
+                        obj.raised = true;
+                        obj.onClick = this.nailClick;
+                        obj.id = element._id;
+                        this.setState({
+                            item: [...this.state.item, obj]
+                        });
+                    });
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+                .then(function () {
+                    // always executed
                 });
-
-          })
-          .catch(function (error) {
-            console.log(error);
-          })
-          .then(function () {
-            // always executed
-          });  
     }
 }
 

@@ -46,6 +46,7 @@ router.get('/api/v1/searchUsers', function(req, res, next) {
 
     dbController.searchUsers(req.query.q, limit, sortOldToNew)
         .then(function (result) {
+            console.log(result);
             res.json(success({"result": result}));
         })
         .catch(function (error) {
