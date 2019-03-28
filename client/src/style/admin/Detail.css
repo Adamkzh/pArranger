@@ -1,3 +1,7 @@
-.backbutton:hover{
+.iconH:hover{
     cursor: pointer;
+}
+
+.deleteButton{
+    float: right;
 }
