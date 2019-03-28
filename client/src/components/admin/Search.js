@@ -74,6 +74,12 @@ nailClick = (element, data)=>{
   })
 }
 
+backClick= () =>{
+  this.setState({
+    viewDetail: false
+  })
+}
+
 render(){
     var dashboardUrl = "/dashboard/";
     if(window.localStorage.getItem('uuid')){
@@ -141,7 +147,7 @@ render(){
           </Segment>
 
           {this.state.viewDetail ?  
-          <Detail id={this.state.curId}/> :       
+          <Detail id={this.state.curId} backFunc={this.backClick}/> :       
           <Card.Group 
           itemsPerRow={5}
           centered
