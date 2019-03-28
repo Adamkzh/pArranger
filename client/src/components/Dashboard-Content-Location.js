@@ -55,12 +55,21 @@ componentDidMount() {
   map.on('moveend', (...args) => {
     let ctn = document.getElementsByClassName("mapboxgl-ctrl-geocoder mapboxgl-ctrl");
     let inputTextValue;
+    console.log("ctn \n");
+    console.log(ctn);
+
     if(ctn[0] === null){
       inputTextValue = "admin";
     }else{
       inputTextValue = ctn[0].textContent;
     }
+    console.log("Input value: ");
+    console.log( inputTextValue);
+    // 1 Washington St, Marblehead, Massachusetts 01945, United States
+    // let address = inputTextValue.substr(0, inputTextValue.indexOf('United States'));
     let address = inputTextValue.substr(0, inputTextValue.indexOf('United States') + 13);
+
+
     console.log(address);
     window.localStorage.setItem('address',address);   
     window.localStorage.setItem('original_map',map.getCanvas().toDataURL());

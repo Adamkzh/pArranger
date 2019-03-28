@@ -102,18 +102,28 @@ class Detail extends Component {
         var imageurl = crop_image;
         const formData = new FormData();
         formData.append('mapImage',imageurl);
-        formData.append('data',JSON.stringify(this.state))
-        const config = {
-            headers: {
-                'content-type': 'multipart/form-data'
-            }
-        };
+        formData.append('data',JSON.stringify(this.state));
 
-        axios.post('/api/save', formData, config)
+        const jsonData = {...this.state};
+        jsonData['mapImage'] = imageurl;
+        const location = {lat: "37.31667328501522", lon: "-121.90200306732642"};
+        jsonData['location'] = location;
+        jsonData['acPower'] = 120;
+
+        var userData = {user: jsonData};
+        var config = {headers: {"content-type": "application/json"}};
+        // var payload = JSON.stringify(userData);
+        axios.post('/api/v1/addUser', userData, config)
           .then(function (response) {
-            if(response.request.status === 200){
-                window.location = '/dashboard/' + window.localStorage.getItem('uuid');
-            }
+              console.log("Response from server below\n");
+              console.log(response.data);
+              if (response.data.success) {
+                  const userID = response.data.result.added._id;
+                  window.localStorage.setItem('uuid', userID);
+                  window.location = '/dashboard/' + window.localStorage.getItem('uuid');
+              } else {
+                  console.log(response.data.error);
+              }
           })
           .catch(function (error) {
             console.log(error);
