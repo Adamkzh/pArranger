@@ -9,8 +9,7 @@
 }
 
 .FinalMapImg{
-    height: 80%;
-    margin-left: 16%; 
+    margin-left: 14%;
 }
 
 .sub_title{
@@ -20,4 +19,8 @@
 
 .rightP{
     width: 80%;
+}
+
+#submitB{
+    
 }

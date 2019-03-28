@@ -67,7 +67,7 @@ class DesktopContainer extends Component {
               secondary={!fixed}
               size='large'
               style={{ 
-                'border-width': '0px'
+                'borderWidth': '0px'
               }}
             >
               <Container>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon, Image, Grid, Container, Segment, Button} from 'semantic-ui-react';
+import { Icon, Image, Grid, Container, Segment } from 'semantic-ui-react';
 import '../../style/admin/Detail.css';
 import axios from 'axios';
 

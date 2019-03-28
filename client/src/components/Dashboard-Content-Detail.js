@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
+import { Button, Form, Grid, Input, Dropdown, Container } from "semantic-ui-react";
 import '../style/Detail.css';
-import { Button, Form, Grid, Input, Dropdown } from "semantic-ui-react";
 import axios from 'axios';
 
 import CSImage from '../image/cs-roof.jpg'
@@ -122,25 +122,21 @@ class Detail extends Component {
     
     render = () =>{
         return (
-            <div>
+            <Container style={{ margin: 5 }}>
                 <div className='_title'>
                         Save/Edit
                 </div>
-                        <Grid divided='vertically'>
-                            <Grid.Row columns={2}>
+                        <Grid centered columns={1}>
                             <Grid.Column>
                                 <canvas className="FinalMapImg" id="realMapImg" width="800" height = "410" > </canvas>
                             </Grid.Column>
-                            <Grid.Column>
-                                <div className='rightP'>
-                                    <Form>
+
+                            <Grid.Row centered >
+                                <Grid.Column>
+                                <Form>
                                         <Form.Field>
                                         <label>Address</label>
                                         <input id="address" value={this.state.address} onChange={this.handleChange}/>
-                                        </Form.Field>
-                                        <Form.Field>
-                                        <label>UUID</label>
-                                        <input id="uuid" value={this.state.uuid} readOnly/>
                                         </Form.Field>
                                         <Form.Field>
                                         <label>User Name</label>
@@ -170,14 +166,12 @@ class Detail extends Component {
                                             onChange ={(e,data) => this.MountChange(e,data)}
                                         />
                                         </Form.Field>
-                                        <Button type="submit" onClick={this.handleSubmit}>Submit</Button>
+                                        <Button id='submitB'type="submit" inverted floated='right' color='orange' size='massive' onClick={this.handleSubmit}>Submit</Button>
                                     </Form>
-                                </div>
-                            </Grid.Column>
+                                </Grid.Column>
                             </Grid.Row>
-
                         </Grid>
-                </div>
+                </Container>
         )
     }
 }
