@@ -26,15 +26,16 @@ class Search extends Component {
         }
     }
 
-
     componentDidMount = () => {
         var id = this.props.match.params.id;
         if (id !== "admin") {
-            axios.get('/api/getall', { params: { ID: id } })
-                .then((response) => {
-                    var data = response.data;
+            const getUsersUrl = "/api/v1/getUsers";
+            axios.get(getUsersUrl).then(response => {
+                const data = response.data.result.data;
+                if (data) {
+                    let allUsers = [];
                     data.forEach(element => {
-                        var obj = {};
+                        let obj = {};
                         obj.header = element.username;
                         obj.meta = element.watts + " W";
                         obj.image = element.mapImage;
@@ -43,20 +44,16 @@ class Search extends Component {
                         obj.raised = true;
                         obj.onClick = this.nailClick;
                         obj.id = element._id;
-                        this.setState({
-                            item: [...this.state.item, obj]
-                        });
+                        allUsers.push(obj);
                     });
-
-                })
-                .catch(function (error) {
-                    console.log(error);
-                })
-                .then(function () {
-                    // always executed
-                });
-    }
-}
+                    this.setState({
+                        viewDetail: false,
+                        item: allUsers
+                    });
+                }
+            }).catch(error => {console.log(error);});
+        }
+    };
 
 nailClick = (element, data)=>{
   var id = data.id;
@@ -83,7 +80,7 @@ backClick= () =>{
           axios.get(searchUsersUrl).then(response => {
               const data = response.data.result.data;
               if (data) {
-                  let searchResultUsers = [];
+                  const searchResultUsers = [];
                   data.forEach(element => {
                       let obj = {};
                       obj.header = element.username;
@@ -104,7 +101,6 @@ backClick= () =>{
           }).catch(error => {console.log(error);});
       }
   };
-
 
 
 render(){

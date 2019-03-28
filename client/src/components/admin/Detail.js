@@ -19,23 +19,26 @@ class Detail extends Component{
 
     componentDidMount = () =>{
         console.log(this.props.id);
-        axios.get('/api/get', {
-            params: {
-              ID: this.props.id
-            }
-          })
+        const getUserByIDUrl = '/api/v1/getUser?id=' + this.props.id;
+        axios.get(getUserByIDUrl)
           .then((response) =>{
-            console.log(response)
-            var data = response.data;
-            this.setState({
-                address: data.address,
-                uuid: data._id,
-                username: data.username,
-                email: data.email,
-                watts: data.watts,
-                mountType: data.mountType,
-                image:data.mapImage,
-            })
+            console.log("[Response] from server: ");
+            console.log(response);
+            if (response.data.success) {
+                const data = response.data.result;
+                this.setState({
+                    address: data.address,
+                    uuid: data._id,
+                    username: data.username,
+                    email: data.email,
+                    watts: data.watts,
+                    mountType: data.mountType,
+                    image:data.mapImage,
+                });
+
+            } else {
+                console.log(response.data.error);
+            }
           })
           .catch(function (error) {
             console.log(error);
@@ -44,6 +47,34 @@ class Detail extends Component{
             // always executed
           });  
     }
+
+    // componentDidMount = () =>{
+    //     console.log(this.props.id);
+    //     axios.get('/api/get', {
+    //         params: {
+    //             ID: this.props.id
+    //         }
+    //     })
+    //         .then((response) =>{
+    //             console.log(response)
+    //             var data = response.data;
+    //             this.setState({
+    //                 address: data.address,
+    //                 uuid: data._id,
+    //                 username: data.username,
+    //                 email: data.email,
+    //                 watts: data.watts,
+    //                 mountType: data.mountType,
+    //                 image:data.mapImage,
+    //             })
+    //         })
+    //         .catch(function (error) {
+    //             console.log(error);
+    //         })
+    //         .then(function () {
+    //             // always executed
+    //         });
+    // }
     
     deleteOnlick = ()=>{
         const config = {
