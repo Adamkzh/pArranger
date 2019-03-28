@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var dbController = require('../controllers/databaseController.js');
 
+
 // See https://github.com/Adamkzh/pArranger/tree/master/server for documentation.
 
 router.get('/api/v1/getUsers', function(req, res, next) {
@@ -74,6 +75,8 @@ router.get('/api/v1/getUser', function(req, res, next) {
 });
 
 router.post('/api/v1/addUser', function(req, res, next) {
+    console.log("[Server] post /api/v1/addUser");
+    console.log(req.body.data);
     let contentType = req.headers['content-type'];
     if (contentType !== "application/json") {
         res.json(failed({"error": "Incoming request header's content-type is not application/json, this is a JSON only API"}));
