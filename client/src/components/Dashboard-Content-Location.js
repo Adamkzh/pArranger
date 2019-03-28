@@ -50,7 +50,7 @@ componentDidMount() {
 
   map.on('moveend', (...args) => {
     let ctn = document.getElementsByClassName("mapboxgl-ctrl-geocoder mapboxgl-ctrl");
-    const inputTextValue = " ";
+    var inputTextValue = " ";
 
     if(ctn[0] === null || ctn[0].textContent === undefined){
       inputTextValue = "admin";
