@@ -72,6 +72,42 @@ backClick= () =>{
   })
 }
 
+ /**
+     * Handle keyPress event.
+     * Call backend server when 'Enter' key is pressed.
+     */
+  handleKeyPress = (event) => {
+      if (event.key === 'Enter') {
+          const value = event.target.value;
+          if (value) {
+              const searchUsersUrl = "/api/v1/searchUsers?q=" + value;
+              axios.get(searchUsersUrl).then(response => {
+                  const data = response.data.result.data;
+                  if (data) {
+                      let searchResultUsers = [];
+                      data.forEach(element => {
+                          let obj = {};
+                          obj.header = element.username;
+                          obj.meta = element.watts + " W";
+                          obj.image = element.mapImage;
+                          obj.description = element.address;
+                          obj.link = true;
+                          obj.raised = true;
+                          obj.onClick = this.nailClick;
+                          obj.id = element._id;
+                          searchResultUsers.push(obj);
+                      });
+                      this.setState({
+                          item: searchResultUsers
+                      });
+                  }
+              }).catch(error => {console.log(error);});
+          }
+      }
+  };
+
+
+
 render(){
     var dashboardUrl = "/dashboard/";
     if(window.localStorage.getItem('uuid')){
@@ -129,12 +165,12 @@ render(){
                     marginTop: '1em',
                 }}
                 />
-            <Input icon='search' placeholder='Search...' 
-                style={{
-                    marginTop: '1em',
-                    width: '39em'
-                }}
-            />
+                <Input icon='search' placeholder='Press [Enter] to search ...'
+                        style={{
+                            marginTop: '1em',
+                            width: '39em'
+                        }} onKeyPress={this.handleKeyPress}
+                />
             </Container>
           </Segment>
 
