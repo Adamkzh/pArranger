@@ -116,6 +116,8 @@ exports.addUser = function(user) {
         return Promise.reject("Please make sure \"location\" object includes " +
                 "(lat and lon) fields");
     }
+    user.username = user.username.toLowerCase();
+    user.email = user.email.toLowerCase();
     const promises = [
         exports.getUserForKeyValuePair({ username: user.username }),
         exports.getUserForKeyValuePair({ email: user.email })
@@ -152,11 +154,13 @@ exports.updateUser = function(mongoId, user) {
 
     var promises = [];
     if (user.username) {
+        user.username.toLowerCase();
         promises.push(exports.getUserForKeyValuePair({ username: user.username }));
     } else {
         delete user.username;
     }
     if (user.email) {
+        user.email.toLowerCase();
         promises.push(exports.getUserForKeyValuePair({ email: user.email }));
     } else {
         delete user.email;
