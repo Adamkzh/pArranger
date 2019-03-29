@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon, Image, Grid, Container, Segment, Confirm } from 'semantic-ui-react';
+import { Icon, Image, Grid, Container, Segment, Confirm, Header } from 'semantic-ui-react';
 import '../../style/admin/Detail.css';
 import axios from 'axios';
 
@@ -132,7 +132,7 @@ class Detail extends Component{
             <Grid.Row>
             <Image src={this.state.image} centered/>
             </Grid.Row>
-            <Grid.Row>ID: {this.state.uuid}</Grid.Row>
+            <Container textAlign='center'><Header as='h4'>ID: {this.state.uuid}</Header> </Container>
             <Grid.Row columns={4}>
             <Grid.Column>
                 <Segment raised>
