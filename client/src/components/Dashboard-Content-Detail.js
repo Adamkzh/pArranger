@@ -44,6 +44,7 @@ const height = 370;
 var crop_image;
 var title = " ";
 var buttonContent = " ";
+var banModifyEmail = false;
 
 class Detail extends Component {
 
@@ -73,6 +74,8 @@ class Detail extends Component {
         if(window.localStorage.getItem('uuid') !== null){
             title = "Edit";
             buttonContent = "Update";
+            banModifyEmail = true;
+
             var id = window.localStorage.getItem('uuid');
             const getUserByIDUrl = '/api/v1/getUser?id=' + id;
             axios.get(getUserByIDUrl)
@@ -222,8 +225,8 @@ class Detail extends Component {
                                         <input id="username"value={this.state.username}  placeholder="Tom Marvolo Riddle"  onChange={this.handleChange}/>
                                         </Form.Field>
                                         <Form.Field>
-                                        <label>Email</label>
-                                        <input id="email" value={this.state.email} placeholder="cmpe280@sjsu.edu"  onChange={this.handleChange}/>
+                                        {!banModifyEmail? <label>Email</label>: <label>Email (Update cannot modify email)</label>}
+                                        <input id="email" readOnly={banModifyEmail} value={this.state.email} placeholder="cmpe280@sjsu.edu"  onChange={this.handleChange}/>
                                         </Form.Field>
                                         <Form.Field>
                                         <label>Panel Power</label>
