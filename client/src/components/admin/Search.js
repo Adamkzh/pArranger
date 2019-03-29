@@ -73,7 +73,7 @@ backClick= () =>{
      * Handle keyPress event.
      * Call backend server when 'Enter' key is pressed.
      */
-  handleKeyPress = (event) => {
+  handleInputChange = (event) => {
       const value = event.target.value;
       if (value) {
           const searchUsersUrl = "/api/v1/searchUsers?q=" + value +'&limit=20';
@@ -158,12 +158,12 @@ render(){
                     marginTop: '1em',
                 }}
                 />
-                <Input icon='search' placeholder='Press [Enter] to search ...'
+                <Input icon='search' placeholder='Search'
                         style={{
                             marginTop: '1em',
                             width: '39em'
                         }}
-                        onChange={this.handleKeyPress}
+                        onChange={this.handleInputChange}
                 />
             </Container>
           </Segment>
