@@ -42,6 +42,7 @@ const width = 1461;
 const height = 370;
 
 var crop_image;
+var title = " ";
 
 class Detail extends Component {
 
@@ -66,7 +67,13 @@ class Detail extends Component {
             email: " ",
             watts: window.localStorage.getItem('watts'),
             mountType: window.localStorage.getItem('0mountType'),
-        })
+        });
+        
+        if(window.localStorage.getItem('uuid') !== null){
+            title = "Edit"
+        }else{
+            title = "Save"
+        }
     }
 
     draw(){
@@ -112,29 +119,51 @@ class Detail extends Component {
 
         var userData = {user: jsonData};
         var config = {headers: {"content-type": "application/json"}};
-        // var payload = JSON.stringify(userData);
-        axios.post('/api/v1/addUser', userData, config)
-          .then(function (response) {
-              console.log("Response from server below\n");
-              console.log(response.data);
-              if (response.data.success) {
-                  const userID = response.data.result.added._id;
-                  window.localStorage.setItem('uuid', userID);
-                  window.location = '/dashboard/' + window.localStorage.getItem('uuid');
-              } else {
-                  console.log(response.data.error);
-              }
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+
+        // call edit api
+        if(window.localStorage.getItem('uuid') !== null){
+            console.log(userData);
+            axios.post('/api/v1/updateUser', userData, config)
+            .then(function (response) {
+                console.log("Response from server below\n");
+                console.log(response.data);
+                if (response.data.success) {
+                    const userID = response.data.result.added._id;
+                    window.localStorage.setItem('uuid', userID);
+                    window.location = '/dashboard/' + window.localStorage.getItem('uuid');
+                } else {
+                    console.log(response.data.error);
+                }
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        // call save api
+        }else{ 
+            axios.post('/api/v1/addUser', userData, config)
+            .then(function (response) {
+                console.log("Response from server below\n");
+                console.log(response.data);
+                if (response.data.success) {
+                    const userID = response.data.result.added._id;
+                    window.localStorage.setItem('uuid', userID);
+                    window.location = '/dashboard/' + window.localStorage.getItem('uuid');
+                } else {
+                    console.log(response.data.error);
+                }
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        }
+
       };
     
     render = () =>{
         return (
             <Container style={{ margin: 5 }}>
                 <div className='_title'>
-                        Save/Edit
+                        {title}
                 </div>
                         <Grid centered columns={1}>
                             <Grid.Column>

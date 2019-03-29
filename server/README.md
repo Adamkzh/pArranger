@@ -4,6 +4,12 @@ To import data into mongoDB, run
 ```
 mongoimport --db pArranger --collection panelDB --file dbImport.json --jsonArray
 ```
+FYI: Use below command to remove all previous records
+```
+mongo
+> use pArranger
+> db.dropDatabase()
+```
 
 # Table of Contents
 * [APIs](#apis)
@@ -46,7 +52,7 @@ Get an array of users from database
 
 | Parameters  | Type | Description | Default  | Optional |
 | --- |:---:|:---:|:---:| ---:|
-| limit | `Int` | Maximum number of records to return | `20` | Yes |
+| limit | `Int` | Maximum number of records to return | `5` | Yes |
 | oldToNew | `String` ('true' or 'false') | Whether to sort from old to new, default is new to old | `false` | Yes |
 | updatedAfter | `Number` (Unix Epoch in millisecond) | Return records updated after this date | `null` | Yes |
 | updatedBefore | `Number` (Unix Epoch in millisecond) | Return records updated before this date | Now | Yes |
@@ -59,7 +65,7 @@ Note: Regular unix Epoch is in second, multiply by 1000 to get it in millisecond
 {
     "result": {
         "oldToNew": false,
-        "limit": 20,
+        "limit": 5,
         "count": 1000,      // The total number of records matching your request
         "updatedBefore": "2019-03-26T22:16:58.639Z",
         "updatedAfter": "2019-03-25T07:46:40.000Z",
@@ -121,7 +127,7 @@ Search users in database
 | Parameters  | Type | Description | Default  | Optional |
 | --- |:---:|:---:|:---:| ---:|
 | q | `String` | The search term | N/A | Required |
-| limit | `Int` | Maximum number of records to return | `20` | Yes |
+| limit | `Int` | Maximum number of records to return | `5` | Yes |
 | oldToNew | `String` ('true' or 'false') | Whether to sort from old to new, default is new to old | `false` | Yes |
 * When parsing query strings, make sure `encodeURIComponent()` is used (e.g. `[space]` will convert to `%20`)
 
@@ -131,7 +137,7 @@ Search users in database
 {
     "result": {
         "oldToNew": false,
-        "limit": 20,
+        "limit": 5,
         "searchTerm": "San Jose, CA",
         "data": [
             {
