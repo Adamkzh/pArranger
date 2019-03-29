@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon, Image, Grid, Container, Segment, Confirm, Header } from 'semantic-ui-react';
+import { Icon, Image, Grid, Container, Segment, Confirm, Header, Label} from 'semantic-ui-react';
 import '../../style/admin/Detail.css';
 import axios from 'axios';
 
@@ -61,34 +61,6 @@ class Detail extends Component{
             // always executed
           });  
     }
-
-    // componentDidMount = () =>{
-    //     console.log(this.props.id);
-    //     axios.get('/api/get', {
-    //         params: {
-    //             ID: this.props.id
-    //         }
-    //     })
-    //         .then((response) =>{
-    //             console.log(response)
-    //             var data = response.data;
-    //             this.setState({
-    //                 address: data.address,
-    //                 uuid: data._id,
-    //                 username: data.username,
-    //                 email: data.email,
-    //                 watts: data.watts,
-    //                 mountType: data.mountType,
-    //                 image:data.mapImage,
-    //             })
-    //         })
-    //         .catch(function (error) {
-    //             console.log(error);
-    //         })
-    //         .then(function () {
-    //             // always executed
-    //         });
-    // }
     
     deleteOnlick = ()=>{
         const config = {
@@ -136,7 +108,7 @@ class Detail extends Component{
             <Grid.Row columns={4}>
             <Grid.Column>
                 <Segment raised>
-                    <span>Mount Type</span>
+                    <Label attached='top'>Mount Type</Label>
                     <p>
                     {this.state.mountType}
                     </p>
@@ -144,7 +116,7 @@ class Detail extends Component{
             </Grid.Column>
             <Grid.Column>
                 <Segment raised>
-                    <span>Panel Power</span>
+                    <Label attached='top'>Panel Power</Label>
                     <p>
                     {this.state.watts}
                     </p>
@@ -152,7 +124,7 @@ class Detail extends Component{
             </Grid.Column>
             <Grid.Column>
                 <Segment raised>
-                    <span>Address</span>
+                    <Label attached='top'>Address</Label>
                     <p>
                     {this.state.address}
                     </p>
@@ -160,7 +132,7 @@ class Detail extends Component{
             </Grid.Column>
             <Grid.Column>
                 <Segment raised>
-                    <span>User</span>
+                    <Label attached='top'>User</Label>
                     <p>
                     {this.state.username}
                     </p>

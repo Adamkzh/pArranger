@@ -26,6 +26,11 @@ class DesktopContainer extends Component {
   
   // For stepZilla init, prevent error
   initStepzilla(){
+
+    console.log(window.localStorage);
+    window.localStorage.clear();
+
+
     if(window.localStorage.getItem('step') === undefined){
        window.localStorage.setItem('step',0);
     }
