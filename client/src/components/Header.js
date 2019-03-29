@@ -11,6 +11,9 @@ class HomepageHeading extends Component {
     constructor(props){
       super(props);
       activeTag = this.props.activeTag;
+      this.state={
+        idLink : " "
+      }
     }
 
     initStepzilla= () => {
@@ -21,7 +24,9 @@ class HomepageHeading extends Component {
 
     componentDidMount = ()=>{
       if(window.localStorage.getItem('uuid') !== null){
-          idLink = "/dashboard/" + window.localStorage.getItem('uuid');
+          this.setState({
+            idLink : "/dashboard/" + window.localStorage.getItem('uuid')
+          })
       }
     }
     render(){ 
@@ -32,7 +37,7 @@ class HomepageHeading extends Component {
             <Container>
               <Menu.Item as={Link} to='/' active={activeTag === "home"}>HOME</Menu.Item>
               <Menu.Item as={Link} to='/design' active={activeTag === "design"}>DESIGN</Menu.Item>
-              <Menu.Item as={Link} to= {idLink} active={activeTag === "dashboard"}>DASHBOARD</Menu.Item>
+              <Menu.Item as={Link} to= {this.state.idLink} active={activeTag === "dashboard"}>DASHBOARD</Menu.Item>
               <Menu.Item as={Link} to='/search' >SEARCH</Menu.Item>
               <Menu.Item as={Link} to= '/console' active={activeTag === "console"}>CONSOLE</Menu.Item>
               <Menu.Item position='right'>

@@ -76,7 +76,7 @@ backClick= () =>{
   handleKeyPress = (event) => {
       const value = event.target.value;
       if (value) {
-          const searchUsersUrl = "/api/v1/searchUsers?q=" + value;
+          const searchUsersUrl = "/api/v1/searchUsers?q=" + value +'&limit=20';
           axios.get(searchUsersUrl).then(response => {
               const data = response.data.result.data;
               if (data) {

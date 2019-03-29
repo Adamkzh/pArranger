@@ -43,6 +43,7 @@ const height = 370;
 
 var crop_image;
 var title = " ";
+var buttonContent = " ";
 
 class Detail extends Component {
 
@@ -71,8 +72,10 @@ class Detail extends Component {
         
         if(window.localStorage.getItem('uuid') !== null){
             title = "Edit"
+            buttonContent = "Update"
         }else{
             title = "Save"
+            buttonContent = "Save"
         }
     }
 
@@ -207,7 +210,7 @@ class Detail extends Component {
                                             onChange ={(e,data) => this.MountChange(e,data)}
                                         />
                                         </Form.Field>
-                                        <Button id='submitB'type="submit" inverted floated='right' color='orange' size='massive' onClick={this.handleSubmit}>Submit</Button>
+                                        <Button id='submitB'type="submit" inverted floated='right' color='orange' size='massive' onClick={this.handleSubmit}>{buttonContent}</Button>
                                     </Form>
                                 </Grid.Column>
                             </Grid.Row>
