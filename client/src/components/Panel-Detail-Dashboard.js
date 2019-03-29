@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import axios from 'axios';
-import {
-  Button,
-} from 'semantic-ui-react';
+import { Image, Grid, Container, Segment, Button, Label } from 'semantic-ui-react';
 
 
 class Dashboard extends Component{
@@ -68,7 +66,58 @@ render(){
     return(
         <div>
             <Header activeTag={"dashboard"}/>
-            <Button inverted color='green' onClick={this.editButtonClick}>Edit</Button>
+            <Container style={{ margin: 5 }}>
+            <Button inverted color='green'  onClick={this.editButtonClick}>Edit</Button>
+            <Grid>
+                <Grid.Row>
+                <Image src={this.state.image} centered/>
+                </Grid.Row>
+                <Grid.Row columns={4}>
+                <Grid.Column>
+                    <Segment raised>
+                        <Label as='a' color='blue' ribbon>
+                        Mount Type
+                        </Label>
+                        <p>
+                        {this.state.mountType}
+                        </p>
+                    </Segment>
+                </Grid.Column>
+                <Grid.Column>
+                    <Segment raised>
+                        <Label as='a' color='red' ribbon>
+                        Panel Power
+                        </Label>
+                        <p>
+                        {this.state.watts}
+                        </p>
+                    </Segment>
+                </Grid.Column>
+                <Grid.Column>
+                    <Segment raised>
+                        <Label as='a' color='orange' ribbon>
+                        Address
+                        </Label>
+                        <p>
+                        {this.state.address}
+                        </p>
+                    </Segment>
+                </Grid.Column>
+                <Grid.Column>
+                    <Segment raised>
+                        <Label as='a' color='teal' ribbon>
+                        User
+                        </Label>
+                        <p>
+                        {this.state.username}
+                        </p>
+                    </Segment>
+                </Grid.Column>
+                </Grid.Row>
+            </Grid>
+            <Grid>
+            </Grid>
+            </Container>
         </div>
     );
 }

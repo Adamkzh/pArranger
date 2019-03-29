@@ -4,7 +4,6 @@ import { Container, Menu, Button } from 'semantic-ui-react'
 
 
 var activeTag = "home";
-var idLink = "/";
 
 class HomepageHeading extends Component {
 
@@ -12,7 +11,7 @@ class HomepageHeading extends Component {
       super(props);
       activeTag = this.props.activeTag;
       this.state={
-        idLink : " "
+        idLink : "/"
       }
     }
 

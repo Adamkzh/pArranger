@@ -71,11 +71,46 @@ class Detail extends Component {
         });
         
         if(window.localStorage.getItem('uuid') !== null){
-            title = "Edit"
-            buttonContent = "Update"
+            title = "Edit";
+            buttonContent = "Update";
+            var id = window.localStorage.getItem('uuid');
+            const getUserByIDUrl = '/api/v1/getUser?id=' + id;
+            axios.get(getUserByIDUrl)
+            .then((response) =>{
+                console.log("[Response] from server: ");
+                console.log(response);
+                if (response.data.success) {
+                    const data = response.data.result;
+                    this.setState({
+                        address: data.address,
+                        uuid: data._id,
+                        username: data.username,
+                        email: data.email,
+                        watts: data.watts,
+                        mountType: data.mountType,
+                    });
+
+                } else {
+                    console.log(response.data.error);
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });  
         }else{
             title = "Save"
             buttonContent = "Save"
+            this.setState({
+                address: window.localStorage.getItem('address'),
+                uuid: window.localStorage.getItem('uuid'),
+                username: " ",
+                email: " ",
+                watts: window.localStorage.getItem('watts'),
+                mountType: window.localStorage.getItem('0mountType'),
+            });
         }
     }
 
