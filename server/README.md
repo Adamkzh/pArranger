@@ -4,6 +4,12 @@ To import data into mongoDB, run
 ```
 mongoimport --db pArranger --collection panelDB --file dbImport.json --jsonArray
 ```
+FYI: Use below command to remove all previous records
+```
+mongo
+> use pArranger
+> db.dropDatabase()
+```
 
 # Table of Contents
 * [APIs](#apis)
