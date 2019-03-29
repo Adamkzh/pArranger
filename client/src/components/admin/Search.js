@@ -104,12 +104,10 @@ backClick= () =>{
 
 
 render(){
-    var dashboardUrl = "/dashboard/";
-    if(window.localStorage.getItem('uuid')){
-      dashboardUrl += window.localStorage.getItem('uuid');
-    }else{
-      dashboardUrl += "admin"
-    }
+  var idLink = "/"
+  if(window.localStorage.getItem('uuid') !== null){
+    idLink = "/dashboard/" + window.localStorage.getItem('uuid');
+  }
 
     return(
         <div>
@@ -137,7 +135,7 @@ render(){
               <Container>
                 <Menu.Item as={Link} to='/' >HOME</Menu.Item>
                 <Menu.Item as={Link} to='/design'>DESIGN</Menu.Item>
-                <Menu.Item as={Link} to= {dashboardUrl}>DASHBOARD</Menu.Item>
+                <Menu.Item as={Link} to= {idLink}>DASHBOARD</Menu.Item>
                 <Menu.Item as={Link} to='/search' active>SEARCH</Menu.Item>
                 <Menu.Item as={Link} to= '/console'>CONSOLE</Menu.Item>
                 <Menu.Item position='right'>

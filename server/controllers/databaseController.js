@@ -7,7 +7,7 @@ const mongodb = require('mongodb');
 var exports = module.exports = {};
 exports.getUsers = function(limit, oldToNew, updatedBefore, updatedAfter) {
     if (!limit) {
-        limit = 20;
+        limit = 5;
     }
     var sortOrder = oldToNew ? 1 : -1;
 
@@ -48,7 +48,7 @@ exports.searchUsers = function(keyword, limit, oldToNew) {
         return Promise.reject("Error: keyword is empty");
     }
     if (!limit) {
-        limit = 20;
+        limit = 5;
     }
     let sortOrder = oldToNew ? 1 : -1;
     let regx = new RegExp(keyword, 'i');
