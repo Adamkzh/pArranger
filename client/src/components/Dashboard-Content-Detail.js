@@ -123,14 +123,14 @@ class Detail extends Component {
         // call edit api
         if(window.localStorage.getItem('uuid') !== null){
             console.log(userData);
+            jsonData['_id'] = window.localStorage.getItem('uuid');
             var updateUser = {updateUser: jsonData};
-            updateUser['_id'] = window.localStorage.getItem('uuid');
             axios.post('/api/v1/updateUser', updateUser, config)
             .then(function (response) {
                 console.log("[UpdateUser] Response from server below\n");
                 console.log(response.data);
                 if (response.data.success) {
-                    const userID = response.data.result.added._id;
+                    const userID = response.data.result.updated._id;
                     window.localStorage.setItem('uuid', userID);
                     window.location = '/dashboard/' + window.localStorage.getItem('uuid');
                 } else {

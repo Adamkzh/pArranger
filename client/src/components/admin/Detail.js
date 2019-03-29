@@ -132,6 +132,7 @@ class Detail extends Component{
             <Grid.Row>
             <Image src={this.state.image} centered/>
             </Grid.Row>
+            <Grid.Row>ID: {this.state.uuid}</Grid.Row>
             <Grid.Row columns={4}>
             <Grid.Column>
                 <Segment raised>
