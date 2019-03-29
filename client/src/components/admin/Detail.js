@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon, Image, Grid, Container, Segment } from 'semantic-ui-react';
+import { Icon, Image, Grid, Container, Segment, Confirm } from 'semantic-ui-react';
 import '../../style/admin/Detail.css';
 import axios from 'axios';
 
@@ -14,10 +14,23 @@ class Detail extends Component{
             watts: "",
             mountType: "",
             image:'',
+            open: false,
+            deleted: false,
         }
     }
 
-    componentDidMount = () =>{
+    handleOpen = () => {
+        this.setState({open: true});
+    };
+
+    handleClose = () => {
+        this.setState({open: false});
+        if (this.state.deleted) {
+            window.location = '/search';
+        }
+    };
+
+    componentDidMount = () => {
         console.log(this.props.id);
         const getUserByIDUrl = '/api/v1/getUser?id=' + this.props.id;
         axios.get(getUserByIDUrl)
@@ -34,6 +47,7 @@ class Detail extends Component{
                     watts: data.watts,
                     mountType: data.mountType,
                     image:data.mapImage,
+                    open: false,
                 });
 
             } else {
@@ -81,21 +95,25 @@ class Detail extends Component{
             headers: {
                 'Content-Type': 'application/json'
             }
-        }
+        };
 
         axios.post('/api/v1/removeUser', {
-            _id: this.state.uuid
+            removeUser: { _id: this.state.uuid }
         }, config)
-        .then(function (response) {
+        .then((response)=> {
             console.log(response);
-          if(response.request.status === 200){
+            if (response.data.success) {
+                console.log("[Success] Item deleted.");
+                this.setState({open: true, deleted: true});
 
-          }
+            } else {
+                console.log(response.data.error);
+            }
         })
         .catch(function (error) {
           console.log(error);
         });
-    }
+    };
 
     render(){
         return(
@@ -148,6 +166,14 @@ class Detail extends Component{
                 </Segment>
             </Grid.Column>
             </Grid.Row>
+        </Grid>
+        <Grid>
+            <Confirm
+                open={this.state.open}
+                content="Deletion succeeded."
+                // onCancel={this.handleCancel}
+                onConfirm={this.handleClose}>
+            </Confirm>
         </Grid>
         </Container>
 
