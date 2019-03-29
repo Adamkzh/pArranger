@@ -154,7 +154,7 @@ class Detail extends Component {
 
         const jsonData = {...this.state};
         jsonData['mapImage'] = imageurl;
-        const location = {lat: "37.31667328501522", lon: "-121.90200306732642"};
+        const location = {lat: window.localStorage.getItem('lat'), lon: window.localStorage.getItem('lon')};
         jsonData['location'] = location;
         jsonData['acPower'] = 120;
 

@@ -39,8 +39,11 @@ componentDidMount() {
   })
   var geocoder = new MapboxGeocoder({
     accessToken: MapboxGl.accessToken,
-    zoom:20.1
+    zoom:20.1,
+    
   });
+
+
   
   map.flyTo({
     center: [this.state.x, this.state.y],
@@ -48,26 +51,21 @@ componentDidMount() {
     speed:4 
   })
 
-  map.on('moveend', (...args) => {
-    let ctn = document.getElementsByClassName("mapboxgl-ctrl-geocoder mapboxgl-ctrl");
-    var inputTextValue = "empty_address";
-    if(ctn[0] !== null ){
-      inputTextValue = ctn[0].textContent;
-    }
-    console.log("Input value: ");
-    console.log( inputTextValue);
-    // 1 Washington St, Marblehead, Massachusetts 01945, United States
-    // let address = inputTextValue.substr(0, inputTextValue.indexOf('United States'));
-    let address = inputTextValue.substr(0, inputTextValue.indexOf('United States') + 13);
-
-
-    console.log(address);
-    window.localStorage.setItem('address',address);   
+  geocoder.on('result', (...args) => {
+    var response = args[0].result;
+    window.localStorage.setItem('lat',response.center[0]);   
+    window.localStorage.setItem('lon',response.center[1]);   
+    window.localStorage.setItem('address',response.place_name);   
     window.localStorage.setItem('original_map',map.getCanvas().toDataURL());
   });
 
   map.addControl(geocoder);
   map.scrollZoom.disable();
+}
+
+onSelected = (viewport, item) => {
+  this.setState({viewport});
+  console.log('Selected: ', item)
 }
 
 shouldComponentUpdate(nextProps, nextState) {
