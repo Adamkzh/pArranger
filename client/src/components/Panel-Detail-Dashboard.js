@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import axios from 'axios';
-
+import {
+  Button,
+} from 'semantic-ui-react';
 
 
 class Dashboard extends Component{
@@ -53,9 +55,12 @@ componentDidMount= ()=> {
         // always executed
       });  
     }
-
 }
 
+editButtonClick = ()=>{
+    window.location = '/design';
+    window.localStorage.setItem('step', 3);
+}
 
 
 render(){
@@ -63,6 +68,7 @@ render(){
     return(
         <div>
             <Header activeTag={"dashboard"}/>
+            <Button inverted color='green' onClick={this.editButtonClick}>Edit</Button>
         </div>
     );
 }
