@@ -1,6 +1,9 @@
 # Server
 
-To import data into mongoDB, run
+To import sample data into mongoDB
+1. Downlaod [Sample Data](https://drive.google.com/open?id=1P_xRJbJMn_P7vDBPV9rMT34c--0ijmO8)
+and make sure it's named `dbImport.json`
+2. Then run the following command in the same directory as `dbImport.json`
 ```
 mongoimport --db pArranger --collection panelDB --file dbImport.json --jsonArray
 ```
