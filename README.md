@@ -49,4 +49,18 @@ To start MongoDB server
 $ mongod
 ```
 
+To import sample data into mongoDB
+1. Downlaod [Sample Data](https://drive.google.com/open?id=1P_xRJbJMn_P7vDBPV9rMT34c--0ijmO8)
+and make sure it's named `dbImport.json`
+2. Then run the following command in the same directory as `dbImport.json`
+```
+mongoimport --db pArranger --collection panelDB --file dbImport.json --jsonArray
+```
+FYI: Use below command to remove all previous records
+```
+mongo
+> use pArranger
+> db.dropDatabase()
+```
+
 Open http://localhost:3000 to view it in the browser.
