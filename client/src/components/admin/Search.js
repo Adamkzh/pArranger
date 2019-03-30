@@ -29,7 +29,7 @@ class Search extends Component {
     componentDidMount = () => {
         var id = this.props.match.params.id;
         if (id !== "admin") {
-            const getUsersUrl = "/api/v1/getUsers";
+            const getUsersUrl = "/api/v1/getUsers" ;
             axios.get(getUsersUrl).then(response => {
                 const data = response.data.result.data;
                 if (data) {

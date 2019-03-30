@@ -7,7 +7,7 @@ const mongodb = require('mongodb');
 var exports = module.exports = {};
 exports.getUsers = function(limit, oldToNew, updatedBefore, updatedAfter) {
     if (!limit) {
-        limit = 5;
+        limit = 20;
     }
     var sortOrder = oldToNew ? 1 : -1;
 
