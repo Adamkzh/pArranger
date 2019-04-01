@@ -9,7 +9,7 @@ Install the dependencies and devDependencies and start the server.
 
 if you don't have node installed, please install node.js at first. go to https://nodejs.org/en/download/ 
 
-if you don't have MongoDB installed, please install node.js at first. go to https://docs.mongodb.com/manual/installation/
+if you don't have MongoDB installed, please install MongoDB at first. go to https://docs.mongodb.com/manual/installation/
 
 
 ### Clone or download 
