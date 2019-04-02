@@ -1,6 +1,8 @@
 # pArranger
 
-
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![Badge](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu/#/zh_CN)
+[![License](https://img.shields.io/npm/l/@angular/cli.svg)](/LICENSE) 
 ### Installation
 
 pArranger requires [Node.js](https://nodejs.org/) v4+ and [MongoDB](https://docs.mongodb.com/manual/introduction/) to run.
