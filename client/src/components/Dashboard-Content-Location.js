@@ -6,6 +6,7 @@ import '../style/Map.css';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import Promise from 'promise';
 
+let mapPic = null;
 
 class Location extends Component {
 
@@ -43,8 +44,6 @@ componentDidMount() {
     
   });
 
-
-  
   map.flyTo({
     center: [this.state.x, this.state.y],
     zoom:0.5,
@@ -55,8 +54,8 @@ componentDidMount() {
     var response = args[0].result;
     window.localStorage.setItem('lat',response.center[0]);   
     window.localStorage.setItem('lon',response.center[1]);   
-    window.localStorage.setItem('address',response.place_name);   
-    window.localStorage.setItem('original_map',map.getCanvas().toDataURL());
+    window.localStorage.setItem('address',response.place_name); 
+    mapPic =  map.getCanvas().toDataURL(); 
   });
 
   map.addControl(geocoder);
@@ -79,6 +78,7 @@ shouldComponentUpdate(nextProps, nextState) {
 //asynchronous problem
 isValidated(){
   return new Promise((resolve, reject) => {
+    window.localStorage.setItem('original_map', mapPic);
     resolve();
   });
 }

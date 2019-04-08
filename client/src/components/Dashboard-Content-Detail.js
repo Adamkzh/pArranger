@@ -44,7 +44,7 @@ const height = 370;
 var crop_image;
 var title = " ";
 var buttonContent = " ";
-var banModifyEmail = false;
+let banModifyEmail = false;
 
 class Detail extends Component {
 
