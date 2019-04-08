@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import axios from 'axios';
-import { Image, Grid, Container, Segment, Button, Label } from 'semantic-ui-react';
-
+import { Image, Grid, Container, Segment, Button, Label, Modal, Icon } from 'semantic-ui-react';
 
 class Dashboard extends Component{
 
@@ -15,7 +14,8 @@ constructor(props){
         email: " ",
         watts: window.localStorage.getItem('watts'),
         mountType: window.localStorage.getItem('0mountType'),
-        image:''
+        image:'',
+        modalOpen: false,
     }
 }
 
@@ -30,8 +30,8 @@ componentDidMount= ()=> {
       .then((response) =>{
         console.log("[Response] from server: ");
         console.log(response);
-        if (response.data.success) {
-            const data = response.data.result;
+        const data = response.data.result;
+        if (data) {
             this.setState({
                 address: data.address,
                 uuid: data._id,
@@ -41,8 +41,10 @@ componentDidMount= ()=> {
                 mountType: data.mountType,
                 image:data.mapImage,
             });
-
         } else {
+            this.setState({
+                modalOpen: true
+            })
             console.log(response.data.error);
         }
       })
@@ -58,6 +60,15 @@ componentDidMount= ()=> {
 editButtonClick = ()=>{
     window.location = '/design';
     window.localStorage.setItem('step', 3);
+}
+
+handleOpen = () => this.setState({ modalOpen: true })
+
+handleClose = () => this.setState({ modalOpen: false })
+
+noDataErr = () => {
+    window.localStorage.setItem('step', 0);
+    window.location = '/design'
 }
 
 
@@ -117,6 +128,26 @@ render(){
             </Grid>
             <Grid>
             </Grid>
+            {this.state.modalOpen && 
+            <div>
+            <Modal
+                open={this.state.modalOpen}
+                onClose={this.noDataErr}
+                basic
+                size='small'
+                style={{ left: '25%', top: '25%' }}
+            >
+                <Modal.Content>
+                <h3>No data found! Please construct your panel first.</h3>
+                </Modal.Content>
+                <Modal.Actions>
+                <Button color='green' onClick={this.noDataErr} inverted>
+                    <Icon name='checkmark' /> Got it
+                </Button>
+                </Modal.Actions>
+            </Modal>
+            </div>
+            }
             </Container>
         </div>
     );
