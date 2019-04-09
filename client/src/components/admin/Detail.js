@@ -31,7 +31,6 @@ class Detail extends Component{
     };
 
     componentDidMount = () => {
-        console.log(this.props.id);
         const getUserByIDUrl = '/api/v1/getUser?id=' + this.props.id;
         axios.get(getUserByIDUrl)
           .then((response) =>{
@@ -57,9 +56,6 @@ class Detail extends Component{
           .catch(function (error) {
             console.log(error);
           })
-          .then(function () {
-            // always executed
-          });  
     }
     
     deleteOnlick = ()=>{
@@ -148,8 +144,6 @@ class Detail extends Component{
                 onConfirm={this.handleClose}>
             </Confirm>
         </Grid>
-
-        
         </Container>
         );
     }

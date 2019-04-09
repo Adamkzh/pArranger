@@ -16,6 +16,7 @@ constructor(props){
         mountType: window.localStorage.getItem('0mountType'),
         image:'',
         modalOpen: false,
+        apidata: null,
     }
 }
 
@@ -28,8 +29,6 @@ componentDidMount= ()=> {
     const getUserByIDUrl = '/api/v1/getUser?id=' + id;
     axios.get(getUserByIDUrl)
       .then((response) =>{
-        console.log("[Response] from server: ");
-        console.log(response);
         const data = response.data.result;
         if (data) {
             this.setState({
@@ -53,7 +52,29 @@ componentDidMount= ()=> {
       })
       .then(function () {
         // always executed
-      });  
+      }); 
+            
+    //   https://api.solcast.com.au/radiation/forecasts?Longitude=119.117&Latitude=-35.277&format=json
+    //   https://solcast.com.au/solar-data-api/api/
+    
+      console.log("not work due to CROSS RIGION, SHOULD FETCH FROM BACKEND")
+      var solarApi = 'https://api.solcast.com.au/radiation/forecasts?Longitude=119.117&Latitude=-35.277&api_key=PqoGuGkg3plkD4Wi1uGSfAVigAM2Bbht&format=json'
+      axios.get(solarApi)
+      .then((response) =>{
+        console.log("[Response] from solar API: ");
+        console.log(response);
+        if (response.data.success) {
+            const data = response.data.result;
+            this.setState({
+                apidata: data
+            });
+        } else {
+            console.log(response.data.error);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
     }
 }
 
@@ -148,6 +169,9 @@ render(){
             </Modal>
             </div>
             }
+            <div>
+                {this.state.apidata}
+            </div>
             </Container>
         </div>
     );
