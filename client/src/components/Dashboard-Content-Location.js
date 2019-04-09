@@ -4,9 +4,6 @@ import { List , Message, Loader } from 'semantic-ui-react';
 import MapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
 import '../style/Map.css';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
-import Promise from 'promise';
-
-let mapPic = null;
 
 class Location extends Component {
 
@@ -55,16 +52,14 @@ componentDidMount() {
     window.localStorage.setItem('lat',response.center[0]);   
     window.localStorage.setItem('lon',response.center[1]);   
     window.localStorage.setItem('address',response.place_name); 
-    mapPic =  map.getCanvas().toDataURL(); 
+  });
+
+  map.on('moveend', (...args) => {
+    window.localStorage.setItem('original_map',map.getCanvas().toDataURL());
   });
 
   map.addControl(geocoder);
   map.scrollZoom.disable();
-}
-
-onSelected = (viewport, item) => {
-  this.setState({viewport});
-  console.log('Selected: ', item)
 }
 
 shouldComponentUpdate(nextProps, nextState) {
@@ -75,13 +70,12 @@ shouldComponentUpdate(nextProps, nextState) {
 }
 
 
-//asynchronous problem
-isValidated(){
-  return new Promise((resolve, reject) => {
-    window.localStorage.setItem('original_map', mapPic);
-    resolve();
-  });
-}
+// //asynchronous problem
+// isValidated(){
+//   return new Promise((resolve, reject) => {
+//     resolve();
+//   });
+// }
 
 
   render() {
