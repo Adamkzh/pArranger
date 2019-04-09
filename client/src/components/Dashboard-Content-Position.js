@@ -54,7 +54,6 @@ class Position extends Component{
       captureMap(){
         return (html2canvas(document.querySelector(".capture")).then(canvas => {
             window.localStorage.setItem('new_image',canvas.toDataURL());
-            // window.localStorage.setItem('original_map','');
         }));
       }
 

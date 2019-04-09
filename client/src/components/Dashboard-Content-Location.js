@@ -70,15 +70,7 @@ shouldComponentUpdate(nextProps, nextState) {
 }
 
 
-// //asynchronous problem
-// isValidated(){
-//   return new Promise((resolve, reject) => {
-//     resolve();
-//   });
-// }
-
-
-  render() {
+render() {
     const { children } = this.props;
     const { map } = this.state;
     

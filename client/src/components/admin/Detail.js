@@ -144,13 +144,13 @@ class Detail extends Component{
             <Confirm
                 open={this.state.open}
                 content="Deletion succeeded."
-                // onCancel={this.handleCancel}
                 style={{ left: '25%', top: '25%' }}
                 onConfirm={this.handleClose}>
             </Confirm>
         </Grid>
-        </Container>
 
+        
+        </Container>
         );
     }
 }

@@ -39,7 +39,7 @@ const mountOptions = [
 const sx = -154;
 const sy = 0;
 const width = 1461;
-const height = 370;
+const height = 420;
 
 var crop_image;
 var title = " ";
@@ -212,7 +212,6 @@ class Detail extends Component {
                             <Grid.Column>
                                 <canvas className="FinalMapImg" id="realMapImg" width="800" height = "410" > </canvas>
                             </Grid.Column>
-
                             <Grid.Row centered >
                                 <Grid.Column>
                                 <Form>
