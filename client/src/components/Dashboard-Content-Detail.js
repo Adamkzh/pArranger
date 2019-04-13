@@ -44,7 +44,7 @@ const height = 420;
 var crop_image;
 var title = " ";
 var buttonContent = " ";
-let banModifyEmail = false;
+var banModifyEmail = false;
 
 class Detail extends Component {
 
@@ -104,8 +104,9 @@ class Detail extends Component {
                 // always executed
             });  
         }else{
-            title = "Save"
-            buttonContent = "Save"
+            title = "Save";
+            buttonContent = "Save";
+            banModifyEmail = false;
             this.setState({
                 address: window.localStorage.getItem('address'),
                 uuid: window.localStorage.getItem('uuid'),
@@ -209,6 +210,7 @@ class Detail extends Component {
       };
     
     render = () =>{
+        console.log(banModifyEmail);
         return (
             <Container style={{ margin: 5 }}>
                 <div className='_title'>
@@ -230,7 +232,7 @@ class Detail extends Component {
                                         <input id="username"value={this.state.username}  placeholder="Tom Marvolo Riddle"  onChange={this.handleChange}/>
                                         </Form.Field>
                                         <Form.Field>
-                                        {!banModifyEmail? <label>Email</label>: <label>Email (Update cannot modify email)</label>}
+                                        {banModifyEmail=== false? <label>Email</label>: <label>Email (Update cannot modify email)</label>}
                                         <input id="email" readOnly={banModifyEmail} value={this.state.email} placeholder="cmpe280@sjsu.edu"  onChange={this.handleChange}/>
                                         </Form.Field>
                                         <Form.Field>
