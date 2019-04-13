@@ -210,7 +210,6 @@ class Detail extends Component {
       };
     
     render = () =>{
-        console.log(banModifyEmail);
         return (
             <Container style={{ margin: 5 }}>
                 <div className='_title'>
@@ -232,7 +231,7 @@ class Detail extends Component {
                                         <input id="username"value={this.state.username}  placeholder="Tom Marvolo Riddle"  onChange={this.handleChange}/>
                                         </Form.Field>
                                         <Form.Field>
-                                        {banModifyEmail=== false? <label>Email</label>: <label>Email (Update cannot modify email)</label>}
+                                        {!banModifyEmail? <label>Email</label>: <label>Email (Update cannot modify email)</label>}
                                         <input id="email" readOnly={banModifyEmail} value={this.state.email} placeholder="cmpe280@sjsu.edu"  onChange={this.handleChange}/>
                                         </Form.Field>
                                         <Form.Field>
