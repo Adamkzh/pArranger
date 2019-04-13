@@ -25,7 +25,6 @@ class LoginForm extends Component {
       email: this.state.email,
       password: this.state.password
     }).then(res => {
-      localStorage.setItem('example-jwt-jwt', res.data);
       this.props.history.push('/protected')
     }).catch(() => this.setState({
 

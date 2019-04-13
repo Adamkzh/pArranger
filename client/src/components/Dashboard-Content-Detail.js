@@ -125,7 +125,13 @@ class Detail extends Component {
             ctx.drawImage(img, sx, sy, width, height);
             crop_image =  canvas.toDataURL();
         }
-        img.src = window.localStorage.getItem('new_image');
+        axios.get('/api/get', {
+            params: {
+              ID: "placed_image"
+            }
+        }).then((response) =>{
+            img.src = 'data:image/png;base64,' + response.data;
+        })
     }  
 
     isValidated(){

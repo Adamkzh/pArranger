@@ -2,8 +2,10 @@ import React,{ PureComponent } from 'react';
 import { Dropdown, Message } from 'semantic-ui-react';
 import NumericInput from 'react-numeric-input';
 import PanelNumber from './Dashboard-Content-System-PanelNumber';
+import axios from 'axios';
 import '../style/System.css';
 
+import blobToBase64 from 'blob-to-base64';
 
 const ACPower = [
     {
@@ -87,7 +89,14 @@ class System extends PureComponent{
         img.onload = () =>{
             ctx.drawImage(img, 0, 0, 800, 390);
         }
-        img.src = window.localStorage.getItem('original_map');
+
+        axios.get('/api/get', {
+            params: {
+              ID: "origin_image"
+            }
+        }).then((response) =>{
+            img.src = 'data:image/png;base64,' + response.data;
+        })
     }
 
     ACPowerChange(event,data){

@@ -4,6 +4,10 @@ import { List , Message, Loader } from 'semantic-ui-react';
 import MapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
 import '../style/Map.css';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import axios from 'axios';
+import b64toBlob from 'b64-to-blob';
+
+var formData = new FormData();
 
 class Location extends Component {
 
@@ -55,7 +59,13 @@ componentDidMount() {
   });
 
   map.on('moveend', (...args) => {
-    window.localStorage.setItem('original_map',map.getCanvas().toDataURL());
+    formData.set('id','origin_image')
+    var contentType = 'image/png';
+    var b64Data=map.getCanvas().toDataURL().replace(/^data:image\/(png|jpg);base64,/, "");
+    var blob = b64toBlob(b64Data, contentType);
+    formData.set('mapImage', blob);
+    console.log(blob)
+    console.log(b64Data);
   });
 
   map.addControl(geocoder);
@@ -69,6 +79,21 @@ shouldComponentUpdate(nextProps, nextState) {
   )
 }
 
+isValidated = () =>{
+  try{
+    const config = {	
+      headers: {	        
+        'content-type': 'multipart/form-data'	      
+      },
+    };
+
+    axios.post('/api/save', formData, config).then(function (response) {
+      console.log(response);
+    })
+  }catch(error){
+    console.log(error)
+  }
+}
 
 render() {
     const { children } = this.props;

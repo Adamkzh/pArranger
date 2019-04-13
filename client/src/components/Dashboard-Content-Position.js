@@ -4,7 +4,8 @@ import html2canvas from 'html2canvas';
 import DraggablePanel from './Dashboard-Content-Position-DraggablePanel';
 import '../style/Position.css';
 import Promise from 'promise';
-
+import axios from 'axios';
+import b64toBlob from 'b64-to-blob';
 
 
 class Position extends Component{
@@ -53,7 +54,30 @@ class Position extends Component{
        */
       captureMap(){
         return (html2canvas(document.querySelector(".capture")).then(canvas => {
-            window.localStorage.setItem('new_image',canvas.toDataURL());
+            var formData  = new FormData();
+            // set id to placed image
+            formData.set('id','placed_image');
+            var contentType = 'image/png';
+            var b64Data = canvas.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "");
+            var blob = b64toBlob(b64Data, contentType);
+
+            // set mapimage
+            formData.set('mapImage', blob);
+
+            // save data to server
+            try{
+                const config = {	
+                  headers: {	        
+                    'content-type': 'multipart/form-data'	      
+                  },
+                };
+            
+                axios.post('/api/save', formData, config).then(function (response) {
+                  console.log(response);
+                })
+              }catch(error){
+                console.log(error)
+              }
         }));
       }
 
@@ -64,7 +88,13 @@ class Position extends Component{
         img.onload = () =>{
             ctx.drawImage(img, 0, 0, 800, 390);
         }
-        img.src = window.localStorage.getItem('original_map');
+        axios.get('/api/get', {
+            params: {
+              ID: "origin_image"
+            }
+        }).then((response) =>{
+            img.src = 'data:image/png;base64,' + response.data;
+        })
     }
     componentDidMount(){
         this.draw();

@@ -6,6 +6,8 @@
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "github:mapbox/mapbox-gl-geocoder",
     "axios": "^0.18.0",
+    "b64-to-blob": "^1.2.19",
+    "blob-to-base64": "^1.0.2",
     "d3": "^5.9.2",
     "deck.gl": "^6.4.7",
     "html2canvas": "^1.0.0-alpha.12",
