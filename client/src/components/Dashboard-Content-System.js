@@ -5,7 +5,6 @@ import PanelNumber from './Dashboard-Content-System-PanelNumber';
 import axios from 'axios';
 import '../style/System.css';
 
-import blobToBase64 from 'blob-to-base64';
 
 const ACPower = [
     {
