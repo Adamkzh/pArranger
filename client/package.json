@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "http://localhost:8080",
   "dependencies": {
-    "@mapbox/mapbox-gl-geocoder": "github:mapbox/mapbox-gl-geocoder",
+    "@mapbox/mapbox-gl-geocoder": "^2.2.0",
     "axios": "^0.18.0",
     "b64-to-blob": "^1.2.19",
     "blob-to-base64": "^1.0.2",
