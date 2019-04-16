@@ -3,6 +3,7 @@ import DeckGL, { HexagonLayer } from "deck.gl";
 import { StaticMap } from "react-map-gl";
 import * as d3 from 'd3';
 import '../../style/admin/adminContent.css';
+import StackedBarChar from './StackedBarChar';
 
 import "semantic-ui-css/semantic.min.css";
 import {
@@ -93,17 +94,18 @@ export default class adminContent extends React.Component{
                 </Header>
               </Grid.Row>
               <Grid.Row textAlign="center">
-                <Grid.Column mobile={8} tablet={4} computer={4}>
-                  <Image
-                    centered
-                    circular
-                    size="small"
-                    src="/static/images/wireframe/square-image.png"
-                  />
-                  <Label basic size="large">
-                    Label
-                  </Label>
-                  <p>Something else</p>
+                <Grid.Column mobile={8} tablet={4} computer={3}>
+                  {/*<Image*/}
+                    {/*centered*/}
+                    {/*circular*/}
+                    {/*size="small"*/}
+                    {/*src="/static/images/wireframe/square-image.png"*/}
+                  {/*/>*/}
+                  {/*<Label basic size="large">*/}
+                    {/*Label*/}
+                  {/*</Label>*/}
+                  {/*<p>Something else</p>*/}
+                  <StackedBarChar />
                 </Grid.Column>
                 <Grid.Column mobile={8} tablet={4} computer={4}>
                   <Image
