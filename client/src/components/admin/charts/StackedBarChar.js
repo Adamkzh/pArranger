@@ -11,16 +11,21 @@ const data = [
     { year: '2018', HYDRO: 291.724, SOLAR: 96.147, BIOMASS: 62.765, WIND: 274.952 }
 ];
 
+const box_style = {
+    'box-shadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)'
+}
+
 export default class StackedBarChar extends PureComponent {
     render() {
         return (
             <BarChart
-                width={370}
-                height={300}
+                width={380}
+                height={220}
                 data={data}
                 margin={{
-                    top: 20, right: 30, left: 20, bottom: 5,
+                    top: 10, left: 10,right: 20, bottom: 10,
                 }}
+                style={box_style}
             >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="year">
@@ -29,10 +34,10 @@ export default class StackedBarChar extends PureComponent {
                 <YAxis label={{ value: 'TWh', angle: -90, position: 'insideLeft' }} />
                 <Tooltip />
                 <Legend verticalAlign="top" height={36} align="right"/>
-                <Bar dataKey="HYDRO" stackId="a" fill="#6e4f89" />
-                <Bar dataKey="SOLAR" stackId="a" fill="#C7FF33" />
+                <Bar dataKey="HYDRO" stackId="a" fill="#8884d8" />
+                <Bar dataKey="SOLAR" stackId="a" fill="#82ca9d" />
                 <Bar dataKey="BIOMASS" stackId="a" fill="#FFB533" />
-                <Bar dataKey="WIND" stackId="a" fill="#271f7c" />
+                <Bar dataKey="WIND" stackId="a" fill="#0088FE" />
             </BarChart>
         );
     }
