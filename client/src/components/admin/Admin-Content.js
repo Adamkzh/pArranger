@@ -94,7 +94,7 @@ export default class adminContent extends React.Component{
                 </Header>
               </Grid.Row>
               <Grid.Row textAlign="center">
-                <Grid.Column mobile={8} tablet={4} computer={3}>
+                <Grid.Column mobile={8} tablet={4} computer={4}>
                   {/*<Image*/}
                     {/*centered*/}
                     {/*circular*/}

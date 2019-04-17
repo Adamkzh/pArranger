@@ -1,39 +1,21 @@
 import React, { PureComponent } from 'react';
 import {
-    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label
 } from 'recharts';
 
 const data = [
-    {
-        year: '2019', uv: 4000, pv: 2400, amt: 2400,
-    },
-    {
-        year: '2018', uv: 3000, pv: 1398, amt: 2210,
-    },
-    {
-        year: '2017', uv: 2000, pv: 9800, amt: 2290,
-    },
-    {
-        year: '2016', uv: 2780, pv: 3908, amt: 2000,
-    },
-    {
-        year: '2015', uv: 1890, pv: 4800, amt: 2181,
-    },
-    {
-        year: '2014', uv: 2390, pv: 3800, amt: 2500,
-    },
-    {
-        year: '2013', uv: 3490, pv: 4300, amt: 2100,
-    },
+    { year: '2014', HYDRO: 259.367, SOLAR: 28.924, BIOMASS: 63.989, WIND: 181.655 },
+    { year: '2015', HYDRO: 249.08, SOLAR: 39.032, BIOMASS: 63.632, WIND: 190.719 },
+    { year: '2016', HYDRO: 267.812, SOLAR: 77.276, BIOMASS: 62.76, WIND: 226.993 },
+    { year: '2017', HYDRO: 300.333, SOLAR: 77.276, BIOMASS:62.762, WIND: 254.303 },
+    { year: '2018', HYDRO: 291.724, SOLAR: 96.147, BIOMASS: 62.765, WIND: 274.952 }
 ];
 
 export default class StackedBarChar extends PureComponent {
-    // static jsfiddleUrl = 'https://jsfiddle.net/alidingling/90v76x08/';
-
     render() {
         return (
             <BarChart
-                width={300}
+                width={370}
                 height={300}
                 data={data}
                 margin={{
@@ -41,12 +23,16 @@ export default class StackedBarChar extends PureComponent {
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="year" />
-                <YAxis />
+                <XAxis dataKey="year">
+                    <Label value="Yearly Renewable Electric Energy Generation" offset={0} position="insideBottom" />
+                </XAxis>
+                <YAxis label={{ value: 'TWh', angle: -90, position: 'insideLeft' }} />
                 <Tooltip />
-                <Legend />
-                <Bar dataKey="pv" stackId="a" fill="#8884d8" />
-                <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
+                <Legend verticalAlign="top" height={36} align="right"/>
+                <Bar dataKey="HYDRO" stackId="a" fill="#6e4f89" />
+                <Bar dataKey="SOLAR" stackId="a" fill="#C7FF33" />
+                <Bar dataKey="BIOMASS" stackId="a" fill="#FFB533" />
+                <Bar dataKey="WIND" stackId="a" fill="#271f7c" />
             </BarChart>
         );
     }
