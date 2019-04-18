@@ -26,11 +26,11 @@ export default class StackedBarChar extends PureComponent {
                 Yearly Renewable Electric Energy Generation
                 </div>
             <BarChart
-                width={310}
-                height={200}
+                width={410}
+                height={290}
                 data={data}
                 margin={{
-                    top: 10, left: 10,right: 50, bottom: 10,
+                    top: 10, left: 10,right: 50, bottom: 20,
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />

@@ -43,8 +43,8 @@ export default class DailyPowerGeneration extends PureComponent {
                 Top 3 Solar Cities
                 </div>
             <LineChart
-                width={310}
-                height={200}
+                width={410}
+                height={290}
                 data={data}
                 margin={{
                     top: 10, left: 5,right: 55, bottom: 10,

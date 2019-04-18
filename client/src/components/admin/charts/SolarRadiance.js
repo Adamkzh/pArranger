@@ -43,8 +43,8 @@ export default class SolarRadiance extends PureComponent {
                 Live Radiation Data
                 </div>
                 <AreaChart
-                    width={310}
-                    height={200}
+                    width={410}
+                    height={290}
                     data={data}
                     margin={{
                         top: 10, right: 55, left: 15, bottom: 10,

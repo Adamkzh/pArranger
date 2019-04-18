@@ -58,8 +58,8 @@ export default class SolarRadiance extends PureComponent {
                 Electricity Cost Comparison
                 </div>
                 <LineChart
-                    width={310}
-                    height={200}
+                    width={410}
+                    height={290}
                     data={data}
                     margin={{
                         top: 10, right: 55, left: 15, bottom: 10,

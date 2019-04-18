@@ -32,9 +32,7 @@ export default class adminContent extends React.Component{
           id="sidebar"
         >
           <Menu vertical borderless fluid text>
-            <Menu.Item active as="a">
-              Overview
-            </Menu.Item>
+            <Menu.Item active as="a"> Overview </Menu.Item>
             <Menu.Item as="a">Reports</Menu.Item>
             <Menu.Item as="a">Analytics</Menu.Item>
             <Menu.Item as="a">Export</Menu.Item>
@@ -51,7 +49,7 @@ export default class adminContent extends React.Component{
                 Dashboard
               </Header>
             </Grid.Row>
-            <Grid.Row columns={4}>
+            <Grid.Row columns={3}>
               <Grid.Column >
                 <StackedBarChar />
               </Grid.Column>
@@ -61,6 +59,8 @@ export default class adminContent extends React.Component{
               <Grid.Column >
                 <SolarRadiance />
               </Grid.Column>
+            </Grid.Row>
+            <Grid.Row columns={3}>
               <Grid.Column >
                 <ChargeCompare />
               </Grid.Column>
