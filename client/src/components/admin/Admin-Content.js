@@ -3,6 +3,8 @@ import '../../style/admin/adminContent.css';
 
 import StackedBarChar from './charts/StackedBarChar';
 import DailyPowerGeneration from './charts/DailyPowerGeneration';
+import SolarRadiance from './charts/SolarRadiance';
+import ChargeCompare from './charts/ChargeCompare';
 
 import "semantic-ui-css/semantic.min.css";
 import {
@@ -57,10 +59,10 @@ export default class adminContent extends React.Component{
                 <DailyPowerGeneration />
               </Grid.Column>
               <Grid.Column >
-                <DailyPowerGeneration />
+                <SolarRadiance />
               </Grid.Column>
               <Grid.Column >
-                <DailyPowerGeneration />
+                <ChargeCompare />
               </Grid.Column>
             </Grid.Row>
           </Grid>

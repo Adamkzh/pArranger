@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-    BarChart, Bar, YAxis, CartesianGrid, Tooltip, Legend    
+    BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend    
 } from 'recharts';
 
 const data = [
@@ -35,6 +35,7 @@ export default class StackedBarChar extends PureComponent {
             >
                 <CartesianGrid strokeDasharray="3 3" />
                 <YAxis label={{ value: 'TWh', angle: -90, position: 'insideLeft' }} tick={{fontSize: 12}} />
+                <XAxis dataKey="year" tick={{fontSize: 12}}/>
                 <Tooltip />
                 <Legend wrapperStyle={{'font-size': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
                 <Bar dataKey="HYDRO" stackId="a" fill="#8884d8" />
