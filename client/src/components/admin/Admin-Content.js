@@ -5,6 +5,7 @@ import StackedBarChar from './charts/StackedBarChar';
 import DailyPowerGeneration from './charts/DailyPowerGeneration';
 import SolarRadiance from './charts/SolarRadiance';
 import ChargeCompare from './charts/ChargeCompare';
+import SimpleBarChart from './charts/SimpleBarChart';
 
 import "semantic-ui-css/semantic.min.css";
 import {
@@ -65,6 +66,12 @@ export default class adminContent extends React.Component{
                 <ChargeCompare />
               </Grid.Column>
             </Grid.Row>
+            <Grid.Row columns={4}>
+            <Grid.Column>
+              <SimpleBarChart/>
+            </Grid.Column>
+            </Grid.Row>
+            
           </Grid>
         </Grid.Column>
       </Grid>
