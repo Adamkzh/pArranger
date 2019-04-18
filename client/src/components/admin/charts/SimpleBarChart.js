@@ -7,12 +7,12 @@ import {
 obj = JSON.parse(text);
 */
 const data = [
-      {Month: 'Oct', SanJose: 1000, SantaClara: 2400, MountainView: 2400},
-      {Month: 'Nov', SanJose: 1200, SantaClara: 2600, MountainView: 2800},
-      {Month: 'Dec', SanJose: 1300, SantaClara: 2900, MountainView: 3000},
-      {Month: 'Jan', SanJose: 1350, SantaClara: 3000, MountainView: 3000},
-      {Month: 'Feb', SanJose: 1500, SantaClara: 3400, MountainView: 3200},
-      {Month: 'Mar', SanJose: 1800, SantaClara: 3600, MountainView: 3400},
+      {Month: 'Oct 2018', SanJose: 1000, SantaClara: 2400, MountainView: 2400},
+      {Month: 'Nov 2018', SanJose: 1200, SantaClara: 2600, MountainView: 2800},
+      {Month: 'Dec 2018', SanJose: 1300, SantaClara: 2900, MountainView: 3000},
+      {Month: 'Jan 2019', SanJose: 1350, SantaClara: 3000, MountainView: 3000},
+      {Month: 'Feb 2019', SanJose: 1500, SantaClara: 3400, MountainView: 3200},
+      {Month: 'Mar 2019', SanJose: 1800, SantaClara: 3600, MountainView: 3400},
 ];
 
 const box_style = {
@@ -26,11 +26,11 @@ export default class SimpleBarChart extends PureComponent{
   	return (
         <div style={box_style}>
         <div style={title_style}>
-        New Installed Solar Panels
+        Total Solar Panels
         </div>
       <BarChart
-      width={310}
-      height={200}
+      width={410}
+      height={290}
       data={data}
       margin={{
           top: 10, left: 10,right: 50, bottom: 10,
