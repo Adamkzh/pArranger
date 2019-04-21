@@ -153,7 +153,7 @@ router.get('/api/v1/solar/radiation', function (req, res, next) {
             res.json(success(result))
         })
         .catch(function (error) {
-            console.log(error);
+            res.json(failed(error));
         })
 });
 
@@ -173,17 +173,17 @@ router.get('/api/v1/solar/pvPower', function (req, res, next) {
             res.json(success(result))
         })
         .catch(function (error) {
-            console.log(error);
+            res.json(failed(error));
         })
 });
 
 router.get('/api/v1/charting/dashboardData', function (req, res, next) {
     chartingController.getChatringData()
         .then(function (result) {
-            res.json(success(result))
+            res.json(success(result));
         })
         .catch(function (error) {
-            console.log(error);
+            res.json(failed(error));
         })
 });
 
@@ -219,7 +219,6 @@ function success(r) {
 }
 
 function failed(e) {
-    d.success = false;
     return {
         success: false,
         error: e
