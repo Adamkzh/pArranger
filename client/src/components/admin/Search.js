@@ -121,8 +121,8 @@ render(){
   let content;
   if(this.state.admin){
     content = <Container>
-    <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
-    <Menu.Item as={Link} to='/search' >SEARCH</Menu.Item>
+    <Menu.Item as={Link} to='/'>HOME</Menu.Item>
+    <Menu.Item as={Link} to='/search' active >SEARCH</Menu.Item>
     <Menu.Item as={Link} to= '/console'>DASHBOARD</Menu.Item>
   </Container>
   }else{
