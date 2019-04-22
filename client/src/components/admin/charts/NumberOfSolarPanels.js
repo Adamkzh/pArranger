@@ -36,8 +36,8 @@ export default class SimpleBarChart extends PureComponent{
         <Tooltip/>
         <Legend wrapperStyle={{'fontSize': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
         <Bar dataKey="SanJose" fill="#8884d8" />
-        <Bar dataKey="SantaClara" fill="#82ca9d" />
-        <Bar dataKey="MountainView" fill="#FFB533" />
+        <Bar dataKey="PaloAlto" fill="#82ca9d" />
+        <Bar dataKey="Sunnyvale" fill="#FFB533" />
         </BarChart>
       </ResponsiveContainer>
     );
