@@ -55,19 +55,19 @@ export default class adminContent extends React.Component{
                 <StackedBarChar />
               </Grid.Column>
               <Grid.Column >
-                <SolarRadiance />
-              </Grid.Column>
-              <Grid.Column >
                 <DailyPowerGeneration />
               </Grid.Column>
-            </Grid.Row>
-            <Grid.Row columns={3}>
               <Grid.Column >
                 <ChargeCompare />
               </Grid.Column>
+            </Grid.Row>
+            <Grid.Row columns={3}>
               <Grid.Column>
                 <SimpleBarChart/>
               </Grid.Column>
+              {/* <Grid.Column >
+                <SolarRadiance />
+              </Grid.Column> */}
             </Grid.Row>
           </Grid>
         </Grid.Column>
