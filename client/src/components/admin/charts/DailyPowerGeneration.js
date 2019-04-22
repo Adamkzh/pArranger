@@ -5,25 +5,25 @@ import {
 
 const data = [
     {
-      date: '2019-3-1', SanJose: 4000, PaloAlto: 2400, Sunnyvale: 2400,
+      date: '2019-3-1', SanJose: 4000, PaloAlto: 6400, Sunnyvale: 2400,
     },
     {
-      date: '2019-3-2', SanJose: 3000, PaloAlto: 1398, Sunnyvale: 2210,
+      date: '2019-3-2', SanJose: 3000, PaloAlto: 7398, Sunnyvale: 2210,
     },
     {
-      date: '2019-3-3', SanJose: 2000, PaloAlto: 9800, Sunnyvale: 2290,
+      date: '2019-3-3', SanJose: 2000, PaloAlto: 6800, Sunnyvale: 2290,
     },
     {
-      date: '2019-3-4', SanJose: 2780, PaloAlto: 3908, Sunnyvale: 2000,
+      date: '2019-3-4', SanJose: 2780, PaloAlto: 5908, Sunnyvale: 2000,
     },
     {
-      date: '2019-3-5', SanJose: 1890, PaloAlto: 4800, Sunnyvale: 2181,
+      date: '2019-3-5', SanJose: 1890, PaloAlto: 6800, Sunnyvale: 2181,
     },
     {
-      date: '2019-3-6', SanJose: 2390, PaloAlto: 3800, Sunnyvale: 2500,
+      date: '2019-3-6', SanJose: 2390, PaloAlto: 7800, Sunnyvale: 2500,
     },
     {
-      date: '2019-3-7', SanJose: 3490, PaloAlto: 4300, Sunnyvale: 2100,
+      date: '2019-3-7', SanJose: 3490, PaloAlto: 5300, Sunnyvale: 2100,
     },
 ];
 
@@ -45,8 +45,8 @@ export default class DailyPowerGeneration extends PureComponent {
               <Tooltip />
               <Legend wrapperStyle={{'fontSize': '14px'}} align="center" />
               <Legend verticalAlign="bottom" height={36} align="right"/>
-              <Line type="monotone" dataKey="SanJose" stroke="#8884d8" />
-              <Line type="monotone" dataKey="PaloAlto" stroke="#82ca9d" />
+              <Line type="monotone" dataKey="SanJose" stroke="#82ca9d" />
+              <Line type="monotone" dataKey="PaloAlto" stroke="#FE2575" />
               <Line type="monotone" dataKey="Sunnyvale" stroke="#FFB533" />
               </LineChart>
         </ResponsiveContainer>
