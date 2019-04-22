@@ -28,10 +28,10 @@ export default class StackedBarChar extends PureComponent {
                     <XAxis dataKey="year" tick={{fontSize: 12}}/>
                     <Tooltip />
                     <Legend wrapperStyle={{'fontSize': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
-                    <Bar dataKey="HYDRO" stackId="a" fill="#8884d8" />
-                    <Bar dataKey="SOLAR" stackId="a" fill="#82ca9d" />
-                    <Bar dataKey="BIOMASS" stackId="a" fill="#FFB533" />
-                    <Bar dataKey="WIND" stackId="a" fill="#0088FE" />
+                    <Bar dataKey="HYDRO" stackId="a" fill="#8F8FA3" />
+                    <Bar dataKey="SOLAR" stackId="a" fill="#EFDF28" />
+                    <Bar dataKey="BIOMASS" stackId="a" fill="#80AAED" />
+                    <Bar dataKey="WIND" stackId="a" fill="#CBD9EF" />
                 </BarChart>
             </ResponsiveContainer>
         );
