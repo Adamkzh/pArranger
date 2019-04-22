@@ -3,22 +3,29 @@ import {
     BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer    
 } from 'recharts';
 
-const data = [
-    { year: '2014', HYDRO: 259.367, SOLAR: 28.924, BIOMASS: 63.989, WIND: 181.655 },
-    { year: '2015', HYDRO: 249.08, SOLAR: 39.032, BIOMASS: 63.632, WIND: 190.719 },
-    { year: '2016', HYDRO: 267.812, SOLAR: 77.276, BIOMASS: 62.76, WIND: 226.993 },
-    { year: '2017', HYDRO: 300.333, SOLAR: 77.276, BIOMASS:62.762, WIND: 254.303 },
-    { year: '2018', HYDRO: 291.724, SOLAR: 96.147, BIOMASS: 62.765, WIND: 274.952 }
-];
 
 export default class StackedBarChar extends PureComponent {
+
+    constructor(props){
+        super(props);
+        this.state={
+            data : null,
+        }
+    }
+
+    componentDidUpdate = () =>{
+        this.setState({
+            data : this.props.data
+        })
+    }
+
     render() {
         return (
             <ResponsiveContainer maxHeight={290} width="100%" height="100%">                     
                 <BarChart
                     width={410}
                     height={290}
-                    data={data}
+                    data={this.state.data}
                     margin={{
                         top: 10, left: 10,right: 50, bottom: 20,
                     }}
