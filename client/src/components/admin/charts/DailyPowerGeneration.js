@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend
+    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
 const data = [
@@ -27,40 +27,29 @@ const data = [
     },
 ];
 
-const box_style = {
-    'boxShadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)',
-    'width':'100%'
-}
-
-const title_style = {
-    'textAlign': 'center',
-}
 export default class DailyPowerGeneration extends PureComponent {
     render() {
         return (
-            <div style={box_style}>
-                <div style={title_style}>
-                Top 3 Solar Cities
-                </div>
+          <ResponsiveContainer maxHeight={290} width="100%" height="100%">                     
             <LineChart
-                width={410}
-                height={290}
-                data={data}
-                margin={{
-                    top: 10, left: 5,right: 55, bottom: 10,
-                }}
+              width={410}
+              height={290}
+              data={data}
+              margin={{
+                  top: 10, left: 5,right: 55, bottom: 10,
+              }}
             >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="date" tick={{fontSize: 12}}/>
-                <YAxis tick={{fontSize: 12}}/>
-                <Tooltip />
-                <Legend wrapperStyle={{'fontSize': '14px'}} align="center" />
-                <Legend verticalAlign="bottom" height={36} align="right"/>
-                <Line type="monotone" dataKey="SanJose" stroke="#8884d8" />
-                <Line type="monotone" dataKey="PaloAlto" stroke="#82ca9d" />
-                <Line type="monotone" dataKey="Sunnyvale" stroke="#FFB533" />
-            </LineChart>
-            </div>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="date" tick={{fontSize: 12}}/>
+              <YAxis label={{ value: 'TWh', angle: -90, position: 'insideLeft' }} tick={{fontSize: 12}} />
+              <Tooltip />
+              <Legend wrapperStyle={{'fontSize': '14px'}} align="center" />
+              <Legend verticalAlign="bottom" height={36} align="right"/>
+              <Line type="monotone" dataKey="SanJose" stroke="#8884d8" />
+              <Line type="monotone" dataKey="PaloAlto" stroke="#82ca9d" />
+              <Line type="monotone" dataKey="Sunnyvale" stroke="#FFB533" />
+              </LineChart>
+        </ResponsiveContainer>
         );
     }
 }

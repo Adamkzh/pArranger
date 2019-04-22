@@ -1,13 +1,15 @@
 import React from "react";
 import '../../style/admin/adminContent.css';
 
-import StackedBarChar from './charts/StackedBarChar';
+import DifferentPower from './charts/DifferentPower';
 import DailyPowerGeneration from './charts/DailyPowerGeneration';
 import SolarRadiance from './charts/SolarRadiance';
 import ChargeCompare from './charts/ChargeCompare';
-import SimpleBarChart from './charts/SimpleBarChart';
+import NumberOfSolarPanels from './charts/NumberOfSolarPanels';
 
 import "semantic-ui-css/semantic.min.css";
+import '../../style/admin/chart.css';
+
 import {
   Grid,
   Header,
@@ -51,23 +53,28 @@ export default class adminContent extends React.Component{
               </Header>
             </Grid.Row>
             <Grid.Row columns={3}>
-              <Grid.Column >
-                <StackedBarChar />
+              <Grid.Column className='chartBox'>
+                <div>EYearly Renewable Electric Energy Generation</div>
+                <DifferentPower />
               </Grid.Column>
-              <Grid.Column >
+              <Grid.Column className='chartBox'>
+                <div>Top 3 Solar Power Generation City</div>
                 <DailyPowerGeneration />
               </Grid.Column>
-              <Grid.Column >
-                <ChargeCompare />
+              <Grid.Column className='chartBox'>
+                <div>Total Solar Panels</div>
+                <NumberOfSolarPanels/>
               </Grid.Column>
             </Grid.Row>
-            <Grid.Row columns={3}>
-              <Grid.Column>
-                <SimpleBarChart/>
+            <Grid.Row columns={2}>
+              <Grid.Column className='chartBox'>
+                <div>Electricity Cost Comparison</div>
+                <ChargeCompare />
               </Grid.Column>
-              {/* <Grid.Column >
+              <Grid.Column className='chartBox'>
+                <div>Live Radiation Data</div>
                 <SolarRadiance />
-              </Grid.Column> */}
+              </Grid.Column>
             </Grid.Row>
           </Grid>
         </Grid.Column>

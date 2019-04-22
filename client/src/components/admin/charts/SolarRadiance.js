@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-    AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
+    AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 } from 'recharts';
 
 const data = [
@@ -27,21 +27,10 @@ const data = [
     },
 ];
 
-const box_style = {
-    'boxShadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)',
-    'width':'100%'
-}
-
-const title_style = {
-    'textAlign': 'center',
-}
 export default class SolarRadiance extends PureComponent {
     render() {
         return (
-            <div style={box_style}>
-                <div style={title_style}>
-                Live Radiation Data
-                </div>
+            <ResponsiveContainer maxHeight={290} width="100%" height="100%">                     
                 <AreaChart
                     width={410}
                     height={290}
@@ -56,7 +45,7 @@ export default class SolarRadiance extends PureComponent {
                     <Tooltip />
                     <Area type="monotone" dataKey="GHI" stroke="#FE0101" fill="#FEBF51" />
                 </AreaChart>
-            </div>
+            </ResponsiveContainer>
         );
     }
 }

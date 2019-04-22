@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import {
-    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
 } from 'recharts';
+
 
 const data = [
     {
@@ -42,23 +43,13 @@ const data = [
     },
   ];
 
-const box_style = {
-    'boxShadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)',
-    'width':'100%'
-}
 
-const title_style = {
-    'textAlign': 'center',
-}
 export default class SolarRadiance extends PureComponent {
     render() {
         return (
-            <div style={box_style}>
-                <div style={title_style}>
-                Electricity Cost Comparison
-                </div>
+            <ResponsiveContainer maxHeight={290} width="100%" height="100%">                     
                 <LineChart
-                    width={410}
+                    width={550}
                     height={290}
                     data={data}
                     margin={{
@@ -73,7 +64,7 @@ export default class SolarRadiance extends PureComponent {
                     <Line dataKey="average" barSize={10} stroke="#FEBF51" fill="#FEBF51" />
                     <Line dataKey="solar" barSize={10} stroke="#82ca9d" fill="#82ca9d" />
                 </LineChart>
-            </div>
+            </ResponsiveContainer>
         );
     }
 }
