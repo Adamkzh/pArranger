@@ -28,12 +28,12 @@ const data = [
 ];
 
 const box_style = {
-    'box-shadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)',
+    'boxShadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)',
     'width':'100%'
 }
 
 const title_style = {
-    'text-align': 'center',
+    'textAlign': 'center',
 }
 export default class SolarRadiance extends PureComponent {
     render() {

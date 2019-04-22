@@ -12,10 +12,10 @@ const data = [
 ];
 
 const box_style = {
-    'box-shadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)'
+    'boxShadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)'
 }
 const title_style = {
-    'text-align': 'center',
+    'textAlign': 'center',
 }
 
 export default class StackedBarChar extends PureComponent {
@@ -37,7 +37,7 @@ export default class StackedBarChar extends PureComponent {
                 <YAxis label={{ value: 'TWh', angle: -90, position: 'insideLeft' }} tick={{fontSize: 12}} />
                 <XAxis dataKey="year" tick={{fontSize: 12}}/>
                 <Tooltip />
-                <Legend wrapperStyle={{'font-size': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
+                <Legend wrapperStyle={{'fontSize': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
                 <Bar dataKey="HYDRO" stackId="a" fill="#8884d8" />
                 <Bar dataKey="SOLAR" stackId="a" fill="#82ca9d" />
                 <Bar dataKey="BIOMASS" stackId="a" fill="#FFB533" />

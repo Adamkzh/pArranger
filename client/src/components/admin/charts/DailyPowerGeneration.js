@@ -28,12 +28,12 @@ const data = [
 ];
 
 const box_style = {
-    'box-shadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)',
+    'boxShadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)',
     'width':'100%'
 }
 
 const title_style = {
-    'text-align': 'center',
+    'textAlign': 'center',
 }
 export default class DailyPowerGeneration extends PureComponent {
     render() {
@@ -54,7 +54,7 @@ export default class DailyPowerGeneration extends PureComponent {
                 <XAxis dataKey="date" tick={{fontSize: 12}}/>
                 <YAxis tick={{fontSize: 12}}/>
                 <Tooltip />
-                <Legend wrapperStyle={{'font-size': '14px'}} align="center" />
+                <Legend wrapperStyle={{'fontSize': '14px'}} align="center" />
                 <Legend verticalAlign="bottom" height={36} align="right"/>
                 <Line type="monotone" dataKey="SanJose" stroke="#8884d8" />
                 <Line type="monotone" dataKey="PaloAlto" stroke="#82ca9d" />

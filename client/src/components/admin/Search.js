@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import {
-    Button,
+    Dropdown,
     Container,
     Header,
     Menu,
@@ -19,11 +19,18 @@ class Search extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            item: [],
-            viewDetail: false,
-            curId: ""
+        var adminStatus;
+        if(window.localStorage.getItem('admin')=== "false"){
+          adminStatus = false;
+        }else{
+          adminStatus = true;
         }
+        this.state = {
+          admin: adminStatus,
+          item: [],
+          viewDetail: false,
+          curId: ""
+      }
     }
 
     componentDidMount = () => {
@@ -104,12 +111,29 @@ backClick= () =>{
 
 
 render(){
-  var idLink = "/"
+  var idLink = "/";
+  var temp = this.state.admin ? "Admin" : "User";
+  var hello = "Hello, "+ temp;
+
   if(window.localStorage.getItem('uuid') !== null){
     idLink = "/dashboard/" + window.localStorage.getItem('uuid');
   }
+  let content;
+  if(this.state.admin){
+    content = <Container>
+    <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
+    <Menu.Item as={Link} to='/search' >SEARCH</Menu.Item>
+    <Menu.Item as={Link} to= '/console'>DASHBOARD</Menu.Item>
+  </Container>
+  }else{
+    content = <Container>
+    <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
+    <Menu.Item as={Link} to='/design'>DESIGN</Menu.Item>
+    <Menu.Item as={Link} to= {idLink}>DASHBOARD</Menu.Item>
+  </Container>
+  }
 
-    return(
+  return(
         <div>
           <Segment
             inverted
@@ -132,18 +156,25 @@ render(){
                 'borderWidth': '0px'
               }}
             >
-              <Container>
-                <Menu.Item as={Link} to='/' >HOME</Menu.Item>
-                <Menu.Item as={Link} to='/design'>DESIGN</Menu.Item>
-                <Menu.Item as={Link} to= {idLink}>DASHBOARD</Menu.Item>
-                <Menu.Item as={Link} to='/search' active>SEARCH</Menu.Item>
-                <Menu.Item as={Link} to= '/console'>CONSOLE</Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as={Link} to='/login' inverted>
-                    SIGN IN
-                  </Button>
+            {content}
+                <Menu.Item 
+                  style={{
+                    "marginRight" : '25px'
+                  }} > 
+                  <Dropdown text={hello}>
+                  <Dropdown.Menu>
+                    <Dropdown.Item
+                      icon="user" text={this.state.admin ? "User Login" : "Admin Login"} 
+                      onClick={()=>{
+                        this.setState({
+                          admin: !this.state.admin
+                        })
+                        window.localStorage.setItem('admin', !this.state.admin);
+                        }}
+                    />
+                  </Dropdown.Menu>
+                  </Dropdown>
                 </Menu.Item>
-              </Container>
             </Menu>
 
             <Container text>

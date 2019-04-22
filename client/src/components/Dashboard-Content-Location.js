@@ -64,8 +64,8 @@ componentDidMount() {
     var b64Data=map.getCanvas().toDataURL().replace(/^data:image\/(png|jpg);base64,/, "");
     var blob = b64toBlob(b64Data, contentType);
     formData.set('mapImage', blob);
-    console.log(blob)
-    console.log(b64Data);
+    // console.log(blob)
+    // console.log(b64Data);
   });
 
   map.addControl(geocoder);

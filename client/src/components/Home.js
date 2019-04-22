@@ -13,24 +13,31 @@ import {
   Responsive,
   Segment,
   Visibility,
+  Dropdown,
 } from 'semantic-ui-react';
 
 import homepageMidImage from '../image/homepage-mid.jpg'
 
 
 class DesktopContainer extends Component {
-  state = {}
+  constructor(props){
+    super(props);
+    var adminStatus;
+    if(window.localStorage.getItem('admin')=== "false"){
+      adminStatus = false;
+    }else{
+      adminStatus = true;
+    }
+    this.state = {
+      admin: adminStatus,
+    }
+}
 
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
   
   // For stepZilla init, prevent error
   initStepzilla(){
-
-    console.log(window.localStorage);
-    window.localStorage.clear();
-
-
     if(window.localStorage.getItem('step') === undefined){
        window.localStorage.setItem('step',0);
     }
@@ -43,6 +50,26 @@ class DesktopContainer extends Component {
     if(window.localStorage.getItem('uuid') !== null){
       idLink = "/dashboard/" + window.localStorage.getItem('uuid');
     }
+    var temp = this.state.admin ? "Admin" : "User";
+    var hello = "Hello, "+ temp;
+
+    let content;
+    if(this.state.admin){
+      content = <Container>
+      <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
+      <Menu.Item as={Link} to='/search' >SEARCH</Menu.Item>
+      <Menu.Item as={Link} to= '/console'>DASHBOARD</Menu.Item>
+    </Container>
+    }else{
+      content = <Container>
+      <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
+      <Menu.Item as={Link} to='/design'>DESIGN</Menu.Item>
+      <Menu.Item as={Link} to= {idLink}>DASHBOARD</Menu.Item>
+    </Container>
+    }
+
+
+
 
     return (
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
@@ -73,19 +100,27 @@ class DesktopContainer extends Component {
                 'borderWidth': '0px'
               }}
             >
-              <Container>
-                <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
-                <Menu.Item as={Link} to='/design'>DESIGN</Menu.Item>
-                <Menu.Item as={Link} to= {idLink}>DASHBOARD</Menu.Item>
-                <Menu.Item as={Link} to='/search' >SEARCH</Menu.Item>
-                <Menu.Item as={Link} to= '/console'>CONSOLE</Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as={Link} to='/login' inverted={!fixed}>
-                    SIGN IN
-                  </Button>
+              {content}
+                <Menu.Item 
+                  style={{
+                    "marginRight" : '25px'
+                  }} > 
+                  <Dropdown text={hello}>
+                  <Dropdown.Menu>
+                    <Dropdown.Item
+                      icon="user" text={this.state.admin ? "User Login" : "Admin Login"} 
+                      onClick={()=>{
+                        this.setState({
+                          admin: !this.state.admin
+                        })
+                        window.localStorage.setItem('admin', !this.state.admin);
+                        }}
+                    />
+                  </Dropdown.Menu>
+                  </Dropdown>
                 </Menu.Item>
-              </Container>
             </Menu>
+
             <Container text>
                 <Header
                 as='h1'

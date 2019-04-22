@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-  BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend
 } from 'recharts';
 /*var text = '{"panels":['+'{"Month": "Apr","city":"San Jose", "number":"1000"},' + '{"Month": "March","city":"San Jose", "number":"1500"},' + '{"Month": "Feb","city":"San Jose", "number":"2000"}]}';
 
@@ -16,10 +16,10 @@ const data = [
 ];
 
 const box_style = {
-    'box-shadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)'
+    'boxShadow':' 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)'
 }
 const title_style = {
-    'text-align': 'center',
+    'textAlign': 'center',
 }
 export default class SimpleBarChart extends PureComponent{
 	render () {
@@ -38,14 +38,10 @@ export default class SimpleBarChart extends PureComponent{
       
   >
        <CartesianGrid strokeDasharray="3 3"/>
-       
-        {/* <Label value="New Installed Solar Panels" offset={0} position="insideBottom" /> */}
-       
-
        <YAxis label={{ value: 'kW', angle: -90, position: 'insideLeft' }} tick={{fontSize: 12}} />
        <XAxis dataKey="Month" tick={{fontSize: 12}}/>
        <Tooltip/>
-       <Legend wrapperStyle={{'font-size': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
+       <Legend wrapperStyle={{'fontSize': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
        <Bar dataKey="SanJose" fill="#8884d8" />
        <Bar dataKey="SantaClara" fill="#82ca9d" />
        <Bar dataKey="MountainView" fill="#FFB533" />
