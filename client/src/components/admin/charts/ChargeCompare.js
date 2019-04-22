@@ -1,45 +1,45 @@
 import React, { PureComponent } from 'react';
 import {
-    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
+    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine
 } from 'recharts';
 
 
 const data = [
     {
-        month: 'JAN', solar: 500, average: 590
+        month: 'JAN', solar: 200, average: 590
     },
     {
-        month: 'FEB', solar: 600, average: 675
+        month: 'FEB', solar: 400, average: 675
     },
     {
-        month: 'MAR', solar: 738, average: 874
+        month: 'MAR', solar: 638, average: 874
     },
     {
-        month: 'APR', solar: 829, average: 900
+        month: 'APR', solar: 629, average: 900
     },
     {
-        month: 'MAY', solar: 988, average: 1065
+        month: 'MAY', solar: 688, average: 1065
     },
     {
-        month: 'JUN', solar: 1002, average: 1102
+        month: 'JUN', solar: 977, average: 1602
     },
     {
-        month: 'JUL', solar: 1102, average: 1199
+        month: 'JUL', solar: 1102, average: 1799
     },
     {
-        month: 'AUG', solar: 1206, average: 1300
+        month: 'AUG', solar: 1206, average: 2300
     },
     {
-        month: 'SEP', solar: 1000, average: 1065
+        month: 'SEP', solar: 1000, average: 1765
     },
     {
-        month: 'OCT', solar: 800, average: 967
+        month: 'OCT', solar: 500, average: 1300
     },
     {
-        month: 'NOV', solar: 754, average: 896
+        month: 'NOV', solar: 400, average: 896
     },
     {
-        month: 'DEC', solar: 588, average: 680
+        month: 'DEC', solar: 300, average: 680
     },
   ];
 
@@ -59,6 +59,8 @@ export default class SolarRadiance extends PureComponent {
                     <CartesianGrid stroke="#f5f5f5" />
                     <XAxis dataKey="month" />
                     <YAxis label={{ value: 'USD', angle: -90, position: 'insideLeft' ,float:'left'}} />
+                    <ReferenceLine x="AUG" stroke="red" label="Max Cost Difference"/>
+                    <ReferenceLine y={2300} label="Max Cost" stroke="red"/>
                     <Tooltip />
                     <Legend />
                     <Line dataKey="average" barSize={10} stroke="#FEBF51" fill="#FEBF51" />

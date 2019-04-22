@@ -14,7 +14,7 @@ const data = [
       date: '2019-3-3', SanJose: 2000, PaloAlto: 6800, Sunnyvale: 2290,
     },
     {
-      date: '2019-3-4', SanJose: 2780, PaloAlto: 5908, Sunnyvale: 2000,
+      date: '2019-3-4', SanJose: 2780, PaloAlto: 6908, Sunnyvale: 2000,
     },
     {
       date: '2019-3-5', SanJose: 1890, PaloAlto: 6800, Sunnyvale: 2181,
@@ -46,7 +46,7 @@ export default class DailyPowerGeneration extends PureComponent {
               <Legend wrapperStyle={{'fontSize': '14px'}} align="center" />
               <Legend verticalAlign="bottom" height={36} align="right"/>
               <Line type="monotone" dataKey="SanJose" stroke="#82ca9d" />
-              <Line type="monotone" dataKey="PaloAlto" stroke="#FE2575" />
+              <Line type="monotone" dataKey="PaloAlto" stroke="#FE0101" />
               <Line type="monotone" dataKey="Sunnyvale" stroke="#FFB533" />
               </LineChart>
         </ResponsiveContainer>

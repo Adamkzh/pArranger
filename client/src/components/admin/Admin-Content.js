@@ -54,11 +54,11 @@ export default class adminContent extends React.Component{
             </Grid.Row>
             <Grid.Row columns={3}>
               <Grid.Column className='chartBox'>
-                <div>EYearly Renewable Electric Energy Generation</div>
+                <div>Yearly Renewable Electric Energy Generation</div>
                 <DifferentPower />
               </Grid.Column>
               <Grid.Column className='chartBox'>
-                <div>Top 3 Solar Power Generation City</div>
+                <div>Top Solar Power Generation City</div>
                 <DailyPowerGeneration />
               </Grid.Column>
               <Grid.Column className='chartBox'>
