@@ -178,7 +178,7 @@ router.get('/api/v1/solar/pvPower', function (req, res, next) {
 });
 
 router.get('/api/v1/charting/dashboardData', function (req, res, next) {
-    chartingController.getChatringData()
+    chartingController.getChartingData()
         .then(function (result) {
             res.json(success(result));
         })
