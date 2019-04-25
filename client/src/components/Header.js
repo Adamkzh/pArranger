@@ -82,6 +82,7 @@ class HomepageHeading extends Component {
               <Menu.Item as={Link} to='/' active={activeTag === "home"}>HOME</Menu.Item>
               <Menu.Item as={Link} to='/search' >SEARCH</Menu.Item>
               <Menu.Item as={Link} to= '/console' active={activeTag === "console"}>DASHBOARD</Menu.Item>
+              <Menu.Item as={Link} to= '/powermap' active={activeTag === "powermap"}>POWERMAP</Menu.Item>
             </Container>
             {tempButton}
             </Menu>

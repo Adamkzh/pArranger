@@ -2,7 +2,9 @@ import React, { PureComponent } from 'react';
 import DeckGL, { HexagonLayer } from "deck.gl";
 import { StaticMap } from "react-map-gl";
 import * as d3 from 'd3';
-import '../../style/admin/adminContent.css';
+import '../../../style/admin/adminContent.css';
+import { Button } from 'semantic-ui-react';
+import Header from '../../Header';
 
 const DATA_URL = 'https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/3d-heatmap/heatmap-data.csv';
 const COLOR_RANGE = [
@@ -13,6 +15,7 @@ const COLOR_RANGE = [
   [254, 173, 84],
   [209, 55, 78]
 ];
+
 const LIGHT_SETTINGS = {
   lightsPosition: [-0.144528, 49.739968, 8000, -3.807751, 54.104682, 8000],
   ambientRatio: 0.4,
@@ -22,6 +25,18 @@ const LIGHT_SETTINGS = {
   numberOfLights: 2
 };
 
+const tiny_screen = {
+  'top': '10px',
+  'marginTop':'5%',
+  'height': '80%',
+  'width': '80%',
+  'marginLeft':'10%',
+  'overflow': 'visible',
+  'position': 'absolute'
+};
+
+const full_screen = {};
+
 export default class PowerMap extends PureComponent {
     constructor(props){
         super(props);
@@ -29,19 +44,41 @@ export default class PowerMap extends PureComponent {
            radius: 2000,
            coverage: 1,
            upperPercentile:100,
+           style : tiny_screen,
+           fullscreenStatus : false,
         }
+        this.escFunction = this.escFunction.bind(this);
       }
   
-      handleChange = (e) =>{
-        var value = e.target.value;
-        this.setState({
-          [e.target.id] : value
-        })
+    handleChange = (e) =>{
+      var value = e.target.value;
+      this.setState({
+        [e.target.id] : value
+      })
+    }
+
+    escFunction = (event) =>{
+      if(event.keyCode === 27) {
+          this.setState({
+            fullscreenStatus:false,
+            style: tiny_screen
+          })
       }
+    }
+
+    componentDidMount(){
+      document.addEventListener("keydown", this.escFunction, false);
+    }
+
+    componentWillUnmount(){
+      document.removeEventListener("keydown", this.escFunction, false);
+    }
       
     render() {
         return (
-         <div className="showbox">
+      <div>
+        <Header activeTag={"powermap"}/>
+         <div style={this.state.style}>
             <div id="control-panel">
               <div>
                   <label>Radius</label>
@@ -59,6 +96,26 @@ export default class PowerMap extends PureComponent {
                   <span id="upperPercentile-value"></span>
               </div>
             </div>
+            <div id="fullscreen-button">
+            <Button inverted color='black' onClick={() =>{
+                this.setState({
+                   fullscreenStatus: !this.state.fullscreenStatus
+                },()=>{
+                  if(this.state.fullscreenStatus){
+                    this.setState({
+                      style: full_screen
+                    })
+                  }else{
+                    this.setState({
+                      style: tiny_screen
+                    })
+                  }
+                })
+                
+            }}>
+            {this.state.fullscreenStatus ? "Normal" : "Full"} Sreen
+            </Button>
+           </div>
             <DeckGL
               initialViewState={{ longitude: -1.4157, latitude: 52.2324, zoom: 6, pitch:40.5 }}
               controller={true}
@@ -88,7 +145,8 @@ export default class PowerMap extends PureComponent {
                 mapboxApiAccessToken="pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA" 
               />
             </DeckGL>
-        </div> 
+          </div> 
+        </div>
         );
     }
 }

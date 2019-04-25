@@ -59,6 +59,7 @@ class DesktopContainer extends Component {
       <Menu.Item as={Link} to='/' active>HOME</Menu.Item>
       <Menu.Item as={Link} to='/search' >SEARCH</Menu.Item>
       <Menu.Item as={Link} to= '/console'>DASHBOARD</Menu.Item>
+      <Menu.Item as={Link} to= '/powermap'>POWERMAP</Menu.Item>
     </Container>
     }else{
       content = <Container>

@@ -6,6 +6,7 @@ import Console from './components/admin/Admin';
 import Login from './components/auth/Login';
 import Detail from './components/Panel-Detail-Dashboard';
 import Search from './components/admin/Search';
+import PowerMap from './components/admin/deck/PowerMap';
 
 const Routes =() =>(
     <Router>
@@ -16,6 +17,7 @@ const Routes =() =>(
       <Route exact path="/login" component={Login}/>
       <Route exact path="/dashboard/:id" component={Detail}/>
       <Route exact path="/search" component={Search}/>
+      <Route exact path="/powermap" component={PowerMap}/>
     </div>
   </Router>
 )

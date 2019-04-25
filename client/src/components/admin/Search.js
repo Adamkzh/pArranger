@@ -124,6 +124,7 @@ render(){
     <Menu.Item as={Link} to='/'>HOME</Menu.Item>
     <Menu.Item as={Link} to='/search' active >SEARCH</Menu.Item>
     <Menu.Item as={Link} to= '/console'>DASHBOARD</Menu.Item>
+    <Menu.Item as={Link} to= '/powermap'>POWERMAP</Menu.Item>
   </Container>
   }else{
     content = <Container>
