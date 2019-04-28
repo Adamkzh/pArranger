@@ -38,49 +38,37 @@ class Position extends Component{
         });
 
         return new Promise((resolve, reject) => {
-            this.captureMap();
-            setTimeout(() => {
-              // call resolve() to indicate that server validation or other aync method was a success.
-              // ... only then will it move to the next step. reject() will indicate a fail
-              resolve();
-              // reject(); // or reject
-            }, 750);
+            // call resolve() to indicate that server validation or other aync method was a success.
+            // ... only then will it move to the next step. reject() will indicate a fail
+            html2canvas(document.querySelector(".capture")).then(canvas => {
+                var formData  = new FormData();
+                // set id to placed image
+                formData.set('id','placed_image');
+                var contentType = 'image/png';
+                var b64Data = canvas.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "");
+                var blob = b64toBlob(b64Data, contentType);
+    
+                // set mapimage
+                formData.set('mapImage', blob);
+    
+                // save data to server
+                try{
+                    const config = {	
+                      headers: {	        
+                        'content-type': 'multipart/form-data'	      
+                      },
+                    };
+                    axios.post('/api/save', formData, config).then(function (response) {
+                        resolve();
+                      console.log(response);
+                    })
+                  }catch(error){
+                    console.log(error)
+                  }
+            })
           });
       }
     
-      
-      /**
-       *  save canvas data
-       */
-      captureMap(){
-        return (html2canvas(document.querySelector(".capture")).then(canvas => {
-            var formData  = new FormData();
-            // set id to placed image
-            formData.set('id','placed_image');
-            var contentType = 'image/png';
-            var b64Data = canvas.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "");
-            var blob = b64toBlob(b64Data, contentType);
-
-            // set mapimage
-            formData.set('mapImage', blob);
-
-            // save data to server
-            try{
-                const config = {	
-                  headers: {	        
-                    'content-type': 'multipart/form-data'	      
-                  },
-                };
-            
-                axios.post('/api/save', formData, config).then(function (response) {
-                  console.log(response);
-                })
-              }catch(error){
-                console.log(error)
-              }
-        }));
-      }
-
       draw(){
         const canvas = document.getElementById('mapImg');
         const ctx = canvas.getContext('2d');
