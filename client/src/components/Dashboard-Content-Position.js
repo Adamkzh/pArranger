@@ -59,13 +59,15 @@ class Position extends Component{
                       },
                     };
                     axios.post('/api/save', formData, config).then(function (response) {
-                        resolve();
                       console.log(response);
                     })
                   }catch(error){
                     console.log(error)
                   }
             })
+            setTimeout(() => {
+                resolve();
+            }, 500);
           });
       }
     

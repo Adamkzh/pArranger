@@ -168,9 +168,9 @@ class Detail extends Component {
         var userData = {user: jsonData};
         var config = {headers: {"content-type": "application/json"}};
 
+        console.log(userData);
         // call edit api
         if(window.localStorage.getItem('uuid') !== null){
-            console.log(userData);
             jsonData['_id'] = window.localStorage.getItem('uuid');
             var updateUser = {updateUser: jsonData};
             axios.post('/api/v1/updateUser', updateUser, config)
@@ -195,6 +195,7 @@ class Detail extends Component {
                 console.log("Response from server below\n");
                 console.log(response.data);
                 if (response.data.success) {
+                    console.log('jump')
                     const userID = response.data.result.added._id;
                     window.localStorage.setItem('uuid', userID);
                     window.location = '/dashboard/' + window.localStorage.getItem('uuid');
