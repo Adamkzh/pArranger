@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button, Form, Grid, Input, Dropdown, Container } from "semantic-ui-react";
 import '../style/Detail.css';
 import axios from 'axios';
+import b64toBlob from 'b64-to-blob'
 
 import CSImage from '../image/cs-roof.jpg'
 import tileImage from '../image/tile-roof.png'
@@ -154,59 +155,82 @@ class Detail extends Component {
 
 
     handleSubmit = () => {
-        var imageurl = crop_image;
+        var b64Data = crop_image.replace(/^data:image\/(png|jpg);base64,/, "");
+        var contentType = 'image/png';
+        var blob = b64toBlob(b64Data, contentType);
+
         const formData = new FormData();
-        formData.append('mapImage',imageurl);
-        formData.append('data',JSON.stringify(this.state));
+        formData.set('mapImage',blob);
+        formData.set('data',JSON.stringify(this.state));
+        formData.set('location', {lat: window.localStorage.getItem('lat'), 
+                                lon: window.localStorage.getItem('lon')});
+        formData.set('acPower', 120);
 
-        const jsonData = {...this.state};
-        jsonData['mapImage'] = imageurl;
-        const location = {lat: window.localStorage.getItem('lat'), lon: window.localStorage.getItem('lon')};
-        jsonData['location'] = location;
-        jsonData['acPower'] = 120;
+ 
 
-        var userData = {user: jsonData};
-        var config = {headers: {"content-type": "application/json"}};
 
-        console.log(userData);
+        // var imageurl = crop_image;
+        // const jsonData = {...this.state};
+        // jsonData['mapImage'] = imageurl;
+        
+        // jsonData['location'] = location;
+        // jsonData['acPower'] = 120;
+
+        // var userData = {user: jsonData};
+        // var config = {headers: {"content-type": "application/json"}};
+
         // call edit api
-        if(window.localStorage.getItem('uuid') !== null){
-            jsonData['_id'] = window.localStorage.getItem('uuid');
-            var updateUser = {updateUser: jsonData};
-            axios.post('/api/v1/updateUser', updateUser, config)
-            .then(function (response) {
-                console.log("[UpdateUser] Response from server below\n");
-                console.log(response.data);
-                if (response.data.success) {
-                    const userID = response.data.result.updated._id;
-                    window.localStorage.setItem('uuid', userID);
-                    window.location = '/dashboard/' + window.localStorage.getItem('uuid');
-                } else {
-                    console.log(response.data.error);
-                }
+        // if(window.localStorage.getItem('uuid') !== null){
+        //     jsonData['_id'] = window.localStorage.getItem('uuid');
+        //     var updateUser = {updateUser: jsonData};
+        //     axios.post('/api/v1/updateUser', updateUser, config)
+        //     .then(function (response) {
+        //         console.log("[UpdateUser] Response from server below\n");
+        //         console.log(response.data);
+        //         if (response.data.success) {
+        //             const userID = response.data.result.updated._id;
+        //             window.localStorage.setItem('uuid', userID);
+        //             window.location = '/dashboard/' + window.localStorage.getItem('uuid');
+        //         } else {
+        //             console.log(response.data.error);
+        //         }
+        //     })
+        //     .catch(function (error) {
+        //       console.log(error);
+        //     });
+        // // call save api
+        // }else{ 
+        //     axios.post('/api/v1/addUser', userData, config)
+        //     .then(function (response) {
+        //         console.log("Response from server below\n");
+        //         console.log(response.data);
+        //         if (response.data.success) {
+        //             const userID = response.data.result.added._id;
+        //             window.localStorage.setItem('uuid', userID);
+        //             window.location = '/dashboard/' + window.localStorage.getItem('uuid');
+        //         } else {
+        //             console.log(response.data.error);
+        //         }
+        //     })
+        //     .catch(function (error) {
+        //       console.log(error);
+        //     });
+        // }
+
+        console.log(formData);
+        try{
+            const config = {	
+              headers: {	        
+                'content-type': 'multipart/form-data'	      
+              },
+            };
+        
+            axios.post('/api/v1/addUser', formData, config).then(function (response) {
+              console.log(response);
             })
-            .catch(function (error) {
-              console.log(error);
-            });
-        // call save api
-        }else{ 
-            axios.post('/api/v1/addUser', userData, config)
-            .then(function (response) {
-                console.log("Response from server below\n");
-                console.log(response.data);
-                if (response.data.success) {
-                    console.log('jump')
-                    const userID = response.data.result.added._id;
-                    window.localStorage.setItem('uuid', userID);
-                    window.location = '/dashboard/' + window.localStorage.getItem('uuid');
-                } else {
-                    console.log(response.data.error);
-                }
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
-        }
+          }catch(error){
+            console.log(error)
+          }
 
       };
     

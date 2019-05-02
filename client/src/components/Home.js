@@ -46,10 +46,7 @@ class DesktopContainer extends Component {
   render() {
     const { children } = this.props
     const { fixed } = this.state
-    var idLink = "/"
-    if(window.localStorage.getItem('uuid') !== null){
-      idLink = "/dashboard/" + window.localStorage.getItem('uuid');
-    }
+    var idLink = "/dashboard/" + window.localStorage.getItem('uuid');
     var temp = this.state.admin ? "Admin" : "User";
     var hello = "Hello, "+ temp;
 

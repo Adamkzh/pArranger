@@ -29,11 +29,9 @@ class HomepageHeading extends Component {
     }
 
     componentDidMount = ()=>{
-      if(window.localStorage.getItem('uuid') !== null){
-          this.setState({
-            idLink : "/dashboard/" + window.localStorage.getItem('uuid')
-          })
-      }
+        this.setState({
+          idLink : "/dashboard/" + window.localStorage.getItem('uuid')
+        })
     }
     
     render(){ 

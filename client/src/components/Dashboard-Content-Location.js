@@ -80,19 +80,23 @@ shouldComponentUpdate(nextProps, nextState) {
 }
 
 isValidated = () =>{
-  try{
-    const config = {	
-      headers: {	        
-        'content-type': 'multipart/form-data'	      
-      },
-    };
-
-    axios.post('/api/save', formData, config).then(function (response) {
-      console.log(response);
-    })
-  }catch(error){
-    console.log(error)
-  }
+  return new Promise((resolve, reject)=>{
+    try{
+      const config = {	
+        headers: {	        
+          'content-type': 'multipart/form-data'	      
+        },
+      };
+      axios.post('/api/save', formData, config).then(function (response) {
+        console.log(response);
+      })
+    }catch(error){
+      console.log(error)
+    }
+    setTimeout(() => {
+      resolve();
+    }, 500);
+  })
 }
 
 render() {
