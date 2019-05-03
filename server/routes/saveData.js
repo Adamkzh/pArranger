@@ -30,6 +30,7 @@ router.post('/api/save', upload, (req, res) => {
             function(err, r) {
             assert.equal(null, err);
             });
+        res.send("Save temp image successful!")
     });
 });
 
