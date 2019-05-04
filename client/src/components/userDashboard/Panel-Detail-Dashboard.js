@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../Header';
 import axios from 'axios';
-import { Image, Grid, Container, Segment, Button, Label, Modal, Icon } from 'semantic-ui-react';
+import { Grid, Segment } from 'semantic-ui-react';
 import AreaChartComponent from './AreachartComponent/AreaChartComponent';
 import LineChartComponent from './LineChart/LineChartComponent';
 
@@ -36,8 +36,33 @@ render(){
 
     return(
         <div>
-            <Header activeTag={"dashboard"}/>
+        <Header activeTag={"dashboard"}/>
+        <div style={{marginLeft:'50px'}}>
+            <h1>Dashboard</h1>
             <Grid>
+            <Grid.Row>
+            <Grid.Column width={4}>
+                <Segment className="chart-container">
+                ijoi
+                </Segment>
+            </Grid.Column>
+            <Grid.Column width={4}>
+                <Segment className="chart-container">
+                ijoi
+                </Segment>
+            </Grid.Column>
+            <Grid.Column width={4}>
+                <Segment className="chart-container">
+                ijoi
+                </Segment>
+            </Grid.Column>
+            <Grid.Column width={4}>
+                <Segment className="chart-container">
+                ijoi
+                </Segment>
+            </Grid.Column>
+            </Grid.Row>
+            
             <Grid.Row>
             <Grid.Column width={8}>
                 <Segment className="chart-container">
@@ -51,6 +76,7 @@ render(){
             </Grid.Column>
             </Grid.Row>
             </Grid>
+        </div>
         </div>
     );
 }

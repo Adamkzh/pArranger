@@ -49,9 +49,7 @@ export default class adminContent extends React.Component{
   render() {
       return(
         <div style={{marginLeft:'50px'}}>
-        <Header dividing size="huge" as="h1">
-              Dashboard
-        </Header> 
+        <h1>Dashboard</h1>
         <Grid >
         <Grid.Row>
           <Grid.Column width={5}>
