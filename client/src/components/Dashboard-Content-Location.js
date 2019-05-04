@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { List , Message, Loader } from 'semantic-ui-react';
+import { List , Message } from 'semantic-ui-react';
 import MapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
 import '../style/Map.css';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
@@ -64,8 +64,6 @@ componentDidMount() {
     var b64Data=map.getCanvas().toDataURL().replace(/^data:image\/(png|jpg);base64,/, "");
     var blob = b64toBlob(b64Data, contentType);
     formData.set('mapImage', blob);
-    // console.log(blob)
-    // console.log(b64Data);
   });
 
   map.addControl(geocoder);
@@ -110,16 +108,10 @@ render() {
         LOCATION       
       </div>
       <div className='Map' ref={(x) => { this.container = x }}>
-        <Loader 
-        indeterminate
-        size='big'
-        >Constructing</Loader>
           { map && children }
       </div>
         <div className="reminder" >
-        <Message 
-          size='mini'
-          >
+        <Message size='mini'>
             <List as='ol'>
               <List.Item as='li'>Enter the address of your desired solar install.</List.Item>
               <List.Item as='li'>Center your installation location and click next.</List.Item>

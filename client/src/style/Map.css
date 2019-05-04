@@ -1,12 +1,10 @@
 .Map
 {
     position: absolute;
-    top: 60px;
     width: 60%;
     margin-left: 20%;
     overflow: visible;
     height: 420px;
-    margin-top:120px;
 }
 
 .Sarea{
@@ -17,14 +15,6 @@
 {
   right: auto;
   width: 100%;
-}
-
-.mapboxgl-ctrl-top-right .mapboxgl-ctrl
-{
-  top: 440px;
-  position:absolute;
-  left:58%;
-  margin-left:-25%;
 }
 
 ._title
@@ -44,7 +34,7 @@
 {
   width: 22.5%;
   margin-left: 16%;
-  margin-top: 460px;
+  margin-top: 10px;
   font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 120%;
   color: black;

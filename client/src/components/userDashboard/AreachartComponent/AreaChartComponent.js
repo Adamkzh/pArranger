@@ -1,37 +1,40 @@
 import React, { Component } from 'react';
-import { ResponsiveContainer } from 'recharts';
-import {
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  Radar,
-  Legend,
-} from 'recharts';
+import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
 
-class AreaChartComponent extends Component {
+const Map = ReactMapboxGl({
+  accessToken: "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA"
+});
+
+class NeighborMap extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      center: [window.localStorage.getItem('lat'), window.localStorage.getItem('lon')],
+    }; 
+  }
+
   render() {
-    const data = [
-      { subject: 'Math', A: 120, B: 110, fullMark: 150 },
-      { subject: 'Chinese', A: 98, B: 130, fullMark: 150 },
-      { subject: 'English', A: 86, B: 130, fullMark: 150 },
-      { subject: 'Geography', A: 99, B: 100, fullMark: 150 },
-      { subject: 'Physics', A: 85, B: 90, fullMark: 150 },
-      { subject: 'History', A: 65, B: 85, fullMark: 150 },
-  ];
+    console.log(this.state.x);
+    console.log(this.state.y);
     return (
-      <ResponsiveContainer>
-        <RadarChart outerRadius={90} width={730} height={250} data={data}>
-          <PolarGrid />
-          <PolarAngleAxis dataKey="subject" />
-          <PolarRadiusAxis angle={30} domain={[0, 150]} />
-          <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-          <Radar name="Lily" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
-          <Legend />
-        </RadarChart>
-      </ResponsiveContainer>
+      <Map 
+        style="mapbox://styles/mapbox/light-v9"
+        containerStyle={{
+          height: "50vh",
+          width: "45vw"
+        }}
+        center={this.state.center}
+        zoom={[13]}
+        >
+        <Layer
+          type="symbol"
+          id="marker"
+          layout={{ "icon-image": "marker-15" }}>
+          <Feature coordinates={this.state.center}/>
+        </Layer>
+    </Map>
     );
   }
 }
 
-export default AreaChartComponent;
+export default NeighborMap;

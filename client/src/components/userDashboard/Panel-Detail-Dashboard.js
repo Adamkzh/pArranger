@@ -37,7 +37,7 @@ render(){
     return(
         <div>
         <Header activeTag={"dashboard"}/>
-        <div style={{marginLeft:'50px'}}>
+        <div style={{marginLeft:'50px', marginRight:'50px'}}>
             <h1>Dashboard</h1>
             <Grid>
             <Grid.Row>
@@ -62,7 +62,7 @@ render(){
                 </Segment>
             </Grid.Column>
             </Grid.Row>
-            
+
             <Grid.Row>
             <Grid.Column width={8}>
                 <Segment className="chart-container">
