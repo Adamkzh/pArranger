@@ -98,16 +98,18 @@ export default class adminContent extends React.Component{
                 {/*<NumberOfSolarPanelsByCity/>*/}
               </Grid.Column>
             </Grid.Row>
-            {/*<Grid.Row columns={2}>*/}
-              {/*<Grid.Column className='chartBox'>*/}
-                {/*<div>Average Electricity Cost Comparison Monthly</div>*/}
-                {/*<ChargeCompare data={this.state.chargeCompare_data}/>*/}
-              {/*</Grid.Column>*/}
-              {/*<Grid.Column className='chartBox'>*/}
-                {/*<div>Live Radiation Data</div>*/}
-                {/*<SolarRadiance data = {this.state.solarRadiance_data}/>*/}
-              {/*</Grid.Column>*/}
-            {/*</Grid.Row>*/}
+            <Grid.Row columns={2}>
+              <Grid.Column className='chartBox'>
+                <div>Average Electricity Cost Comparison Monthly</div>
+                <ChargeCompare data={this.state.chargeCompare_data}/>
+              </Grid.Column>
+              <Grid.Column className='chartBox'>
+                <div>Live Radiation Data</div>
+                <SolarRadiance data = {this.state.solarRadiance_data}/>
+              </Grid.Column>
+            </Grid.Row>
+
+             {/*Newly Added Start Here*/}
             <Grid.Row columns={4}>
               <Grid.Column className='chartBox'>
                 <div> Num of Household Installed Panels by City </div>
