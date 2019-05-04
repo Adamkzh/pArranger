@@ -59,34 +59,9 @@ export default class adminContent extends React.Component{
 
   render() {
       return(
-        <div style={{marginLeft:'50px'}}>
+        <div style={{marginLeft:'50px',marginRight:'50px'}}>
         <h1>Dashboard</h1>
-        <Grid >
-        <Grid.Column
-          computer={2}
-          only="tablet computer"
-          id="sidebar"
-        >
-          <Menu vertical borderless fluid text>
-            <Menu.Item active as="a"> Overview </Menu.Item>
-            <Menu.Item as="a">Reports</Menu.Item>
-            <Menu.Item as="a">Analytics</Menu.Item>
-            <Menu.Item as="a">Export</Menu.Item>
-          </Menu>
-        </Grid.Column>
-        <Grid.Column
-          computer={14}
-          floated="right"
-          id="content"
-        >
           <Grid padded>
-            <Grid.Row>
-              <Header dividing size="huge" as="h1">
-                Dashboard
-              </Header>
-            </Grid.Row>
-
-
               <Grid.Row>
                   <Grid.Column width={5}>
                       <Segment className="chart-container">
@@ -177,8 +152,6 @@ export default class adminContent extends React.Component{
                   </Grid.Column>
               </Grid.Row>
           </Grid>
-        </Grid.Column>
-      </Grid>
       </div>
       )
   }
