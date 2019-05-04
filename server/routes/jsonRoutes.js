@@ -78,8 +78,8 @@ router.get('/api/v1/getUser', function(req, res, next) {
 router.post('/api/v1/addUser', function(req, res, next) {
     console.log("[Server] post /api/v1/addUser");
     console.log(req.body.data);
-    if (!isValidJsonRequest(req)) {
-        return
+    if (!isValidJsonRequest(req, res)) {
+        return;
     }
     if (!req.body.user) {
         res.json(failed({"error": "Please specify a \"user\" object" }));
@@ -95,8 +95,8 @@ router.post('/api/v1/addUser', function(req, res, next) {
 });
 
 router.post('/api/v1/updateUser', function(req, res, next) {
-    if (!isValidJsonRequest(req)) {
-        return
+    if (!isValidJsonRequest(req, res)) {
+        return;
     }
     let user = req.body.updateUser;
     if (!user) {
@@ -119,8 +119,8 @@ router.post('/api/v1/updateUser', function(req, res, next) {
 });
 
 router.post('/api/v1/removeUser', function(req, res, next) {
-    if (!isValidJsonRequest(req)) {
-        return
+    if (!isValidJsonRequest(req, res)) {
+        return;
     }
     let user = req.body.removeUser;
     if (!user) {
@@ -187,6 +187,9 @@ router.get('/api/v1/charting/dashboardData', function (req, res, next) {
         })
 });
 
+router.get('/api/v1/*', sendBadRequest);
+router.post('/api/v1/*', sendBadRequest);
+
 function convertEpochMilliStringToDate(epochMilliString) {
     if (!epochMilliString) {
         return null;
@@ -202,13 +205,17 @@ function convertEpochMilliStringToDate(epochMilliString) {
     return date;
 }
 
-function isValidJsonRequest(req) {
+function isValidJsonRequest(req, res) {
     let contentType = req.headers['content-type'];
     if (contentType !== "application/json") {
         res.json(failed("Incoming request header's content-type is not application/json, this is a JSON only API"));
         return false;
     }
     return true;
+}
+
+function sendBadRequest(req, res) {
+    res.json(failed("Bad request, please check your uri"));
 }
 
 function success(r) {
