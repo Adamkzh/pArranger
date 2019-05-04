@@ -4,7 +4,7 @@ import Home from './components/Home';
 import Design from './components/Dashboard';
 import Console from './components/admin/Admin';
 import Login from './components/auth/Login';
-import Detail from './components/Panel-Detail-Dashboard';
+import Detail from './components/userDashboard/Panel-Detail-Dashboard';
 import Search from './components/admin/Search';
 import PowerMap from './components/admin/deck/PowerMap';
 
