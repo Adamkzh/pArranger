@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import DeckGL, { HexagonLayer } from "deck.gl";
 import { StaticMap } from "react-map-gl";
-// import * as d3 from 'd3';
+import * as d3 from 'd3';
 import '../../../style/admin/adminContent.css';
 import { Button } from 'semantic-ui-react';
 import Header from '../../Header';
 
-// const DATA_URL = 'https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/3d-heatmap/heatmap-data.csv';
+const DATA_URL = 'https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/3d-heatmap/heatmap-data.csv';
 
 var test = [
   {
@@ -139,8 +139,8 @@ export default class PowerMap extends PureComponent {
                 new HexagonLayer({
                   type: HexagonLayer,
                   id: 'heatmap',
-                  // data: d3.csv(DATA_URL),
-                  data: test,
+                  data: d3.csv(DATA_URL),
+                  // data: test,
                   radius: this.state.radius,
                   coverage: this.state.coverage,
                   upperPercentile: this.state.upperPercentile,
