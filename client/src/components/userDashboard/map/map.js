@@ -18,9 +18,9 @@ class NeighborMap extends Component {
     console.log(this.state.y);
     return (
       <Map 
-        style="mapbox://styles/mapbox/light-v9"
+        style="mapbox://styles/mapbox/streets-v11"
         containerStyle={{
-          height: "50vh",
+          height: "30vh",
           width: "45vw"
         }}
         center={this.state.center}
@@ -29,7 +29,7 @@ class NeighborMap extends Component {
         <Layer
           type="symbol"
           id="marker"
-          layout={{ "icon-image": "marker-15" }}>
+          layout={{ "icon-image": "city" }}>
           <Feature coordinates={this.state.center}/>
         </Layer>
     </Map>
