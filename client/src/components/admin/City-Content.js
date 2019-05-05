@@ -67,7 +67,11 @@ export default class CityContent extends React.Component{
                 <Grid>
                     <Grid.Column computer={2} only="tablet computer" id="sidebar" >
                         <Menu vertical borderless fluid text>
-                            <Menu.Item as={Link} to='/console' > Overview </Menu.Item>
+                            <Menu.Item header>Compete</Menu.Item>
+                            <Menu.Item active as={Link} to='/console'> Overview </Menu.Item>
+                            <Menu.Item as="a"> Overview (Per Capita) </Menu.Item>
+                            <Menu.Item as="a"> Overview (Per Land Area) </Menu.Item>
+                            <Menu.Item header>City</Menu.Item>
                             <Menu.Item as={Link} to='/console/sanjose'>San Jose</Menu.Item>
                             <Menu.Item as={Link} to='/console/sunnyvale'>Sunnyvale</Menu.Item>
                             <Menu.Item as={Link} to='/console/paloalto'>Palo Alto</Menu.Item>
@@ -75,8 +79,8 @@ export default class CityContent extends React.Component{
                     </Grid.Column>
                     <Grid.Column computer={14} floated="right" id="content" >
 
-                        <h1>San Jose City Detail</h1>
                         <Grid padded>
+                            <Grid.Row> <Header dividing size="huge" as="h2"> {this.props.city.toUpperCase()} CITY OVERVIEW</Header> </Grid.Row>
                             <Grid.Row columns={4}>
                                 <Grid.Column>
                                     <Segment>
