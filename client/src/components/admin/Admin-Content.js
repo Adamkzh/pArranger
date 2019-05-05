@@ -73,8 +73,6 @@ export default class adminContent extends React.Component {
         return (<div style={{ marginLeft: '50px', marginRight: '50px' }}>
                 <Grid>
                     <Grid.Column computer={2} only="tablet computer" id="sidebar">
-                        <br/>
-                        <br/>
                         <AdminMenu selected={this.props.selected}/>
                     </Grid.Column>
 
