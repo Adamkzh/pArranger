@@ -3,7 +3,7 @@ import {
     LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine
 } from 'recharts';
 
-export default class SolarRadiance extends PureComponent {
+export default class ChargeCompare extends PureComponent {
 
     constructor(props){
         super(props);
@@ -23,10 +23,10 @@ export default class SolarRadiance extends PureComponent {
             <ResponsiveContainer maxHeight={290} width="100%" height="100%">                     
                 <LineChart
                     width={550}
-                    height={290}
+                    height={230}
                     data={this.state.data}
                     margin={{
-                        top: 10, right: 55, left: 15, bottom: 10,
+                        top: 10, right: 15, left: 5, bottom: 30,
                     }}
                 >
                     <CartesianGrid stroke="#f5f5f5" />
