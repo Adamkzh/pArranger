@@ -3,11 +3,6 @@ import {
     BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer
 } from 'recharts';
 
-const data = [
-    { Month: "Apr 2019", SanJose: 4000, AllCitiesAverage: 3000},
-    { Month: "Mar 2019", SanJose: 4100, AllCitiesAverage: 3010},
-    { Month: "Feb 2019", SanJose: 4010, AllCitiesAverage: 3000},
-];
 
 export default class AvgMoneySavedPerMonthByCitySingleCity extends PureComponent {
     render() {
@@ -16,7 +11,7 @@ export default class AvgMoneySavedPerMonthByCitySingleCity extends PureComponent
             <BarChart
                 width={260}
                 height={230}
-                data={data}
+                data={this.props.data}
                 margin={{
                     top: 10, left: 10,right: 50, bottom: 10,
                 }}

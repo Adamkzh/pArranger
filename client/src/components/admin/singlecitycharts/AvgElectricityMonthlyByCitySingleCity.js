@@ -3,14 +3,16 @@ import {
     BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer
 } from 'recharts';
 
-const data = [
-    { Month: "Nov 2018",  SanJose: 4300, AllCitiesAverage: 3200},
-    { Month: "Dec 2018",  SanJose: 4300, AllCitiesAverage: 3200},
-    { Month: "Jan 2019",  SanJose: 4300, AllCitiesAverage: 3200},
-    { Month: "Feb 2019",  SanJose: 4300, AllCitiesAverage: 3200},
-    { Month: "Mar 2019",  SanJose: 4200, AllCitiesAverage: 3100},
-    { Month: "Apr 2019",  SanJose: 4000, AllCitiesAverage: 3000},
-];
+// const data = [
+//     { Month: "Nov 2018",  SanJose: 4300, AllCitiesAverage: 3200},
+//     { Month: "Dec 2018",  SanJose: 4300, AllCitiesAverage: 3200},
+//     { Month: "Jan 2019",  SanJose: 4300, AllCitiesAverage: 3200},
+//     { Month: "Feb 2019",  SanJose: 4300, AllCitiesAverage: 3200},
+//     { Month: "Mar 2019",  SanJose: 4200, AllCitiesAverage: 3100},
+//     { Month: "Apr 2019",  SanJose: 4000, AllCitiesAverage: 3000},
+// ];
+
+
 
 export default class AvgElectricityMonthlyByCitySingleCity extends PureComponent {
     render() {
@@ -19,7 +21,7 @@ export default class AvgElectricityMonthlyByCitySingleCity extends PureComponent
             <BarChart
                 width={410}
                 height={290}
-                data={data}
+                data={this.props.data}
                 margin={{
                     top: 10, left: 10,right: 50, bottom: 10,
                 }}
