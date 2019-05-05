@@ -8,20 +8,20 @@ import Header from '../../Header';
 
 const DATA_URL = 'https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/3d-heatmap/heatmap-data.csv';
 
-var test = [
-  {
-    'lng':-118.59397,
-    'lat':33.4672,
-  },
-  {
-    'lng':-118.48479,
-    'lat':33.48748,
-  },
-  {
-    'lng':-118.37033,
-    'lat':33.40928,
-  },
-]
+// var test = [
+//   {
+//     'lng':-118.59397,
+//     'lat':33.4672,
+//   },
+//   {
+//     'lng':-118.48479,
+//     'lat':33.48748,
+//   },
+//   {
+//     'lng':-118.37033,
+//     'lat':33.40928,
+//   },
+// ]
 
 const COLOR_RANGE = [
   [1, 152, 189],

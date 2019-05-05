@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Button, Form, Grid, Input, Dropdown, Container } from "semantic-ui-react";
 import '../style/Detail.css';
 import axios from 'axios';
-// import b64toBlob from 'b64-to-blob'
 
 import CSImage from '../image/cs-roof.jpg'
 import tileImage from '../image/tile-roof.png'
@@ -155,19 +154,6 @@ class Detail extends Component {
 
 
     handleSubmit = () => {
-        // var b64Data = crop_image.replace(/^data:image\/(png|jpg);base64,/, "");
-        // var contentType = 'image/png';
-        // var blob = b64toBlob(b64Data, contentType);
-
-        // const formData = new FormData();
-        // formData.set('mapImage',blob);
-        // formData.set('data',JSON.stringify(this.state));
-        // formData.set('location', {lat: window.localStorage.getItem('lat'), 
-        //                         lon: window.localStorage.getItem('lon')});
-        // formData.set('acPower', 120);
-
- 
-        console.log('save......');
         var location = {lat: window.localStorage.getItem('lat'), lon: window.localStorage.getItem('lon')}
         var imageurl = crop_image;
         const jsonData = {...this.state};
@@ -181,26 +167,26 @@ class Detail extends Component {
         var config = {headers: {"content-type": "application/json"}};
 
         // call edit api
-        // if(window.localStorage.getItem('uuid') !== null){
-        //     jsonData['_id'] = window.localStorage.getItem('uuid');
-        //     var updateUser = {updateUser: jsonData};
-        //     axios.post('/api/v1/updateUser', updateUser, config)
-        //     .then(function (response) {
-        //         console.log("[UpdateUser] Response from server below\n");
-        //         console.log(response.data);
-        //         if (response.data.success) {
-        //             const userID = response.data.result.updated._id;
-        //             window.localStorage.setItem('uuid', userID);
-        //             window.location = '/dashboard/' + window.localStorage.getItem('uuid');
-        //         } else {
-        //             console.log(response.data.error);
-        //         }
-        //     })
-        //     .catch(function (error) {
-        //       console.log(error);
-        //     });
-        // // call save api
-        // }else{
+        if(window.localStorage.getItem('uuid') !== null){
+            jsonData['_id'] = window.localStorage.getItem('uuid');
+            var updateUser = {updateUser: jsonData};
+            axios.post('/api/v1/updateUser', updateUser, config)
+            .then(function (response) {
+                console.log("[UpdateUser] Response from server below\n");
+                console.log(response.data);
+                if (response.data.success) {
+                    const userID = response.data.result.updated._id;
+                    window.localStorage.setItem('uuid', userID);
+                    window.location = '/dashboard/' + window.localStorage.getItem('uuid');
+                } else {
+                    console.log(response.data.error);
+                }
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        // call save api
+        }else{
             console.log(JSON.stringify(userData)) 
             axios.post('/api/v1/addUser', userData, config)
             .then(function (response) {
@@ -217,21 +203,7 @@ class Detail extends Component {
             .catch(function (error) {
               console.log(error);
             });
-        // }
-
-    //     try{
-    //         const config = {	
-    //           headers: {	        
-    //             'content-type': 'multipart/form-data'	      
-    //           },
-    //         };
-        
-    //         axios.post('/api/v1/addUser', formData, config).then(function (response) {
-    //           console.log(response);
-    //         })
-    //       }catch(error){
-    //         console.log(error)
-    //       }
+        }
 
       };
     
