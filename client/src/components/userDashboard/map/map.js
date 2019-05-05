@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
+import ReactMapboxGl, { Layer, Feature, Marker } from "react-mapbox-gl";
+
+const markerUrl = "https://impactinggroup.com/wp-content/uploads/2016/02/impacting-pinpoint.png";
 
 const Map = ReactMapboxGl({
   accessToken: "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA"
@@ -14,24 +16,28 @@ class NeighborMap extends Component {
   }
 
   render() {
-    console.log(this.state.x);
-    console.log(this.state.y);
     return (
       <Map 
-        style="mapbox://styles/mapbox/streets-v11"
+        style="mapbox://styles/mapbox/light-v9"
         containerStyle={{
           height: "100%",
           width: "100%"
         }}
         center={this.state.center}
         zoom={[13]}
+        
         >
         <Layer
           type="symbol"
           id="marker"
-          layout={{ "icon-image": "city" }}>
-          <Feature coordinates={this.state.center}/>
+        >
+        <Feature coordinates={this.state.center}/>
         </Layer>
+        <Marker
+            coordinates={this.state.center}
+            anchor="bottom">
+            <img src={markerUrl} height={30}/>
+        </Marker>
     </Map>
     );
   }

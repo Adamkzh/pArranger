@@ -6,7 +6,6 @@ import Map from './map/map';
 
 import SolarRadiance from './LineChart/SolarRadiance';
 
-
 import './panel-detail-dashboard.css'
 import ChargeCompare from './LineChart/ChargeCompare';
 import PayBack from './PB/PayBack';
@@ -18,6 +17,20 @@ const cardStyle = {
     marginTop: '10px'
 }
  
+var currentDate = new Date();
+var hour = currentDate.getHours() - 9;
+
+
+var monthTotalEnergy = window.localStorage.getItem('watts') * 6 * 30 * 0.78 * 0.001;
+monthTotalEnergy = monthTotalEnergy.toFixed(2) + " kWh";
+
+var todayGenerate = window.localStorage.getItem('watts') * hour * 0.001 + ' kWh';
+var todaySaving = "$ " + window.localStorage.getItem('watts') * hour * 0.002 * 0.16;
+var monthBill =  window.localStorage.getItem('watts') * 6 * 30 * 0.78 * 0.001 * -0.16 + 101.49;
+monthBill = "$ " + monthBill.toFixed(2);
+
+var co2EmissionsDecliined = window.localStorage.getItem('watts') * 6 * 30 * 0.78 * 0.001 * 0.94 * 12;
+co2EmissionsDecliined = co2EmissionsDecliined.toFixed(2) + " kg";
 
 class PDDashboard extends Component{
 
@@ -111,41 +124,41 @@ render(){
             <Grid.Row>
             <Grid.Column width={3}>
             <Segment style={cardStyle}>
-                <Statistic color='olive'size='small'>
-                    <Statistic.Label>Total Money Saved YTD</Statistic.Label>
-                    <Statistic.Value>{2000}</Statistic.Value>
+                <Statistic color='teal'size='small'>
+                    <Statistic.Label>Today Money Saved</Statistic.Label>
+                    <Statistic.Value>{todaySaving}</Statistic.Value>
                 </Statistic>
             </Segment>
             </Grid.Column>
             <Grid.Column width={3}>
                 <Segment style={cardStyle}> 
-                <Statistic color='olive'size='small'>
-                    <Statistic.Label>Total Money Saved YTD</Statistic.Label>
-                    <Statistic.Value>{2000}</Statistic.Value>
+                <Statistic color='blue'size='small'>
+                    <Statistic.Label>Today Power generated</Statistic.Label>
+                    <Statistic.Value>{todayGenerate}</Statistic.Value>
                 </Statistic>
                 </Segment>
             </Grid.Column>
             <Grid.Column width={3}>
                 <Segment style={cardStyle}> 
-                <Statistic color='olive'size='small'>
-                    <Statistic.Label>Total Money Saved YTD</Statistic.Label>
-                    <Statistic.Value>{2000}</Statistic.Value>
+                <Statistic color='purple'size='small'>
+                    <Statistic.Label>monthly electricity bill</Statistic.Label>
+                    <Statistic.Value>{monthBill}</Statistic.Value>
+                </Statistic>
+                </Segment>
+            </Grid.Column>
+            <Grid.Column width={3}>
+                <Segment style={cardStyle}> 
+                <Statistic color='orange' size='small'>
+                    <Statistic.Label>Power generation Monthly</Statistic.Label>
+                    <Statistic.Value>{monthTotalEnergy}</Statistic.Value>
                 </Statistic>
                 </Segment>
             </Grid.Column>
             <Grid.Column width={3}>
                 <Segment style={cardStyle}> 
                 <Statistic color='olive' size='small'>
-                    <Statistic.Label>Total Money Saved YTD</Statistic.Label>
-                    <Statistic.Value>{2000}</Statistic.Value>
-                </Statistic>
-                </Segment>
-            </Grid.Column>
-            <Grid.Column width={3}>
-                <Segment style={cardStyle}> 
-                <Statistic color='olive' size='small'>
-                    <Statistic.Label>Total Money Saved YTD</Statistic.Label>
-                    <Statistic.Value>{2000}</Statistic.Value>
+                    <Statistic.Label>co2 emissions reduction yearly</Statistic.Label>
+                    <Statistic.Value>{co2EmissionsDecliined}</Statistic.Value>
                 </Statistic>
                 </Segment>
             </Grid.Column>
