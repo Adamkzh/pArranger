@@ -20,8 +20,8 @@ class NeighborMap extends Component {
       <Map 
         style="mapbox://styles/mapbox/streets-v11"
         containerStyle={{
-          height: "30vh",
-          width: "45vw"
+          height: "100%",
+          width: "100%"
         }}
         center={this.state.center}
         zoom={[13]}

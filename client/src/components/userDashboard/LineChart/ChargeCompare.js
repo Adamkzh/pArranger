@@ -31,13 +31,11 @@ export default class ChargeCompare extends PureComponent {
                 >
                     <CartesianGrid stroke="#f5f5f5" />
                     <XAxis dataKey="month" />
-                    <YAxis label={{ value: 'USD', angle: -90, position: 'insideLeft' ,float:'left'}} />
-                    <ReferenceLine x="AUG" stroke="red" label="Max Cost Difference"/>
-                    <ReferenceLine y={2300} label="Max Cost" stroke="red"/>
+                    <YAxis label={{ value: 'USD($)', angle: -90, position: 'insideLeft' ,float:'left'}} />
                     <Tooltip />
                     <Legend />
-                    <Line dataKey="average" barSize={10} stroke="#FEBF51" fill="#FEBF51" />
-                    <Line dataKey="solar" barSize={10} stroke="#82ca9d" fill="#82ca9d" />
+                    <Line dataKey="average" barSize={10} stroke="#FEBF51" fill="#FEBF51" label={{ value: 'USD', position: 'insideLeft' ,float:'left'}}/>
+                    <Line dataKey="solar" barSize={10} stroke="#82ca9d" fill="#82ca9d" label={{ value: 'USD', position: 'insideLeft' ,float:'left'}}/>
                 </LineChart>
             </ResponsiveContainer>
         );

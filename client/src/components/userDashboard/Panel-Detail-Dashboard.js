@@ -7,9 +7,10 @@ import Map from './map/map';
 import SolarRadiance from './LineChart/SolarRadiance';
 
 
-
 import './panel-detail-dashboard.css'
 import ChargeCompare from './LineChart/ChargeCompare';
+import PayBack from './PB/PayBack';
+import Taxreturn from './Tax/TaxCredit'
 
 const cardStyle = {
     'textAlign':'center',
@@ -118,7 +119,7 @@ render(){
             <Grid.Column width={8}>
                 <Segment  className="chart-container">
                 <Statistic>
-                    <Statistic.Label>Money Saved</Statistic.Label>
+                    <Statistic.Label>Comparison of annual payment</Statistic.Label>
                 </Statistic>
                 <ChargeCompare data = {this.state.chargeCompare_data}/>
                 </Segment>
@@ -131,24 +132,25 @@ render(){
             </Grid.Row>
             
             {/* chart */}
-            <div></div>
             <Grid.Row>
             <Grid.Column width={5}>
                 <Segment className="chart-container">
                 <Statistic>
-                    <Statistic.Label>Power Output</Statistic.Label>
+                    <Statistic.Label>Solar Payback Period</Statistic.Label>
                 </Statistic>
-                <SolarRadiance data = {this.state.solarRadiance_data}/>
+                <PayBack />
                 </Segment>
             </Grid.Column>
+
             <Grid.Column width={5}>
                 <Segment className="chart-container">
                 <Statistic>
-                    <Statistic.Label>Live Radiation Data</Statistic.Label>
+                    <Statistic.Label>Value of 30% federal tax credit</Statistic.Label>
                 </Statistic>
-                <SolarRadiance data = {this.state.solarRadiance_data}/>
+                <Taxreturn />
                 </Segment>
             </Grid.Column>
+
             <Grid.Column width={5}>
                 <Segment className="chart-container">
                 <Statistic>
