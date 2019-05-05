@@ -17,48 +17,34 @@ export default class adminMenu extends React.Component {
     }
 
     render() {
-        let selected = this.props.selected;
-        let overview;
-        let overviewPerCapita;
-        let overviewPerLandArea;
-        let citySanJose;
-        let citySunnyvale;
-        let cityPaloAlto;
+        var overview            = <Menu.Item as={Link} to='/console'> Overview </Menu.Item>;
+        var overviewPerCapita   = <Menu.Item as={Link} to='/console/overviewPerCapita'> Overview (Per Capita) </Menu.Item>;
+        var overviewPerLandArea = <Menu.Item as={Link} to='/console/overviewPerLandArea'> Overview (Per Land Area) </Menu.Item>;
+        var citySanJose         = <Menu.Item as={Link} to='/console/sanjose'> San Jose </Menu.Item>;
+        var citySunnyvale       = <Menu.Item as={Link} to='/console/sunnyvale'> Sunnyvale </Menu.Item>;
+        var cityPaloAlto        = <Menu.Item as={Link} to='/console/paloalto'> Palo Alto </Menu.Item>;
 
-        if (selected === 'overview') {
-            overview = <Menu.Item active as='a'> Overview </Menu.Item>;
-        } else {
-            overview = <Menu.Item as={Link} to='/console'> Overview </Menu.Item>;
-        }
-
-        if (selected === 'overviewPerCapita') {
-            overviewPerCapita = <Menu.Item active as='a'> Overview (Per Capita) </Menu.Item>;
-        } else {
-            overviewPerCapita = <Menu.Item as={Link} to='/console/overviewPerCapita'> Overview (Per Capita) </Menu.Item>;
-        }
-
-        if (selected === 'overviewPerLandArea') {
-            overviewPerLandArea = <Menu.Item active as='a'> Overview (Per Land Area) </Menu.Item>;
-        } else {
-            overviewPerLandArea = <Menu.Item as={Link} to='/console/overviewPerLandArea'> Overview (Per Land Area) </Menu.Item>;
-        }
-
-        if (selected === 'citySanJose') {
-            citySanJose = <Menu.Item active as='a'> San Jose </Menu.Item>;
-        } else {
-            citySanJose = <Menu.Item as={Link} to='/console/sanjose'> San Jose </Menu.Item>;
-        }
-
-        if (selected === 'citySunnyvale') {
-            citySunnyvale = <Menu.Item active as='a'> Sunnyvale </Menu.Item>;
-        } else {
-            citySunnyvale = <Menu.Item as={Link} to='/console/sunnyvale'> Sunnyvale </Menu.Item>;
-        }
-
-        if (selected === 'cityPaloAlto') {
-            cityPaloAlto = <Menu.Item active as='a'> Palo Alto </Menu.Item>;
-        } else {
-            cityPaloAlto = <Menu.Item as={Link} to='/console/paloalto'> Palo Alto </Menu.Item>;
+        switch (this.props.selected) {
+            case "overview":
+                overview = <Menu.Item active as='a'> Overview </Menu.Item>;
+                break;
+            case "overviewPerCapita":
+                overviewPerCapita = <Menu.Item active as='a'> Overview (Per Capita) </Menu.Item>;
+                break;
+            case "overviewPerLandArea":
+                overviewPerLandArea = <Menu.Item active as='a'> Overview (Per Land Area) </Menu.Item>;
+                break;
+            case "citySanJose":
+                citySanJose = <Menu.Item active as='a'> San Jose </Menu.Item>;
+                break;
+            case "citySunnyvale":
+                citySunnyvale = <Menu.Item active as='a'> Sunnyvale </Menu.Item>;
+                break;
+            case "cityPaloAlto":
+                cityPaloAlto = <Menu.Item active as='a'> Palo Alto </Menu.Item>;
+                break;
+            default:
+                break;
         }
 
         return <Grid.Column computer={2} only="tablet computer" id="sidebar">
