@@ -121,6 +121,7 @@ export default class PowerMap extends PureComponent {
                     this.setState({
                       style: full_screen
                     })
+
                   }else{
                     this.setState({
                       style: tiny_screen

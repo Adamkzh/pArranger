@@ -9,6 +9,7 @@ import HHCountByCity from './charts/HHCountByCity';
 import AvgElectricityPerDayByCity from './charts/AvgElectricityPerDayByCity';
 import AvgMoneySavedPerMonthByCity from './charts/AvgMoneySavedPerMonthByCity';
 import NumberOfSolarPanelsByCity from './charts/NumberOfSolarPanelsByCity';
+import {Link} from 'react-router-dom';
 
 import "semantic-ui-css/semantic.min.css";
 
@@ -61,8 +62,20 @@ export default class adminContent extends React.Component{
       return(
         <div style={{marginLeft:'50px',marginRight:'50px'}}>
         <h1>Dashboard</h1>
-          <Grid padded>
-              <Grid.Row>
+            <Grid>
+                <Grid.Column computer={2} only="tablet computer" id="sidebar" >
+                    <Menu vertical borderless fluid text>
+                        <Menu.Item active as="a"> Overview </Menu.Item>
+                        <Menu.Item as={Link} to='/console/sanjose'>San Jose</Menu.Item>
+                        <Menu.Item as="a" to='/sunnyvalue'>Sunnyvale</Menu.Item>
+                        <Menu.Item as="a" to='/paloalto'>Palo Alto</Menu.Item>
+                    </Menu>
+                </Grid.Column>
+                <Grid.Column computer={14} floated="right" id="content" >
+
+                <Grid padded>
+                    <Grid.Row> <Header dividing size="huge" as="h1"> Dashboard </Header> </Grid.Row>
+                    <Grid.Row>
                   <Grid.Column width={5}>
                       <Segment className="chart-container">
                           <div>Yearly Renewable Electric Energy Generation(US) </div>
@@ -151,6 +164,8 @@ export default class adminContent extends React.Component{
                       </Segment>
                   </Grid.Column>
               </Grid.Row>
+                </Grid>
+                </Grid.Column>
           </Grid>
       </div>
       )

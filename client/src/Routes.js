@@ -7,6 +7,7 @@ import Login from './components/auth/Login';
 import Detail from './components/userDashboard/Panel-Detail-Dashboard';
 import Search from './components/admin/Search';
 import PowerMap from './components/admin/deck/PowerMap';
+import SingleCityContent from './components/admin/SingleCityContent';
 
 const Routes =() =>(
     <Router>
@@ -18,6 +19,7 @@ const Routes =() =>(
       <Route exact path="/dashboard/:id" component={Detail}/>
       <Route exact path="/search" component={Search}/>
       <Route exact path="/powermap" component={PowerMap}/>
+      <Route exact path="/console/sanjose" component={SingleCityContent}/>
     </div>
   </Router>
 )
