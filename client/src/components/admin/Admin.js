@@ -13,7 +13,7 @@ class AdminDashboard extends Component{
         return(
             <div>
                 <Header activeTag={"console"}/>
-                <AdminContent />
+                <AdminContent selected={this.props.selected}/>
             </div>
         );
     }
