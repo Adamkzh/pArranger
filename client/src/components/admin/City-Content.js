@@ -9,6 +9,7 @@ import { Grid, Label, Header, Menu, Segment, Statistic } from "semantic-ui-react
 import axios from 'axios';
 import DailyPowerGenerationSingleCity from "./singlecitycharts/DailyPowerGenerationSingleCity";
 import {Link} from "react-router-dom";
+import AdminMenu from "./Admin-Menu";
 
 
 export default class CityContent extends React.Component{
@@ -51,17 +52,9 @@ export default class CityContent extends React.Component{
             <div style={{marginLeft:'50px',marginRight:'50px'}}>
                 <Grid>
                     <Grid.Column computer={2} only="tablet computer" id="sidebar" >
-                        <Menu vertical borderless fluid text>
-                            <Menu.Item header>Compete</Menu.Item>
-                            <Menu.Item active as={Link} to='/console'> Overview </Menu.Item>
-                            <Menu.Item as="a"> Overview (Per Capita) </Menu.Item>
-                            <Menu.Item as="a"> Overview (Per Land Area) </Menu.Item>
-                            <Menu.Item header>City</Menu.Item>
-                            <Menu.Item as={Link} to='/console/sanjose'>San Jose</Menu.Item>
-                            <Menu.Item as={Link} to='/console/sunnyvale'>Sunnyvale</Menu.Item>
-                            <Menu.Item as={Link} to='/console/paloalto'>Palo Alto</Menu.Item>
-                        </Menu>
+                        <AdminMenu selected={this.props.selected}/>
                     </Grid.Column>
+
                     <Grid.Column computer={14} floated="right" id="content" >
 
                         <Grid padded>

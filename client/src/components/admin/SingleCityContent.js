@@ -65,7 +65,7 @@ class SingleCityContent extends Component{
         return this.state.city ?
             (<div>
                 <Header activeTag={"console"}/>
-                <CityContent city={this.state.city} data={this.state.data}/>
+                <CityContent city={this.state.city} data={this.state.data} selected={this.props.selected}/>
             </div> )
             : null;
     }
