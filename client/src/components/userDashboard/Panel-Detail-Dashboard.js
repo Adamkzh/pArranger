@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../Header';
 import axios from 'axios';
-import { Grid, Segment, Statistic } from 'semantic-ui-react';
+import { Grid, Segment, Statistic, Modal, Button, Icon } from 'semantic-ui-react';
 import Map from './map/map';
 
 import SolarRadiance from './LineChart/SolarRadiance';
@@ -25,11 +25,21 @@ constructor(props){
     super(props);
     this.state = {
         address: window.localStorage.getItem('address'),
+        uuid: window.localStorage.getItem('uuid'),
         solarRadiance_data: null,
+        modalOpen: false,
+        apidata: null,
     }
 }
 
+handleOpen = () => this.setState({ modalOpen: true })
 
+handleClose = () => this.setState({ modalOpen: false })
+
+noDataErr = () => {
+    window.localStorage.setItem('step', 0);
+    window.location = '/design'
+}
 
 componentDidMount= ()=> {
     const fetchDataUrl = "/api/v1/charting/dashboardData";
@@ -48,6 +58,33 @@ componentDidMount= ()=> {
       .catch(function (error) {
           console.log(error);
       })
+
+       // fetch current user data from server
+    var id = this.props.match.params.id;
+    if(id !== "admin"){  
+        const getUserByIDUrl = '/api/v1/getUser?id=' + id;
+        axios.get(getUserByIDUrl)
+        .then((response) =>{
+            const data = response.data.result;
+            if (data) {
+                this.setState({
+                    uuid: data._id,
+                    watts: data.watts,
+                });
+            } else {
+                this.setState({
+                    modalOpen: true
+                })
+                console.log(response.data.error);
+            }
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+        .then(function () {
+            // always executed
+        }); 
+        }
 }
 
 // | 'red'
@@ -161,6 +198,26 @@ render(){
             </Grid.Column>
             </Grid.Row>
             </Grid>
+            {this.state.modalOpen && 
+            <div>
+            <Modal
+                open={this.state.modalOpen}
+                onClose={this.noDataErr}
+                basic
+                size='small'
+                style={{ left: '25%', top: '25%' }}
+            >
+                <Modal.Content>
+                <h3>No data found! Please construct your panel first.</h3>
+                </Modal.Content>
+                <Modal.Actions>
+                <Button color='green' onClick={this.noDataErr} inverted>
+                    <Icon name='checkmark' /> Got it
+                </Button>
+                </Modal.Actions>
+            </Modal>
+            </div>
+            }
         </div>
         </div>
     );

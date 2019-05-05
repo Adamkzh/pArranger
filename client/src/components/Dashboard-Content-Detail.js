@@ -157,8 +157,7 @@ class Detail extends Component {
         var location = {lat: window.localStorage.getItem('lat'), lon: window.localStorage.getItem('lon')}
         var imageurl = crop_image;
         const jsonData = {...this.state};
-        // jsonData['mapImage'] = imageurl;
-        jsonData['mapImage'] = "https://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=https%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2018%2F03%2Fnexus2cee_goo-dot-gl.png&w=728";
+        jsonData['mapImage'] = imageurl;
         
         jsonData['location'] = location;
         jsonData['acPower'] = 120;
