@@ -8,6 +8,7 @@ import "semantic-ui-css/semantic.min.css";
 import { Grid, Label, Header, Menu, Segment, Statistic } from "semantic-ui-react";
 import axios from 'axios';
 import DailyPowerGenerationSingleCity from "./singlecitycharts/DailyPowerGenerationSingleCity";
+import MonthlyPowerGenerationSingleCity from "./singlecitycharts/MonthlyPowerGenerationSingleCity";
 import {Link} from "react-router-dom";
 import AdminMenu from "./Admin-Menu";
 
@@ -63,64 +64,82 @@ export default class CityContent extends React.Component{
                                 <Grid.Column>
                                     <Segment>
                                         <Statistic color='olive'>
-                                            <Statistic.Value>{this.props.data.totalHHInstalled}</Statistic.Value>
-                                            <Statistic.Label>Household Installed</Statistic.Label>
+                                            <Statistic.Value>{this.props.data.totalHHInstalled.toLocaleString()}</Statistic.Value>
+                                            <Statistic.Label>Household Installed #</Statistic.Label>
                                         </Statistic>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment>
                                         <Statistic color='orange'>
-                                            <Statistic.Value>{this.props.data.totalHHNotInstalled}</Statistic.Value>
-                                            <Statistic.Label>Household not Installed</Statistic.Label>
+                                            <Statistic.Value>{this.props.data.totalHHNotInstalled.toLocaleString()}</Statistic.Value>
+                                            <Statistic.Label>Household not Installed #</Statistic.Label>
                                         </Statistic>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment>
                                         <Statistic color='olive'>
-                                            <Statistic.Value>{this.props.data.totalElectricityGeneratedYTD}</Statistic.Value>
-                                            <Statistic.Label>Electricity Generated YTD</Statistic.Label>
+                                            <Statistic.Value>{this.props.data.totalElectricityGeneratedYTD.toLocaleString()}</Statistic.Value>
+                                            <Statistic.Label>Electricity Generated YTD (KWh)</Statistic.Label>
                                         </Statistic>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment>
                                         <Statistic color='olive'>
-                                            <Statistic.Value>{this.props.data.totalMoneySavedYTD}</Statistic.Value>
-                                            <Statistic.Label>Total Money Saved YTD</Statistic.Label>
+                                            <Statistic.Value>{this.props.data.totalMoneySavedYTD.toLocaleString()}</Statistic.Value>
+                                            <Statistic.Label>Total Money Saved YTD (USD)</Statistic.Label>
                                         </Statistic>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
 
                             <Grid.Row>
-                                <Grid.Column width={5}>
+                                <Grid.Column width={8}>
                                     <Segment className="chart-container">
                                         <div>Total Solar Panel Capacity Trend</div>
                                         <NumberOfSolarPanelsHistorySingleCity data={this.props.data.numberOfSolarPanelsHistorySingleCity_data} city={this.props.city}/>
                                     </Segment>
                                 </Grid.Column>
 
-                                <Grid.Column width={5}>
+                                <Grid.Column width={8}>
                                     <Segment className="chart-container">
-                                        <div>Electricity Generated Monthly Compare To AVG</div>
-                                        <AvgElectricityMonthlyByCitySingleCity city={this.props.city} data={this.props.data.electricityGeneratedMonthlyCompareToCitiesAvgSingleCity}/>
-                                    </Segment>
-                                </Grid.Column>
-
-                                <Grid.Column width={5}>
-                                    <Segment className="chart-container">
-                                        <div>Electricity Bill Savings Per HH Monthly Compare To AVG</div>
-                                        <AvgMoneySavedPerMonthByCitySingleCity city={this.props.city} data={this.props.data.moneySavedMonthlyCompareToCitiesAvgSingleCity}/>
+                                        <div>Total Solar Panel Capacity Per HH Trend</div>
+                                        <NumberOfSolarPanelsHistorySingleCity data={this.props.data.numberOfSolarPanelsPerHHSingleCity} city={this.props.city}/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
 
                             <Grid.Row>
-                                <Grid.Column width={6}>
+                                <Grid.Column width={8}>
                                     <Segment className="chart-container">
-                                        <div>Solar Power Generation Comparison In the Last Week</div>
+                                        <div>Total Electricity Generated Monthly Comparison</div>
+                                        <MonthlyPowerGenerationSingleCity city={this.props.city} data={this.props.data.electricityGeneratedMonthlyCompareToCitiesAvgSingleCity}/>
+                                    </Segment>
+                                </Grid.Column>
+
+                                <Grid.Column width={8}>
+                                    <Segment className="chart-container">
+                                        <div>Total Electricity Generated Per HH Monthly Comparison</div>
+                                        <MonthlyPowerGenerationSingleCity city={this.props.city} data={this.props.data.totalElectricityGeneratedPerHHMonthly}/>
+                                    </Segment>
+                                </Grid.Column>
+
+
+                            </Grid.Row>
+
+                            <Grid.Row>
+                                <Grid.Column width={8}>
+                                    <Segment className="chart-container">
+                                        <div>Monthly Electricity Bill Savings Per HH Comparison</div>
+                                        <AvgMoneySavedPerMonthByCitySingleCity city={this.props.city} data={this.props.data.moneySavedMonthlyCompareToCitiesAvgSingleCity}/>
+                                    </Segment>
+                                </Grid.Column>
+
+                                <Grid.Column width={8}>
+                                    <Segment className="chart-container">
+                                        <div>Daily Solar Power Generation Trend In the Last Week</div>
                                         <DailyPowerGenerationSingleCity data={this.props.data.dailyPowerGenerationByCity} city={this.props.city}/>
                                     </Segment>
                                 </Grid.Column>

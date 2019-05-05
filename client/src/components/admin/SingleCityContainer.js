@@ -6,7 +6,7 @@ import axios from "axios";
 const allData = require('../../dataByCity');
 
 
-class SingleCityContent extends Component{
+class SingleCityContainer extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -71,4 +71,4 @@ class SingleCityContent extends Component{
     }
 }
 
-export default SingleCityContent;
+export default SingleCityContainer;

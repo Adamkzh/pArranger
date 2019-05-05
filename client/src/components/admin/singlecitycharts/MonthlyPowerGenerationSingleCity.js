@@ -14,7 +14,7 @@ import {
 //     {"date":"2019-3-7","SanJose":3490,"AllCitiesAverage":5300}];
 
 
-export default class DailyPowerGenerationSingleCity extends PureComponent {
+export default class MonthlyPowerGenerationSingleCity extends PureComponent {
     constructor(props){
       super(props);
       this.state={
@@ -34,7 +34,7 @@ export default class DailyPowerGenerationSingleCity extends PureComponent {
             }}
           >
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" tick={{fontSize: 12}}/>
+            <XAxis dataKey="Month" tick={{fontSize: 12}}/>
             <YAxis label={{ value: 'KWh', angle: -90, position: 'insideLeft' }} tick={{fontSize: 12}} />
             <Tooltip />
             <Legend wrapperStyle={{'fontSize': '14px'}} align="center" />
