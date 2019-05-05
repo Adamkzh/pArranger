@@ -28,15 +28,15 @@ export default class SimpleBarChart extends PureComponent{
         margin={{
             top: 10, left: 10,right: 50, bottom: 10,
         }}
-        
+
       >
         <CartesianGrid strokeDasharray="3 3"/>
         <YAxis label={{ value: 'kW', angle: -90, position: 'insideLeft' }} tick={{fontSize: 12}} />
         <XAxis dataKey="Month" tick={{fontSize: 12}}/>
         <Tooltip/>
         <Legend wrapperStyle={{'fontSize': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
-        <Bar dataKey="SanJose" fill="#8884d8" />
-        <Bar dataKey="PaloAlto" fill="#82ca9d" />
+        <Bar dataKey="SanJose" fill="#CBD9EF" />
+        <Bar dataKey="PaloAlto" fill="#80AAED" />
         <Bar dataKey="Sunnyvale" fill="#FFB533" />
         </BarChart>
       </ResponsiveContainer>

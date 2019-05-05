@@ -1,38 +1,51 @@
 import React, { PureComponent } from 'react';
 import {
-    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
+    BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
-const data = [
-    {
-        city: 'SanJose', moneySavedPerMonthPerHH: 4000,
-    },
-    {
-        city: 'Sunnyvale', moneySavedPerMonthPerHH: 3000,
-    },
-    {
-        city: 'PaloAlto', moneySavedPerMonthPerHH: 1000,
-    },
+const data1 = [
+    {Month: 'Apr 2019', SanJose: 400, Sunnyvale: 300, PaloAlto: 280},
 ];
 
-export default class AvgMoneySavedPerMonthByCity extends PureComponent {
-    render() {
+export default class AvgMoneySavedPerMonthByCity extends PureComponent{
+    constructor(props){
+        super(props);
+        this.state={
+            data : null
+        }
+    }
+
+    // componentDidUpdate = () =>{
+    //     this.setState({
+    //         data : this.props.data
+    //     })
+    // }
+
+    render () {
         return (
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer maxHeight={290} width="100%" height="100%">
                 <BarChart
-                    data={data}
+                    width={410}
+                    height={290}
+                    data={data1}
                     margin={{
-                        top: 20, right: 30, left: 20, bottom: 5,
+                        top: 10, left: 10,right: 50, bottom: 10,
                     }}
+
                 >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="city" />
-                    <YAxis label={{ value: 'US Dollar', angle: -90, position: 'insideLeft' }} tick={{fontSize: 12}}/>
-                    <Tooltip />
-                    {/*<Legend />*/}
-                    <Bar dataKey="moneySavedPerMonthPerHH" fill="#80AAED" />
+                    <CartesianGrid strokeDasharray="3 3"/>
+                    <YAxis label={{ value: 'US DOLLAR', angle: -90, position: 'insideLeft' }} tick={{fontSize: 12}} />
+                    <XAxis dataKey="Month" tick={{fontSize: 12}}/>
+                    <Tooltip/>
+                    <Legend wrapperStyle={{'fontSize': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
+                    <Bar dataKey="SanJose" fill="#CBD9EF" />
+                    <Bar dataKey="PaloAlto" fill="#80AAED" />
+                    <Bar dataKey="Sunnyvale" fill="#FFB533" />
                 </BarChart>
             </ResponsiveContainer>
         );
     }
 }
+
+
+

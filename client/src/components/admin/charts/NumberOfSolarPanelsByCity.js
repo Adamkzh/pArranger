@@ -3,22 +3,15 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
+const data1 = [
+    {Month: 'Apr 2019', SanJose: 12000, Sunnyvale: 9000, PaloAlto: 8000},
+];
 
 export default class SimpleBarChart extends PureComponent{
     constructor(props){
       super(props);
       this.state={
-          data : [
-              {
-                  city: 'SanJose', totalPanels: 12000,
-              },
-              {
-                  city: 'Sunnyvale', totalPanels: 9000,
-              },
-              {
-                  city: 'PaloAlto', totalPanels: 8000,
-              },
-          ]
+          data : null
       }
   }
 
@@ -32,9 +25,9 @@ export default class SimpleBarChart extends PureComponent{
   	return (
       <ResponsiveContainer maxHeight={290} width="100%" height="100%">                     
         <BarChart
-        width={300}
-        height={300}
-        data={this.state.data}
+        width={410}
+        height={290}
+        data={data1}
         margin={{
             top: 10, left: 10,right: 50, bottom: 10,
         }}
@@ -42,12 +35,12 @@ export default class SimpleBarChart extends PureComponent{
       >
         <CartesianGrid strokeDasharray="3 3"/>
         <YAxis label={{ value: 'kW', angle: -90, position: 'insideLeft' }} tick={{fontSize: 12}} />
-        <XAxis dataKey="city" tick={{fontSize: 12}}/>
+        <XAxis dataKey="Month" tick={{fontSize: 12}}/>
         <Tooltip/>
-        {/*<Legend wrapperStyle={{'fontSize': '9.8px'}} verticalAlign="bottom" height={36} align="right" />*/}
-        <Bar dataKey="totalPanels" fill="#CBD9EF" />
-        {/*<Bar dataKey="PaloAlto" fill="#80AAED" />*/}
-        {/*<Bar dataKey="Sunnyvale" fill="#FFB533" />*/}
+        <Legend wrapperStyle={{'fontSize': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
+            <Bar dataKey="SanJose" fill="#CBD9EF" />
+            <Bar dataKey="PaloAlto" fill="#80AAED" />
+            <Bar dataKey="Sunnyvale" fill="#FFB533" />
         </BarChart>
       </ResponsiveContainer>
     );

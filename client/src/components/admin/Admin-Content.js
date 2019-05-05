@@ -79,74 +79,12 @@ export default class adminContent extends React.Component {
                     <Grid.Column computer={14} floated="right" id="content">
                         <Grid padded>
                             <Grid.Row> <Header dividing size="huge" as="h1">{headerText}</Header> </Grid.Row>
-                            <Grid.Row columns={3}>
-                                <Grid.Column>
-                                    <Segment className="chart-container">
-                                        <div>Yearly Renewable Electric Energy Generation(US)</div>
-                                        <DifferentPower data={this.state.differentPower_data}/>
-                                    </Segment>
-                                </Grid.Column>
-                                <Grid.Column>
-                                    <Segment className="chart-container">
-                                        <div>Top Solar Power Generation City</div>
-                                        <DailyPowerGeneration data={this.state.dailyPowerGeneration_data}/>
-                                    </Segment>
-                                </Grid.Column>
-                                <Grid.Column>
-                                    <Segment className="chart-container">
-                                        <div>Total Solar Panels By City</div>
-                                        <NumberOfSolarPanels data={this.state.numberOfSolarPanels_data}/>
-                                    </Segment>
-                                </Grid.Column>
-                            </Grid.Row>
-                            <Grid.Row columns={2}>
-                                <Grid.Column>
-                                    <Segment className="chart-container">
-                                        <div>Electricity Cost Comparison</div>
-                                        <ChargeCompare data={this.state.chargeCompare_data}/>
-                                    </Segment>
-                                </Grid.Column>
-                                <Grid.Column>
-                                    <Segment className="chart-container">
-                                        <div>Live Radiation Data</div>
-                                        <SolarRadiance data={this.state.solarRadiance_data}/>
-                                    </Segment>
-                                </Grid.Column>
-                            </Grid.Row>
-
-                            {/*Newly Added Start Here*/}
-                            <Grid.Row columns={4}>
-                                <Grid.Column>
-                                    <Segment className="chart-container">
-                                        <div> Num of Household Installed Panels by City</div>
-                                        <HHCountByCity/>
-                                    </Segment>
-                                </Grid.Column>
-                                <Grid.Column>
-                                    <Segment className="chart-container">
-                                        <div>Total Solar Panels Installed By City(KW)</div>
-                                        <NumberOfSolarPanelsByCity/>
-                                    </Segment>
-                                </Grid.Column>
-                                <Grid.Column>
-                                    <Segment className="chart-container">
-                                        <div>Avg Electricity Generated Per Month By City</div>
-                                        <AvgElectricityPerDayByCity/>
-                                    </Segment>
-                                </Grid.Column>
-                                <Grid.Column>
-                                    <Segment className="chart-container">
-                                        <div>Avg Money Saved Per HH Per Month By City</div>
-                                        <AvgMoneySavedPerMonthByCity/>
-                                    </Segment>
-                                </Grid.Column>
-                            </Grid.Row>
 
                             <Grid.Row columns={4}>
                                 <Grid.Column>
                                     <Segment>
                                         <Statistic color='olive'>
-                                            <Statistic.Value>{this.state.totalHHInstalled}</Statistic.Value>
+                                            <Statistic.Value>{this.state.totalHHInstalled.toLocaleString()}</Statistic.Value>
                                             <Statistic.Label>Household Installed</Statistic.Label>
                                         </Statistic>
                                     </Segment>
@@ -154,7 +92,7 @@ export default class adminContent extends React.Component {
                                 <Grid.Column>
                                     <Segment>
                                         <Statistic color='orange'>
-                                            <Statistic.Value>{this.state.totalHHNotInstalled}</Statistic.Value>
+                                            <Statistic.Value>{this.state.totalHHNotInstalled.toLocaleString()}</Statistic.Value>
                                             <Statistic.Label>Household not Installed</Statistic.Label>
                                         </Statistic>
                                     </Segment>
@@ -162,7 +100,7 @@ export default class adminContent extends React.Component {
                                 <Grid.Column>
                                     <Segment>
                                         <Statistic color='olive'>
-                                            <Statistic.Value>{this.state.totalElectricityGeneratedYTD}</Statistic.Value>
+                                            <Statistic.Value>{this.state.totalElectricityGeneratedYTD.toLocaleString()}</Statistic.Value>
                                             <Statistic.Label>Electricity Generated YTD</Statistic.Label>
                                         </Statistic>
                                     </Segment>
@@ -170,9 +108,75 @@ export default class adminContent extends React.Component {
                                 <Grid.Column>
                                     <Segment>
                                         <Statistic color='olive'>
-                                            <Statistic.Value>{this.state.totalMoneySavedYTD}</Statistic.Value>
+                                            <Statistic.Value>{this.state.totalMoneySavedYTD.toLocaleString()}</Statistic.Value>
                                             <Statistic.Label>Total Money Saved YTD</Statistic.Label>
                                         </Statistic>
+                                    </Segment>
+                                </Grid.Column>
+                            </Grid.Row>
+
+                            <Grid.Row columns={4}>
+                                {/*<Grid.Column>*/}
+                                    {/*<Segment className="chart-container">*/}
+                                        {/*<div>Yearly Renewable Electric Energy Generation(US)</div>*/}
+                                        {/*<DifferentPower data={this.state.differentPower_data}/>*/}
+                                    {/*</Segment>*/}
+                                {/*</Grid.Column>*/}
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div> Total Household By City</div>
+                                        <HHCountByCity/>
+                                    </Segment>
+                                </Grid.Column>
+
+                                {/*<Grid.Column>*/}
+                                    {/*<Segment className="chart-container">*/}
+                                        {/*<div>Total Solar Panel Capacity By City</div>*/}
+                                        {/*<NumberOfSolarPanels data={this.state.numberOfSolarPanels_data}/>*/}
+                                    {/*</Segment>*/}
+                                {/*</Grid.Column>*/}
+
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Total Solar Panel Capacity By City(KW)</div>
+                                        <NumberOfSolarPanelsByCity/>
+                                    </Segment>
+                                </Grid.Column>
+
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Total Electricity Generated Per Month</div>
+                                        <AvgElectricityPerDayByCity/>
+                                    </Segment>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Total Money Saved Per Month By City</div>
+                                        <AvgMoneySavedPerMonthByCity/>
+                                    </Segment>
+                                </Grid.Column>
+
+                            </Grid.Row>
+
+                            <Grid.Row columns={2}>
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Electricity Cost Comparison</div>
+                                        <ChargeCompare data={this.state.chargeCompare_data}/>
+                                    </Segment>
+                                </Grid.Column>
+
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Top Solar Power Generation City</div>
+                                        <DailyPowerGeneration data={this.state.dailyPowerGeneration_data}/>
+                                    </Segment>
+                                </Grid.Column>
+
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Live Radiation Data</div>
+                                        <SolarRadiance data={this.state.solarRadiance_data}/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
