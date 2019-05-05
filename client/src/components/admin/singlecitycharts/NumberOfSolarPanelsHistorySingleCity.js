@@ -25,6 +25,8 @@ export default class SimpleBarChart extends PureComponent{
       // })
   }
 
+
+
 	render () {
   	return (
       <ResponsiveContainer maxHeight={290} width="100%" height="100%">                     
@@ -42,7 +44,7 @@ export default class SimpleBarChart extends PureComponent{
         <XAxis dataKey="Month" tick={{fontSize: 12}}/>
         <Tooltip/>
         <Legend wrapperStyle={{'fontSize': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
-        <Bar dataKey="SanJose" fill="#82ca9d" />
+        <Bar dataKey={this.props.city} fill="#82ca9d" />
         <Bar dataKey="AllCitiesAverage" fill="#dee3ea" />
         </BarChart>
       </ResponsiveContainer>

@@ -4,18 +4,21 @@ import {
 } from 'recharts';
 
 const data = [
-    { Month: "Apr 2019", SanJose: 4000, AllCitiesAverage: 3000},
-    { Month: "Mar 2019", SanJose: 4100, AllCitiesAverage: 3010},
-    { Month: "Feb 2019", SanJose: 4010, AllCitiesAverage: 3000},
+    { Month: "Nov 2018",  SanJose: 4300, AllCitiesAverage: 3200},
+    { Month: "Dec 2018",  SanJose: 4300, AllCitiesAverage: 3200},
+    { Month: "Jan 2019",  SanJose: 4300, AllCitiesAverage: 3200},
+    { Month: "Feb 2019",  SanJose: 4300, AllCitiesAverage: 3200},
+    { Month: "Mar 2019",  SanJose: 4200, AllCitiesAverage: 3100},
+    { Month: "Apr 2019",  SanJose: 4000, AllCitiesAverage: 3000},
 ];
 
-export default class AvgMoneySavedPerMonthByCitySingleCity extends PureComponent {
+export default class AvgElectricityMonthlyByCitySingleCity extends PureComponent {
     render() {
         return (
             <ResponsiveContainer maxHeight={290} width="100%" height="100%">
             <BarChart
-                width={260}
-                height={230}
+                width={410}
+                height={290}
                 data={data}
                 margin={{
                     top: 10, left: 10,right: 50, bottom: 10,
@@ -23,7 +26,7 @@ export default class AvgMoneySavedPerMonthByCitySingleCity extends PureComponent
             >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="Month" tick={{fontSize: 12}}/>
-                <YAxis label={{ value: 'US Dollar', angle: -90, position: 'insideLeft' }} tick={{fontSize: 10 }}/>
+                <YAxis label={{ value: 'KW', angle: -90, position: 'insideLeft' }} tick={{fontSize: 12}}/>
                 <Tooltip />
                 <Legend wrapperStyle={{'fontSize': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
                 <Bar dataKey={this.props.city} fill="#82ca9d" />

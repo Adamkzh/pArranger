@@ -67,8 +67,8 @@ export default class adminContent extends React.Component{
                     <Menu vertical borderless fluid text>
                         <Menu.Item active as="a"> Overview </Menu.Item>
                         <Menu.Item as={Link} to='/console/sanjose'>San Jose</Menu.Item>
-                        <Menu.Item as="a" to='/sunnyvalue'>Sunnyvale</Menu.Item>
-                        <Menu.Item as="a" to='/paloalto'>Palo Alto</Menu.Item>
+                        <Menu.Item as={Link} to='/sunnyvale'>Sunnyvale</Menu.Item>
+                        <Menu.Item as={Link} to='/paloalto'>Palo Alto</Menu.Item>
                     </Menu>
                 </Grid.Column>
                 <Grid.Column computer={14} floated="right" id="content" >

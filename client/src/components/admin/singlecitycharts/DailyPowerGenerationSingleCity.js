@@ -26,7 +26,7 @@ export default class DailyPowerGenerationSingleCity extends PureComponent {
       // this.setState({
       //     data : this.props.data
       // })
-  }
+  };
 
   render() {
       return (
@@ -45,9 +45,8 @@ export default class DailyPowerGenerationSingleCity extends PureComponent {
             <Tooltip />
             <Legend wrapperStyle={{'fontSize': '14px'}} align="center" />
             <Legend verticalAlign="bottom" height={36} align="right"/>
-            <Line type="monotone" dataKey="SanJose" stroke="#82ca9d" />
+            <Line type="monotone" dataKey={this.props.city} stroke="#82ca9d" />
             <Line type="monotone" dataKey="AllCitiesAverage" stroke="#FE0101" />
-            {/*<Line type="monotone" dataKey="Sunnyvale" stroke="#FFB533" />*/}
             </LineChart>
       </ResponsiveContainer>
       );

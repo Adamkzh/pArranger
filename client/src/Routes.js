@@ -20,6 +20,8 @@ const Routes =() =>(
       <Route exact path="/search" component={Search}/>
       <Route exact path="/powermap" component={PowerMap}/>
       <Route exact path="/console/sanjose" component={SingleCityContent}/>
+      <Route exact path="/console/sunnyvale" component={SingleCityContent}/>
+      <Route exact path="/console/paloalto" component={SingleCityContent}/>
     </div>
   </Router>
 )
