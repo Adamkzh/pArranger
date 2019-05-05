@@ -9,177 +9,179 @@ import HHCountByCity from './charts/HHCountByCity';
 import AvgElectricityPerDayByCity from './charts/AvgElectricityPerDayByCity';
 import AvgMoneySavedPerMonthByCity from './charts/AvgMoneySavedPerMonthByCity';
 import NumberOfSolarPanelsByCity from './charts/NumberOfSolarPanelsByCity';
+import AdminMenu from './Admin-Menu';
 import {Link} from 'react-router-dom';
 
 import "semantic-ui-css/semantic.min.css";
 
 import {
-  Grid,
+    Grid,
     Label,
-  Header,
-  Menu,
-  Segment,
+    Header,
+    Menu,
+    Segment,
     Statistic
 } from "semantic-ui-react";
 import axios from 'axios';
 
 
-export default class adminContent extends React.Component{
+export default class adminContent extends React.Component {
 
-    constructor(props){
-      super(props);
-      this.state={
-        chargeCompare_data:null,
-        dailyPowerGeneration_data:null,
-        differentPower_data:null,
-        numberOfSolarPanels_data:null,
-        solarRadiance_data:null,
+    constructor(props) {
+        super(props);
+        this.state = {
+            chargeCompare_data: null,
+            dailyPowerGeneration_data: null,
+            differentPower_data: null,
+            numberOfSolarPanels_data: null,
+            solarRadiance_data: null,
 
-        totalHHInstalled: 4000,
-        totalHHNotInstalled: 2000,
-        totalElectricityGeneratedYTD: 80000,
-        totalMoneySavedYTD: 800000
-      }
-      const fetchDataUrl = "/api/v1/charting/dashboardData";
-      axios.get(fetchDataUrl)
-      .then((response) =>{
-          if (response.data.success) {
-              this.setState({
-                chargeCompare_data :response.data.result.chargeCompare,
-                dailyPowerGeneration_data : response.data.result.dailyPowerGeneration,
-                differentPower_data : response.data.result.differentPower,
-                numberOfSolarPanels_data : response.data.result.numberOfSolarPanels,
-                solarRadiance_data : response.data.result.solarRadiance,
-              })
-            }
-      })
-      .catch(function (error) {
-          console.log(error);
-      })
+            totalHHInstalled: 4000,
+            totalHHNotInstalled: 2000,
+            totalElectricityGeneratedYTD: 80000,
+            totalMoneySavedYTD: 800000
+        }
+        const fetchDataUrl = "/api/v1/charting/dashboardData";
+        axios.get(fetchDataUrl)
+            .then((response) => {
+                if (response.data.success) {
+                    this.setState({
+                        chargeCompare_data: response.data.result.chargeCompare,
+                        dailyPowerGeneration_data: response.data.result.dailyPowerGeneration,
+                        differentPower_data: response.data.result.differentPower,
+                        numberOfSolarPanels_data: response.data.result.numberOfSolarPanels,
+                        solarRadiance_data: response.data.result.solarRadiance,
+                    })
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
     }
 
-  render() {
-      return(<div style={{ marginLeft: '50px', marginRight: '50px' }}>
-              <Grid>
-                  <Grid.Column computer={2} only="tablet computer" id="sidebar">
-                      <br/>
-                      <br/>
-                      <Menu vertical borderless fluid text>
-                          <Menu.Item header>Compete</Menu.Item>
-                          <Menu.Item active as={Link} to='/console'> Overview </Menu.Item>
-                          <Menu.Item as="a"> Overview (Per Capita) </Menu.Item>
-                          <Menu.Item as="a"> Overview (Per Land Area) </Menu.Item>
-                          <Menu.Item header>City</Menu.Item>
-                          <Menu.Item as={Link} to='/console/sanjose'>San Jose</Menu.Item>
-                          <Menu.Item as={Link} to='/console/sunnyvale'>Sunnyvale</Menu.Item>
-                          <Menu.Item as={Link} to='/console/paloalto'>Palo Alto</Menu.Item>
-                      </Menu>
-                  </Grid.Column>
+    render() {
+        let headerText;
+        if (this.props.selected === 'overview') {
+            headerText = "Overview";
+        } else if (this.props.selected === 'overviewPerCapita') {
+            headerText = "Overview (Per Capita)";
+        } else if (this.props.selected === 'overviewPerLandArea') {
+            headerText = "Overview (Per Land Area)";
+        } else {
+            headerText = "";
+        }
+        return (<div style={{ marginLeft: '50px', marginRight: '50px' }}>
+                <Grid>
+                    <Grid.Column computer={2} only="tablet computer" id="sidebar">
+                        <br/>
+                        <br/>
+                        <AdminMenu selected={this.props.selected}/>
+                    </Grid.Column>
 
-                  <Grid.Column computer={14} floated="right" id="content">
-                      <Grid padded>
-                          <Grid.Row> <Header dividing size="huge" as="h1"> Overview </Header> </Grid.Row>
-                          <Grid.Row columns={3}>
-                              <Grid.Column>
-                                  <Segment className="chart-container">
-                                      <div>Yearly Renewable Electric Energy Generation(US)</div>
-                                      <DifferentPower data={this.state.differentPower_data}/>
-                                  </Segment>
-                              </Grid.Column>
-                              <Grid.Column>
-                                  <Segment className="chart-container">
-                                      <div>Top Solar Power Generation City</div>
-                                      <DailyPowerGeneration data={this.state.dailyPowerGeneration_data}/>
-                                  </Segment>
-                              </Grid.Column>
-                              <Grid.Column>
-                                  <Segment className="chart-container">
-                                      <div>Total Solar Panels By City</div>
-                                      <NumberOfSolarPanels data={this.state.numberOfSolarPanels_data}/>
-                                  </Segment>
-                              </Grid.Column>
-                          </Grid.Row>
-                          <Grid.Row columns={2}>
-                              <Grid.Column>
-                                  <Segment className="chart-container">
-                                      <div>Electricity Cost Comparison</div>
-                                      <ChargeCompare data={this.state.chargeCompare_data}/>
-                                  </Segment>
-                              </Grid.Column>
-                              <Grid.Column>
-                                  <Segment className="chart-container">
-                                      <div>Live Radiation Data</div>
-                                      <SolarRadiance data={this.state.solarRadiance_data}/>
-                                  </Segment>
-                              </Grid.Column>
-                          </Grid.Row>
+                    <Grid.Column computer={14} floated="right" id="content">
+                        <Grid padded>
+                            <Grid.Row> <Header dividing size="huge" as="h1">{headerText}</Header> </Grid.Row>
+                            <Grid.Row columns={3}>
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Yearly Renewable Electric Energy Generation(US)</div>
+                                        <DifferentPower data={this.state.differentPower_data}/>
+                                    </Segment>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Top Solar Power Generation City</div>
+                                        <DailyPowerGeneration data={this.state.dailyPowerGeneration_data}/>
+                                    </Segment>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Total Solar Panels By City</div>
+                                        <NumberOfSolarPanels data={this.state.numberOfSolarPanels_data}/>
+                                    </Segment>
+                                </Grid.Column>
+                            </Grid.Row>
+                            <Grid.Row columns={2}>
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Electricity Cost Comparison</div>
+                                        <ChargeCompare data={this.state.chargeCompare_data}/>
+                                    </Segment>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Live Radiation Data</div>
+                                        <SolarRadiance data={this.state.solarRadiance_data}/>
+                                    </Segment>
+                                </Grid.Column>
+                            </Grid.Row>
 
-                          {/*Newly Added Start Here*/}
-                          <Grid.Row columns={4}>
-                              <Grid.Column>
-                                  <Segment className="chart-container">
-                                      <div> Num of Household Installed Panels by City</div>
-                                      <HHCountByCity/>
-                                  </Segment>
-                              </Grid.Column>
-                              <Grid.Column>
-                                  <Segment className="chart-container">
-                                      <div>Total Solar Panels Installed By City(KW)</div>
-                                      <NumberOfSolarPanelsByCity/>
-                                  </Segment>
-                              </Grid.Column>
-                              <Grid.Column>
-                                  <Segment className="chart-container">
-                                      <div>Avg Electricity Generated Per Month By City</div>
-                                      <AvgElectricityPerDayByCity/>
-                                  </Segment>
-                              </Grid.Column>
-                              <Grid.Column>
-                                  <Segment className="chart-container">
-                                      <div>Avg Money Saved Per HH Per Month By City</div>
-                                      <AvgMoneySavedPerMonthByCity/>
-                                  </Segment>
-                              </Grid.Column>
-                          </Grid.Row>
+                            {/*Newly Added Start Here*/}
+                            <Grid.Row columns={4}>
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div> Num of Household Installed Panels by City</div>
+                                        <HHCountByCity/>
+                                    </Segment>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Total Solar Panels Installed By City(KW)</div>
+                                        <NumberOfSolarPanelsByCity/>
+                                    </Segment>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Avg Electricity Generated Per Month By City</div>
+                                        <AvgElectricityPerDayByCity/>
+                                    </Segment>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Segment className="chart-container">
+                                        <div>Avg Money Saved Per HH Per Month By City</div>
+                                        <AvgMoneySavedPerMonthByCity/>
+                                    </Segment>
+                                </Grid.Column>
+                            </Grid.Row>
 
-                          <Grid.Row columns={4}>
-                              <Grid.Column>
-                                  <Segment>
-                                      <Statistic color='olive'>
-                                          <Statistic.Value>{this.state.totalHHInstalled}</Statistic.Value>
-                                          <Statistic.Label>Household Installed</Statistic.Label>
-                                      </Statistic>
-                                  </Segment>
-                              </Grid.Column>
-                              <Grid.Column>
-                                  <Segment>
-                                      <Statistic color='orange'>
-                                          <Statistic.Value>{this.state.totalHHNotInstalled}</Statistic.Value>
-                                          <Statistic.Label>Household not Installed</Statistic.Label>
-                                      </Statistic>
-                                  </Segment>
-                              </Grid.Column>
-                              <Grid.Column>
-                                  <Segment>
-                                      <Statistic color='olive'>
-                                          <Statistic.Value>{this.state.totalElectricityGeneratedYTD}</Statistic.Value>
-                                          <Statistic.Label>Electricity Generated YTD</Statistic.Label>
-                                      </Statistic>
-                                  </Segment>
-                              </Grid.Column>
-                              <Grid.Column>
-                                  <Segment>
-                                      <Statistic color='olive'>
-                                          <Statistic.Value>{this.state.totalMoneySavedYTD}</Statistic.Value>
-                                          <Statistic.Label>Total Money Saved YTD</Statistic.Label>
-                                      </Statistic>
-                                  </Segment>
-                              </Grid.Column>
-                          </Grid.Row>
-                      </Grid>
-                  </Grid.Column>
-              </Grid>
-          </div>
-      )
-  }
+                            <Grid.Row columns={4}>
+                                <Grid.Column>
+                                    <Segment>
+                                        <Statistic color='olive'>
+                                            <Statistic.Value>{this.state.totalHHInstalled}</Statistic.Value>
+                                            <Statistic.Label>Household Installed</Statistic.Label>
+                                        </Statistic>
+                                    </Segment>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Segment>
+                                        <Statistic color='orange'>
+                                            <Statistic.Value>{this.state.totalHHNotInstalled}</Statistic.Value>
+                                            <Statistic.Label>Household not Installed</Statistic.Label>
+                                        </Statistic>
+                                    </Segment>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Segment>
+                                        <Statistic color='olive'>
+                                            <Statistic.Value>{this.state.totalElectricityGeneratedYTD}</Statistic.Value>
+                                            <Statistic.Label>Electricity Generated YTD</Statistic.Label>
+                                        </Statistic>
+                                    </Segment>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Segment>
+                                        <Statistic color='olive'>
+                                            <Statistic.Value>{this.state.totalMoneySavedYTD}</Statistic.Value>
+                                            <Statistic.Label>Total Money Saved YTD</Statistic.Label>
+                                        </Statistic>
+                                    </Segment>
+                                </Grid.Column>
+                            </Grid.Row>
+                        </Grid>
+                    </Grid.Column>
+                </Grid>
+            </div>
+        )
+    }
 }

@@ -14,14 +14,16 @@ const Routes =() =>(
     <div style={{height: '100%'}}>
       <Route exact path="/" component={Home}/>
       <Route exact path="/design" component={Design}/>
-      <Route exact path="/console" component={Console}/>
       <Route exact path="/login" component={Login}/>
       <Route exact path="/dashboard/:id" component={Detail}/>
       <Route exact path="/search" component={Search}/>
       <Route exact path="/powermap" component={PowerMap}/>
-      <Route exact path="/console/sanjose" component={SingleCityContent}/>
-      <Route exact path="/console/sunnyvale" component={SingleCityContent}/>
-      <Route exact path="/console/paloalto" component={SingleCityContent}/>
+      <Route exact path="/console" render={(props) => <Console {...props} selected="overview" />}/>
+      <Route exact path="/console/overviewPerCapita" render={(props) => <Console {...props} selected="overviewPerCapita" />}/>
+      <Route exact path="/console/overviewPerLandArea" render={(props) => <Console {...props} selected="overviewPerLandArea" />}/>
+      <Route exact path="/console/sanjose" render={(props) => <SingleCityContent {...props} selected="citySanJose"/>}/>
+      <Route exact path="/console/sunnyvale" render={(props) => <SingleCityContent {...props} selected="citySunnyvale"/>}/>
+      <Route exact path="/console/paloalto" render={(props) => <SingleCityContent {...props} selected="cityPaloAlto"/>}/>
     </div>
   </Router>
 )

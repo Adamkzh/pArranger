@@ -15,6 +15,18 @@ const data = [
     },
 ];
 
+// class CustomizedAxisTick extends PureComponent {
+//     render () {
+//         const {x, y, stroke, payload} = this.props;
+//
+//         return (
+//             <g transform={`translate(${x},${y})`}>
+//                 <text x={0} y={0} dy={16} textAnchor="end" fill="#666" transform="rotate(-35)">{payload.value}</text>
+//             </g>
+//         );
+//     }
+// }
+
 export default class HHCountByCity extends PureComponent {
     render() {
         return (
@@ -26,7 +38,7 @@ export default class HHCountByCity extends PureComponent {
                     }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="city" />
+                    <XAxis dataKey="city"/>
                     <YAxis label={{ value: 'Number of HH', angle: -90, position: 'insideLeft' }} tick={{fontSize: 12}}/>
                     <Tooltip />
                     <Legend />
