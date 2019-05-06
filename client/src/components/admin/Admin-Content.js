@@ -66,68 +66,68 @@ export default class adminContent extends React.Component {
                 "value": 3400
             }];
         let growthTotalCapacity = [{
-            "month": "Nov 2018",
+            "label": "Nov 2018",
             "San Jose": "200",
             "Palo Alto": "300",
             "Sunnyvale": "400"
         },{
-            "month": "Dec 2018",
+            "label": "Dec 2018",
             "San Jose": "100",
             "Palo Alto": "250",
             "Sunnyvale": "250"
         },{
-            "month": "Jan 2019",
+            "label": "Jan 2019",
             "San Jose": "900",
             "Palo Alto": "950",
             "Sunnyvale": "850"
         },{
-            "month": "Feb 2019",
+            "label": "Feb 2019",
             "San Jose": "600",
             "Palo Alto": "400",
             "Sunnyvale": "500"
         },{
-            "month": "Mar 2019",
+            "label": "Mar 2019",
             "San Jose": "300",
             "Palo Alto": "400",
             "Sunnyvale": "350"
         },{
-            "month": "Apr 2019",
+            "label": "Apr 2019",
             "San Jose": "500",
             "Palo Alto": "550",
             "Sunnyvale": "450"
         }];
         let newInstallationIncentivesVsCost = [{
-            "month": "Nov 2018",
+            "label": "Nov 2018",
             "San Jose": "100",
             "Palo Alto": "100",
             "Sunnyvale": "100",
             "Average Cost": "3000"
         },{
-            "month": "Dec 2018",
+            "label": "Dec 2018",
             "San Jose": "100",
             "Palo Alto": "100",
             "Sunnyvale": "100",
             "Average Cost": "2990"
         },{
-            "month": "Jan 2019",
+            "label": "Jan 2019",
             "San Jose": "800",
             "Palo Alto": "500",
             "Sunnyvale": "100",
             "Average Cost": "2800"
         },{
-            "month": "Feb 2019",
+            "label": "Feb 2019",
             "San Jose": "800",
             "Palo Alto": "500",
             "Sunnyvale": "100",
             "Average Cost": "2800"
         },{
-            "month": "Mar 2019",
+            "label": "Mar 2019",
             "San Jose": "800",
             "Palo Alto": "500",
             "Sunnyvale": "100",
             "Average Cost": "2800"
         },{
-            "month": "Apr 2019",
+            "label": "Apr 2019",
             "San Jose": "800",
             "Palo Alto": "500",
             "Sunnyvale": "100",
@@ -193,7 +193,7 @@ export default class adminContent extends React.Component {
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Installation Incentives vs Average Cost</div>
+                                        <div>Rebate Incentives vs Average Installation Cost</div>
                                         <CitiesLineChart data={newInstallationIncentivesVsCost} unit='kW/USD' showLabels={true} extraLineKey='Average Cost'/>
                                     </Segment>
                                 </Grid.Column>

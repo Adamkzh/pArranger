@@ -19,21 +19,25 @@ export default class CitiesLineChart extends PureComponent {
     }
 
     render() {
-        var sanJoseLine = <Line type="monotone" dataKey="San Jose" barSize={10} stroke="#c5a1fd" strokeWidth={3} fill="#c5a1fd" />;
-        var paloAltoLine = <Line type="monotone" dataKey="Palo Alto" barSize={10} stroke="#82ca9d" strokeWidth={3} fill="#82ca9d" />;
-        var sunnyvaleLine = <Line type="monotone" dataKey="Sunnyvale" barSize={10} stroke="#FFB533" strokeWidth={3} fill="#FFB533" />;
+        var enableDots = true;
+        if (this.props.dots === false) {
+            enableDots = false;
+        }
+        var sanJoseLine = <Line type="monotone" dataKey="San Jose" barSize={10} stroke="#c5a1fd" strokeWidth={3} fill="#c5a1fd" dot={enableDots}/>;
+        var paloAltoLine = <Line type="monotone" dataKey="Palo Alto" barSize={10} stroke="#82ca9d" strokeWidth={3} fill="#82ca9d" dot={enableDots}/>;
+        var sunnyvaleLine = <Line type="monotone" dataKey="Sunnyvale" barSize={10} stroke="#FFB533" strokeWidth={3} fill="#FFB533" dot={enableDots}/>;
 
         var extraLine = '';
         if (this.props.extraLineKey) {
-            extraLine = <Line type="monotone" dataKey={this.props.extraLineKey} barSize={10} stroke="#11CEFF" strokeWidth={3} fill="#11CEFF" />;
+            extraLine = <Line type="monotone" dataKey={this.props.extraLineKey} barSize={10} stroke="#11CEFF" strokeWidth={3} fill="#11CEFF" dot={enableDots}/>;
         }
 
         if (this.props.showLabels) {
-            sanJoseLine = <Line type="monotone" dataKey="San Jose" barSize={10} stroke="#c5a1fd" fill="#c5a1fd" strokeWidth={3} label={<CustomizedLabel/>}/>;
-            paloAltoLine = <Line type="monotone" dataKey="Palo Alto" barSize={10} stroke="#82ca9d" fill="#82ca9d" strokeWidth={3} label={<CustomizedLabel/>}/>;
-            sunnyvaleLine = <Line type="monotone" dataKey="Sunnyvale" barSize={10} stroke="#FFB533" fill="#FFB533" strokeWidth={3} label={<CustomizedLabel/>}/>;
+            sanJoseLine = <Line type="monotone" dataKey="San Jose" barSize={10} stroke="#c5a1fd" fill="#c5a1fd" strokeWidth={3} label={<CustomizedLabel/>} dot={enableDots}/>;
+            paloAltoLine = <Line type="monotone" dataKey="Palo Alto" barSize={10} stroke="#82ca9d" fill="#82ca9d" strokeWidth={3} label={<CustomizedLabel/>} dot={enableDots}/>;
+            sunnyvaleLine = <Line type="monotone" dataKey="Sunnyvale" barSize={10} stroke="#FFB533" fill="#FFB533" strokeWidth={3} label={<CustomizedLabel/>} dot={enableDots}/>;
             if (this.props.extraLineKey) {
-                extraLine = <Line type="monotone" dataKey={this.props.extraLineKey} barSize={10} stroke="#11CEFF" fill="#11CEFF" strokeWidth={3} label={<CustomizedLabel/>}/>;
+                extraLine = <Line type="monotone" dataKey={this.props.extraLineKey} barSize={10} stroke="#11CEFF" fill="#11CEFF" strokeWidth={3} label={<CustomizedLabel/>} dot={enableDots}/>;
             }
         }
 
@@ -46,7 +50,7 @@ export default class CitiesLineChart extends PureComponent {
                     }}
                 >
                     <CartesianGrid strokeDasharray="3 3"/>
-                    <XAxis dataKey="month" />
+                    <XAxis dataKey="label" />
                     <YAxis label={{ value: this.props.unit, angle: -90, position: 'insideLeft', style: {textAnchor: 'middle'}}} />
                     <Tooltip />
                     <Legend />
