@@ -26,7 +26,7 @@ import {
 import axios from 'axios';
 
 
-export default class adminContent extends React.Component {
+export default class effectAndImpactContent extends React.Component {
 
     constructor(props) {
         super(props);
@@ -81,7 +81,7 @@ export default class adminContent extends React.Component {
 
                     <Grid.Column computer={14} floated="right" id="content">
                         <Grid padded>
-                            <Grid.Row> <Header dividing size="huge" as="h1">Summary</Header> </Grid.Row>
+                            <Grid.Row> <Header dividing size="huge" as="h1">Effect and Impact</Header> </Grid.Row>
                             <Grid.Row columns={3}>
                                 <Grid.Column>
                                     <Segment className="chart-container">

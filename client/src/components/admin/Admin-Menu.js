@@ -17,22 +17,18 @@ export default class adminMenu extends React.Component {
     }
 
     render() {
-        var overview            = <Menu.Item as={Link} to='/console'> Overview </Menu.Item>;
-        var overviewPerCapita   = <Menu.Item as={Link} to='/console/overviewPerCapita'> Overview (Per Capita) </Menu.Item>;
-        var overviewPerLandArea = <Menu.Item as={Link} to='/console/overviewPerLandArea'> Overview (Per Land Area) </Menu.Item>;
+        var summary            = <Menu.Item as={Link} to='/console'> Summary </Menu.Item>;
+        var effectAndImpact   = <Menu.Item as={Link} to='/console/effectAndImpact'> Effect & Impact </Menu.Item>;
         var citySanJose         = <Menu.Item as={Link} to='/console/sanjose'> San Jose </Menu.Item>;
         var citySunnyvale       = <Menu.Item as={Link} to='/console/sunnyvale'> Sunnyvale </Menu.Item>;
         var cityPaloAlto        = <Menu.Item as={Link} to='/console/paloalto'> Palo Alto </Menu.Item>;
 
         switch (this.props.selected) {
-            case "overview":
-                overview = <Menu.Item active as='a'> Overview </Menu.Item>;
+            case "summary":
+                summary = <Menu.Item active as='a'> Summary </Menu.Item>;
                 break;
-            case "overviewPerCapita":
-                overviewPerCapita = <Menu.Item active as='a'> Overview (Per Capita) </Menu.Item>;
-                break;
-            case "overviewPerLandArea":
-                overviewPerLandArea = <Menu.Item active as='a'> Overview (Per Land Area) </Menu.Item>;
+            case "effectAndImpact":
+                effectAndImpact = <Menu.Item active as='a'> Effect & Impact </Menu.Item>;
                 break;
             case "citySanJose":
                 citySanJose = <Menu.Item active as='a'> San Jose </Menu.Item>;
@@ -51,10 +47,9 @@ export default class adminMenu extends React.Component {
             <br/>
             <br/>
             <Menu vertical borderless fluid text>
-                <Menu.Item header>Compete</Menu.Item>
-                {overview}
-                {overviewPerCapita}
-                {overviewPerLandArea}
+                <Menu.Item header>Overview</Menu.Item>
+                {summary}
+                {effectAndImpact}
                 <Menu.Item header>City</Menu.Item>
                 {citySanJose}
                 {citySunnyvale}
