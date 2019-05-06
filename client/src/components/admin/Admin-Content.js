@@ -101,37 +101,37 @@ export default class adminContent extends React.Component {
             "San Jose": "100",
             "Palo Alto": "100",
             "Sunnyvale": "100",
-            "Average Cost": "3000"
+            "Average Installation Cost": "3000"
         },{
             "label": "Dec 2018",
             "San Jose": "100",
             "Palo Alto": "100",
             "Sunnyvale": "100",
-            "Average Cost": "2990"
+            "Average Installation Cost": "2990"
         },{
             "label": "Jan 2019",
             "San Jose": "800",
             "Palo Alto": "500",
             "Sunnyvale": "100",
-            "Average Cost": "2800"
+            "Average Installation Cost": "2800"
         },{
             "label": "Feb 2019",
             "San Jose": "800",
             "Palo Alto": "500",
             "Sunnyvale": "100",
-            "Average Cost": "2800"
+            "Average Installation Cost": "2800"
         },{
             "label": "Mar 2019",
             "San Jose": "800",
             "Palo Alto": "500",
             "Sunnyvale": "100",
-            "Average Cost": "2800"
+            "Average Installation Cost": "2800"
         },{
             "label": "Apr 2019",
             "San Jose": "800",
             "Palo Alto": "500",
             "Sunnyvale": "100",
-            "Average Cost": "2750"
+            "Average Installation Cost": "2750"
         }];
         return (<div style={{ marginLeft: '50px', marginRight: '50px' }}>
                 <Grid>
@@ -152,7 +152,7 @@ export default class adminContent extends React.Component {
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Solar Capacity per Capita</div>
-                                        <CitiesCompareBarChart data={totalCapacityOfSolarPanels} unit="kw/person"/>
+                                        <CitiesCompareBarChart data={totalCapacityOfSolarPanels} unit="kW/person"/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
@@ -194,7 +194,7 @@ export default class adminContent extends React.Component {
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Rebate Incentives vs Average Installation Cost</div>
-                                        <CitiesLineChart data={newInstallationIncentivesVsCost} unit='kW/USD' showLabels={true} extraLineKey='Average Cost'/>
+                                        <CitiesLineChart data={newInstallationIncentivesVsCost} unit='kW/USD' showLabels={true} extraLineKey='Average Installation Cost'/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>

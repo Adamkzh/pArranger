@@ -349,6 +349,118 @@ export default class effectAndImpactContent extends React.Component {
             "Palo Alto": "550",
             "Sunnyvale": "450"
         }];
+        let solarEnergyConversionRate = [{
+            "label": "5am",
+            "San Jose": "0",
+            "Palo Alto": "0",
+            "Sunnyvale": "0"
+        },{
+            "label": "6am",
+            "San Jose": "0.1",
+            "Palo Alto": "0.12",
+            "Sunnyvale": "0.15"
+        },{
+            "label": "7am",
+            "San Jose": "0.2",
+            "Palo Alto": "0.22",
+            "Sunnyvale": "0.25"
+        },{
+            "label": "8am",
+            "San Jose": "0.3",
+            "Palo Alto": "0.32",
+            "Sunnyvale": "0.35"
+        },{
+            "label": "9am",
+            "San Jose": "0.4",
+            "Palo Alto": "0.42",
+            "Sunnyvale": "0.45"
+        },{
+            "label": "10am",
+            "San Jose": "0.5",
+            "Palo Alto": "0.52",
+            "Sunnyvale": "0.55"
+        },{
+            "label": "11am",
+            "San Jose": "0.6",
+            "Palo Alto": "0.62",
+            "Sunnyvale": "0.65"
+        },{
+            "label": "12pm",
+            "San Jose": "0.7",
+            "Palo Alto": "0.72",
+            "Sunnyvale": "0.75"
+        },{
+            "label": "1pm",
+            "San Jose": "0.7",
+            "Palo Alto": "0.72",
+            "Sunnyvale": "0.75"
+        },{
+            "label": "2pm",
+            "San Jose": "0.6",
+            "Palo Alto": "0.62",
+            "Sunnyvale": "0.65"
+        },{
+            "label": "3pm",
+            "San Jose": "0.5",
+            "Palo Alto": "0.52",
+            "Sunnyvale": "0.55"
+        },{
+            "label": "4pm",
+            "San Jose": "0.4",
+            "Palo Alto": "0.42",
+            "Sunnyvale": "0.45"
+        },{
+            "label": "5pm",
+            "San Jose": "0.3",
+            "Palo Alto": "0.32",
+            "Sunnyvale": "0.35"
+        },{
+            "label": "6pm",
+            "San Jose": "0.2",
+            "Palo Alto": "0.22",
+            "Sunnyvale": "0.25"
+        },{
+            "label": "7pm",
+            "San Jose": "0.1",
+            "Palo Alto": "0.12",
+            "Sunnyvale": "0.15"
+        },{
+            "label": "8pm",
+            "San Jose": "0",
+            "Palo Alto": "0",
+            "Sunnyvale": "0"
+        }];
+        let averageBillSavings = [{
+            "label": "Nov 2018",
+            "San Jose": "20",
+            "Palo Alto": "30",
+            "Sunnyvale": "40"
+        },{
+            "label": "Dec 2018",
+            "San Jose": "10",
+            "Palo Alto": "25",
+            "Sunnyvale": "25"
+        },{
+            "label": "Jan 2019",
+            "San Jose": "90",
+            "Palo Alto": "95",
+            "Sunnyvale": "85"
+        },{
+            "label": "Feb 2019",
+            "San Jose": "60",
+            "Palo Alto": "40",
+            "Sunnyvale": "50"
+        },{
+            "label": "Mar 2019",
+            "San Jose": "30",
+            "Palo Alto": "40",
+            "Sunnyvale": "35"
+        },{
+            "label": "Apr 2019",
+            "San Jose": "50",
+            "Palo Alto": "55",
+            "Sunnyvale": "45"
+        }];
         return (<div style={{ marginLeft: '50px', marginRight: '50px' }}>
                 <Grid>
                     <Grid.Column computer={2} only="tablet computer" id="sidebar">
@@ -393,13 +505,13 @@ export default class effectAndImpactContent extends React.Component {
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Daytime Solar Energy Maximum Conversion Rate (April 2019)</div>
-                                        <CitiesLineChart data={this.state.chargeCompare_data}/>
+                                        <CitiesLineChart data={solarEnergyConversionRate} unit='Energy Generated/Capacity'/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Average Electricity Bill Saving per Solar Household (April 2019)</div>
-                                        <CitiesLineChart data={this.state.chargeCompare_data}/>
+                                        <div>Average Electricity Bill Savings per Solar Household</div>
+                                        <CitiesLineChart data={averageBillSavings} unit='USD'/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
