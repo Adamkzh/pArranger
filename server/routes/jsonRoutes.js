@@ -187,6 +187,16 @@ router.get('/api/v1/charting/dashboardData', function (req, res, next) {
         })
 });
 
+router.get('/api/v1/charting/summaryDashboardData', function (req, res, next) {
+    chartingController.getSummaryChartingData()
+        .then(function (result) {
+            res.json(success(result));
+        })
+        .catch(function (error) {
+            res.json(failed(error));
+        })
+});
+
 router.get('/api/v1/*', sendBadRequest);
 router.post('/api/v1/*', sendBadRequest);
 

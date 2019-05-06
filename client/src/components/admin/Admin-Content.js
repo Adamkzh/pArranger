@@ -22,27 +22,20 @@ export default class adminContent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            chargeCompare_data: null,
-            dailyPowerGeneration_data: null,
-            differentPower_data: null,
-            numberOfSolarPanels_data: null,
-            solarRadiance_data: null,
-
-            totalHHInstalled: 4000,
-            totalHHNotInstalled: 2000,
-            totalElectricityGeneratedYTD: 80000,
-            totalMoneySavedYTD: 800000
+            totalSolarCapacity: null,
+            solarCapacityPerCapita: null,
+            solarCapacityPerSurfaceArea: null,
+            solarCapacityAddedIn30Days: null
         }
-        const fetchDataUrl = "/api/v1/charting/dashboardData";
+        const fetchDataUrl = "/api/v1/charting/summaryDashboardData";
         axios.get(fetchDataUrl)
             .then((response) => {
                 if (response.data.success) {
                     this.setState({
-                        chargeCompare_data: response.data.result.chargeCompare,
-                        dailyPowerGeneration_data: response.data.result.dailyPowerGeneration,
-                        differentPower_data: response.data.result.differentPower,
-                        numberOfSolarPanels_data: response.data.result.numberOfSolarPanels,
-                        solarRadiance_data: response.data.result.solarRadiance,
+                        totalSolarCapacity: response.data.result.totalSolarCapacity,
+                        solarCapacityPerCapita: response.data.result.solarCapacityPerCapita,
+                        solarCapacityPerSurfaceArea: response.data.result.solarCapacityPerSurfaceArea,
+                        solarCapacityAddedIn30Days: response.data.result.solarCapacityAddedIn30Days
                     })
                 }
             })
@@ -146,19 +139,19 @@ export default class adminContent extends React.Component {
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Total Solar Capacity</div>
-                                        <CitiesCompareBarChart data={totalCapacityOfSolarPanels} unit="kW"/>
+                                        <CitiesCompareBarChart data={this.state.totalSolarCapacity} unit="kW"/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Solar Capacity per Capita</div>
-                                        <CitiesCompareBarChart data={totalCapacityOfSolarPanels} unit="kW/person"/>
+                                        <CitiesCompareBarChart data={this.state.solarCapacityPerCapita} unit="kW/person"/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Solar Capacity per Surface Area</div>
-                                        <CitiesCompareBarChart data={totalCapacityOfSolarPanels} unit="kW/mi²"/>
+                                        <CitiesCompareBarChart data={this.state.solarCapacityPerSurfaceArea} unit="kW/mi²"/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
@@ -167,7 +160,7 @@ export default class adminContent extends React.Component {
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Solar Capacity Added (last 30 days)</div>
-                                        <CitiesCompareBarChart data={totalCapacityOfSolarPanels} unit="kW"/>
+                                        <CitiesCompareBarChart data={this.state.solarCapacityAddedIn30Days} unit="kW"/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
