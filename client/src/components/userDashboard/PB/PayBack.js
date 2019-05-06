@@ -7,6 +7,7 @@ import {
 const data = [
     {year: '0', money: -10000},
     {year: '5', money: -5000},
+    {year: '7', money: 0},
     {year: '10', money: 2000},
     {year: '15', money: 5000},
     {year: '20', money: 10000},
