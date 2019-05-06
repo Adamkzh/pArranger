@@ -480,7 +480,7 @@ export default class effectAndImpactContent extends React.Component {
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Solar Incentive Spending (FY2019)</div>
+                                        <div>Solar Incentive Budget & Spending (FY2019)</div>
                                         <CitiesCompareStackedBarChart data={solarIncentiveSpending} unit='USD'/>
                                     </Segment>
                                 </Grid.Column>
