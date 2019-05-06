@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {
-    BarChart, Bar, XAxis, YAxis, CartesianGrid, Cell, LabelList, Tooltip, Legend, ResponsiveContainer
+    BarChart, Bar, XAxis, YAxis, CartesianGrid, Cell, LabelList, Tooltip, Legend, ResponsiveContainer, ReferenceLine
 } from 'recharts';
 
 const colors = ["#c5a1fd", "#82ca9d", "#FFB533"];
@@ -31,7 +31,7 @@ export default class SimpleBarChart extends PureComponent {
                 <BarChart
                     data={this.state.data}
                     margin={{
-                        top: 10, left: 0, right: 20, bottom: 10,
+                        top: 10, left: 1, right: 20, bottom: 10,
                     }}
 
                 >
@@ -47,6 +47,7 @@ export default class SimpleBarChart extends PureComponent {
                         {cell}
                         <LabelList dataKey="value" position='insideTop' fill="#000000"/>
                     </Bar>
+                    <ReferenceLine y={0} stroke='#000'/>
                 </BarChart>
             </ResponsiveContainer>
         );

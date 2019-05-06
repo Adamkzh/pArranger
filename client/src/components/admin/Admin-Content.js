@@ -1,17 +1,8 @@
 import React from "react";
 
-import DifferentPower from './charts/DifferentPower';
-import DailyPowerGeneration from './charts/DailyPowerGeneration';
-import SolarRadiance from './charts/SolarRadiance';
-import ChargeCompare from './charts/ChargeCompare';
-import NumberOfSolarPanels from './charts/NumberOfSolarPanels';
-import HHCountByCity from './charts/HHCountByCity';
-import AvgElectricityPerDayByCity from './charts/AvgElectricityPerDayByCity';
-import AvgMoneySavedPerMonthByCity from './charts/AvgMoneySavedPerMonthByCity';
-import NumberOfSolarPanelsByCity from './charts/NumberOfSolarPanelsByCity';
 import AdminMenu from './Admin-Menu';
 import CitiesCompareBarChart from './charts/CitiesCompareBarChart'
-import {Link} from 'react-router-dom';
+import CitiesLineChart from './charts/CitiesLineChart'
 
 import "semantic-ui-css/semantic.min.css";
 
@@ -61,7 +52,8 @@ export default class adminContent extends React.Component {
     }
 
     render() {
-        let totalCapacityOfSolarPanels = [{
+        let totalCapacityOfSolarPanels = [
+            {
                 "label": "San Jose",
                 "value": 1800
             },
@@ -73,6 +65,68 @@ export default class adminContent extends React.Component {
                 "label": "Sunnyvale",
                 "value": 3400
             }];
+        let growthTotalCapacity = [{
+            "month": "Nov 2018",
+            "San Jose": "200",
+            "Palo Alto": "300",
+            "Sunnyvale": "400"
+        },{
+            "month": "Dec 2018",
+            "San Jose": "100",
+            "Palo Alto": "250",
+            "Sunnyvale": "250"
+        },{
+            "month": "Jan 2019",
+            "San Jose": "900",
+            "Palo Alto": "950",
+            "Sunnyvale": "850"
+        },{
+            "month": "Feb 2019",
+            "San Jose": "600",
+            "Palo Alto": "400",
+            "Sunnyvale": "500"
+        },{
+            "month": "Mar 2019",
+            "San Jose": "300",
+            "Palo Alto": "400",
+            "Sunnyvale": "350"
+        },{
+            "month": "Apr 2019",
+            "San Jose": "500",
+            "Palo Alto": "550",
+            "Sunnyvale": "450"
+        }];
+        let newInstallationIncentives = [{
+            "month": "Nov 2018",
+            "San Jose": "100",
+            "Palo Alto": "100",
+            "Sunnyvale": "100"
+        },{
+            "month": "Dec 2018",
+            "San Jose": "100",
+            "Palo Alto": "100",
+            "Sunnyvale": "100"
+        },{
+            "month": "Jan 2019",
+            "San Jose": "800",
+            "Palo Alto": "500",
+            "Sunnyvale": "100"
+        },{
+            "month": "Feb 2019",
+            "San Jose": "800",
+            "Palo Alto": "500",
+            "Sunnyvale": "100"
+        },{
+            "month": "Mar 2019",
+            "San Jose": "800",
+            "Palo Alto": "500",
+            "Sunnyvale": "100"
+        },{
+            "month": "Apr 2019",
+            "San Jose": "800",
+            "Palo Alto": "500",
+            "Sunnyvale": "100"
+        }];
         return (<div style={{ marginLeft: '50px', marginRight: '50px' }}>
                 <Grid>
                     <Grid.Column computer={2} only="tablet computer" id="sidebar">
@@ -128,13 +182,13 @@ export default class adminContent extends React.Component {
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Growth of Total Solar Capacity</div>
-                                        <ChargeCompare data={this.state.chargeCompare_data}/>
+                                        <CitiesLineChart data={growthTotalCapacity} unit='kW'/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Installation Incentives (Rebates and Tax Credits)</div>
-                                        <ChargeCompare data={this.state.chargeCompare_data}/>
+                                        <div>New Installation Incentives (Rebates and Tax Credits)</div>
+                                        <CitiesLineChart data={newInstallationIncentives} unit='kW/USD' showLabels={true}/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>

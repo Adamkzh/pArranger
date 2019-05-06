@@ -1,27 +1,14 @@
 import React from "react";
 
-import DifferentPower from './charts/DifferentPower';
-import DailyPowerGeneration from './charts/DailyPowerGeneration';
-import SolarRadiance from './charts/SolarRadiance';
-import ChargeCompare from './charts/ChargeCompare';
-import NumberOfSolarPanels from './charts/NumberOfSolarPanels';
-import HHCountByCity from './charts/HHCountByCity';
-import AvgElectricityPerDayByCity from './charts/AvgElectricityPerDayByCity';
-import AvgMoneySavedPerMonthByCity from './charts/AvgMoneySavedPerMonthByCity';
-import NumberOfSolarPanelsByCity from './charts/NumberOfSolarPanelsByCity';
+import CitiesLineChart from './charts/CitiesLineChart'
 import AdminMenu from './Admin-Menu';
-import CitiesCompareBarChart from './charts/CitiesCompareBarChart'
-import {Link} from 'react-router-dom';
 
 import "semantic-ui-css/semantic.min.css";
 
 import {
     Grid,
-    Label,
     Header,
-    Menu,
     Segment,
-    Statistic
 } from "semantic-ui-react";
 import axios from 'axios';
 
@@ -61,18 +48,74 @@ export default class effectAndImpactContent extends React.Component {
     }
 
     render() {
-        let totalCapacityOfSolarPanels = [{
-                "label": "San Jose",
-                "value": 1800
-            },
-            {
-                "label": "Palo Alto",
-                "value": 3600
-            },
-            {
-                "label": "Sunnyvale",
-                "value": 3400
-            }];
+        let growthTotalCapacity = [{
+            "month": "Nov 2018",
+            "San Jose": "200",
+            "Palo Alto": "300",
+            "Sunnyvale": "400"
+        },{
+            "month": "Dec 2018",
+            "San Jose": "100",
+            "Palo Alto": "250",
+            "Sunnyvale": "250"
+        },{
+            "month": "Jan 2019",
+            "San Jose": "900",
+            "Palo Alto": "950",
+            "Sunnyvale": "850"
+        },{
+            "month": "Feb 2019",
+            "San Jose": "600",
+            "Palo Alto": "400",
+            "Sunnyvale": "500"
+        },{
+            "month": "Mar 2019",
+            "San Jose": "300",
+            "Palo Alto": "400",
+            "Sunnyvale": "350"
+        },{
+            "month": "Apr 2019",
+            "San Jose": "500",
+            "Palo Alto": "550",
+            "Sunnyvale": "450"
+        }];
+        let newInstallationIncentivesVsCost = [{
+            "month": "Nov 2018",
+            "San Jose": "100",
+            "Palo Alto": "100",
+            "Sunnyvale": "100",
+            "Average Cost": "3000"
+        },{
+            "month": "Dec 2018",
+            "San Jose": "100",
+            "Palo Alto": "100",
+            "Sunnyvale": "100",
+            "Average Cost": "2990"
+        },{
+            "month": "Jan 2019",
+            "San Jose": "800",
+            "Palo Alto": "500",
+            "Sunnyvale": "100",
+            "Average Cost": "2800"
+        },{
+            "month": "Feb 2019",
+            "San Jose": "800",
+            "Palo Alto": "500",
+            "Sunnyvale": "100",
+            "Average Cost": "2800"
+        },{
+            "month": "Mar 2019",
+            "San Jose": "800",
+            "Palo Alto": "500",
+            "Sunnyvale": "100",
+            "Average Cost": "2800"
+        },{
+            "month": "Apr 2019",
+            "San Jose": "800",
+            "Palo Alto": "500",
+            "Sunnyvale": "100",
+            "Average Cost": "2750"
+        }];
         return (<div style={{ marginLeft: '50px', marginRight: '50px' }}>
                 <Grid>
                     <Grid.Column computer={2} only="tablet computer" id="sidebar">
@@ -87,13 +130,13 @@ export default class effectAndImpactContent extends React.Component {
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Growth of Total Solar Capacity</div>
-                                        <ChargeCompare data={this.state.chargeCompare_data}/>
+                                        <CitiesLineChart data={growthTotalCapacity} unit='kW'/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Installation Incentives (Rebates and Tax Credits)</div>
-                                        <ChargeCompare data={this.state.chargeCompare_data}/>
+                                        <div>Installation Incentives vs Average Cost</div>
+                                        <CitiesLineChart data={newInstallationIncentivesVsCost} unit='kW/USD' showLabels={true} extraLineKey='Average Cost'/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
@@ -101,49 +144,29 @@ export default class effectAndImpactContent extends React.Component {
                             <Grid.Row columns={2}>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Average Daily Electricity Generated by Solar Panel (Last Month) - FIX DATA</div>
-                                        <ChargeCompare data={this.state.chargeCompare_data}/>
+                                        <div>Average Electricity Generated by Solar in a Day (April 2019)</div>
+                                        <CitiesLineChart data={this.state.chargeCompare_data}/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Average Daily Transformer Load (Last Month) - FIX DATA</div>
-                                        <ChargeCompare data={this.state.chargeCompare_data}/>
+                                        <div>Average Transformer Load in a Day (April 2019)</div>
+                                        <CitiesLineChart data={this.state.chargeCompare_data}/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
 
-                            <Grid.Row columns={4}>
+                            <Grid.Row columns={2}>
                                 <Grid.Column>
-                                    <Segment>
-                                        <Statistic color='olive'>
-                                            <Statistic.Value>{this.state.totalHHInstalled}</Statistic.Value>
-                                            <Statistic.Label>Household Installed</Statistic.Label>
-                                        </Statistic>
+                                    <Segment className="chart-container">
+                                        <div>Daytime Solar Energy Maximum Conversion Rate (April 2019)</div>
+                                        <CitiesLineChart data={this.state.chargeCompare_data}/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Segment>
-                                        <Statistic color='orange'>
-                                            <Statistic.Value>{this.state.totalHHNotInstalled}</Statistic.Value>
-                                            <Statistic.Label>Household not Installed</Statistic.Label>
-                                        </Statistic>
-                                    </Segment>
-                                </Grid.Column>
-                                <Grid.Column>
-                                    <Segment>
-                                        <Statistic color='olive'>
-                                            <Statistic.Value>{this.state.totalElectricityGeneratedYTD}</Statistic.Value>
-                                            <Statistic.Label>Electricity Generated YTD</Statistic.Label>
-                                        </Statistic>
-                                    </Segment>
-                                </Grid.Column>
-                                <Grid.Column>
-                                    <Segment>
-                                        <Statistic color='olive'>
-                                            <Statistic.Value>{this.state.totalMoneySavedYTD}</Statistic.Value>
-                                            <Statistic.Label>Total Money Saved YTD</Statistic.Label>
-                                        </Statistic>
+                                    <Segment className="chart-container">
+                                        <div>Average Electricity Bill per Household (April 2019)</div>
+                                        <CitiesLineChart data={this.state.chargeCompare_data}/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
