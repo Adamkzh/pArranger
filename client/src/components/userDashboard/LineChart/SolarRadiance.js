@@ -61,7 +61,8 @@ export default class SolarRadiance extends PureComponent {
                     <YAxis label={{ value: 'Power output', angle: -90, position: 'insideLeft' }} />
                     <Tooltip />
                     <Legend />
-                    <Area type="monotone" dataKey="GHI" stroke="#FFA500" fill="#FEBF51" label={{ value: 'GHI', position: 'insideBottom' ,float:'left'}}/>
+                    {/* label={{ value: 'GHI', position: 'insideBottom' ,float:'left'}} */}
+                    <Area type="monotone" dataKey="GHI" stroke="#FFA500" fill="#FEBF51" />
                     <Area type="monotone" dataKey="AVG" stroke="#7CFC00" fill="#AFEEEE" />
                 </AreaChart>
             </ResponsiveContainer>
