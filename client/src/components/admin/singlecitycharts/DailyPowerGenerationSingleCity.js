@@ -39,7 +39,7 @@ export default class DailyPowerGenerationSingleCity extends PureComponent {
             <Tooltip />
             <Legend wrapperStyle={{'fontSize': '14px'}} align="center" />
             <Legend verticalAlign="bottom" height={36} align="right"/>
-            <Line type="monotone" dataKey={this.props.city} stroke="#c45417" strokeWidth={3} />
+            <Line type="monotone" dataKey={this.props.city} stroke="#82ca9d" strokeWidth={3} />
             <Area type="monotone" dataKey="AllCitiesAverage" fill="#DEE3EA" stroke="#DEE3EA" />
             </ComposedChart>
       </ResponsiveContainer>
