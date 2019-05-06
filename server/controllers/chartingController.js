@@ -18,6 +18,8 @@ let sanJoseSize = 177.51;
 let paloAltoSize = 23.86;
 let sunnyvaleSize = 21.98;
 
+let solarConversionRate = 0.35;
+
 exports.getChartingData = function() {
     return dbController.getChartingDataFromDB();
 };
@@ -36,6 +38,10 @@ exports.getSummaryChartingData = function () {
             var sanJoseSolarCapacityAdded = 0.0;
             var paloAltoSolarCapacityAdded = 0.0;
             var sunnyvaleSolarCapacityAdded = 0.0;
+
+            var sanJoseHouseholdAdded = 0.0;
+            var paloAltoHouseholdAdded = 0.0;
+            var sunnyvaleHouseholdAdded = 0.0;
             for (var i = 0; i < result.data.length; i++) {
                 let user = result.data[i];
                 if (!user.zipcode) {
@@ -52,16 +58,19 @@ exports.getSummaryChartingData = function () {
                     sanJoseTotalSolarCapacity += (user.watts / 1000.0);
                     if (numDaysBetween(new Date(), user.updatedDate) <= 30) {
                         sanJoseSolarCapacityAdded += (user.watts / 1000.0);
+                        sanJoseHouseholdAdded += 1;
                     }
                 } else if (paloAltoZipcodes.includes(user.zipcode)) {
                     paloAltoTotalSolarCapacity += (user.watts / 1000.0);
                     if (numDaysBetween(new Date(), user.updatedDate) <= 30) {
                         paloAltoSolarCapacityAdded += (user.watts / 1000.0);
+                        paloAltoHouseholdAdded += 1;
                     }
                 } else if (sunnyvaleZipcodes.includes(user.zipcode)) {
                     sunnyvaleTotalSolarCapacity += (user.watts / 1000.0);
                     if (numDaysBetween(new Date(), user.updatedDate) <= 30) {
                         sunnyvaleSolarCapacityAdded += (user.watts / 1000.0);
+                        sunnyvaleHouseholdAdded += 1;
                     }
                 }
             }
@@ -86,11 +95,23 @@ exports.getSummaryChartingData = function () {
                 paloAltoSolarCapacityAdded,
                 sunnyvaleSolarCapacityAdded
             );
+            let electricityGeneratedBySolarLast30Days = makeBarChartObject(
+                (sanJoseTotalSolarCapacity * solarConversionRate * 720) / 1000,
+                (paloAltoTotalSolarCapacity * solarConversionRate * 720) / 1000,
+                (sunnyvaleTotalSolarCapacity * solarConversionRate * 720) / 1000
+            );
+            let solarHouseholdAddedLast30Days = makeBarChartObject(
+                sanJoseHouseholdAdded,
+                paloAltoHouseholdAdded,
+                sunnyvaleHouseholdAdded
+            );
             return {
                 totalSolarCapacity: totalSolarCapacity,
                 solarCapacityPerCapita: solarCapacityPerCapita,
                 solarCapacityPerSurfaceArea: solarCapacityPerSurfaceArea,
-                solarCapacityAddedIn30Days: solarCapacityAddedIn30Days
+                solarCapacityAddedIn30Days: solarCapacityAddedIn30Days,
+                electricityGeneratedBySolarLast30Days: electricityGeneratedBySolarLast30Days,
+                solarHouseholdAddedLast30Days: solarHouseholdAddedLast30Days
             };
         });
 
