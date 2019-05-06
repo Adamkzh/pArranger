@@ -24,8 +24,12 @@ var hour = currentDate.getHours() - 9;
 var monthTotalEnergy = window.localStorage.getItem('watts') * 6 * 30 * 0.78 * 0.001;
 monthTotalEnergy = monthTotalEnergy.toFixed(2) + " kWh";
 
-var todayGenerate = window.localStorage.getItem('watts') * hour * 0.001 + ' kWh';
-var todaySaving = "$ " + window.localStorage.getItem('watts') * hour * 0.002 * 0.16;
+var todayGenerate = window.localStorage.getItem('watts') * hour * 0.001;
+var todayGenerate = todayGenerate.toFixed(2) + ' kWh';
+
+var todaySaving = window.localStorage.getItem('watts') * hour * 0.002 * 0.16;
+todaySaving = "$ " + todaySaving.toFixed(2);
+
 var monthBill =  window.localStorage.getItem('watts') * 6 * 30 * 0.78 * 0.001 * -0.16 + 101.49;
 monthBill = "$ " + monthBill.toFixed(2);
 
