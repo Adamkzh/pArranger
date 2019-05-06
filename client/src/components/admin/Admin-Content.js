@@ -96,36 +96,42 @@ export default class adminContent extends React.Component {
             "Palo Alto": "550",
             "Sunnyvale": "450"
         }];
-        let newInstallationIncentives = [{
+        let newInstallationIncentivesVsCost = [{
             "month": "Nov 2018",
             "San Jose": "100",
             "Palo Alto": "100",
-            "Sunnyvale": "100"
+            "Sunnyvale": "100",
+            "Average Cost": "3000"
         },{
             "month": "Dec 2018",
             "San Jose": "100",
             "Palo Alto": "100",
-            "Sunnyvale": "100"
+            "Sunnyvale": "100",
+            "Average Cost": "2990"
         },{
             "month": "Jan 2019",
             "San Jose": "800",
             "Palo Alto": "500",
-            "Sunnyvale": "100"
+            "Sunnyvale": "100",
+            "Average Cost": "2800"
         },{
             "month": "Feb 2019",
             "San Jose": "800",
             "Palo Alto": "500",
-            "Sunnyvale": "100"
+            "Sunnyvale": "100",
+            "Average Cost": "2800"
         },{
             "month": "Mar 2019",
             "San Jose": "800",
             "Palo Alto": "500",
-            "Sunnyvale": "100"
+            "Sunnyvale": "100",
+            "Average Cost": "2800"
         },{
             "month": "Apr 2019",
             "San Jose": "800",
             "Palo Alto": "500",
-            "Sunnyvale": "100"
+            "Sunnyvale": "100",
+            "Average Cost": "2750"
         }];
         return (<div style={{ marginLeft: '50px', marginRight: '50px' }}>
                 <Grid>
@@ -181,14 +187,14 @@ export default class adminContent extends React.Component {
                             <Grid.Row columns={2}>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Growth of Total Solar Capacity</div>
+                                        <div>Growth of Solar Capacity</div>
                                         <CitiesLineChart data={growthTotalCapacity} unit='kW'/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>New Installation Incentives (Rebates and Tax Credits)</div>
-                                        <CitiesLineChart data={newInstallationIncentives} unit='kW/USD' showLabels={true}/>
+                                        <div>Installation Incentives vs Average Cost</div>
+                                        <CitiesLineChart data={newInstallationIncentivesVsCost} unit='kW/USD' showLabels={true} extraLineKey='Average Cost'/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>

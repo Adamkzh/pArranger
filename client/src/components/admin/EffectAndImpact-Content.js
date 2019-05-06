@@ -1,6 +1,7 @@
 import React from "react";
 
 import CitiesLineChart from './charts/CitiesLineChart'
+import CitiesCompareBarChart from './charts/CitiesCompareBarChart'
 import AdminMenu from './Admin-Menu';
 
 import "semantic-ui-css/semantic.min.css";
@@ -11,6 +12,7 @@ import {
     Segment,
 } from "semantic-ui-react";
 import axios from 'axios';
+import CitiesCompareStackedBarChart from "./charts/CitiesCompareStackedBarChart";
 
 
 export default class effectAndImpactContent extends React.Component {
@@ -79,43 +81,22 @@ export default class effectAndImpactContent extends React.Component {
             "Palo Alto": "550",
             "Sunnyvale": "450"
         }];
-        let newInstallationIncentivesVsCost = [{
-            "month": "Nov 2018",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100",
-            "Average Cost": "3000"
-        },{
-            "month": "Dec 2018",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100",
-            "Average Cost": "2990"
-        },{
-            "month": "Jan 2019",
-            "San Jose": "800",
-            "Palo Alto": "500",
-            "Sunnyvale": "100",
-            "Average Cost": "2800"
-        },{
-            "month": "Feb 2019",
-            "San Jose": "800",
-            "Palo Alto": "500",
-            "Sunnyvale": "100",
-            "Average Cost": "2800"
-        },{
-            "month": "Mar 2019",
-            "San Jose": "800",
-            "Palo Alto": "500",
-            "Sunnyvale": "100",
-            "Average Cost": "2800"
-        },{
-            "month": "Apr 2019",
-            "San Jose": "800",
-            "Palo Alto": "500",
-            "Sunnyvale": "100",
-            "Average Cost": "2750"
-        }];
+        let sample = [
+            {
+                "label": "San Jose",
+                "(Dark) Claimed Incentives": 18000,
+                "(Light) Remaining Budget": 100000
+            },
+            {
+                "label": "Palo Alto",
+                "(Dark) Claimed Incentives": 36000,
+                "(Light) Remaining Budget": 90000
+            },
+            {
+                "label": "Sunnyvale",
+                "(Dark) Claimed Incentives": 34000,
+                "(Light) Remaining Budget": 80000
+            }];
         return (<div style={{ marginLeft: '50px', marginRight: '50px' }}>
                 <Grid>
                     <Grid.Column computer={2} only="tablet computer" id="sidebar">
@@ -129,14 +110,14 @@ export default class effectAndImpactContent extends React.Component {
                             <Grid.Row columns={2}>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Growth of Total Solar Capacity</div>
+                                        <div>Growth of Solar Capacity</div>
                                         <CitiesLineChart data={growthTotalCapacity} unit='kW'/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Installation Incentives vs Average Cost</div>
-                                        <CitiesLineChart data={newInstallationIncentivesVsCost} unit='kW/USD' showLabels={true} extraLineKey='Average Cost'/>
+                                        <div>Solar Incentive Spending (FY2019)</div>
+                                        <CitiesCompareStackedBarChart data={sample} unit='USD'/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
