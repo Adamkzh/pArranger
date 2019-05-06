@@ -39,10 +39,10 @@ export default class MonthlyPowerGenerationSingleCity extends PureComponent {
             <Tooltip />
             <Legend wrapperStyle={{'fontSize': '14px'}} align="center" />
             <Legend verticalAlign="bottom" height={36} align="right"/>
-            <Line type="monotone" dataKey={this.props.city} stroke="#82ca9d" >
+            <Line type="monotone" dataKey={this.props.city} stroke="#82ca9d" strokeWidth={3}>
               <LabelList dataKey={this.props.city} position="insideTop" />
             </Line>
-            <Line type="monotone" dataKey="AllCitiesAverage" stroke="#1e2b12" >
+            <Line type="monotone" dataKey="AllCitiesAverage" stroke="#1e2b12"strokeWidth={3} >
                 <LabelList dataKey="AllCitiesAverage" position="insideTop" />
             </Line>
             </LineChart>

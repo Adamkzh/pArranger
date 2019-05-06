@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer, LabelList
+    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer, LabelList, Area
 } from 'recharts';
 
 
@@ -32,3 +32,6 @@ export default class AvgMoneySavedPerMonthByCitySingleCity extends PureComponent
         );
     }
 }
+
+
+

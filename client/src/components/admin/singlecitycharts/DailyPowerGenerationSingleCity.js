@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
+    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ComposedChart, Area
 } from 'recharts';
 
 // Sample data:
@@ -25,7 +25,7 @@ export default class DailyPowerGenerationSingleCity extends PureComponent {
   render() {
       return (
         <ResponsiveContainer maxHeight={290} width="100%" height="100%">                     
-          <LineChart
+          <ComposedChart
             width={410}
             height={290}
             data={this.props.data}
@@ -39,9 +39,9 @@ export default class DailyPowerGenerationSingleCity extends PureComponent {
             <Tooltip />
             <Legend wrapperStyle={{'fontSize': '14px'}} align="center" />
             <Legend verticalAlign="bottom" height={36} align="right"/>
-            <Line type="monotone" dataKey={this.props.city} stroke="#82ca9d" />
-            <Line type="monotone" dataKey="AllCitiesAverage" stroke="#1e2b12" />
-            </LineChart>
+            <Line type="monotone" dataKey={this.props.city} stroke="#c45417" strokeWidth={3} />
+            <Area type="monotone" dataKey="AllCitiesAverage" fill="#DEE3EA" stroke="#DEE3EA" />
+            </ComposedChart>
       </ResponsiveContainer>
       );
   }
