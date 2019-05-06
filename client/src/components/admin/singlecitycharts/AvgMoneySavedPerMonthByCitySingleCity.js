@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer
+    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer, LabelList
 } from 'recharts';
 
 
@@ -21,8 +21,12 @@ export default class AvgMoneySavedPerMonthByCitySingleCity extends PureComponent
                 <YAxis label={{ value: 'US Dollar', angle: -90, position: 'insideLeft' }} tick={{fontSize: 10 }}/>
                 <Tooltip />
                 <Legend wrapperStyle={{'fontSize': '9.8px'}} verticalAlign="bottom" height={36} align="right" />
-                <Bar dataKey={this.props.city} fill="#82ca9d" />
-                <Bar dataKey="AllCitiesAverage" fill="#dee3ea" />
+                <Bar dataKey={this.props.city} fill="#82ca9d">
+                    <LabelList dataKey={this.props.city} position="insideTop" />
+                </Bar>
+                <Bar dataKey="AllCitiesAverage" fill="#dee3ea" >
+                    <LabelList dataKey="AllCitiesAverage" position="insideTop" />
+                </Bar>
             </BarChart>
             </ResponsiveContainer>
         );

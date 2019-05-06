@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
+    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LabelList
 } from 'recharts';
 
 // Sample data:
@@ -39,8 +39,12 @@ export default class MonthlyPowerGenerationSingleCity extends PureComponent {
             <Tooltip />
             <Legend wrapperStyle={{'fontSize': '14px'}} align="center" />
             <Legend verticalAlign="bottom" height={36} align="right"/>
-            <Line type="monotone" dataKey={this.props.city} stroke="#82ca9d" />
-            <Line type="monotone" dataKey="AllCitiesAverage" stroke="#1e2b12" />
+            <Line type="monotone" dataKey={this.props.city} stroke="#82ca9d" >
+              <LabelList dataKey={this.props.city} position="insideTop" />
+            </Line>
+            <Line type="monotone" dataKey="AllCitiesAverage" stroke="#1e2b12" >
+                <LabelList dataKey="AllCitiesAverage" position="insideTop" />
+            </Line>
             </LineChart>
       </ResponsiveContainer>
       );
