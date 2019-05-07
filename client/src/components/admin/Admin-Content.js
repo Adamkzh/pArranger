@@ -27,7 +27,9 @@ export default class adminContent extends React.Component {
             solarCapacityPerSurfaceArea: null,
             solarCapacityAddedIn30Days: null,
             electricityGeneratedBySolarLast30Days: null,
-            solarHouseholdAddedLast30Days: null
+            solarHouseholdAddedLast30Days: null,
+            growthOfSolarCapacity: null,
+            newInstallationIncentivesVsCost: null
         }
         const fetchDataUrl = "/api/v1/charting/summaryDashboardData";
         axios.get(fetchDataUrl)
@@ -39,7 +41,9 @@ export default class adminContent extends React.Component {
                         solarCapacityPerSurfaceArea: response.data.result.solarCapacityPerSurfaceArea,
                         solarCapacityAddedIn30Days: response.data.result.solarCapacityAddedIn30Days,
                         electricityGeneratedBySolarLast30Days: response.data.result.electricityGeneratedBySolarLast30Days,
-                        solarHouseholdAddedLast30Days: response.data.result.solarHouseholdAddedLast30Days
+                        solarHouseholdAddedLast30Days: response.data.result.solarHouseholdAddedLast30Days,
+                        growthOfSolarCapacity: response.data.result.growthOfSolarCapacity,
+                        newInstallationIncentivesVsCost: response.data.result.newInstallationIncentivesVsCost
                     })
                 }
             })
@@ -185,13 +189,13 @@ export default class adminContent extends React.Component {
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Growth of Solar Capacity</div>
-                                        <CitiesLineChart data={growthTotalCapacity} unit='kW'/>
+                                        <CitiesLineChart data={this.state.growthOfSolarCapacity} unit='%'/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Rebate Incentives vs Average Installation Cost</div>
-                                        <CitiesLineChart data={newInstallationIncentivesVsCost} unit='kW/USD' showLabels={true} extraLineKey='Average Installation Cost'/>
+                                        <CitiesLineChart data={this.state.newInstallationIncentivesVsCost} unit='USD/Project' showLabels={true} extraLineKey='Average Installation Cost'/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>

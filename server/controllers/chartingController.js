@@ -20,6 +20,44 @@ let sunnyvaleSize = 21.98;
 
 let solarConversionRate = 0.35;
 
+let newInstallationIncentivesVsCost = [{
+    "label": "Nov 2018",
+    "San Jose": "3000",
+    "Palo Alto": "3000",
+    "Sunnyvale": "3000",
+    "Average Installation Cost": "25000"
+},{
+    "label": "Dec 2018",
+    "San Jose": "3000",
+    "Palo Alto": "3000",
+    "Sunnyvale": "3000",
+    "Average Installation Cost": "24500"
+},{
+    "label": "Jan 2019",
+    "San Jose": "3000",
+    "Palo Alto": "3000",
+    "Sunnyvale": "3000",
+    "Average Installation Cost": "23000"
+},{
+    "label": "Feb 2019",
+    "San Jose": "8000",
+    "Palo Alto": "10000",
+    "Sunnyvale": "4000",
+    "Average Installation Cost": "22500"
+},{
+    "label": "Mar 2019",
+    "San Jose": "8000",
+    "Palo Alto": "10000",
+    "Sunnyvale": "4000",
+    "Average Installation Cost": "29000"
+},{
+    "label": "Apr 2019",
+    "San Jose": "8000",
+    "Palo Alto": "10000",
+    "Sunnyvale": "4000",
+    "Average Installation Cost": "24500"
+}];
+
 exports.getChartingData = function() {
     return dbController.getChartingDataFromDB();
 };
@@ -42,6 +80,31 @@ exports.getSummaryChartingData = function () {
             var sanJoseHouseholdAdded = 0.0;
             var paloAltoHouseholdAdded = 0.0;
             var sunnyvaleHouseholdAdded = 0.0;
+
+            var sanJoseMonthlyAddedCapacity = {
+                nov18: 0,
+                dec18: 0,
+                jan19: 0,
+                feb19: 0,
+                mar19: 0,
+                apr19: 0
+            };
+            var paloAltoMonthlyAddedCapacity = {
+                nov18: 0,
+                dec18: 0,
+                jan19: 0,
+                feb19: 0,
+                mar19: 0,
+                apr19: 0
+            };
+            var sunnyvaleMonthlyAddedCapacity = {
+                nov18: 0,
+                dec18: 0,
+                jan19: 0,
+                feb19: 0,
+                mar19: 0,
+                apr19: 0
+            };
             for (var i = 0; i < result.data.length; i++) {
                 let user = result.data[i];
                 if (!user.zipcode) {
@@ -60,18 +123,33 @@ exports.getSummaryChartingData = function () {
                         sanJoseSolarCapacityAdded += (user.watts / 1000.0);
                         sanJoseHouseholdAdded += 1;
                     }
+                    let monthKey = getKeyWithMonth(user.updatedDate);
+                    if (!monthKey) {
+                        continue;
+                    }
+                    sanJoseMonthlyAddedCapacity[monthKey] += user.watts;
                 } else if (paloAltoZipcodes.includes(user.zipcode)) {
                     paloAltoTotalSolarCapacity += (user.watts / 1000.0);
                     if (numDaysBetween(new Date(), user.updatedDate) <= 30) {
                         paloAltoSolarCapacityAdded += (user.watts / 1000.0);
                         paloAltoHouseholdAdded += 1;
                     }
+                    let monthKey = getKeyWithMonth(user.updatedDate);
+                    if (!monthKey) {
+                        continue;
+                    }
+                    paloAltoMonthlyAddedCapacity[monthKey] += user.watts;
                 } else if (sunnyvaleZipcodes.includes(user.zipcode)) {
                     sunnyvaleTotalSolarCapacity += (user.watts / 1000.0);
                     if (numDaysBetween(new Date(), user.updatedDate) <= 30) {
                         sunnyvaleSolarCapacityAdded += (user.watts / 1000.0);
                         sunnyvaleHouseholdAdded += 1;
                     }
+                    let monthKey = getKeyWithMonth(user.updatedDate);
+                    if (!monthKey) {
+                        continue;
+                    }
+                    sunnyvaleMonthlyAddedCapacity[monthKey] += user.watts;
                 }
             }
 
@@ -105,17 +183,25 @@ exports.getSummaryChartingData = function () {
                 paloAltoHouseholdAdded,
                 sunnyvaleHouseholdAdded
             );
+            let growthOfSolarCapacity = make6MonthLineChartObject(
+                getGrowthRateFromAddedCapacity(sanJoseMonthlyAddedCapacity),
+                getGrowthRateFromAddedCapacity(paloAltoMonthlyAddedCapacity),
+                getGrowthRateFromAddedCapacity(sunnyvaleMonthlyAddedCapacity)
+            )
             return {
                 totalSolarCapacity: totalSolarCapacity,
                 solarCapacityPerCapita: solarCapacityPerCapita,
                 solarCapacityPerSurfaceArea: solarCapacityPerSurfaceArea,
                 solarCapacityAddedIn30Days: solarCapacityAddedIn30Days,
                 electricityGeneratedBySolarLast30Days: electricityGeneratedBySolarLast30Days,
-                solarHouseholdAddedLast30Days: solarHouseholdAddedLast30Days
+                solarHouseholdAddedLast30Days: solarHouseholdAddedLast30Days,
+                growthOfSolarCapacity: growthOfSolarCapacity,
+                newInstallationIncentivesVsCost: newInstallationIncentivesVsCost
             };
         });
 
 };
+
 
 function makeBarChartObject(sanJoseValue, paloAltoValue, sunnyvaleValue) {
     return [{
@@ -128,6 +214,92 @@ function makeBarChartObject(sanJoseValue, paloAltoValue, sunnyvaleValue) {
         "label": "Sunnyvale",
         "value": Math.round(sunnyvaleValue)
     }]
+}
+
+function make6MonthLineChartObject(sanJoseValue, paloAltoValue, sunnyvaleValue) {
+    return [{
+        "label": "Nov 2018",
+        "San Jose": sanJoseValue.nov18,
+        "Palo Alto": paloAltoValue.nov18,
+        "Sunnyvale": sunnyvaleValue.nov18
+    },{
+        "label": "Dec 2018",
+        "San Jose": sanJoseValue.dec18,
+        "Palo Alto": paloAltoValue.dec18,
+        "Sunnyvale": sunnyvaleValue.dec18
+    },{
+        "label": "Jan 2019",
+        "San Jose": sanJoseValue.jan19,
+        "Palo Alto": paloAltoValue.jan19,
+        "Sunnyvale": sunnyvaleValue.jan19
+    },{
+        "label": "Feb 2019",
+        "San Jose": sanJoseValue.feb19,
+        "Palo Alto": paloAltoValue.feb19,
+        "Sunnyvale": sunnyvaleValue.feb19
+    },{
+        "label": "Mar 2019",
+        "San Jose": sanJoseValue.mar19,
+        "Palo Alto": paloAltoValue.mar19,
+        "Sunnyvale": sunnyvaleValue.mar19
+    },{
+        "label": "Apr 2019",
+        "San Jose": sanJoseValue.apr19,
+        "Palo Alto": paloAltoValue.apr19,
+        "Sunnyvale": sunnyvaleValue.apr19
+    }];
+}
+
+function getKeyWithMonth(date) {
+    let monthKey;
+    switch (date.getMonth()) {
+        case 10:
+            monthKey = 'nov18';
+            break;
+        case 11:
+            monthKey = 'dec18';
+            break;
+        case 0:
+            monthKey = 'jan19';
+            break;
+        case 1:
+            monthKey = 'feb19';
+            break;
+        case 2:
+            monthKey = 'mar19';
+            break;
+        case 3:
+            monthKey = 'apr19';
+            break;
+    }
+    return monthKey;
+}
+
+function getGrowthRateFromAddedCapacity(data) {
+    let dec18Rate = Math.round(getGrowthRate(data.dec18, data.nov18) * 10000) / 100;
+    let nov18Rate = dec18Rate;
+    let jan19Rate = Math.round(getGrowthRate(data.jan19, data.dec18) * 10000) / 100;
+    let feb19Rate = Math.round(getGrowthRate(data.feb19, data.jan19) * 10000) / 100;
+    let mar19Rate = Math.round(getGrowthRate(data.mar19, data.feb19) * 10000) / 100;
+    let apr19Rate = Math.round(getGrowthRate(data.apr19, data.mar19) * 10000) / 100;
+    return {
+        nov18: nov18Rate,
+        dec18: dec18Rate,
+        jan19: jan19Rate,
+        feb19: feb19Rate,
+        mar19: mar19Rate,
+        apr19: apr19Rate
+    };
+}
+
+function getGrowthRate(present, past) {
+    if (!past) {
+        return 0;
+    }
+    if (past === 0) {
+        return 0;
+    }
+    return (present - past) / past;
 }
 
 var numDaysBetween = function(d1, d2) {
