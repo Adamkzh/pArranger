@@ -20,27 +20,24 @@ export default class effectAndImpactContent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            chargeCompare_data: null,
-            dailyPowerGeneration_data: null,
-            differentPower_data: null,
-            numberOfSolarPanels_data: null,
-            solarRadiance_data: null,
-
-            totalHHInstalled: 4000,
-            totalHHNotInstalled: 2000,
-            totalElectricityGeneratedYTD: 80000,
-            totalMoneySavedYTD: 800000
+            growthOfSolarCapacity: null,
+            solarIncentiveSpending: null,
+            solarEnergyConversionRate: null,
+            solarElectricityGeneratedHourly: null,
+            hourlyAllElectricLoad: null,
+            averageBillSavings: null
         }
-        const fetchDataUrl = "/api/v1/charting/dashboardData";
+        const fetchDataUrl = "/api/v1/charting/getEffectAndImpactChartingData";
         axios.get(fetchDataUrl)
             .then((response) => {
                 if (response.data.success) {
                     this.setState({
-                        chargeCompare_data: response.data.result.chargeCompare,
-                        dailyPowerGeneration_data: response.data.result.dailyPowerGeneration,
-                        differentPower_data: response.data.result.differentPower,
-                        numberOfSolarPanels_data: response.data.result.numberOfSolarPanels,
-                        solarRadiance_data: response.data.result.solarRadiance,
+                        growthOfSolarCapacity: response.data.result.growthOfSolarCapacity,
+                        solarIncentiveSpending: response.data.result.solarIncentiveSpending,
+                        solarEnergyConversionRate: response.data.result.solarEnergyConversionRate,
+                        solarElectricityGeneratedHourly: response.data.result.solarElectricityGeneratedHourly,
+                        hourlyAllElectricLoad: response.data.result.hourlyAllElectricLoad,
+                        averageBillSavings: response.data.result.averageBillSavings
                     })
                 }
             })
@@ -50,417 +47,6 @@ export default class effectAndImpactContent extends React.Component {
     }
 
     render() {
-        let growthTotalCapacity = [{
-            "label": "Nov 2018",
-            "San Jose": "200",
-            "Palo Alto": "300",
-            "Sunnyvale": "400"
-        },{
-            "label": "Dec 2018",
-            "San Jose": "100",
-            "Palo Alto": "250",
-            "Sunnyvale": "250"
-        },{
-            "label": "Jan 2019",
-            "San Jose": "900",
-            "Palo Alto": "950",
-            "Sunnyvale": "850"
-        },{
-            "label": "Feb 2019",
-            "San Jose": "600",
-            "Palo Alto": "400",
-            "Sunnyvale": "500"
-        },{
-            "label": "Mar 2019",
-            "San Jose": "300",
-            "Palo Alto": "400",
-            "Sunnyvale": "350"
-        },{
-            "label": "Apr 2019",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        }];
-        let solarIncentiveSpending = [
-            {
-                "label": "San Jose",
-                "(Dark) Claimed Incentives": 18000,
-                "(Light) Remaining Budget": 100000
-            },
-            {
-                "label": "Palo Alto",
-                "(Dark) Claimed Incentives": 36000,
-                "(Light) Remaining Budget": 90000
-            },
-            {
-                "label": "Sunnyvale",
-                "(Dark) Claimed Incentives": 34000,
-                "(Light) Remaining Budget": 80000
-            }];
-        let solarElectricityGeneratedHourly = [{
-            "label": "12am",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "1am",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "2am",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "3am",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "4am",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "5am",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "6am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "7am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "8am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "9am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "10am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "11am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "12pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "1pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "2pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "3pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "4pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "5pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "6pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "7pm",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "8pm",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "9pm",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "10pm",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "11pm",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "12am",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        }];
-        let hourlyElectricLoad = [{
-            "label": "12am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "1am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "2am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "3am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "4am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "5am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "6am",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "7am",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "8am",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "9am",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "10am",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "11am",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "12pm",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "1pm",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "2pm",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "3pm",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "4pm",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "5pm",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "6pm",
-            "San Jose": "100",
-            "Palo Alto": "100",
-            "Sunnyvale": "100"
-        },{
-            "label": "7pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "8pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "9pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "10pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "11pm",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        },{
-            "label": "12am",
-            "San Jose": "500",
-            "Palo Alto": "550",
-            "Sunnyvale": "450"
-        }];
-        let solarEnergyConversionRate = [{
-            "label": "5am",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        },{
-            "label": "6am",
-            "San Jose": "0.1",
-            "Palo Alto": "0.12",
-            "Sunnyvale": "0.15"
-        },{
-            "label": "7am",
-            "San Jose": "0.2",
-            "Palo Alto": "0.22",
-            "Sunnyvale": "0.25"
-        },{
-            "label": "8am",
-            "San Jose": "0.3",
-            "Palo Alto": "0.32",
-            "Sunnyvale": "0.35"
-        },{
-            "label": "9am",
-            "San Jose": "0.4",
-            "Palo Alto": "0.42",
-            "Sunnyvale": "0.45"
-        },{
-            "label": "10am",
-            "San Jose": "0.5",
-            "Palo Alto": "0.52",
-            "Sunnyvale": "0.55"
-        },{
-            "label": "11am",
-            "San Jose": "0.6",
-            "Palo Alto": "0.62",
-            "Sunnyvale": "0.65"
-        },{
-            "label": "12pm",
-            "San Jose": "0.7",
-            "Palo Alto": "0.72",
-            "Sunnyvale": "0.75"
-        },{
-            "label": "1pm",
-            "San Jose": "0.7",
-            "Palo Alto": "0.72",
-            "Sunnyvale": "0.75"
-        },{
-            "label": "2pm",
-            "San Jose": "0.6",
-            "Palo Alto": "0.62",
-            "Sunnyvale": "0.65"
-        },{
-            "label": "3pm",
-            "San Jose": "0.5",
-            "Palo Alto": "0.52",
-            "Sunnyvale": "0.55"
-        },{
-            "label": "4pm",
-            "San Jose": "0.4",
-            "Palo Alto": "0.42",
-            "Sunnyvale": "0.45"
-        },{
-            "label": "5pm",
-            "San Jose": "0.3",
-            "Palo Alto": "0.32",
-            "Sunnyvale": "0.35"
-        },{
-            "label": "6pm",
-            "San Jose": "0.2",
-            "Palo Alto": "0.22",
-            "Sunnyvale": "0.25"
-        },{
-            "label": "7pm",
-            "San Jose": "0.1",
-            "Palo Alto": "0.12",
-            "Sunnyvale": "0.15"
-        },{
-            "label": "8pm",
-            "San Jose": "0",
-            "Palo Alto": "0",
-            "Sunnyvale": "0"
-        }];
-        let averageBillSavings = [{
-            "label": "Nov 2018",
-            "San Jose": "20",
-            "Palo Alto": "30",
-            "Sunnyvale": "40"
-        },{
-            "label": "Dec 2018",
-            "San Jose": "10",
-            "Palo Alto": "25",
-            "Sunnyvale": "25"
-        },{
-            "label": "Jan 2019",
-            "San Jose": "90",
-            "Palo Alto": "95",
-            "Sunnyvale": "85"
-        },{
-            "label": "Feb 2019",
-            "San Jose": "60",
-            "Palo Alto": "40",
-            "Sunnyvale": "50"
-        },{
-            "label": "Mar 2019",
-            "San Jose": "30",
-            "Palo Alto": "40",
-            "Sunnyvale": "35"
-        },{
-            "label": "Apr 2019",
-            "San Jose": "50",
-            "Palo Alto": "55",
-            "Sunnyvale": "45"
-        }];
         return (<div style={{ marginLeft: '50px', marginRight: '50px' }}>
                 <Grid>
                     <Grid.Column computer={2} only="tablet computer" id="sidebar">
@@ -475,13 +61,13 @@ export default class effectAndImpactContent extends React.Component {
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Growth of Solar Capacity</div>
-                                        <CitiesLineChart data={growthTotalCapacity} unit='kW'/>
+                                        <CitiesLineChart data={this.state.growthOfSolarCapacity} unit='%'/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Solar Incentive Budget & Spending (FY2019)</div>
-                                        <CitiesCompareStackedBarChart data={solarIncentiveSpending} unit='USD'/>
+                                        <CitiesCompareStackedBarChart data={this.state.solarIncentiveSpending} unit='1000 USD'/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
@@ -489,14 +75,14 @@ export default class effectAndImpactContent extends React.Component {
                             <Grid.Row columns={2}>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Solar Electricity Generated Hourly (Month Average - April 2019)</div>
-                                        <CitiesLineChart data={solarElectricityGeneratedHourly} unit='kW' dots={false}/>
+                                        <div>Solar Electricity Generated Hourly (Month Average - Last 30 Days)</div>
+                                        <CitiesLineChart data={this.state.solarElectricityGeneratedHourly} unit='kW' dots={false}/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Hourly All Electric Load (Month Average - April 2019)</div>
-                                        <CitiesLineChart data={hourlyElectricLoad} unit='kW' dots={false}/>
+                                        <div>Hourly All Electric Load (Month Average - Last 30 Days)</div>
+                                        <CitiesLineChart data={this.state.hourlyAllElectricLoad} unit='kW' dots={false}/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
@@ -504,14 +90,14 @@ export default class effectAndImpactContent extends React.Component {
                             <Grid.Row columns={2}>
                                 <Grid.Column>
                                     <Segment className="chart-container">
-                                        <div>Daytime Solar Energy Maximum Conversion Rate (April 2019)</div>
-                                        <CitiesLineChart data={solarEnergyConversionRate} unit='Energy Generated/Capacity'/>
+                                        <div>Daytime Solar Energy Maximum Conversion Rate (Last 30 Days)</div>
+                                        <CitiesLineChart data={this.state.solarEnergyConversionRate} unit='%' dots={false}/>
                                     </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment className="chart-container">
                                         <div>Average Electricity Bill Savings per Solar Household</div>
-                                        <CitiesLineChart data={averageBillSavings} unit='USD'/>
+                                        <CitiesLineChart data={this.state.averageBillSavings} unit='USD'/>
                                     </Segment>
                                 </Grid.Column>
                             </Grid.Row>
