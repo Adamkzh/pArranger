@@ -152,16 +152,16 @@ render(){
             </Grid.Column>
             <Grid.Column width={3}>
                 <Segment style={cardStyle}> 
-                <Statistic color='orange' size='small'>
-                    <Statistic.Label>Power generation Monthly</Statistic.Label>
+                <Statistic color='orange' size='tiny'>
+                    <Statistic.Label>Generated Energy monthly</Statistic.Label>
                     <Statistic.Value>{monthTotalEnergy}</Statistic.Value>
                 </Statistic>
                 </Segment>
             </Grid.Column>
             <Grid.Column width={3}>
                 <Segment style={cardStyle}> 
-                <Statistic color='olive' size='small'>
-                    <Statistic.Label>co2 emissions reduction yearly</Statistic.Label>
+                <Statistic color='olive' size='tiny'>
+                    <Statistic.Label>co2 emissions reducted yearly</Statistic.Label>
                     <Statistic.Value>{co2EmissionsDecliined}</Statistic.Value>
                 </Statistic>
                 </Segment>
