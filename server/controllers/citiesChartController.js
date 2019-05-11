@@ -205,7 +205,7 @@ function getGrowthOfSolarCapacity(data) {
         },
         PaloAlto: {
             numberOfSolarPanelsHistorySingleCity_data: monthlySolarCapacityJsonObject.paloalto,
-            numberOfSolarPanelsPerHHSingleCity: monthlySolarCapacityPerHHJsonObject.sunnyvale,
+            numberOfSolarPanelsPerHHSingleCity: monthlySolarCapacityPerHHJsonObject.paloalto,
             electricityGeneratedMonthlyCompareToCitiesAvgSingleCity: elecGeneratedMonthlyCompareToAllCitesAvgJsonObj.paloalto,
             totalElectricityGeneratedPerHHMonthly: elecGeneratedMonthlyPerHHCompareToAllCitesAvgJsonObj.paloalto,
             moneySavedMonthlyCompareToCitiesAvgSingleCity: moneySavedPerHHMonthlyJsonObj.paloalto,
