@@ -16,7 +16,7 @@ let paloAltoTotalHH = 67082;
 let sunnyvaleTotalHH = 15156;
 const electricityPriceSanJose = 0.45, electricityPriceSunnyvale = 0.47, electricityPricePaloAlto = 0.49;
 
-let electricityConversionRateFromPannelCapacity = 0.35;
+let electricityConversionRateFromPannelCapacity = 0.035;
 
 
 exports.getAllData = function () {
@@ -259,8 +259,10 @@ function getElectricityLast6Days(sanjoseCapacity, sunnyvaleCapacity, paloaltoCap
             'AllCitiesAverage': Math.floor((sanjoseCapacity + sunnyvaleCapacity + paloaltoCapacity) / 3 * electricityConversionRateFromPannelCapacity * conversionRateInLast6Days[i])};
         ElecGeneratedLast6DaysPaloAlto.push(paloaltoSingleDay);
     }
+    ElecGeneratedLast6DaysSanJose = ElecGeneratedLast6DaysSanJose.reverse();
+    ElecGeneratedLast6DaysSunnyvale = ElecGeneratedLast6DaysSunnyvale.reverse();
+    ElecGeneratedLast6DaysPaloAlto = ElecGeneratedLast6DaysPaloAlto.reverse();
     return {sanjose: ElecGeneratedLast6DaysSanJose, sunnyvale: ElecGeneratedLast6DaysSunnyvale, paloalto: ElecGeneratedLast6DaysPaloAlto};
-
 }
 
 
@@ -402,7 +404,7 @@ function getMoneySavedMonthlyPerHH(data) {
         sanJoseMonthlyElectricityBillSavingsPerHH[keys[i]] = Math.floor(data.sanJoseMonthlyElectricityGeneratedPerHH[keys[i]] * electricityPriceSanJose);
         sunnyvaleMonthlyElectricityBillSavingsPerHH[keys[i]] = Math.floor(data.sunnyvaleMonthlyElectricityGeneratedPerHH[keys[i]] * electricityPriceSunnyvale);
         paloaltoMonthlyElectricityBillSavingsPerHH[keys[i]] = Math.floor(data.paloaltoMonthlyElectricityGeneratedPerHH[keys[i]] * electricityPricePaloAlto);
-        allCitiesAvgMonthlyElectricityBillSavingsPerHH[keys[i]] = Math.floor(sanJoseMonthlyElectricityBillSavingsPerHH[keys[i]] + sunnyvaleMonthlyElectricityBillSavingsPerHH[keys[i]] + paloaltoMonthlyElectricityBillSavingsPerHH[keys[i]] / 3.0);
+        allCitiesAvgMonthlyElectricityBillSavingsPerHH[keys[i]] = Math.floor((sanJoseMonthlyElectricityBillSavingsPerHH[keys[i]] + sunnyvaleMonthlyElectricityBillSavingsPerHH[keys[i]] + paloaltoMonthlyElectricityBillSavingsPerHH[keys[i]]) / 3.0);
     }
 
     return {
