@@ -98,14 +98,14 @@ export default class CityContent extends React.Component{
                             <Grid.Row>
                                 <Grid.Column width={8}>
                                     <Segment className="chart-container">
-                                        <div>Total Solar Panel Capacity Trend</div>
+                                        <div>Total Solar Panel Capacity Comparison</div>
                                         <NumberOfSolarPanelsHistorySingleCity data={this.props.data.numberOfSolarPanelsHistorySingleCity_data} city={this.props.city}/>
                                     </Segment>
                                 </Grid.Column>
 
                                 <Grid.Column width={8}>
                                     <Segment className="chart-container">
-                                        <div>Solar Panel Capacity Per HH Trend</div>
+                                        <div>Solar Panel Capacity Per HH Comparison</div>
                                         <NumberOfSolarPanelsHistorySingleCity data={this.props.data.numberOfSolarPanelsPerHHSingleCity} city={this.props.city}/>
                                     </Segment>
                                 </Grid.Column>
@@ -114,14 +114,14 @@ export default class CityContent extends React.Component{
                             <Grid.Row>
                                 <Grid.Column width={8}>
                                     <Segment className="chart-container">
-                                        <div>Total Electricity Generated Monthly Comparison</div>
+                                        <div>Total Electricity Generated Monthly Trend</div>
                                         <MonthlyPowerGenerationSingleCity city={this.props.city} data={this.props.data.electricityGeneratedMonthlyCompareToCitiesAvgSingleCity}/>
                                     </Segment>
                                 </Grid.Column>
 
                                 <Grid.Column width={8}>
                                     <Segment className="chart-container">
-                                        <div>Total Electricity Generated Per HH Monthly Comparison</div>
+                                        <div>Total Electricity Generated Per HH Monthly Trend</div>
                                         <MonthlyPowerGenerationSingleCity city={this.props.city} data={this.props.data.totalElectricityGeneratedPerHHMonthly}/>
                                     </Segment>
                                 </Grid.Column>
@@ -139,7 +139,7 @@ export default class CityContent extends React.Component{
 
                                 <Grid.Column width={8}>
                                     <Segment className="chart-container">
-                                        <div>Daily Electricity Generation Trend In the 6 Days</div>
+                                        <div>Daily Electricity Generation Trend 6 Days</div>
                                         <DailyPowerGenerationSingleCity data={this.props.data.dailyPowerGenerationByCity} city={this.props.city}/>
                                     </Segment>
                                 </Grid.Column>
