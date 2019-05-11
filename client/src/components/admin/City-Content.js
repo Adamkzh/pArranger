@@ -132,14 +132,14 @@ export default class CityContent extends React.Component{
                             <Grid.Row>
                                 <Grid.Column width={8}>
                                     <Segment className="chart-container">
-                                        <div>Monthly Electricity Bill Savings Per HH Comparison</div>
+                                        <div>Monthly Electricity Bill Savings Comparison</div>
                                         <AvgMoneySavedPerMonthByCitySingleCity city={this.props.city} data={this.props.data.moneySavedMonthlyCompareToCitiesAvgSingleCity}/>
                                     </Segment>
                                 </Grid.Column>
 
                                 <Grid.Column width={8}>
                                     <Segment className="chart-container">
-                                        <div>Daily Electricity Generation Trend In the Last Week</div>
+                                        <div>Daily Electricity Generation Trend In the 6 Days</div>
                                         <DailyPowerGenerationSingleCity data={this.props.data.dailyPowerGenerationByCity} city={this.props.city}/>
                                     </Segment>
                                 </Grid.Column>

@@ -20,29 +20,25 @@ class SingleCityContainer extends Component{
             this.state = {
                 ...this.state,
                 city: cur_city,
-                data: {...allData.data[cur_city]}
+                data: {...allData.data}
             }
         }
     }
 
     componentDidMount() {
         // Fetch Data Here
-        // const fetchDataUrl = "/api/v1/charting/singleCityData";
-        // axios.get(fetchDataUrl)
-        //     .then((response) =>{
-        //         if (response.data.success) {
-        //             this.setState({
-        //                 chargeCompare_data :response.data.result.chargeCompare,
-        //                 dailyPowerGeneration_data : response.data.result.dailyPowerGeneration,
-        //                 differentPower_data : response.data.result.differentPower,
-        //                 numberOfSolarPanels_data : response.data.result.numberOfSolarPanels,
-        //                 solarRadiance_data : response.data.result.solarRadiance,
-        //             })
-        //         }
-        //     })
-        //     .catch(function (error) {
-        //         console.log(error);
-        //     })
+        const fetchDataUrl = "/api/v1/charting/citiesDetailData";
+        axios.get(fetchDataUrl)
+            .then((response) =>{
+                if (response.data.success) {
+                    this.setState({
+                        data: {...response.data.result.citiesDetailData},
+                    })
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
     }
 
     getCurrentCity = () => {
@@ -65,7 +61,7 @@ class SingleCityContainer extends Component{
         return this.state.city ?
             (<div>
                 <Header activeTag={"console"}/>
-                <CityContent city={this.state.city} data={this.state.data} selected={this.props.selected}/>
+                <CityContent city={this.state.city} data={this.state.data[this.state.city]} selected={this.props.selected}/>
             </div> )
             : null;
     }
