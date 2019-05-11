@@ -3,6 +3,7 @@ var router = express.Router();
 var dbController = require('../controllers/databaseController.js');
 var solcastController = require('../controllers/solcastController.js');
 var chartingController = require('../controllers/chartingController.js');
+var citiesChartController = require('../controllers/citiesChartController.js');
 
 // See https://github.com/Adamkzh/pArranger/tree/master/server for documentation.
 
@@ -199,6 +200,17 @@ router.get('/api/v1/charting/summaryDashboardData', function (req, res, next) {
 
 router.get('/api/v1/charting/getEffectAndImpactChartingData', function (req, res, next) {
     chartingController.getEffectAndImpactChartingData()
+        .then(function (result) {
+            res.json(success(result));
+        })
+        .catch(function (error) {
+            res.json(failed(error));
+        })
+});
+
+
+router.get('/api/v1/charting/citiesDetailData', function (req, res, next) {
+    citiesChartController.getAllData()
         .then(function (result) {
             res.json(success(result));
         })

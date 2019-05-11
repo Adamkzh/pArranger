@@ -24,6 +24,7 @@ exports.getChartingData = function() {
     return dbController.getChartingDataFromDB();
 };
 
+
 exports.getSummaryChartingData = function () {
     return dbController.getUsers(999)
         .then(function (result) {
