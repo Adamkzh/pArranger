@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "mongo pArranger --eval \"db.dropDatabase()\"; mongoimport --db pArranger --collection panelDB --file db.json --jsonArray; node ./bin/www;",
+    "start": "node app.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "dependencies": {
