@@ -1,5 +1,5 @@
-var solcastController = require('../controllers/solcastController.js');
-var dbController = require('../controllers/databaseController.js');
+var solcastController = require('./solcastController.js');
+var dbController = require('./databaseController.js');
 
 // All methods returns a promise
 var exports = module.exports = {};
