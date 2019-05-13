@@ -17,15 +17,14 @@ class NeighborMap extends Component {
 
   render() {
     return (
-      <Map 
-        style="mapbox://styles/mapbox/light-v9"
+      // eslint-disable-next-line
+      <Map style="mapbox://styles/mapbox/light-v9"
         containerStyle={{
           height: "100%",
           width: "100%"
         }}
         center={this.state.center}
         zoom={[13]}
-        
         >
         <Layer
           type="symbol"
@@ -36,7 +35,7 @@ class NeighborMap extends Component {
         <Marker
             coordinates={this.state.center}
             anchor="bottom">
-            <img src={markerUrl} height={30}/>
+            <img src={markerUrl} alt="alt"height={30}/>
         </Marker>
     </Map>
     );

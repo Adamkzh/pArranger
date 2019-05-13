@@ -1,7 +1,6 @@
 import React from "react";
 
 import CitiesLineChart from './charts/CitiesLineChart'
-import CitiesCompareBarChart from './charts/CitiesCompareBarChart'
 import AdminMenu from './Admin-Menu';
 
 import "semantic-ui-css/semantic.min.css";

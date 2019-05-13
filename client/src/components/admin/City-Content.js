@@ -1,15 +1,13 @@
 import React from "react";
 
 import NumberOfSolarPanelsHistorySingleCity from './singlecitycharts/NumberOfSolarPanelsHistorySingleCity';
-import AvgElectricityMonthlyByCitySingleCity from './singlecitycharts/AvgElectricityMonthlyByCitySingleCity';
 import AvgMoneySavedPerMonthByCitySingleCity from './singlecitycharts/AvgMoneySavedPerMonthByCitySingleCity';
 import "semantic-ui-css/semantic.min.css";
 
-import { Grid, Label, Header, Menu, Segment, Statistic } from "semantic-ui-react";
+import { Grid, Header, Segment, Statistic } from "semantic-ui-react";
 import axios from 'axios';
 import DailyPowerGenerationSingleCity from "./singlecitycharts/DailyPowerGenerationSingleCity";
 import MonthlyPowerGenerationSingleCity from "./singlecitycharts/MonthlyPowerGenerationSingleCity";
-import {Link} from "react-router-dom";
 import AdminMenu from "./Admin-Menu";
 
 

@@ -11,7 +11,6 @@ import {
     Legend,
     ResponsiveContainer,
     ReferenceLine,
-    LineChart
 } from 'recharts';
 
 const colors = ["#c5a1fd", "#82ca9d", "#FFB533"];

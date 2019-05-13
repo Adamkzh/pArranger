@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {
-    BarChart, Bar, XAxis, YAxis, CartesianGrid, Cell, LabelList, Tooltip, Legend, ResponsiveContainer, ReferenceLine
+    BarChart, Bar, XAxis, YAxis, CartesianGrid, Cell, LabelList, ResponsiveContainer, ReferenceLine
 } from 'recharts';
 
 const colors = ["#c5a1fd", "#82ca9d", "#FFB533"];

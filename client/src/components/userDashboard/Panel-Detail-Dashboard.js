@@ -25,7 +25,7 @@ var monthTotalEnergy = window.localStorage.getItem('watts') * 6 * 30 * 0.78 * 0.
 monthTotalEnergy = monthTotalEnergy.toFixed(2) + " kWh";
 
 var todayGenerate = window.localStorage.getItem('watts') * hour * 0.001;
-var todayGenerate = todayGenerate.toFixed(2) + ' kWh';
+todayGenerate = todayGenerate.toFixed(2) + ' kWh';
 
 var todaySaving = window.localStorage.getItem('watts') * hour * 0.002 * 0.16;
 todaySaving = "$ " + todaySaving.toFixed(2);

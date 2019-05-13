@@ -8,11 +8,8 @@ import "semantic-ui-css/semantic.min.css";
 
 import {
     Grid,
-    Label,
     Header,
-    Menu,
     Segment,
-    Statistic
 } from "semantic-ui-react";
 import axios from 'axios';
 

@@ -12,10 +12,6 @@ import {
 
 export default class adminMenu extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         var summary            = <Menu.Item as={Link} to='/console'> Summary </Menu.Item>;
         var effectAndImpact   = <Menu.Item as={Link} to='/console/effectAndImpact'> Effect & Impact </Menu.Item>;
