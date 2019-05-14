@@ -67,7 +67,7 @@ class Position extends Component{
             })
             setTimeout(() => {
                 resolve();
-            }, 500);
+            }, 1100);
           });
       }
     
