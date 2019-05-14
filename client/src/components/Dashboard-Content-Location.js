@@ -6,6 +6,7 @@ import '../style/Map.css';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import axios from 'axios';
 import b64toBlob from 'b64-to-blob';
+import uuid from 'uuid/v1';
 
 var formData = new FormData();
 
@@ -30,9 +31,12 @@ getChildContext = () => ({
   
 
 componentDidMount() {
-  /**
-   * This part is for mapbox configuration
-   */
+  var id = window.localStorage.getItem('userid');
+  if( id == null){
+    id = uuid();
+    window.localStorage.setItem('userid',id);
+  }
+
   MapboxGl.accessToken = "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA"
   const map = new MapboxGl.Map({
     container: this.container,
@@ -59,7 +63,7 @@ componentDidMount() {
   });
 
   map.on('moveend', (...args) => {
-    formData.set('id','origin_image')
+    formData.set('id',id)
     var contentType = 'image/png';
     var b64Data=map.getCanvas().toDataURL().replace(/^data:image\/(png|jpg);base64,/, "");
     var blob = b64toBlob(b64Data, contentType);
@@ -93,7 +97,7 @@ isValidated = () =>{
     }
     setTimeout(() => {
       resolve();
-    }, 500);
+    }, 1000);
   })
 }
 

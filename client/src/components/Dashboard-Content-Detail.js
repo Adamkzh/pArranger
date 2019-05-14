@@ -128,7 +128,7 @@ class Detail extends Component {
         }
         axios.get('/api/get', {
             params: {
-              ID: "placed_image"
+              ID: window.localStorage.getItem('userid') + 'placed_image'
             }
         }).then((response) =>{
             img.src = 'data:image/png;base64,' + response.data;

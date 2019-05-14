@@ -91,7 +91,7 @@ class System extends PureComponent{
 
         axios.get('/api/get', {
             params: {
-              ID: "origin_image"
+                ID: window.localStorage.getItem('userid')
             }
         }).then((response) =>{
             img.src = 'data:image/png;base64,' + response.data;

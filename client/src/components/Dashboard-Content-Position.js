@@ -43,7 +43,7 @@ class Position extends Component{
             html2canvas(document.querySelector(".capture")).then(canvas => {
                 var formData  = new FormData();
                 // set id to placed image
-                formData.set('id','placed_image');
+                formData.set('id', window.localStorage.getItem('userid') + 'placed_image');
                 var contentType = 'image/png';
                 var b64Data = canvas.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "");
                 var blob = b64toBlob(b64Data, contentType);
@@ -80,7 +80,7 @@ class Position extends Component{
         }
         axios.get('/api/get', {
             params: {
-              ID: "origin_image"
+              ID: window.localStorage.getItem('userid')
             }
         }).then((response) =>{
             img.src = 'data:image/png;base64,' + response.data;
