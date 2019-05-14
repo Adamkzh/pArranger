@@ -1,4 +1,5 @@
-const db = require('monk')('localhost:27017/pArranger');
+// const db = require('monk')('localhost:27017/pArranger');
+const db = require('monk')('mongodb://root:a00000@ds155596.mlab.com:55596/parranger');
 const panelDB = db.get('panelDB');
 const chartDB = db.get('chartDB');
 const mongodb = require('mongodb');
