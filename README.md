@@ -3,6 +3,11 @@
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 [![Badge](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu/#/zh_CN)
 [![License](https://img.shields.io/npm/l/@angular/cli.svg)](/LICENSE) 
+
+### HOST URL
+Our application is hosted in AWC EC2 instance with the link
+ ```(http://52.15.85.102:3000/)```
+
 ### Installation
 
 pArranger requires [Node.js](https://nodejs.org/) v4+ and [MongoDB](https://docs.mongodb.com/manual/introduction/) to run.
@@ -45,24 +50,23 @@ the server is running under http://localhost:8080
 
 ### Database
 
-To start MongoDB server
+To start a MongoDB server 
 
 ```sh
 $ mongod
 ```
-
-To import sample data into mongoDB
-1. Downlaod [Sample Data](https://drive.google.com/open?id=1P_xRJbJMn_P7vDBPV9rMT34c--0ijmO8)
-and make sure it's named `dbImport.json`
-2. Then run the following command in the same directory as `dbImport.json`
-```
-mongoimport --db pArranger --collection panelDB --file dbImport.json --jsonArray
-```
-FYI: Use below command to remove all previous records
-```
-mongo
-> use pArranger
-> db.dropDatabase()
-```
+Sample users' data will be imported to the mongoDB instance automatically when starting the server.
 
 Open http://localhost:3000 to view it in the browser.
+
+## Test Cases of the APP
+### Sign In as a user who wants to install solar panels
+
+1. Make sure to **login as User** on the **right side of the navbar**
+2. Click **Start Button** on the home page, input **an address in the US**: 
+3. Wait util the mapbox zooming stops, click next. 
+4. Follow the steps. After saving the user info, A user's dashboard will be shown, the user dashboard will only be seen when signed in as a user.
+
+### Sign In as Admin(City Officials)
+1. Make sure to **login as Admin** on the ***right side of the navbar***
+2. Click **Dashboard** from the nav bar.
