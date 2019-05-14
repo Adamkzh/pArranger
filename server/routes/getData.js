@@ -19,7 +19,7 @@ router.get('/api/get', function(req, res, next) {
 
         db.collection('tempImg').findOne( { _id: id }, (err, result) =>{
             if (err) throw err;
-            var blob = result.mapImage;
+            var blob = result ? result.mapImage : null;
             res.send(blob);
         } );
       });

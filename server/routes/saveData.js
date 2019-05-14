@@ -15,9 +15,12 @@ var MongoClient = require('mongodb').MongoClient, assert = require('assert');
 
 // save specific user information 
 router.post('/api/save', upload, (req, res) => {
+    var imageData = "test";
+	imageData = req.file.buffer;
     let document = {
-        mapImage: req.file.buffer
+        mapImage: imageData
     }
+	console.log(req.file.buffer);
 
     MongoClient.connect(url, function(err, client) {
         assert.equal(null, err);
@@ -29,8 +32,9 @@ router.post('/api/save', upload, (req, res) => {
             { upsert: true },
             function(err, r) {
             assert.equal(null, err);
+		    res.send("Save temp image successful!");
             });
-        res.send("Save temp image successful!")
+       // res.send("Save temp image successful!")
     });
 });
 
